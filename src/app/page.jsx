@@ -11,13 +11,13 @@ import { PageTitle } from "./components/PageTitle";
 import { RecentWorkSection } from "./components/RecentWorkSection";
 import { RightImgSection } from "./components/RightImgSection";
 import { SocialSection } from "./components/SocialSection";
-{/*import { VideoSection } from "./components/VideoSection";*/}
+import { VideoSection } from "./components/VideoSection";
 import { WhoWeAre } from "./components/WhoWeAre";
 export default function Home() {
   return (
     <>
       <HeroSection />
-       {/*<VideoSection /> */}
+      <VideoSection />
       <RecentWorkSection />
 
       <RightImgSection
