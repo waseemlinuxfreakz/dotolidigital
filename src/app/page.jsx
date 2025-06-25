@@ -3,6 +3,7 @@
 import { ClientTestimonial } from "./components/ClientTestimonial";
 import { CounterSection } from "./components/CounterSection";
 import { DribbbleSection } from "./components/DribbbleSection";
+import Footer from "./components/Footer";
 import { HeroSection } from "./components/HeroSection";
 import { JungleSection } from "./components/JungleSection";
 import { LeftImgSection } from "./components/LeftImgSection";
@@ -76,7 +77,7 @@ export default function Home() {
         description={"Custom-built AI agents and automation flows powered by tools like Make.com, Zapier, and n8n—designed to qualify leads, automate support, and run your business on autopilot."}
         images={"k3.webp"}
         btn_text={"Explore work"}
-        btn_link={"/services/ai-agents-chatbots"}
+        btn_link={"/services/ai-agents-automation"}
       />
 
       <WhoWeAre
@@ -93,6 +94,7 @@ export default function Home() {
       <DribbbleSection />
       <JungleSection title1={"Join "} title2={"With Us"} title3={""} />
       <SocialSection />
+      <Footer />
     </>
   );
 }
