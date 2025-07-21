@@ -45,7 +45,7 @@ export function TeamMemberSection() {
               <Image src="/images/people-2.webp" alt="member" width={1000} height={1200} />
               <div className="text">
                 <p className="name">Jared Dotoli</p>
-                <p className="position">CEO</p>
+                <p className="position">Founder & CEO</p>
               </div>
             </div>
           </SwiperSlide>
@@ -54,8 +54,8 @@ export function TeamMemberSection() {
             <div className="item">
               <Image src="/images/name.jpg" alt="member" width={1000} height={1200} />
               <div className="text">
-                <p className="name">Mohammad Khalid</p>
-                <p className="position">Assistant Manager</p>
+                <p className="name">Md Khalid</p>
+                <p className="position">Project Manager</p>
               </div>
             </div>
           </SwiperSlide>
