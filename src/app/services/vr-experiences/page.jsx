@@ -35,16 +35,7 @@ export default function Page() {
       */}
 
       <section className="iframe-section">
-        <iframe
-          src="https://tours.tommycrivello.com/stratford/"
-          title="Virtual Tour - Stratford"
-          style={{
-            width: "100%",
-            height: "100vh",
-            border: "none",
-          }}
-          allowFullScreen
-        ></iframe>
+        
       </section>
 
       <section className="video-section">
