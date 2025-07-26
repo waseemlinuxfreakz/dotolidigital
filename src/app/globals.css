@@ -2053,3 +2053,41 @@ main.blog-single .container article p {
     opacity: 1;
   }
 }
+.popup-content {
+    max-height: unset;
+    margin: 0 auto;
+    padding: 20px 20px;
+}
+ 
+.popup-overlay {
+    display: block;
+    padding: 30px 10px;
+}
+ 
+.popup-content .sm-title {
+    margin-top: 0;
+    font-size: 22px;
+    line-height: 1.2;
+}
+ 
+.popup-content p.text-1 {
+    font-size: 16px;
+    line-height: 1.2;
+}
+ 
+.form-group {
+    gap: 2px;
+}
+ 
+.dark .form-group input, .dark .form-group select, .dark .form-group textarea {
+    padding: 7px 10px;
+    font-size: 16px !important;
+}
+ 
+.dark .form-group ::placeholder {
+    font-size: 16px;
+}
+ 
+.popup-content p.micro-trust {
+    margin-top: 20px;
+}
