@@ -39,16 +39,16 @@ export function VideoSection() {
             end: "top 80%",
             toggleActions: "play none none none",
             scrub: 2,
-            pin: true,
+            pin: false,
             markers: false,
             onEnter: () => {
               setPlayVideo(true); // Load video when section is visible
               gsap.to(videoRef.current, {
                 y: 0,
-                scale: 1
+                scale: 1,
               });
-            }
-          }
+            },
+          },
         });
       } else {
         gsap.from(videoRef.current, {
@@ -56,7 +56,7 @@ export function VideoSection() {
           opacity: 0,
           duration: 2,
           delay: 3,
-          ease: "Expo.easeOut"
+          ease: "Expo.easeOut",
         });
         setPlayVideo(true); // Load immediately on mobile
       }
@@ -65,20 +65,33 @@ export function VideoSection() {
   );
 
   return (
-    <section id="video-sec" ref={videoSecRef} className="video-sec" aria-label="Scroll to video section">
-      <div className="container">
-        <div className="video-wrapper" ref={videoRef}>
-          {playVideo ? (
-            <video autoPlay loop muted playsInline preload="none">
-              <source src="/video/intro-video.webm" type="video/webm" />
-              <source src="/video/intro-video.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          ) : (
-            <img src="/video/video-thumbnail.webp" alt="Intro Video Preview" width="100%" height="auto" loading="lazy" />
-          )}
+    <div className="video-sec-wrapper">
+      <section
+        id="video-sec"
+        ref={videoSecRef}
+        className="video-sec"
+        aria-label="Scroll to video section"
+      >
+        <div className="container">
+          <div className="video-wrapper" ref={videoRef}>
+            {playVideo ? (
+              <video autoPlay loop muted playsInline preload="none">
+                <source src="/video/intro-video.webm" type="video/webm" />
+                <source src="/video/intro-video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            ) : (
+              <img
+                src="/video/video-thumbnail.webp"
+                alt="Intro Video Preview"
+                width="100%"
+                height="auto"
+                loading="lazy"
+              />
+            )}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }

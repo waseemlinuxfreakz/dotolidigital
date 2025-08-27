@@ -36,11 +36,7 @@ export default function About() {
           • <strong>AI-Native Thinking — </strong>We’re not adapting to AI; we’re built on it.<br />
           • <strong>Flexible, Transparent, Fast — </strong>We move with clarity and urgency to deliver results, not fluff.
       */}
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      <div className="abourspacer"></div>
       <WhoWeAre
         title1="Why Clients"
         title2="Choose Us"

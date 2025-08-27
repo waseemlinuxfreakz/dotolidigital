@@ -34,6 +34,7 @@ export default function Home() {
         btn_link2={"/contact"}
       />
       <VideoSection />
+      <div className="abourspacer"></div>
       <RecentWorkSection />
 
       <div style={{ overflow: "hidden" }}>

@@ -771,6 +771,18 @@ section.hero-wrapper h1.title-1.text-center {
   recent-work-sec
 ============================
 */
+.abourspacer {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: 40px;
+}
+.video-sec-wrapper {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
 .recent-work-sec .flex-box.sm-right-wwa {
   flex-direction: row-reverse;
 }
