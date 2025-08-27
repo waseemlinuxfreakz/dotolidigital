@@ -103,7 +103,7 @@ function Header() {
                       <li><Link href="/services/vr-experiences" className="dropdown-link" onClick={closeMenu}>VR Experiences</Link></li>
                       <li><Link href="/services/branding-creative" className="dropdown-link" onClick={closeMenu}>Branding & Creative</Link></li>
                       <li><Link href="/services/crm-automation" className="dropdown-link" onClick={closeMenu}>CRM & Automation</Link></li>
-                      <li><Link href="/services/ai-agents" className="dropdown-link" onClick={closeMenu}>AI Agents & Chatbots</Link></li>
+                      <li><Link href="/services/ai-agents-automation" className="dropdown-link" onClick={closeMenu}>AI Agents & Chatbots</Link></li>
                     </ul>
                   )}
                 </li>
