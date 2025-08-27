@@ -751,7 +751,7 @@ section.hero-wrapper h1.title-1.text-center {
 .video-wrapper video {
   width: 100%;
   display: block;
-  overflow: hidden;
+  /* overflow: hidden; */
   border-radius: 2rem;
 }
 /*all mobile*/
@@ -843,8 +843,16 @@ section.hero-wrapper h1.title-1.text-center {
   right-img-section
 ============================
 */
-.right-img-section {
+/* .right-img-section {
   overflow: hidden;
+} */
+
+section.right-img-section {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 .right-img-section .flex-box {
   display: flex;
@@ -1970,11 +1978,12 @@ video-section
   text-decoration: none;
   color: var(--foreground);
 }
-.form-group select{
+.form-group select {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background: url('data:image/svg+xml;utf8,<svg fill="gray" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 1rem center !important;
+  background: url('data:image/svg+xml;utf8,<svg fill="gray" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>')
+    no-repeat right 1rem center !important;
   background-size: 30px !important;
 }
 .blog-layout .blog-content .blog-main .blog-date {
@@ -2054,40 +2063,42 @@ main.blog-single .container article p {
   }
 }
 .popup-content {
-    max-height: unset;
-    margin: 0 auto;
-    padding: 20px 20px;
+  max-height: unset;
+  margin: 0 auto;
+  padding: 20px 20px;
 }
- 
+
 .popup-overlay {
-    display: block;
-    padding: 30px 10px;
+  display: block;
+  padding: 30px 10px;
 }
- 
+
 .popup-content .sm-title {
-    margin-top: 0;
-    font-size: 22px;
-    line-height: 1.2;
+  margin-top: 0;
+  font-size: 22px;
+  line-height: 1.2;
 }
- 
+
 .popup-content p.text-1 {
-    font-size: 16px;
-    line-height: 1.2;
+  font-size: 16px;
+  line-height: 1.2;
 }
- 
+
 .form-group {
-    gap: 2px;
+  gap: 2px;
 }
- 
-.dark .form-group input, .dark .form-group select, .dark .form-group textarea {
-    padding: 7px 10px;
-    font-size: 16px !important;
+
+.dark .form-group input,
+.dark .form-group select,
+.dark .form-group textarea {
+  padding: 7px 10px;
+  font-size: 16px !important;
 }
- 
+
 .dark .form-group ::placeholder {
-    font-size: 16px;
+  font-size: 16px;
 }
- 
+
 .popup-content p.micro-trust {
-    margin-top: 20px;
+  margin-top: 20px;
 }
