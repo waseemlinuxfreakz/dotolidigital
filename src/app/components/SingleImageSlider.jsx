@@ -101,20 +101,7 @@ export function SingleImageSlider() {
               interaction is tracked, every opportunity is maximized, and your
               sales process runs smarter, not harder.
             </p>
-          </div>
-
-          <div className="text-box">
-            <h2 className="title-4">
-              AI-Powered Blog Automation for WordPress: Publish Smarter, Not
-              Harder
-            </h2>
-            <p className="text-1">
-              From content that writes and posts itself, to customer journeys
-              powered by intelligent workflows—our AI Agents transform hours of
-              manual work into seamless automation. If you can imagine it, we
-              can automate it. Let’s build your growth engine together.
-            </p>
-          </div>
+          </div>       
         </div>
 
         {/* ===== CSS (same file) ===== */}
@@ -126,7 +113,7 @@ export function SingleImageSlider() {
           }
           .sis-ox-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             gap: 50px;
             margin-top: 50px;
           }
