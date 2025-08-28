@@ -19,11 +19,11 @@ import "swiper/css/pagination";
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 
 const slides = [
-  { src: "/images/crm-slide1.png", alt: "CRM slide 1" },
-  { src: "/images/crm-slide2.png", alt: "CRM slide 2" },
+  { src: "/images/crm-slide3.jpg", alt: "CRM slide 3" },
+  { src: "/images/crm-slide4.jpg", alt: "CRM slide 4" },
 ];
 
-export function SingleImageSlider() {
+export function SingleImageSlider1() {
   return (
     <>
       <div className="container">
@@ -111,15 +111,14 @@ export function SingleImageSlider() {
         <div className="sis-ox-grid">
           <div className="text-box">
             <h2 className="title-4">
-              Streamlining Sales & Marketing Success with HubSpot CRM
+              AI-Powered Blog Automation for WordPress: Publish Smarter, Not
+              Harder
             </h2>
             <p className="text-1">
-              At Dotoli Digital, we go beyond running ads—we build seamless
-              systems that convert. With Complete HubSpot CRM Setup, we help
-              businesses capture, organize, and nurture leads effortlessly. From
-              deal pipelines to contact management, our expertise ensures every
-              interaction is tracked, every opportunity is maximized, and your
-              sales process runs smarter, not harder.
+              From content that writes and posts itself, to customer journeys
+              powered by intelligent workflows—our AI Agents transform hours of
+              manual work into seamless automation. If you can imagine it, we
+              can automate it. Let’s build your growth engine together.
             </p>
           </div>
         </div>

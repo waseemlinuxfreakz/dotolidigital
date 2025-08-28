@@ -5,6 +5,7 @@ import PopupForm from "../../components/PopupForm";
 import Footer from "../../components/Footer";
 import { HeroAllSection } from "../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../components/ServiceDetailsSection";
+import { SingleImageSlider1 } from "../../components/SingleImageSlider1";
 
 export default function Page() {
   const [showPopup, setShowPopup] = useState(false);
@@ -13,7 +14,7 @@ export default function Page() {
       {showPopup && <PopupForm onClose={() => setShowPopup(false)} />}
 
       <HeroAllSection
-       id="team-hero"
+        id="team-hero"
         title1="AI-Powered Agents That"
         title2="Engage, Qualify With You."
         description={`We build intelligent AI agents and chatbots powered by tools like Make.com, Zapier,<br /> and n8n—designed to engage leads, qualify prospects, and automate<br /> conversations 24/7 while staying true to your brand voice.`}
@@ -21,6 +22,8 @@ export default function Page() {
         onBtnClick={() => setShowPopup(true)}
       />
       <div id="team-hero"></div>
+
+      <SingleImageSlider1 />
       {/* 
       <Link href="/contact">Contact Us</Link>
       <PortfolioLightbox
