@@ -4,6 +4,7 @@ import Footer from "../../components/Footer";
 import { HeroAllSection } from "../../components/HeroAllSection";
 import PopupForm from "../../components/PopupForm";
 import { ServiceDetailsSection } from "../../components/ServiceDetailsSection";
+import { SingleImageSlider } from "../../components/SingleImageSlider";
 export default function Page() {
   const [showPopup, setShowPopup] = useState(false);
   return (
@@ -17,6 +18,10 @@ export default function Page() {
         btn_text="Book a Free Strategy Call"
         onBtnClick={() => setShowPopup(true)}
       />
+      <SingleImageSlider />
+      {/* 
+      SingleImageSlider.jsx
+      */}
       <div id="team-hero"></div>
       {/* <PortfolioImage
         img1="/images/project-1.webp"
