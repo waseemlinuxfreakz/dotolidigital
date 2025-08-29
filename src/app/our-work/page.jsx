@@ -19,9 +19,20 @@ export default function page() {
         description={`Explore how we help service businesses stand out,<br/> rank higher, and convert better — through SEO, branding,<br/> and aerial content that moves people.`}
         btn_text="Book a Free Strategy Call"
         onBtnClick={() => setShowPopup(true)}
-        
       />
-       <div id="team-hero"></div>
+      <div id="team-hero"></div>
+
+      <ServiceDetailsSection
+        img="/images/crm-slide1.png"
+        heading="Streamlining Sales & Marketing Success with HubSpot CRM"
+        text="At Dotoli Digital, we go beyond running ads—we build seamless systems that convert. With Complete HubSpot CRM Setup, we help businesses capture, organize, and nurture leads effortlessly. From deal pipelines to contact management, our expertise ensures every interaction is tracked, every opportunity is maximized, and your sales process runs smarter, not harder."
+      />
+      <ServiceDetailsSection
+        img="/images/crm-slide3.jpg"
+        heading="AI-Powered Blog Automation for WordPress: Publish Smarter, Not Harder"
+        text="From content that writes and posts itself, to customer journeys powered by intelligent workflows—our AI Agents transform hours of manual work into seamless automation. If you can imagine it, we can automate it. Let's build your growth engine together."
+      />
+
       {/* ai-agents-automation */}
       <ServiceDetailsSection
         img="/images/ia2.webp"
@@ -79,7 +90,14 @@ export default function page() {
       {/* vr-experiences */}
       {/* branding-creative */}
       {/* website-development */}
-      <PortfolioImage img1="/images/w2.webp" img2="/images/w1.webp" img3="/images/w3.webp" img4="/images/w4.webp" img5="/images/w5.webp" img6="/images/w6.webp" />
+      <PortfolioImage
+        img1="/images/w2.webp"
+        img2="/images/w1.webp"
+        img3="/images/w3.webp"
+        img4="/images/w4.webp"
+        img5="/images/w5.webp"
+        img6="/images/w6.webp"
+      />
       <br />
       <br />
       <br />
