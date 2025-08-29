@@ -1,12 +1,22 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Link from "next/link";
+import { FaArrowTurnDown } from "react-icons/fa6";
 
 import { HiOutlineArrowSmDown } from "react-icons/hi";
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
 
-export function HeroSection({ title1, title2, text, btn_text1, btn_link1, onBtnClick, btn_text2, btn_link2 }) {
+export function HeroSection({
+  title1,
+  title2,
+  text,
+  btn_text1,
+  btn_link1,
+  onBtnClick,
+  btn_text2,
+  btn_link2,
+}) {
   const title1Ref = useRef(null);
   const title2Ref = useRef(null);
   const textRef = useRef(null);
@@ -24,10 +34,11 @@ translate: none; rotate: none; scale: none; filter: none; transform: translate(0
       gsap.from(title1Ref.current, {
         opacity: 0,
         filter: "blur(5px)",
-        transform: "translate(0%, 24%) translate3d(0px, 0px, 0px) rotateX(18deg) skew(-18deg)",
+        transform:
+          "translate(0%, 24%) translate3d(0px, 0px, 0px) rotateX(18deg) skew(-18deg)",
         duration: 2,
         delay: 0.5,
-        ease: "Expo.easeOut"
+        ease: "Expo.easeOut",
       });
     },
     { scope: heroWrapperRef }
@@ -38,10 +49,11 @@ translate: none; rotate: none; scale: none; filter: none; transform: translate(0
       gsap.from(title2Ref.current, {
         opacity: 0,
         filter: "blur(5px)",
-        transform: "translate(0%, 24%) translate3d(0px, 0px, 0px) rotateX(18deg) skew(-18deg)",
+        transform:
+          "translate(0%, 24%) translate3d(0px, 0px, 0px) rotateX(18deg) skew(-18deg)",
         duration: 2,
         delay: 1,
-        ease: "Expo.easeOut"
+        ease: "Expo.easeOut",
       });
     },
     { scope: heroWrapperRef }
@@ -54,7 +66,7 @@ translate: none; rotate: none; scale: none; filter: none; transform: translate(0
         opacity: 0,
         duration: 2,
         delay: 1.5,
-        ease: "Expo.easeOut"
+        ease: "Expo.easeOut",
       });
     },
     { scope: heroWrapperRef }
@@ -67,7 +79,7 @@ translate: none; rotate: none; scale: none; filter: none; transform: translate(0
         opacity: 0,
         duration: 2,
         delay: 2,
-        ease: "Expo.easeOut"
+        ease: "Expo.easeOut",
       });
     },
     { scope: heroWrapperRef }
@@ -80,7 +92,7 @@ translate: none; rotate: none; scale: none; filter: none; transform: translate(0
         opacity: 0,
         duration: 2,
         delay: 2.5,
-        ease: "Expo.easeOut"
+        ease: "Expo.easeOut",
       });
     },
     { scope: heroWrapperRef }
@@ -99,7 +111,10 @@ translate: none; rotate: none; scale: none; filter: none; transform: translate(0
             </span>
           </h1>
           <div className="text" ref={textRef}>
-            <p className="text-center" dangerouslySetInnerHTML={{ __html: text }} />
+            <p
+              className="text-center"
+              dangerouslySetInnerHTML={{ __html: text }}
+            />
             <div>
               <div className="scroll-next-sec">
                 <Link href="#video-sec">
@@ -108,18 +123,26 @@ translate: none; rotate: none; scale: none; filter: none; transform: translate(0
               </div>
             </div>
           </div>
+
           <div className="btn-group">
-            <div className="btn" ref={btn1Ref}>
+            <div className="btn btn--pulse" ref={btn1Ref}>
               {onBtnClick ? (
-                <button type="button" onClick={onBtnClick}>
+                <button type="button" className="btn-elem" onClick={onBtnClick}>
                   {btn_text1}
                 </button>
               ) : btn_link1 ? (
-                <Link href={btn_link1}>{btn_text1}</Link>
+                <Link href={btn_link1} className="btn-elem">
+                  {btn_text1}
+                </Link>
               ) : null}
             </div>
-            <div className="btn" ref={btn2Ref}>
-              {btn_text2 && btn_link2 ? <Link href={btn_link2}>{btn_text2}</Link> : null}
+
+            <div className="btn btn--pulse" ref={btn2Ref}>
+              {btn_text2 && btn_link2 ? (
+                <Link href={btn_link2} className="btn-elem">
+                  {btn_text2}
+                </Link>
+              ) : null}
             </div>
           </div>
         </div>

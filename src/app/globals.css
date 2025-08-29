@@ -6,6 +6,146 @@
 }
 @media (min-width: 1920px) {
 }
+
+/* === Dubstep pulse without .pulsing div (Option B) === */
+.btn--pulse {
+  position: relative;
+}
+
+/* ===== Default (Light Mode) ===== */
+.btn--pulse .btn-elem {
+  position: relative;
+  z-index: 1;
+  background-color: #eef3f3; /* Light mode এ ভিতরে সাদা */
+  color: #121315; /* টেক্সট কালো */
+  border-color: #121315; /* বর্ডার কালো */
+  border-radius: 9999px;
+  overflow: visible;
+}
+
+/* pulse layer */
+.btn--pulse .btn-elem::before,
+.btn--pulse .btn-elem::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Default slow pulse */
+.btn--pulse .btn-elem::before {
+  animation: ring-light 2.5s linear infinite;
+}
+.btn--pulse .btn-elem::after {
+  animation: ring2-light 2.5s linear infinite;
+}
+
+/* Hover fast */
+.btn--pulse:hover .btn-elem::before,
+.btn--pulse:hover .btn-elem::after {
+  animation-duration: 0.2s;
+}
+
+/* ===== Dark Mode ===== */
+.dark .btn--pulse .btn-elem {
+  background-color: #121315; /* Dark mode এ ভিতরে ব্ল্যাক */
+  color: #fff;
+  border-color: #fff;
+}
+
+/* Dark mode pulse effect */
+.dark .btn--pulse .btn-elem::before {
+  animation: ring-dark 2.5s linear infinite;
+}
+.dark .btn--pulse .btn-elem::after {
+  animation: ring2-dark 2.5s linear infinite;
+}
+
+/* Keyframes: Light Mode (black glow outside) */
+@keyframes ring-light {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1);
+  }
+  70% {
+    box-shadow: 0 0 0 22px rgba(0, 0, 0, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+@keyframes ring2-light {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1);
+  }
+  70% {
+    box-shadow: 0 0 0 14px rgba(0, 0, 0, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+/* Keyframes: Dark Mode (white glow outside) */
+@keyframes ring-dark {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.2);
+  }
+  70% {
+    box-shadow: 0 0 0 22px rgba(255, 255, 255, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+@keyframes ring2-dark {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.2);
+  }
+  70% {
+    box-shadow: 0 0 0 14px rgba(255, 255, 255, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+/* সব লেয়ারে pill shape বজায় থাকবে */
+.btn,
+.btn--pulse,
+.btn--pulse .btn-elem,
+.btn--pulse .btn-elem::before,
+.btn--pulse .btn-elem::after {
+  border-radius: 9999px;
+}
+
+/* ✅ HOVER: Light mode */
+.btn--pulse:hover .btn-elem::before {
+  animation: ring-light 0.2s linear infinite;
+}
+.btn--pulse:hover .btn-elem::after {
+  animation: ring2-light 0.2s linear infinite;
+}
+
+/* ✅ HOVER: Dark mode */
+.dark .btn--pulse:hover .btn-elem::before {
+  animation: ring-dark 0.2s linear infinite;
+}
+.dark .btn--pulse:hover .btn-elem::after {
+  animation: ring2-dark 0.2s linear infinite;
+}
+
+.btn-group .btn {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-group .btn svg.arrow-hero {
+  font-size: 100px;
+  margin-bottom: 20px;
+}
+
 :root {
   /* color variables */
   --background: #eef3f3;
