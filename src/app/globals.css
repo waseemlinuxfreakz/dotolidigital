@@ -51,8 +51,8 @@
 /* ===== Dark Mode ===== */
 .dark .btn--pulse .btn-elem {
   background-color: #121315; /* Dark mode এ ভিতরে ব্ল্যাক */
-  color: #fff;
-  border-color: #fff;
+  color: #c5fcfc;
+  border-color: #c5fcfc;
 }
 
 /* Dark mode pulse effect */
@@ -162,7 +162,7 @@
 /* Dark theme overrides */
 :root.dark {
   --background: #121315;
-  --foreground: #e0eeee;
+  --foreground: #c5fcfc;
   --primary: #c5fcfc;
 
   /* #c5fcfc */
