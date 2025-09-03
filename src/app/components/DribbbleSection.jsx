@@ -368,26 +368,7 @@ export function DribbbleSection() {
                 <Link href="/services">Explore work</Link>
               </div>
             </div>
-            <div className="dribbble-posts">
-              <div className="dribbble-img" ref={secimgRef1}>
-                <Image ref={imgRef1} src="/images/d1.webp" alt="" width={1000} height={700} />
-              </div>
-              <div className="dribbble-img" ref={secimgRef2}>
-                <Image ref={imgRef2} src="/images/d2.webp" alt="" width={1000} height={700} />
-              </div>
-              <div className="dribbble-img" ref={secimgRef3}>
-                <Image ref={imgRef3} src="/images/d3.webp" alt="" width={1000} height={700} />
-              </div>
-              <div className="dribbble-img" ref={secimgRef4}>
-                <Image ref={imgRef4} src="/images/d4.webp" alt="" width={1000} height={700} />
-              </div>
-              <div className="dribbble-img" ref={secimgRef5}>
-                <Image ref={imgRef5} src="/images/d5.webp" alt="" width={1000} height={700} />
-              </div>
-              <div className="dribbble-img" ref={secimgRef6}>
-                <Image ref={imgRef6} src="/images/d6.webp" alt="" width={1000} height={700} />
-              </div>
-            </div>
+            
           </div>
         </div>
       </section>
