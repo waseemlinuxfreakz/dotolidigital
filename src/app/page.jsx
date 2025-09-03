@@ -16,6 +16,8 @@ import { RightImgSection } from "./components/RightImgSection";
 import { SocialSection } from "./components/SocialSection";
 import { VideoSection } from "./components/VideoSection";
 import { WhoWeAre } from "./components/WhoWeAre";
+import Image from "next/image";
+import Link from "next/link";
 
 /* sm shuvoS */
 export default function Home() {
@@ -119,7 +121,23 @@ export default function Home() {
       <CounterSection />
       <ClientTestimonial />
       <NewsTracker />
-      <DribbbleSection />
+      {/* <DribbbleSection /> */}
+      <div className="container">
+          <div className="dribbble-middle-text project-section-container">
+            <Image src="/images/logo.png" alt="Logo" width={200} height={60} priority />
+            <p className="text-2">
+              <strong>Design that Speaks. Strategy that Performs. </strong>
+              Explore the creative edge where visuals meet value.
+            </p>
+            <div className="btn-group">
+              <div className="btn btn--pulse">
+                <Link href="/services" className="btn-elem">Explore work</Link>
+              </div>
+            </div>
+          </div>
+      </div>
+      
+
       <JungleSection title1={"Join Us"} title2={""} title3={""} />
       <SocialSection />
       <Footer />

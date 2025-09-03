@@ -2254,3 +2254,24 @@ main.blog-single .container article p {
 .popup-content p.micro-trust {
   margin-top: 20px;
 }
+.dribbble-middle-text.project-section-container {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.dribbble-middle-text.project-section-container p.text-2 {
+    text-align: center;
+    margin-top: 24px;
+}
+.dark .dribbble-middle-text.project-section-container {
+    filter: brightness(0) saturate(100%) invert(89%) sepia(92%) saturate(1426%) hue-rotate(169deg) brightness(115%) contrast(98%);
+}
+
+.dribbble-middle-text.project-section-container {
+    filter: brightness(0) saturate(100%) invert(24%) sepia(1%) saturate(2881%) hue-rotate(183deg) brightness(93%) contrast(88%);
+}
