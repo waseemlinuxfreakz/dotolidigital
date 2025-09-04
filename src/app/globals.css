@@ -16,7 +16,7 @@
 .btn--pulse .btn-elem {
   position: relative;
   z-index: 1;
-  background-color: #eef3f3; /* Light mode এ ভিতরে সাদা */
+  background-color: transparent !important; /* Light mode এ ভিতরে সাদা */
   color: #121315; /* টেক্সট কালো */
   border-color: #121315; /* বর্ডার কালো */
   border-radius: 9999px;
@@ -50,7 +50,7 @@
 
 /* ===== Dark Mode ===== */
 .dark .btn--pulse .btn-elem {
-  background-color: #121315; /* Dark mode এ ভিতরে ব্ল্যাক */
+  background-color: transparent !important; /* Dark mode এ ভিতরে ব্ল্যাক */
   color: #c5fcfc;
   border-color: #c5fcfc;
 }

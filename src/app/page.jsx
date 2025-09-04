@@ -129,11 +129,21 @@ export default function Home() {
               <strong>Design that Speaks. Strategy that Performs. </strong>
               Explore the creative edge where visuals meet value.
             </p>
-            <div className="btn-group">
+            {/* <div className="btn-group">
               <div className="btn btn--pulse">
                 <Link href="/services" className="btn-elem">Explore work</Link>
+
               </div>
-            </div>
+            </div> */}
+            <div className="btn-group">
+                <div className="btn">
+                  <div className="btn btn--pulse">
+                    
+                      <Link href="/services" className="btn-elem">Explore work</Link>
+                      
+                  </div>
+                </div>
+              </div>
           </div>
       </div>
       
