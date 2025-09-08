@@ -247,8 +247,8 @@ h6 span {
   margin-bottom: 30px;
 }
 .title-3 {
-  font-size: 64px;
-  line-height: 80px;
+  font-size: 57px;
+  line-height: 74px;
   margin-bottom: 30px;
 }
 .title-4 {
@@ -956,7 +956,7 @@ section.hero-wrapper h1.title-1.text-center {
 
 /* for animation */
 .dark .recent-work-sec .title-3 .block {
-  background: linear-gradient(90deg, #e0eeee 50%, #252525 0);
+  background: linear-gradient(90deg, #c5fcfc 50%, #252525 0);
   background-size: 200% 100%;
   background-position-x: 0%;
   color: transparent;
@@ -2255,23 +2255,25 @@ main.blog-single .container article p {
   margin-top: 20px;
 }
 .dribbble-middle-text.project-section-container {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 .dribbble-middle-text.project-section-container p.text-2 {
-    text-align: center;
-    margin-top: 24px;
+  text-align: center;
+  margin-top: 24px;
 }
 .dark .dribbble-middle-text.project-section-container {
-    filter: brightness(0) saturate(100%) invert(89%) sepia(92%) saturate(1426%) hue-rotate(169deg) brightness(115%) contrast(98%);
+  filter: brightness(0) saturate(100%) invert(89%) sepia(92%) saturate(1426%)
+    hue-rotate(169deg) brightness(115%) contrast(98%);
 }
 
 .dribbble-middle-text.project-section-container {
-    filter: brightness(0) saturate(100%) invert(24%) sepia(1%) saturate(2881%) hue-rotate(183deg) brightness(93%) contrast(88%);
+  filter: brightness(0) saturate(100%) invert(24%) sepia(1%) saturate(2881%)
+    hue-rotate(183deg) brightness(93%) contrast(88%);
 }
