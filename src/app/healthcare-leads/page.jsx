@@ -19,7 +19,7 @@ export default function page() {
       <HeroAllSection
         id={"team-hero"}
         title1={"Healthcare Leads "}
-        title2={"That Conver"}
+        title2={"That Converts"}
         description={`We don’t just generate calls. We generate conversations that close. <br/>At Dotoli Digital, our hybrid publisher-broker model ensures higher intent,<br/> higher quality, and higher ROI.`}
         btn_text="Book a Free Strategy Call"
         onBtnClick={() => setShowPopup(true)}
