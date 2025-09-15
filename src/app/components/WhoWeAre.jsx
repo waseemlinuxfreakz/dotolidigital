@@ -96,8 +96,8 @@ export function WhoWeAre({
                 <Image
                   src={`/images/${img}`}
                   alt="loftloom"
-                  width={300}
-                  height={300}
+                  width={450}
+                  height={450}
                 />
               </div>
             </div>

@@ -9,6 +9,7 @@ import { ServiceDetailsSection } from "../components/ServiceDetailsSection";
 import { ClientTestimonial } from "../components/ClientTestimonial";
 import { WhoWeAre } from "../components/WhoWeAre";
 import { CounterSection } from "../components/CounterSection";
+import Image from "next/image";
 
 export default function page() {
   const [showPopup, setShowPopup] = useState(false);
@@ -25,11 +26,12 @@ export default function page() {
       />
       <div id="team-hero"></div>
 
-      <WhoWeAre
-        title1="Why Healthcare Leads Require"
-        title2=" a Different Approach"
-        img="kimg.png"
-        paragraph={`
+      <div className="sm-img-fix">
+        <WhoWeAre
+          title1="Why Healthcare Leads Require"
+          title2=" a Different Approach"
+          img="leads-1.webp"
+          paragraph={`
             Most brokers treat leads as a commodity. We don’t. Healthcare is a high-compliance, high-competition industry—meaning intent and quality matter more than volume. Our background in Google Ads, audience targeting, and creative optimization gives us an edge in generating genuine intent traffic, not just random clicks.
 Key Point Highlights:<br/><br/>
             <ul>
@@ -37,13 +39,13 @@ Key Point Highlights:<br/><br/>
               <li>Compliance-first lead generation</li>
               <li>Optimized campaigns for healthcare verticals</li>
               </ul>`}
-      />
-
+        />
+      </div>
       <WhoWeAre
         smclass={"sm-right-wwa"}
         title1="The Dotoli "
         title2="Digital Advantage"
-        img="kimg.png"
+        img="leads-2.webp"
         paragraph={`
             We bridge the gap between publishers and buyers. Instead of acting as a middleman, we:<br/><br/>
             <ul>
@@ -53,10 +55,21 @@ Key Point Highlights:<br/><br/>
               </ul>`}
       />
 
+      <section>
+        <div className="container">
+          <Image
+            src="/images/leads-full.webp"
+            alt=""
+            width={1920}
+            height={1431}
+          />
+        </div>
+      </section>
+
       <WhoWeAre
         title1="How We Deliver "
         title2="Quality Healthcare Leads"
-        img="kimg.png"
+        img="leads-3.webp"
         paragraph={`
            
             <ul>
@@ -71,7 +84,7 @@ Key Point Highlights:<br/><br/>
         smclass={"sm-right-wwa"}
         title1="Who We "
         title2="Work With"
-        img="kimg.png"
+        img="leads-4.webp"
         paragraph={`
             We power growth for:<br/><br/>
             <ul>
