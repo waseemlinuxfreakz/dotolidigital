@@ -92,10 +92,8 @@ function Footer() {
               <p className="ft2">(954) 383-8093</p>
             </a>
             <div className="sm1">
-                <a className="f-link" href="tel:+19543838093">
-                  <p className="ft1">Privacy Policy</p>
-                </a>
-                <a className="f-link" href="tel:+19543838093">
+                <Link href="/privacy">Privacy</Link>
+                <a className="f-link" href="">
                   <p className="ft1">Privacy Policy</p>
                 </a>
             </div>
