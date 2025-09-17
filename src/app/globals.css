@@ -2294,3 +2294,9 @@ ul.dropdown-list.footer-links li {
 .sm2-footer {
     width: 100%;
 }
+article.max-w-4xl.mx-auto.p-8.bg-white.shadow-sm.rounded-lg.prose.lg\:prose-lg.content-section-terms {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
