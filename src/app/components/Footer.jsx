@@ -91,12 +91,7 @@ function Footer() {
               <p className="ft1">Call</p>
               <p className="ft2">(954) 383-8093</p>
             </a>
-            <div className="sm2">
-              <ul className="dropdown-list footer-links">
-                <li><Link href="/privacy">Privacy Policy</Link></li>
-                <li><Link href="/terms">Terms & Condition</Link></li>
-              </ul>
-            </div>
+            
             
             <a className="f-link sm4" href="">
               <p className="ft1"></p>
@@ -106,6 +101,14 @@ function Footer() {
                 Serving clients across the U.S. and worldwide.
               </p>
             </a>
+          </div>
+          <div className="boxa">
+            <div className="sm2">
+              <ul className="dropdown-list footer-links">
+                <li><Link href="/privacy">Privacy Policy</Link></li>
+                <li><Link href="/terms">Terms & Condition</Link></li>
+              </ul>
+            </div>
           </div>
         </div>
       </footer>
