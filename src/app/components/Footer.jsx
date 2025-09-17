@@ -91,6 +91,9 @@ function Footer() {
               <p className="ft1">Call</p>
               <p className="ft2">(954) 383-8093</p>
             </a>
+            <a className="f-link sm1" href="tel:+19543838093">
+              <p className="ft1">Privacy Policy</p>
+            </a>
             <a className="f-link sm4" href="">
               <p className="ft1"></p>
               <p className="ft2">
