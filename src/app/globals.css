@@ -2274,3 +2274,6 @@ main.blog-single .container article p {
   filter: brightness(0) saturate(100%) invert(24%) sepia(1%) saturate(2881%)
     hue-rotate(183deg) brightness(93%) contrast(88%);
 }
+ul.dropdown-list.footer-links li a {
+    text-decoration: none;
+}
