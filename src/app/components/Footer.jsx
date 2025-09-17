@@ -102,8 +102,8 @@ function Footer() {
               </p>
             </a>
           </div>
-          <div className="boxa">
-            <div className="sm2">
+          <div className="boxa-footer">
+            <div className="sm2-footer">
               <ul className="dropdown-list footer-links">
                 <li><Link href="/privacy">Privacy Policy</Link></li>
                 <li><Link href="/terms">Terms & Condition</Link></li>
