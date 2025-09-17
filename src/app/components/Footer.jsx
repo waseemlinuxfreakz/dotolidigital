@@ -92,9 +92,10 @@ function Footer() {
               <p className="ft2">(954) 383-8093</p>
             </a>
             <div className="sm2">
-                <Link href="/privacy">Privacy</Link>
-                <Link href="/terms">Terms & Condition</Link>
-                
+              <ul className="dropdown-list footer-links">
+                <li><Link href="/privacy">Privacy</Link></li>
+                <li><Link href="/terms">Terms & Condition</Link></li>
+              </ul>
             </div>
             
             <a className="f-link sm4" href="">
