@@ -31,9 +31,14 @@ export default function page() {
       <div className="health_left_section">
         <RightImgSection
           title={"Why Healthcare Leads Require a Different Approach"}
-          description={
-            "Our SEO services are designed to improve your search engine rankings, increase organic traffic, and convert visitors into customers. Let us help you dominate search results."
-          }
+          description={`
+            Most brokers treat leads as a commodity. We don’t. Healthcare is a high-compliance, high-competition industry—meaning intent and quality matter more than volume. Our background in Google Ads, audience targeting, and creative optimization gives us an edge in generating genuine intent traffic, not just random clicks.
+Key Point Highlights:<br/><br/>
+            <ul>
+              <li>Intent-driven strategies, not spray-and-pray</li>
+              <li>Compliance-first lead generation</li>
+              <li>Optimized campaigns for healthcare verticals</li>
+              </ul>`}
           images={"leads-1.webp"}
           btn_text={"Explore work"}
           btn_link={"/services/seo-expert"}
