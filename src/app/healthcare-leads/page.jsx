@@ -59,19 +59,7 @@ Key Point Highlights:<br/><br/>
       />
       </div>
       
-      <WhoWeAre
-        smclass={"sm-right-wwa"}
-        title1="The Dotoli "
-        title2="Digital Advantage"
-        img="leads-2.webp"
-        paragraph={`
-            We bridge the gap between publishers and buyers. Instead of acting as a middleman, we:<br/><br/>
-            <ul>
-              <li>Speak the language of publishers → campaigns, creatives, and data optimization.</li>
-              <li>Understand the needs of call centers → dispo feedback, close rate drivers, and compliance.</li>
-              <li>Move fast with insights → adjusting in real time to maximize ROI.</li>
-              </ul>`}
-      />
+      
 
       <section>
         <div className="container">
