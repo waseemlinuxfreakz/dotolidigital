@@ -73,20 +73,20 @@ Key Point Highlights:<br/><br/>
       </section>
       
       <div className="health_left_section">
-      <RightImgSection
-        title={"How We Deliver Quality Healthcare Leads"}
-        description={`
-           
-            <ul>
-              <li><strong>Step 1: Audience Targetingstrong</strong> - Intent-driven Google Ads, social ads, and native campaigns.</li>
-              <li><strong>Step 2: Creative Optimization</strong> - High-converting copy and visuals designed for healthcare compliance.</li>
-              <li><strong>Step 3: Real-Time Feedback Loops</strong> - Using dispo and buyer feedback to refine campaigns daily.</li>
-              <li><strong>Step 4: Scalable Partnerships</strong> - Flexible capacity, tailored lead flow, and nationwide reach.</li>
-              </ul>`}
-        images={"leads-3.webp"}
-        btn_text={"Explore work"}
-        btn_link={"/services/seo-expert"}
-      />
+        <RightImgSection
+          title={"How We Deliver Quality Healthcare Leads"}
+          description={`
+            
+              <ul>
+                <li><strong>Step 1: Audience Targetingstrong</strong> - Intent-driven Google Ads, social ads, and native campaigns.</li>
+                <li><strong>Step 2: Creative Optimization</strong> - High-converting copy and visuals designed for healthcare compliance.</li>
+                <li><strong>Step 3: Real-Time Feedback Loops</strong> - Using dispo and buyer feedback to refine campaigns daily.</li>
+                <li><strong>Step 4: Scalable Partnerships</strong> - Flexible capacity, tailored lead flow, and nationwide reach.</li>
+                </ul>`}
+          images={"leads-3.webp"}
+          btn_text={"Explore work"}
+          btn_link={"/services/seo-expert"}
+        />
       </div>
 
       <WhoWeAre
