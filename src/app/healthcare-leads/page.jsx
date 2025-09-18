@@ -29,11 +29,16 @@ export default function page() {
       <div id="team-hero"></div>
 
       <LeftImgSection
-        title={"Website Development"}
-        description={
-          "Luxury, conversion-focused websites tailored to your brand – specializing in real estate, home services, and corporate sites that impress and perform."
-        }
-        images={"technis-main-landscape.webp"}
+        title={"Why Healthcare Leads Require a Different Approach"}
+        description={`
+            Most brokers treat leads as a commodity. We don’t. Healthcare is a high-compliance, high-competition industry—meaning intent and quality matter more than volume. Our background in Google Ads, audience targeting, and creative optimization gives us an edge in generating genuine intent traffic, not just random clicks.
+Key Point Highlights:<br/><br/>
+            <ul>
+              <li>Intent-driven strategies, not spray-and-pray</li>
+              <li>Compliance-first lead generation</li>
+              <li>Optimized campaigns for healthcare verticals</li>
+              </ul>`}
+        images={"leads-1.webp"}
         btn_text={"Explore work"}
         btn_link={"/services/website-development"}
       />
