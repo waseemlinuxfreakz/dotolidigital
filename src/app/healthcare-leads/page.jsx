@@ -30,7 +30,7 @@ export default function page() {
 
       <LeftImgSection
         title={"Why Healthcare Leads Require a Different Approach"}
-        description={`
+        paragraph={`
             Most brokers treat leads as a commodity. We don’t. Healthcare is a high-compliance, high-competition industry—meaning intent and quality matter more than volume. Our background in Google Ads, audience targeting, and creative optimization gives us an edge in generating genuine intent traffic, not just random clicks.
 Key Point Highlights:<br/><br/>
             <ul>
