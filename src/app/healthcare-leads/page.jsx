@@ -10,6 +10,8 @@ import { ClientTestimonial } from "../components/ClientTestimonial";
 import { WhoWeAre } from "../components/WhoWeAre";
 import { CounterSection } from "../components/CounterSection";
 import Image from "next/image";
+import { LeftImgSection } from "../components/LeftImgSection";
+import { RightImgSection } from "../components/RightImgSection";
 
 export default function page() {
   const [showPopup, setShowPopup] = useState(false);
@@ -25,6 +27,26 @@ export default function page() {
         onBtnClick={() => setShowPopup(true)}
       />
       <div id="team-hero"></div>
+
+      <LeftImgSection
+        title={"Website Development"}
+        description={
+          "Luxury, conversion-focused websites tailored to your brand – specializing in real estate, home services, and corporate sites that impress and perform."
+        }
+        images={"technis-main-landscape.webp"}
+        btn_text={"Explore work"}
+        btn_link={"/services/website-development"}
+      />
+
+      <RightImgSection
+        title={"Seo Expert"}
+        description={
+          "Our SEO services are designed to improve your search engine rankings, increase organic traffic, and convert visitors into customers. Let us help you dominate search results."
+        }
+        images={"loftloom-main-landscape.webp"}
+        btn_text={"Explore work"}
+        btn_link={"/services/seo-expert"}
+      />
 
       <div className="sm-img-fix">
         <WhoWeAre
