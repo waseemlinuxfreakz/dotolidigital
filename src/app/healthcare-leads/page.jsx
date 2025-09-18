@@ -27,10 +27,24 @@ export default function page() {
         onBtnClick={() => setShowPopup(true)}
       />
       <div id="team-hero"></div>
-      <div className="health_left_section">
-      <LeftImgSection
-        title={"Why Healthcare Leads Require a Different Approach"}
-        description={`
+
+      
+        <RightImgSection
+          title={"Seo Expert"}
+          description={
+            "Our SEO services are designed to improve your search engine rankings, increase organic traffic, and convert visitors into customers. Let us help you dominate search results."
+          }
+          images={"loftloom-main-landscape.webp"}
+          btn_text={"Explore work"}
+          btn_link={"/services/seo-expert"}
+        />
+
+      <div className="sm-img-fix">
+        <WhoWeAre
+          title1="Why Healthcare Leads Require"
+          title2=" a Different Approach"
+          img="leads-1.webp"
+          paragraph={`
             Most brokers treat leads as a commodity. We don’t. Healthcare is a high-compliance, high-competition industry—meaning intent and quality matter more than volume. Our background in Google Ads, audience targeting, and creative optimization gives us an edge in generating genuine intent traffic, not just random clicks.
 Key Point Highlights:<br/><br/>
             <ul>
@@ -38,28 +52,30 @@ Key Point Highlights:<br/><br/>
               <li>Compliance-first lead generation</li>
               <li>Optimized campaigns for healthcare verticals</li>
               </ul>`}
-        images={"leads-1.webp"}
-        btn_text={"Explore work"}
-        btn_link={"/services/website-development"}
-      />
+        />
       </div>
-      <div className="health_left_section">
-      <RightImgSection
-        title={"The Dotoli Digital Advantage"}
-        description={`
+      <LeftImgSection
+          title={"Website Development"}
+          description={
+            "Luxury, conversion-focused websites tailored to your brand – specializing in real estate, home services, and corporate sites that impress and perform."
+          }
+          images={"technis-main-landscape.webp"}
+          btn_text={"Explore work"}
+          btn_link={"/services/website-development"}
+        />
+      <WhoWeAre
+        smclass={"sm-right-wwa"}
+        title1="The Dotoli "
+        title2="Digital Advantage"
+        img="leads-2.webp"
+        paragraph={`
             We bridge the gap between publishers and buyers. Instead of acting as a middleman, we:<br/><br/>
             <ul>
               <li>Speak the language of publishers → campaigns, creatives, and data optimization.</li>
               <li>Understand the needs of call centers → dispo feedback, close rate drivers, and compliance.</li>
               <li>Move fast with insights → adjusting in real time to maximize ROI.</li>
               </ul>`}
-        images={"leads-2.webp"}
-        btn_text={"Explore work"}
-        btn_link={"/services/seo-expert"}
       />
-      </div>
-      
-      
 
       <section>
         <div className="container">
@@ -71,23 +87,20 @@ Key Point Highlights:<br/><br/>
           />
         </div>
       </section>
-      
-      <div className="health_left_section">
-        <RightImgSection
-          title={"How We Deliver Quality Healthcare Leads"}
-          description={`
-            
-              <ul>
-                <li><strong>Step 1: Audience Targetingstrong</strong> - Intent-driven Google Ads, social ads, and native campaigns.</li>
-                <li><strong>Step 2: Creative Optimization</strong> - High-converting copy and visuals designed for healthcare compliance.</li>
-                <li><strong>Step 3: Real-Time Feedback Loops</strong> - Using dispo and buyer feedback to refine campaigns daily.</li>
-                <li><strong>Step 4: Scalable Partnerships</strong> - Flexible capacity, tailored lead flow, and nationwide reach.</li>
-                </ul>`}
-          images={"leads-3.webp"}
-          btn_text={"Explore work"}
-          btn_link={"/services/seo-expert"}
-        />
-      </div>
+
+      <WhoWeAre
+        title1="How We Deliver "
+        title2="Quality Healthcare Leads"
+        img="leads-3.webp"
+        paragraph={`
+           
+            <ul>
+              <li><strong>Step 1: Audience Targetingstrong</strong> - Intent-driven Google Ads, social ads, and native campaigns.</li>
+              <li><strong>Step 2: Creative Optimization</strong> - High-converting copy and visuals designed for healthcare compliance.</li>
+              <li><strong>Step 3: Real-Time Feedback Loops</strong> - Using dispo and buyer feedback to refine campaigns daily.</li>
+              <li><strong>Step 4: Scalable Partnerships</strong> - Flexible capacity, tailored lead flow, and nationwide reach.</li>
+              </ul>`}
+      />
 
       <WhoWeAre
         smclass={"sm-right-wwa"}
