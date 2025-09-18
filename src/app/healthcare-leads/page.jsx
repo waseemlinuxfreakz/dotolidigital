@@ -71,12 +71,11 @@ Key Point Highlights:<br/><br/>
           />
         </div>
       </section>
-
-      <WhoWeAre
-        title1="How We Deliver "
-        title2="Quality Healthcare Leads"
-        img="leads-3.webp"
-        paragraph={`
+      
+      <div className="health_left_section">
+      <RightImgSection
+        title={"How We Deliver Quality Healthcare Leads"}
+        description={`
            
             <ul>
               <li><strong>Step 1: Audience Targetingstrong</strong> - Intent-driven Google Ads, social ads, and native campaigns.</li>
@@ -84,7 +83,11 @@ Key Point Highlights:<br/><br/>
               <li><strong>Step 3: Real-Time Feedback Loops</strong> - Using dispo and buyer feedback to refine campaigns daily.</li>
               <li><strong>Step 4: Scalable Partnerships</strong> - Flexible capacity, tailored lead flow, and nationwide reach.</li>
               </ul>`}
+        images={"leads-3.webp"}
+        btn_text={"Explore work"}
+        btn_link={"/services/seo-expert"}
       />
+      </div>
 
       <WhoWeAre
         smclass={"sm-right-wwa"}
