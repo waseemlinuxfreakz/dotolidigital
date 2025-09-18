@@ -28,16 +28,17 @@ export default function page() {
       />
       <div id="team-hero"></div>
 
-      
+      <div className="health_left_section">
         <RightImgSection
-          title={"Seo Expert"}
+          title={"Why Healthcare Leads Require a Different Approach"}
           description={
             "Our SEO services are designed to improve your search engine rankings, increase organic traffic, and convert visitors into customers. Let us help you dominate search results."
           }
-          images={"loftloom-main-landscape.webp"}
+          images={"leads-1.webp"}
           btn_text={"Explore work"}
           btn_link={"/services/seo-expert"}
         />
+        </div>
 
       <div className="sm-img-fix">
         <WhoWeAre
