@@ -2312,3 +2312,7 @@ article.max-w-4xl.mx-auto.p-8.bg-white.shadow-sm.rounded-lg.prose.lg\:prose-lg.c
 .health_left_section .content {
     width: 60% !important;
 }
+.health_left_section .img-box img {
+    width: 450px !important;
+    height: 460px !important;
+}
