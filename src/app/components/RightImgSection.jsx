@@ -59,7 +59,7 @@ export function RightImgSection({ title, description, images, btn_text, btn_link
             <div className="content" ref={contentRef}>
               <h2 className="title-2"> {title}</h2>
               <p className="text-1" dangerouslySetInnerHTML={{ __html: description }} />
-
+          
               <div className="btn">
                 {/* <Link href="/about">Explore work</Link> */}
                 <Link href={btn_link}>{btn_text}</Link>
