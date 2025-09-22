@@ -61,15 +61,26 @@ Key Point Highlights:<br/><br/>
         />
       </div> */}
 
-      <LeftImgSection
-          title={"Website Development"}
-          description={
-            "Luxury, conversion-focused websites tailored to your brand – specializing in real estate, home services, and corporate sites that impress and perform."
-          }
-          images={"technis-main-landscape.webp"}
+      <div className="health_left_section">
+
+        <LeftImgSection
+          title={"The Dotoli Digital Advantage"}
+          description={`
+            We bridge the gap between publishers and buyers. Instead of acting as a middleman, we:<br/><br/>
+            <ul>
+              <li>Speak the language of publishers → campaigns, creatives, and data optimization.</li>
+              <li>Understand the needs of call centers → dispo feedback, close rate drivers, and compliance.</li>
+              <li>Move fast with insights → adjusting in real time to maximize ROI.</li>
+              </ul>`}
+          images={"leads-2.webp"}
           btn_text={"Explore work"}
           btn_link={"/services/website-development"}
         />
+
+      </div>
+
+      
+
       <WhoWeAre
         smclass={"sm-right-wwa"}
         title1="The Dotoli "
