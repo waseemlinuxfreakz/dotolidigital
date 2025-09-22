@@ -92,6 +92,18 @@ Key Point Highlights:<br/><br/>
         </div>
       </section>
 
+      <section className="button-health-center">
+          <div className="container">
+            <div className="btn-group">
+              <div className="btn">
+                <div className="btn btn--pulse">
+                    <Link className="btn-elem" href="/contact">Book a Free Strategy Call</Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
       <div className="health_left_section">
           <RightImgSection
             title={"How We Deliver <br> Quality Healthcare Leads"}
