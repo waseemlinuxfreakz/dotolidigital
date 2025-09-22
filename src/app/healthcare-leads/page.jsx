@@ -64,7 +64,7 @@ Key Point Highlights:<br/><br/>
       <div className="health_left_section">
 
         <LeftImgSection
-          title={"The Dotoli Digital Advantage"}
+          title={"The Dotoli <br>Digital Advantage"}
           description={`
             We bridge the gap between publishers and buyers. Instead of acting as a middleman, we:<br/><br/>
             <ul>
