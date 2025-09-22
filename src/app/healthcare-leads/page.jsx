@@ -82,7 +82,7 @@ Key Point Highlights:<br/><br/>
 
 
       <section>
-        <div className="container">
+        <div className="container middle-health-img">
           <Image
             src="/images/leads-full.webp"
             alt=""
