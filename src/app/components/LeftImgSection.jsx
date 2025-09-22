@@ -61,7 +61,7 @@ export function LeftImgSection({ title, description, images, btn_text, btn_link 
               </Link>
             </div>
             <div className="content" ref={content1Ref}>
-              <h2 className="title-2" >{title}</h2>
+              <h2 className="title-2" dangerouslySetInnerHTML={{ __html: title }}/>
               <p
                     className="text-1"
                     dangerouslySetInnerHTML={{ __html: description }}
