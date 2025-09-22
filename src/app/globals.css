@@ -2329,3 +2329,10 @@ section.button-health-center .btn-group {
   margin-top: 30px;
   margin-bottom: 20px;
 }
+.container.middle-health-img img {
+    width: 80% !important;
+}
+
+.container.middle-health-img {
+    text-align: center;
+}
