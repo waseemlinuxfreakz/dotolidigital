@@ -73,7 +73,7 @@ Key Point Highlights:<br/><br/>
               <li>Move fast with insights → adjusting in real time to maximize ROI.</li>
               </ul>`}
           images={"leads-2.webp"}
-          btn_text={"Explore work"}
+          btn_text={""}
           btn_link={"/services/website-development"}
         />
 
