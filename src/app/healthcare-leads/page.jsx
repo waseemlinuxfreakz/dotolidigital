@@ -76,7 +76,7 @@ Key Point Highlights:<br/><br/>
           btn_text={"Explore work"}
           btn_link={"/services/website-development"}
         />
-        
+
       </div>
 
 
@@ -108,26 +108,11 @@ Key Point Highlights:<br/><br/>
           />
         </div>
 
-      <WhoWeAre
-        title1="How We Deliver "
-        title2="Quality Healthcare Leads"
-        img="leads-3.webp"
-        paragraph={`
-           
-            <ul>
-              <li><strong>Step 1: Audience Targetingstrong</strong> - Intent-driven Google Ads, social ads, and native campaigns.</li>
-              <li><strong>Step 2: Creative Optimization</strong> - High-converting copy and visuals designed for healthcare compliance.</li>
-              <li><strong>Step 3: Real-Time Feedback Loops</strong> - Using dispo and buyer feedback to refine campaigns daily.</li>
-              <li><strong>Step 4: Scalable Partnerships</strong> - Flexible capacity, tailored lead flow, and nationwide reach.</li>
-              </ul>`}
-      />
+        <div className="health_left_section">
 
-      <WhoWeAre
-        smclass={"sm-right-wwa"}
-        title1="Who We "
-        title2="Work With"
-        img="leads-4.webp"
-        paragraph={`
+            <LeftImgSection
+          title={"Who We <br>Work With"}
+          description={`
             We power growth for:<br/><br/>
             <ul>
               <li>Call centers seeking consistent high-intent calls</li>
@@ -138,8 +123,18 @@ Key Point Highlights:<br/><br/>
             <br/>if you need healthcare leads that close, we’re the partner you’ve been looking for.
               
               `}
-      />
+          images={"leads-4.webp"}
+          btn_text={"Explore work"}
+          btn_link={"/services/website-development"}
+        />
 
+        </div>
+
+        <section>
+          <div className="container">
+              
+          </div>
+        </section>
       <br />
       <br />
       <br />
