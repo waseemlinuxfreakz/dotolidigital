@@ -76,24 +76,9 @@ Key Point Highlights:<br/><br/>
           btn_text={"Explore work"}
           btn_link={"/services/website-development"}
         />
-
+        
       </div>
 
-      
-
-      <WhoWeAre
-        smclass={"sm-right-wwa"}
-        title1="The Dotoli "
-        title2="Digital Advantage"
-        img="leads-2.webp"
-        paragraph={`
-            We bridge the gap between publishers and buyers. Instead of acting as a middleman, we:<br/><br/>
-            <ul>
-              <li>Speak the language of publishers → campaigns, creatives, and data optimization.</li>
-              <li>Understand the needs of call centers → dispo feedback, close rate drivers, and compliance.</li>
-              <li>Move fast with insights → adjusting in real time to maximize ROI.</li>
-              </ul>`}
-      />
 
       <section>
         <div className="container">
@@ -105,6 +90,23 @@ Key Point Highlights:<br/><br/>
           />
         </div>
       </section>
+
+      <div className="health_left_section">
+          <RightImgSection
+            title={"How We Deliver <br> Quality Healthcare Leads"}
+            description={`
+           
+            <ul>
+              <li><strong>Step 1: Audience Targetingstrong</strong> - Intent-driven Google Ads, social ads, and native campaigns.</li>
+              <li><strong>Step 2: Creative Optimization</strong> - High-converting copy and visuals designed for healthcare compliance.</li>
+              <li><strong>Step 3: Real-Time Feedback Loops</strong> - Using dispo and buyer feedback to refine campaigns daily.</li>
+              <li><strong>Step 4: Scalable Partnerships</strong> - Flexible capacity, tailored lead flow, and nationwide reach.</li>
+              </ul>`}
+            images={"leads-3.webp"}
+            btn_text={"Explore work"}
+            btn_link={"/services/seo-expert"}
+          />
+        </div>
 
       <WhoWeAre
         title1="How We Deliver "
