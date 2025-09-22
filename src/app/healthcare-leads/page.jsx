@@ -40,7 +40,6 @@ export default function page() {
                 <li>Optimized campaigns for healthcare verticals</li>
                 </ul>`}
             images={"leads-1.webp"}
-            btn_text={"Explore work"}
             btn_link={"/services/seo-expert"}
           />
         </div>
@@ -73,7 +72,6 @@ Key Point Highlights:<br/><br/>
               <li>Move fast with insights → adjusting in real time to maximize ROI.</li>
               </ul>`}
           images={"leads-2.webp"}
-          btn_text={""}
           btn_link={"/services/website-development"}
         />
 
