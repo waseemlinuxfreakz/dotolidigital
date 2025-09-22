@@ -12,6 +12,7 @@ import { CounterSection } from "../components/CounterSection";
 import Image from "next/image";
 import { LeftImgSection } from "../components/LeftImgSection";
 import { RightImgSection } from "../components/RightImgSection";
+import Link from "next/link";
 
 export default function page() {
   const [showPopup, setShowPopup] = useState(false);
