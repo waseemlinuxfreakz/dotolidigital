@@ -2319,3 +2319,10 @@ article.max-w-4xl.mx-auto.p-8.bg-white.shadow-sm.rounded-lg.prose.lg\:prose-lg.c
 .health_left_section .btn {
     display: none;
 }
+section.button-health-center .btn-group {
+    text-align: center;
+    margin: 0 auto;
+    display: flex
+;
+    justify-content: center;
+}
