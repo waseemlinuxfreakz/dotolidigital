@@ -97,7 +97,7 @@ Key Point Highlights:<br/><br/>
             <div className="btn-group">
               <div className="btn">
                 <div className="btn btn--pulse">
-                    <Link className="btn-elem">Book a Free Strategy Call</Link>
+                    <Link className="btn-elem" href="/contact" onBtnClick={() => setShowPopup(true)}>Book a Free Strategy Call</Link>
                 </div>
               </div>
             </div>
