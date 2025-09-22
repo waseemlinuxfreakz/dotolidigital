@@ -2331,6 +2331,9 @@ section.button-health-center .btn-group {
 }
 .container.middle-health-img img {
     width: 80% !important;
+    border-radius: 20px;
+    border:5px solid;
+    border-color: #c5fcfc;
 }
 
 .container.middle-health-img {
