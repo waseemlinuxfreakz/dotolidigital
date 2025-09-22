@@ -91,8 +91,8 @@ Key Point Highlights:<br/><br/>
           />
         </div>
       </section>
-
-      <section className="button-health-center">
+      
+      <section className="button-health-center health-care-centers">
           <div className="container">
             <div className="btn-group">
               <div className="btn">
