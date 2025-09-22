@@ -97,7 +97,11 @@ Key Point Highlights:<br/><br/>
             <div className="btn-group">
               <div className="btn">
                 <div className="btn btn--pulse">
-                    <Link className="btn-elem" href="/contact" onBtnClick={() => setShowPopup(true)}>Book a Free Strategy Call</Link>
+                    <button
+                        type="button"
+                        onClick={() => setShowPopup(true)}
+                        className="btn-elem"
+                      >Book a Free Strategy Call</button>
                 </div>
               </div>
             </div>
@@ -148,7 +152,11 @@ Key Point Highlights:<br/><br/>
             <div className="btn-group">
               <div className="btn">
                 <div className="btn btn--pulse">
-                    <Link className="btn-elem" href="/contact">Book a Free Strategy Call</Link>
+                    <button
+                        type="button"
+                        onClick={() => setShowPopup(true)}
+                        className="btn-elem"
+                      >Book a Free Strategy Call</button>
                 </div>
               </div>
             </div>
