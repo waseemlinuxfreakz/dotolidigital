@@ -131,7 +131,7 @@ Key Point Highlights:<br/><br/>
 
         </div>
 
-        <section>
+        <section className="button-health-center">
           <div className="container">
             <div className="btn-group">
               <div className="btn">
