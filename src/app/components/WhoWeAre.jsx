@@ -13,6 +13,7 @@ export function WhoWeAre({
   btn_link,
   img,
   smclass,
+  headertag = "h3",
 }) {
   const whoWeAreRef = useRef(null);
   const text1Ref = useRef(null);
@@ -59,6 +60,9 @@ export function WhoWeAre({
     { scope: whoWeAreRef }
   );
 
+  // ✅ Fix: Capitalize dynamic header tag
+  const HeaderTag = headertag;
+
   return (
     <>
       <section className="recent-work-sec who-we-are">
@@ -66,14 +70,14 @@ export function WhoWeAre({
           <div className={`flex-box ${smclass ? smclass : ""}`}>
             <div className="text">
               <div>
-                <h3 className="title-3 text-left" ref={whoWeAreRef}>
+                <HeaderTag className="title-3 text-left" ref={whoWeAreRef}>
                   <span className="block sm1" ref={text1Ref}>
                     {title1}
                   </span>
                   <span className="block sm2" ref={text2Ref}>
                     {title2}
                   </span>
-                </h3>
+                </HeaderTag>
                 <div className="box1">
                   <p
                     className="text-1"

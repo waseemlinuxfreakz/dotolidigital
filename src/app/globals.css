@@ -2275,67 +2275,92 @@ main.blog-single .container article p {
     hue-rotate(183deg) brightness(93%) contrast(88%);
 }
 ul.dropdown-list.footer-links li a {
-    text-decoration: none;
-    color: #c5fcfc;
+  text-decoration: none;
+  color: #c5fcfc;
 }
 
 ul.dropdown-list.footer-links {
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
-    padding: 0;
-    margin-left: 0 !important;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  margin-left: 0 !important;
 }
 
 ul.dropdown-list.footer-links li {
-    display: flex;
+  display: flex;
 }
 
 .sm2-footer {
-    width: 100%;
+  width: 100%;
 }
 article.max-w-4xl.mx-auto.p-8.bg-white.shadow-sm.rounded-lg.prose.lg\:prose-lg.content-section-terms {
-    width: 80%;
-    margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .health_left_section section.right-img-section .content h2.title-2 {
-    font-size: 55px;
-    line-height: 74px;
-    font-weight: 400;
+  font-size: 55px;
+  line-height: 74px;
+  font-weight: 400;
 }
 
 .health_left_section .img-box {
-    width: 40% !important;
+  width: 40% !important;
 }
 .health_left_section .content {
-    width: 60% !important;
+  width: 60% !important;
 }
 .health_left_section .img-box img {
-    width: 450px !important;
-    height: 460px !important;
+  width: 450px !important;
+  height: 460px !important;
 }
 .health_left_section .btn {
-    display: none;
+  display: none;
 }
 section.button-health-center .btn-group {
-    text-align: center;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
-.health-care-centers{
+.health-care-centers {
   margin-top: 30px;
   margin-bottom: 20px;
 }
 .container.middle-health-img img {
-    width: 80% !important;
-    border-radius: 20px;
-    border:5px solid;
-    border-color: #c5fcfc;
+  width: 80% !important;
+  border-radius: 20px;
+  border: 5px solid;
+  border-color: #c5fcfc;
 }
 
 .container.middle-health-img {
-    text-align: center;
+  text-align: center;
+}
+
+/* 
+======================
+seo-expert-hero
+======================
+*/
+
+.seo-expert-hero .title-1 {
+  font-size: 65px;
+  line-height: 85px;
+}
+/*ipad*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .seo-expert-hero .title-1 {
+    font-size: 52px;
+    line-height: 72px;
+  }
+}
+/*all mobile*/
+@media (max-width: 767px) {
+  body .seo-expert-hero .title-1 {
+    font-size: 28px;
+    line-height: 42px;
+  }
 }
