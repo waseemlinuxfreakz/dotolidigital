@@ -41,14 +41,14 @@ export default function page() {
       />
       <ServiceDetailsSection
         img="/images/ia3.webp"
-        heading="End-to-End Lead Automation with 15+ Custom Zaps for JoshDotoliGroup"
+        heading="End-to-End Lead Automation with 15+ Custom Zaps for Josh DotoliGroup"
         text="We set up over 15 custom Zaps to automate lead capture, syncing, and follow-ups across Facebook, Google Forms, Outlook, and CRMs. This system helps JoshDotoliGroup respond faster, stay organized, and scale lead handling with zero manual effort."
       />
 
       {/* crm-automation */}
       <ServiceDetailsSection
         img="/images/crm1.webp"
-        heading="CRM Setup & Lead Activity Tracking for Trentium Capital Using Close"
+        heading="CRM Setup & Lead Activity Tracking for Trentium Capital Using Close CRM"
         text="We configured and streamlined Close CRM for Trentium Capital to manage their full sales workflow — from lead intake to follow-up tracking. This setup enabled the team to monitor performance across 2,100+ leads, 1,100+ outbound calls, and 968 emails with clarity and consistency. With custom workflows and reporting, Trentium operates with better pipeline visibility and team accountability."
       />
       <ServiceDetailsSection
@@ -64,21 +64,6 @@ export default function page() {
         text="The screenshot highlights a positive trend in organic keyword performance across four different digital assets. One asset saw a significant increase to 13.4K keywords (+5.24%), while
                   others recorded even more impressive growth rates +66.43% (476 keywords), +58.33% (494 keywords), and +7.24% (741 keywords). This data reflects improved SEO visibility and content
                   performance, indicating successful optimization strategies and rising organic search presence."
-      />
-
-      <ServiceDetailsSection
-        img="/images/x2.webp"
-        heading="Growth in Organic Clicks & Impressions"
-        text="The screenshot displays a positive upward trend in SEO performance over the past three months. Total organic clicks reached 13.3K, while impressions climbed to 1.48 million, reflecting increased visibility in search results. The overall trajectory indicates successful optimization efforts and rising organic reach."
-      />
-
-      {/* digital-marketing */}
-      <ServiceDetailsSection
-        img="/images/x1.webp"
-        heading="Growth in Organic Keywords Across Multiple Assets"
-        text="The screenshot highlights a positive trend in organic keyword performance across four different digital assets. One asset saw a significant increase to 13.4K keywords (+5.24%), while
-                    others recorded even more impressive growth rates +66.43% (476 keywords), +58.33% (494 keywords), and +7.24% (741 keywords). This data reflects improved SEO visibility and content
-                    performance, indicating successful optimization strategies and rising organic search presence."
       />
 
       <ServiceDetailsSection
