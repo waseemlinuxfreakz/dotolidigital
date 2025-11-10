@@ -69,10 +69,11 @@ function Footer() {
             <div className="btn-group">
               <div className="btn">
                 <div className="btn btn--pulse">
-                    <Link className="btn-elem" href="/contact">Book a Free Strategy Call</Link>
+                  <Link className="btn-elem" href="/contact">
+                    Book a Free Strategy Call
+                  </Link>
                 </div>
                 {/*  */}
-                
               </div>
             </div>
           </div>
@@ -82,17 +83,16 @@ function Footer() {
       <footer className="footer">
         <div className="container">
           <div className="boxa">
-            <a className="f-link sm1" href="mailto:info@dotolidigital.com">
+            <a className="f-link sm1" href="mailto:sales@dotolidigital.com">
               <p className="ft1">Email</p>
-              <p className="ft2">info@dotolidigital.com</p>
+              <p className="ft2">sales@dotolidigital.com</p>
             </a>
 
             <a className="f-link sm2" href="tel:+19543838093">
               <p className="ft1">Call</p>
               <p className="ft2">(954) 383-8093</p>
             </a>
-            
-            
+
             <a className="f-link sm4" href="">
               <p className="ft1"></p>
               <p className="ft2">
@@ -105,8 +105,12 @@ function Footer() {
           <div className="boxa-footer">
             <div className="sm2-footer">
               <ul className="dropdown-list footer-links">
-                <li><Link href="/privacy">Privacy Policy</Link></li>
-                <li><Link href="/terms">Terms & Condition</Link></li>
+                <li>
+                  <Link href="/privacy">Privacy Policy</Link>
+                </li>
+                <li>
+                  <Link href="/terms">Terms & Condition</Link>
+                </li>
               </ul>
             </div>
           </div>

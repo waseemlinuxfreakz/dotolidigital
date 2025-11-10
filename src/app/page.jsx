@@ -82,7 +82,7 @@ export default function Home() {
           description={
             "Where strategy meets style. From identity design to storytelling, we build brands that not only look good—but mean something."
           }
-          images={"k2.webp"}
+          images={"ppsms1.webp"}
           btn_text={"Explore work"}
           btn_link={"/services/branding-creative"}
         />
@@ -123,30 +123,35 @@ export default function Home() {
       <NewsTracker />
       {/* <DribbbleSection /> */}
       <div className="container">
-          <div className="dribbble-middle-text project-section-container">
-            <Image src="/images/logo.png" alt="Logo" width={200} height={60} priority />
-            <p className="text-2">
-              <strong>Design that Speaks. Strategy that Performs. </strong>
-              Explore the creative edge where visuals meet value.
-            </p>
-            {/* <div className="btn-group">
+        <div className="dribbble-middle-text project-section-container">
+          <Image
+            src="/images/logo.png"
+            alt="Logo"
+            width={200}
+            height={60}
+            priority
+          />
+          <p className="text-2">
+            <strong>Design that Speaks. Strategy that Performs. </strong>
+            Explore the creative edge where visuals meet value.
+          </p>
+          {/* <div className="btn-group">
               <div className="btn btn--pulse">
                 <Link href="/services" className="btn-elem">Explore work</Link>
 
               </div>
             </div> */}
-            <div className="btn-group">
-                <div className="btn">
-                  <div className="btn btn--pulse">
-                    
-                      <Link href="/services" className="btn-elem">Explore work</Link>
-                      
-                  </div>
-                </div>
+          <div className="btn-group">
+            <div className="btn">
+              <div className="btn btn--pulse">
+                <Link href="/services" className="btn-elem">
+                  Explore work
+                </Link>
               </div>
+            </div>
           </div>
+        </div>
       </div>
-      
 
       <JungleSection title1={"Join Us"} title2={""} title3={""} />
       <SocialSection />
