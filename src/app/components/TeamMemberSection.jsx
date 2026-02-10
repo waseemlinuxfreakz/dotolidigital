@@ -11,14 +11,14 @@ export function TeamMemberSection() {
       <div className="team-member">
         <Swiper
           modules={[Autoplay]}
-          slidesPerView={3.5}
+          slidesPerView={4}
           spaceBetween={30}
           pagination={{
-            clickable: true
+            clickable: true,
           }}
           autoplay={{
             delay: 2500, // Time between slides in ms
-            disableOnInteraction: false // Autoplay keeps going after user interaction
+            disableOnInteraction: false, // Autoplay keeps going after user interaction
           }}
           navigation={true}
           className="mySwiper"
@@ -26,43 +26,73 @@ export function TeamMemberSection() {
             // when window width is >= 320px (mobile)
             320: {
               slidesPerView: 1.1,
-              spaceBetween: 20
+              spaceBetween: 20,
             },
             // when window width is >= 768px (tablet)
             768: {
               slidesPerView: 2.5,
-              spaceBetween: 25
+              spaceBetween: 25,
             },
             // when window width is >= 1024px (desktop)
             1024: {
-              slidesPerView: 3,
-              spaceBetween: 30
-            }
+              slidesPerView: 4,
+              spaceBetween: 30,
+            },
           }}
         >
-           <SwiperSlide>
+          <SwiperSlide>
             <div className="item">
-              <Image src="/images/people-2.webp" alt="member" width={1000} height={1200} />
+              <Image
+                src="/images/people-2.webp"
+                alt="member"
+                width={1000}
+                height={1200}
+              />
               <div className="text">
                 <p className="name">Jared Dotoli</p>
                 <p className="position">Founder & CEO</p>
               </div>
             </div>
           </SwiperSlide>
-          
+
           <SwiperSlide>
             <div className="item">
-              <Image src="/images/name.jpg" alt="member" width={1000} height={1200} />
+              <Image
+                src="/images/name.jpg"
+                alt="member"
+                width={1000}
+                height={1200}
+              />
               <div className="text">
                 <p className="name">Md Khalid</p>
                 <p className="position">Project Manager</p>
               </div>
             </div>
           </SwiperSlide>
-         
+
           <SwiperSlide>
             <div className="item">
-              <Image src="/images/people-3.webp" alt="member" width={1000} height={1200} />
+              <Image
+                src="/images/wmaan.webp"
+                alt="member"
+                width={1000}
+                height={1200}
+              />
+              <div className="text">
+                <p className="name">Alicia Rinaldi</p>
+                <p className="position">Creative Head</p>
+              </div>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className="item">
+              <Image
+                src="/images/people-3.webp"
+                alt="member"
+                width={1000}
+                height={1200}
+              />
               <div className="text">
                 <p className="name">Waseem Ahmed Tunio</p>
                 <p className="position">Full Stack Developer</p>
