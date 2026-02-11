@@ -23,18 +23,23 @@ export default function page() {
       />
 
       <div id="team-hero"></div>
-      <TextCounterSection text={`Our results come from experience — not hype.<br/> Every project is powered by a team that understands<br/> both strategy and execution.`} />
+      <TextCounterSection
+        text={`Our results come from experience — not hype.<br/> Every project is powered by a team that understands<br/> both strategy and execution.`}
+      />
 
       <TeamMemberSection />
 
-      {/* <JungleSection
+      {/* 
+      <JungleSection
         title1={"we're hiring"}
         title2={"talented marketers"}
         title3={"& creators"}
         description={`Passionate about SEO, storytelling, <br/>or digital content? We’d love to hear from you.`}
         btn_text={"Meet the Team"}
         btn_link={"/about"}
-      /> */}
+      /> 
+      digital-marketing/performance-marketing
+      */}
 
       <BannerSection title={"Built On Strategy. Backed By Results."} />
       <Footer />
