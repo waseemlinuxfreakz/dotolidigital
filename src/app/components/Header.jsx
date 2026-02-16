@@ -7,12 +7,22 @@ import { ThemeToggle } from "./ThemeToggle";
 
 function Header() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  // ✅ separate submenu states
+  const [digitalMarketingOpen, setDigitalMarketingOpen] = useState(false);
+  const [websiteDevelopmentOpen, setWebsiteDevelopmentOpen] = useState(false);
+  const [brandingCreativeOpen, setBrandingCreativeOpen] = useState(false);
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
   const closeMenu = () => {
     setIsMenuOpen(false);
     setDropdownOpen(false);
+    setDigitalMarketingOpen(false);
+    setWebsiteDevelopmentOpen(false);
+    setBrandingCreativeOpen(false);
   };
 
   useEffect(() => {
@@ -93,6 +103,7 @@ function Header() {
                     Our Work
                   </Link>
                 </li>
+
                 <li>
                   <Link
                     href="/about-us"
@@ -104,6 +115,7 @@ function Header() {
                   </Link>
                 </li>
 
+                {/* Services Dropdown */}
                 <li className="menu-dropdown">
                   <div className="services-link-wrapper">
                     <Link
@@ -114,9 +126,20 @@ function Header() {
                     >
                       Services
                     </Link>
+
                     <button
                       className="dropdown-toggle-btn"
-                      onClick={() => setDropdownOpen(!dropdownOpen)}
+                      onClick={() => {
+                        const next = !dropdownOpen;
+                        setDropdownOpen(next);
+
+                        // ✅ when closing services, reset ALL submenus
+                        if (!next) {
+                          setDigitalMarketingOpen(false);
+                          setWebsiteDevelopmentOpen(false);
+                          setBrandingCreativeOpen(false);
+                        }
+                      }}
                       tabIndex={isMenuOpen ? 0 : -1}
                       aria-label="Toggle Services Dropdown"
                     >
@@ -126,24 +149,133 @@ function Header() {
 
                   {dropdownOpen && (
                     <ul className="dropdown-list">
-                      <li>
-                        <Link
-                          href="/services/digital-marketing"
-                          className="dropdown-link"
-                          onClick={closeMenu}
-                        >
-                          Digital Marketing
-                        </Link>
+                      {/* Digital Marketing with Submenu */}
+                      <li className="dropdown-item-with-submenu">
+                        <div className="submenu-title-row sm-submenu">
+                          <Link
+                            href="/services/digital-marketing"
+                            className="dropdown-link"
+                            onClick={closeMenu}
+                          >
+                            Digital Marketing
+                          </Link>
+
+                          <button
+                            className="dropdown-toggle-btn"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              setDigitalMarketingOpen((prev) => !prev);
+
+                              // ✅ close others
+                              setWebsiteDevelopmentOpen(false);
+                              setBrandingCreativeOpen(false);
+                            }}
+                            aria-label="Toggle Digital Marketing Submenu"
+                            tabIndex={isMenuOpen ? 0 : -1}
+                          >
+                            {digitalMarketingOpen ? "▲" : "▼"}
+                          </button>
+                        </div>
+
+                        {digitalMarketingOpen && (
+                          <ul className="sub-dropdown-list sub-dropdown-list-2">
+                            <li>
+                              <Link
+                                href="/services/digital-marketing/performance-marketing"
+                                className="dropdown-link"
+                                onClick={closeMenu}
+                              >
+                                Performance Marketing
+                              </Link>
+                            </li>
+
+                            <li>
+                              <Link
+                                href="/services/digital-marketing/social-media-marketing"
+                                className="dropdown-link"
+                                onClick={closeMenu}
+                              >
+                                Social Media Marketing
+                              </Link>
+                            </li>
+
+                            <li>
+                              <Link
+                                href="/services/digital-marketing/conversion-rate-optimization"
+                                className="dropdown-link"
+                                onClick={closeMenu}
+                              >
+                                Conversion Rate Optimization
+                              </Link>
+                            </li>
+                          </ul>
+                        )}
                       </li>
-                      <li>
-                        <Link
-                          href="/services/website-development"
-                          className="dropdown-link"
-                          onClick={closeMenu}
-                        >
-                          Website Development
-                        </Link>
+
+                      {/* Website Development with Submenu */}
+                      <li className="dropdown-item-with-submenu">
+                        <div className="submenu-title-row sm-submenu">
+                          <Link
+                            href="/services/website-development"
+                            className="dropdown-link"
+                            onClick={closeMenu}
+                          >
+                            Website Development
+                          </Link>
+
+                          <button
+                            className="dropdown-toggle-btn"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              setWebsiteDevelopmentOpen((prev) => !prev);
+
+                              // ✅ close others
+                              setDigitalMarketingOpen(false);
+                              setBrandingCreativeOpen(false);
+                            }}
+                            aria-label="Toggle Website Development Submenu"
+                            tabIndex={isMenuOpen ? 0 : -1}
+                          >
+                            {websiteDevelopmentOpen ? "▲" : "▼"}
+                          </button>
+                        </div>
+
+                        {websiteDevelopmentOpen && (
+                          <ul className="sub-dropdown-list sub-dropdown-list-2">
+                            <li>
+                              <Link
+                                href="/services/website-development/custom-website-development"
+                                className="dropdown-link"
+                                onClick={closeMenu}
+                              >
+                                Custom Website Development
+                              </Link>
+                            </li>
+
+                            <li>
+                              <Link
+                                href="/services/website-development/ecommerce-website-development"
+                                className="dropdown-link"
+                                onClick={closeMenu}
+                              >
+                                eCommerce Website Development
+                              </Link>
+                            </li>
+
+                            <li>
+                              <Link
+                                href="/services/website-development/landing-page-design-development"
+                                className="dropdown-link"
+                                onClick={closeMenu}
+                              >
+                                Landing Page Design & Development
+                              </Link>
+                            </li>
+                          </ul>
+                        )}
                       </li>
+
+                      {/* SEO / VR */}
                       <li>
                         <Link
                           href="/services/seo-expert"
@@ -162,15 +294,71 @@ function Header() {
                           VR Experiences
                         </Link>
                       </li>
-                      <li>
-                        <Link
-                          href="/services/branding-creative"
-                          className="dropdown-link"
-                          onClick={closeMenu}
-                        >
-                          Branding & Creative
-                        </Link>
+
+                      {/* Branding & Creative with Submenu */}
+                      <li className="dropdown-item-with-submenu">
+                        <div className="submenu-title-row sm-submenu">
+                          <Link
+                            href="/services/branding-creative"
+                            className="dropdown-link"
+                            onClick={closeMenu}
+                          >
+                            Branding & Creative
+                          </Link>
+
+                          <button
+                            className="dropdown-toggle-btn"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              setBrandingCreativeOpen((prev) => !prev);
+
+                              // ✅ close others
+                              setDigitalMarketingOpen(false);
+                              setWebsiteDevelopmentOpen(false);
+                            }}
+                            aria-label="Toggle Branding & Creative Submenu"
+                            tabIndex={isMenuOpen ? 0 : -1}
+                          >
+                            {brandingCreativeOpen ? "▲" : "▼"}
+                          </button>
+                        </div>
+
+                        {brandingCreativeOpen && (
+                          <ul className="sub-dropdown-list sub-dropdown-list-2">
+                            <li>
+                              <Link
+                                href="/services/branding-creative/brand-identity-design"
+                                className="dropdown-link"
+                                onClick={closeMenu}
+                              >
+                                Brand Identity Design
+                              </Link>
+                            </li>
+                            {/* http://dotolidigital.com/services/branding-creative/ui-ux-design/ */}
+                            <li>
+                              <Link
+                                href="/services/branding-creative/ui-ux-design"
+                                className="dropdown-link"
+                                onClick={closeMenu}
+                              >
+                                UI/UX Design
+                              </Link>
+                            </li>
+                            {/* URL: http://dotolidigital.com/services/branding-creative/ad-creative-design/ */}
+
+                            <li>
+                              <Link
+                                href="/services/branding-creative/ad-creative-design"
+                                className="dropdown-link"
+                                onClick={closeMenu}
+                              >
+                                Ad Creative Design
+                              </Link>
+                            </li>
+                          </ul>
+                        )}
                       </li>
+
                       <li>
                         <Link
                           href="/services/crm-automation"
@@ -203,6 +391,7 @@ function Header() {
                     Teams
                   </Link>
                 </li>
+
                 <li>
                   <Link
                     href="/blog"
@@ -213,6 +402,7 @@ function Header() {
                     Blog
                   </Link>
                 </li>
+
                 <li>
                   <Link
                     href="/contact"
@@ -226,6 +416,7 @@ function Header() {
               </ul>
             </nav>
 
+            {/* Social */}
             <div className="menu-social">
               <div className="info">
                 <a
@@ -246,6 +437,7 @@ function Header() {
                   target="_blank"
                   href="https://www.linkedin.com/company/dotoli-digital/"
                   tabIndex={isMenuOpen ? 0 : -1}
+                  rel="noreferrer"
                 >
                   <Image
                     src="/images/linkedin.svg"
@@ -254,11 +446,13 @@ function Header() {
                     height={64}
                   />
                 </a>
+
                 <a
                   className="s-item"
                   target="_blank"
                   href="https://www.instagram.com/dotolidigital/"
                   tabIndex={isMenuOpen ? 0 : -1}
+                  rel="noreferrer"
                 >
                   <Image
                     src="/images/instagram.svg"
@@ -267,11 +461,13 @@ function Header() {
                     height={64}
                   />
                 </a>
+
                 <a
                   className="s-item"
                   target="_blank"
                   href="https://www.youtube.com/@DotoliDigital"
                   tabIndex={isMenuOpen ? 0 : -1}
+                  rel="noreferrer"
                 >
                   <Image
                     src="/images/youtube1.svg"
@@ -280,11 +476,13 @@ function Header() {
                     height={64}
                   />
                 </a>
+
                 <a
                   className="s-item"
                   target="_blank"
                   href="https://www.facebook.com/profile.php?id=61578050977417"
                   tabIndex={isMenuOpen ? 0 : -1}
+                  rel="noreferrer"
                 >
                   <Image
                     src="/images/facebook.svg"

@@ -193,7 +193,9 @@ body {
   line-height: 26px;
   background-color: var(--background);
   color: var(--foreground);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
   overflow-x: hidden;
 }
 img {
@@ -2363,4 +2365,41 @@ seo-expert-hero
     font-size: 24px;
     line-height: 34px;
   }
+}
+
+/* 
+
+*/
+
+.sub-dropdown-list {
+  padding-left: 18px;
+  margin-top: 8px;
+}
+
+.submenu-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.services-link-wrapper {
+  gap: 200px;
+}
+
+ul.sub-dropdown-list.sub-dropdown-list-2 a.dropdown-link {
+  font-size: 24px;
+  line-height: 34px;
+  /* background: transparent; */
+}
+
+ul.sub-dropdown-list.sub-dropdown-list-2 {
+  /* background: transparent; */
+  padding-left: 24px;
+  padding-top: 16px;
+}
+
+.submenu-title-row.sm-submenu button.dropdown-toggle-btn {
+  width: 30px;
+  height: 30px;
+  font-size: 14px;
 }
