@@ -22,130 +22,73 @@ export default function page() {
 
       <div id="team-hero"></div>
       <article className="max-w-4xl mx-auto p-8 bg-white shadow-sm rounded-lg prose lg:prose-lg content-section-terms">
-        
-        <p className="mt-2 text-sm text-gray-600">Last updated: February 14, 2022</p>
-
+        <p className="mt-2 text-sm text-gray-600">
+          Last updated: February 14, 2022
+        </p>
 
         <section>
-        <p>
-        Please read these Terms of Use ("Terms", "Terms of Use") carefully before using the  website (the
-        "Service") operated by <strong>Dotoli Digital </strong> ("us", "we", or "our").
-        </p>
+          <h2>SMS Terms</h2>
 
+          <p>
+            Dotoli Digital LLC offers an SMS messaging program for marketing and
+            sales communications related to digital marketing services and lead
+            generation.
+          </p>
 
-        <p>
-        Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms.
-        These Terms apply to all visitors, users and others who access or use the Service.
-        </p>
+          <h3>Consent</h3>
+          <p>
+            By submitting your phone number and opting in, you agree to receive
+            SMS messages from Dotoli Digital LLC. Consent is not a condition of
+            purchase.
+          </p>
 
+          <h3>Message Frequency</h3>
+          <p>
+            Message frequency varies, typically up to 4 messages per month, and
+            may increase if you are actively engaging in a conversation.
+          </p>
 
-        <p>
-        By accessing or using the Service you agree to be bound by these Terms. If you disagree with any part of the
-        terms then you may not access the Service.
-        </p>
+          <h3>Message and Data Rates</h3>
+          <p>Message and data rates may apply.</p>
+
+          <h3>Opt-Out and Help</h3>
+          <p>
+            Reply <strong>STOP</strong> to opt out at any time. Reply{" "}
+            <strong>HELP</strong> for help.
+          </p>
+
+          <h3>Customer Support Contact</h3>
+          <p>For support, contact:</p>
+          <p>
+            Email:{" "}
+            <a href="mailto:info@dotolidigital.com" className="underline">
+              info@dotolidigital.com
+            </a>
+          </p>
+          <p>Phone: [Support phone]</p>
+
+          <h3>Carrier Liability Disclaimer</h3>
+          <p>Carriers are not liable for delayed or undelivered messages.</p>
+
+          <h3>Age Restriction</h3>
+          <p>
+            You must be 18 years or older to opt in to receive SMS messages.
+          </p>
+
+          <h3>Privacy Policy</h3>
+          <p>
+            Your use of the SMS program is also governed by our Privacy Policy:{" "}
+            <a
+              href="https://www.dotolidigital.com/privacy-policy/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              https://www.dotolidigital.com/privacy-policy/
+            </a>
+          </p>
         </section>
-
-
-        <section>
-        <h2>Accounts</h2>
-        <p>
-        When you create an account with us, you must provide us information that is accurate, complete, and current at
-        all times. Failure to do so constitutes a breach of the Terms, which may result in immediate termination of your
-        account on our Service.
-        </p>
-
-
-        <p>
-        You are responsible for safeguarding the password that you use to access the Service and for any activities or
-        actions under your password, whether your password is with our Service or a third-party service.
-        </p>
-
-
-        <p>
-        You agree not to disclose your password to any third party. You must notify us immediately upon becoming aware
-        of any breach of security or unauthorized use of your account.
-        </p>
-        </section>
-
-
-        <section>
-        <h2>Links To Other Web Sites</h2>
-        <p>
-        Our Service may contain links to third-party web sites or services that are not owned or controlled by Dotoli Digital.
-        </p>
-
-
-        <p>
-        Dotoli Digital has no control over, and assumes no responsibility for, the content, privacy policies, or
-        practices of any third party web sites or services. You further acknowledge and agree that Dotoli Digital shall
-        not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by
-        or in connection with use of or reliance on any such content, goods or services available on or through any such
-        web sites or services.
-        </p>
-
-
-        <p>
-        We strongly advise you to read the terms and conditions and privacy policies of any third-party web sites or
-        services that you visit.
-        </p>
-        </section>
-
-
-        <section>
-        <h2>Disclaimer</h2>
-        <p>
-        Your use of the Service is at your sole risk. The Service is provided on an "AS IS" and "AS AVAILABLE" basis.
-        The Service is provided without warranties of any kind, whether express or implied, including, but not limited
-        to, implied warranties of merchantability, fitness for a particular purpose, non-infringement or course of
-        performance.
-        </p>
-        </section>
-
-
-        <section>
-        <h2>Governing Law</h2>
-        <p>
-        These Terms shall be governed and construed in accordance with the laws of United States without regard to its
-        conflict of law provisions.
-        </p>
-
-
-        <p>
-        Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If
-        any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these
-        Terms will remain in effect. These Terms constitute the entire agreement between us regarding our Service, and
-        supersede and replace any prior agreements we might have between us regarding the Service.
-        </p>
-        </section>
-
-
-        <section>
-        <h2>Changes</h2>
-        <p>
-        We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is
-        material we will try to provide at least 30 days notice prior to any new terms taking effect. What constitutes a
-        material change will be determined at our sole discretion.
-        </p>
-
-
-        <p>
-        By continuing to access or use our Service after those revisions become effective, you agree to be bound by the
-        revised terms. If you do not agree to the new terms, please stop using the Service.
-        </p>
-        </section>
-
-
-        <section>
-        <h2>Contact Us</h2>
-        <p>
-        If you have any questions about these Terms, please contact us at:
-        </p>
-        <p className="mt-2">Email: <a href="mailto:info@dotolidigital.com" className="underline">info@dotolidigital.com</a></p>
-        </section>
-
-
-</article>
-      
+      </article>
 
       {/* <JungleSection
         title1={"we're hiring"}
