@@ -4,6 +4,13 @@ import PopupForm from "../../../components/PopupForm";
 import Footer from "../../../components/Footer";
 import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
+import { FAQSection } from "../../../components/FAQSection";
+import BenefitsPerformance from "../../../components/BenefitsPerformance";
+import IndustriesSection from "../../../components/IndustriesSection";
+import PlatformsWeUse from "../../../components/PlatformsWeUse";
+import ProcessTimeline from "../../../components/ProcessTimeline";
+import ServicesWeOffer from "../../../components/ServicesWeOffer";
+import Link from "next/link";
 
 export default function PerformanceMarketing() {
   const [showPopup, setShowPopup] = useState(false);
@@ -35,6 +42,10 @@ export default function PerformanceMarketing() {
         img="/images/x8.webp"
         heading="What Is Performance Marketing?"
         text={`Performance marketing is a results-driven digital marketing approach in which advertisers pay for measurable actions, such as clicks, leads, or sales. It uses data, analytics, and continuous optimization to ensure marketing budgets generate real, trackable business results.`}
+        cta={{
+          text: "Book a Free Strategy Call",
+          link: "/contact",
+        }}
       />
 
       <ServiceDetailsSection
@@ -60,10 +71,16 @@ export default function PerformanceMarketing() {
         Decisions are made using real performance metrics, not assumptions.<br/><br/>
         <strong>Optimized for Humans and Algorithms</strong><br/><br/>
         Performance marketing sits at the intersection of human psychology and platform algorithms. Our campaigns are designed to resonate with users while aligning with how ad systems prioritize relevance and efficiency.<br/><br/>
-        This balance allows us to reduce wasted spend and improve results over time.`}
+        This balance allows us to reduce wasted spend and improve results over time.
+        `}
+        cta={{
+          text: "Book a Free Strategy Call",
+          link: "/contact",
+        }}
       />
 
-      <ServiceDetailsSection
+      <ServicesWeOffer />
+      {/* <ServiceDetailsSection
         img="/images/x9.webp"
         heading="Performance Marketing Services We Offer"
         text={`Our performance marketing services are structured to support every stage of the customer journey.<br/><br/>
@@ -88,9 +105,11 @@ export default function PerformanceMarketing() {
         This allows us to measure what actually drives results.<br/><br/>
         <strong>Continuous Testing & Optimization</strong><br/>
         No campaign is static. We test creatives, audiences, messaging, and funnels continuously to improve performance. Small optimizations compound into significant gains over time.`}
-      />
+      /> */}
 
-      <ServiceDetailsSection
+      <PlatformsWeUse />
+
+      {/* <ServiceDetailsSection
         img="/images/x9.webp"
         heading="Platforms We Use for Performance Marketing"
         text={`Our performance marketing strategies are executed across high-intent platforms, including:<br/>
@@ -101,9 +120,11 @@ export default function PerformanceMarketing() {
           <li>Conversion-focused landing pages</li>
         </ul><br/>
         Platform selection depends on audience behavior and business goals.`}
-      />
+      /> */}
 
-      <ServiceDetailsSection
+      <ProcessTimeline />
+
+      {/* <ServiceDetailsSection
         img="/images/x9.webp"
         heading="How Our Performance Marketing Process Works"
         text={`<strong>1. Goal & KPI Definition</strong><br/>
@@ -116,9 +137,11 @@ export default function PerformanceMarketing() {
         Once campaigns go live, we closely monitor performance metrics in real time. Budgets, bids, targeting, and creatives are adjusted continuously to improve results and reduce wasted spend as data accumulates.<br/><br/>
         <strong>5. Reporting, Insights & Scaling</strong><br/>
         We track performance against KPIs and extract actionable insights from campaign data. High-performing campaigns are scaled strategically, while underperforming elements are refined or replaced to maintain growth momentum.`}
-      />
+      /> */}
 
-      <ServiceDetailsSection
+      <IndustriesSection />
+
+      {/* <ServiceDetailsSection
         img="/images/x9.webp"
         heading="Industries That Benefit Most from Performance Marketing"
         text={`Performance marketing is effective across many industries, including:<br/>
@@ -131,9 +154,11 @@ export default function PerformanceMarketing() {
           <li>Agencies</li>
         </ul><br/>
         Each industry requires a tailored funnel and targeting strategy.`}
-      />
+      /> */}
 
-      <ServiceDetailsSection
+      <BenefitsPerformance />
+
+      {/* <ServiceDetailsSection
         img="/images/x9.webp"
         heading="Benefits of Our Performance Marketing Services"
         text={`<ul>
@@ -145,10 +170,9 @@ export default function PerformanceMarketing() {
           <li>Reduced marketing waste</li>
         </ul><br/>
         Performance marketing ensures every marketing dollar works harder.`}
-      />
+      /> */}
 
-      <ServiceDetailsSection
-        img="/images/x9.webp"
+      {/* <ServiceDetailsSection
         heading="Why Businesses Choose Dotoli Digital for Performance Marketing"
         text={`Businesses choose Dotoli Digital because we treat performance marketing as a system, not a set of ads.<br/><br/>
         Our strategies are:<br/>
@@ -159,9 +183,146 @@ export default function PerformanceMarketing() {
           <li>Continuously optimized for changing algorithms</li>
         </ul><br/>
         We build performance marketing engines that improve over time.`}
+      /> */}
+
+      <section className="whychoose-sec">
+        <div className="container-w1">
+          <div className="whychoose-grid">
+            {/* LEFT SIDE */}
+            <div className="whychoose-left">
+              <div className="whychoose-pill">
+                <span className="whychoose-dot" />
+                Performance marketing, built as a system
+              </div>
+
+              <h2 className="title-4 whychoose-title">
+                Why businesses choose <span>Dotoli Digital</span> for
+                Performance Marketing
+              </h2>
+
+              <p className="text-1 whychoose-sub">
+                Businesses choose Dotoli Digital because we treat performance
+                marketing as a system, not a set of ads.
+              </p>
+
+              <div className="btn-group whychoose-cta">
+                <div className="btn btn--pulse">
+                  <Link className="btn-elem" href="/contact">
+                    Book a Free Strategy Call
+                  </Link>
+                </div>
+              </div>
+
+              {/* small proof row */}
+              <div className="whychoose-mini">
+                <div className="whychoose-mini-card">
+                  <p className="k">Data</p>
+                  <p className="v">Transparent reporting</p>
+                </div>
+                <div className="whychoose-mini-card">
+                  <p className="k">Focus</p>
+                  <p className="v">Conversions first</p>
+                </div>
+                <div className="whychoose-mini-card">
+                  <p className="k">System</p>
+                  <p className="v">SEO + CRO + automation</p>
+                </div>
+              </div>
+            </div>
+
+            {/* RIGHT SIDE */}
+            <div className="whychoose-right">
+              <div className="whychoose-cards">
+                <div className="whychoose-card">
+                  <div className="icon" />
+                  <div className="txt">
+                    <h3>Data-driven and transparent</h3>
+                    <p>
+                      Clear KPIs, clean attribution, and reporting you can
+                      trust—no guesswork.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="whychoose-card">
+                  <div className="icon" />
+                  <div className="txt">
+                    <h3>Focused on conversions</h3>
+                    <p>
+                      We optimize for leads, sales, and pipeline—not vanity
+                      metrics.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="whychoose-card">
+                  <div className="icon" />
+                  <div className="txt">
+                    <h3>Integrated with SEO, CRO, and automation</h3>
+                    <p>
+                      Paid + landing pages + lifecycle follow-up, built as one
+                      growth system.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="whychoose-card">
+                  <div className="icon" />
+                  <div className="txt">
+                    <h3>Continuously optimized</h3>
+                    <p>
+                      Continuous testing and iteration to keep up with changing
+                      algorithms.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="whychoose-outcome">
+                <p>
+                  <strong>Outcome:</strong> We build performance marketing
+                  engines that improve over time.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <FAQSection
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question:
+              "What makes performance marketing different from traditional digital marketing?",
+            answer:
+              "Performance marketing focuses on measurable outcomes such as leads, sales, and revenue. Instead of paying for exposure or impressions, you invest in campaigns that are optimized around real business results.",
+          },
+          {
+            question: "How quickly can performance marketing deliver results?",
+            answer:
+              "Paid performance campaigns can begin generating results within days of launch. Over time, continuous optimization improves efficiency and lowers cost per acquisition.",
+          },
+          {
+            question: "Is performance marketing expensive?",
+            answer:
+              "Cost depends on competition and goals, but performance marketing offers better budget control because spending is directly tied to performance metrics such as leads or sales.",
+          },
+          {
+            question: "Can performance marketing work with SEO and AEO?",
+            answer:
+              "Yes. Performance marketing complements SEO and AEO by driving immediate demand while organic strategies build long-term visibility and authority.",
+          },
+          {
+            question:
+              "Do you provide ongoing performance marketing management?",
+            answer:
+              "Yes. Performance marketing requires continuous testing, optimization, and scaling. We manage and improve campaigns over time to ensure sustained ROI.",
+          },
+        ]}
       />
 
-      <ServiceDetailsSection
+      {/* <ServiceDetailsSection
         img="/images/x9.webp"
         heading="Frequently Asked Questions"
         text={`<strong>What makes performance marketing different from traditional digital marketing?</strong><br/>
@@ -174,7 +335,7 @@ export default function PerformanceMarketing() {
         Yes. Performance marketing complements SEO and AEO by driving demand and supporting conversion funnels.<br/><br/>
         <strong>Do you provide ongoing performance marketing management?</strong><br/>
         Yes. Continuous management and optimization are essential for sustained performance.`}
-      />
+      /> */}
 
       <ServiceDetailsSection
         img="/images/x9.webp"

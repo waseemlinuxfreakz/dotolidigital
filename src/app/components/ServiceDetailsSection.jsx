@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -13,13 +14,13 @@ export function ServiceDetailsSection({
   heading,
   text,
   headertag = "h2",
+  cta, // ✅ new prop
 }) {
   const sectionRef = useRef(null);
   const imgBoxRef = useRef(null);
   const headingRef = useRef(null);
   const textRef = useRef(null);
 
-  // animation
   useGSAP(
     () => {
       gsap
@@ -37,21 +38,12 @@ export function ServiceDetailsSection({
           duration: 1.2,
           ease: "power2.out",
         })
-        .from(
-          headingRef.current,
-          { opacity: 0, y: 30, duration: 0.8, ease: "power2.out" },
-          "-=0.6"
-        )
-        .from(
-          textRef.current,
-          { opacity: 0, y: 20, duration: 0.8, ease: "power2.out" },
-          "-=0.4"
-        );
+        .from(headingRef.current, { opacity: 0, y: 30, duration: 0.8 }, "-=0.6")
+        .from(textRef.current, { opacity: 0, y: 20, duration: 0.8 }, "-=0.4");
     },
-    { scope: sectionRef } // ⬅ cleans up automatically
+    { scope: sectionRef },
   );
 
-  // ✅ Fix: Capitalize dynamic header tag
   const HeaderTag = headertag;
 
   return (
@@ -65,8 +57,7 @@ export function ServiceDetailsSection({
                 alt={heading}
                 width={1240}
                 height={700}
-                priority={false}
-                onLoadingComplete={() => ScrollTrigger.refresh()} // ⚠️ key fix
+                onLoadingComplete={() => ScrollTrigger.refresh()}
               />
             )}
           </div>
@@ -75,12 +66,23 @@ export function ServiceDetailsSection({
             <HeaderTag className="title-4" ref={headingRef}>
               <span>{heading}</span>
             </HeaderTag>
-            {/* Html text */}
+
             <div
               className="text-1"
               ref={textRef}
               dangerouslySetInnerHTML={{ __html: text }}
             />
+
+            {/* ✅ Dynamic Button */}
+            {cta && (
+              <div className="btn-group whychoose-cta">
+                <div className="btn btn--pulse">
+                  <Link className="btn-elem" href={cta.link}>
+                    {cta.text}
+                  </Link>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
