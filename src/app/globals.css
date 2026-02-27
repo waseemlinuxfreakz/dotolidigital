@@ -3268,3 +3268,124 @@ ul.sub-dropdown-list.sub-dropdown-list-2 {
     border-radius: 22px;
   }
 }
+
+/* ============================
+Title block above form
+============================
+*/
+/* Title block above form */
+.contact-form-title-wrap {
+  margin-bottom: 18px;
+}
+
+.contact-form-title {
+  margin: 0 0 10px;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 30px !important;
+}
+
+.contact-form-title .accent {
+  text-decoration: underline;
+}
+
+.contact-form-infobar {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* Light border around entire form (like screenshot) */
+.contact-form {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  padding: 26px 22px;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+}
+
+/* SMS Opt-in block */
+.sms-optin-wrap {
+  margin-top: 18px;
+}
+
+.sms-optin-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.sms-optin-title {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.sms-optin-badge {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  opacity: 0.9;
+}
+
+.sms-optin-note {
+  font-size: 12px;
+  opacity: 0.75;
+}
+
+.sms-optin-box {
+  border: 1px dashed rgba(255, 255, 255, 0.25);
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.sms-check-row {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin: 10px 0;
+}
+
+.sms-check-row input {
+  margin-top: 4px;
+}
+
+.sms-check-text {
+  font-size: 13px;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+/* Consent text (all steps) */
+.contact-consent-text {
+  margin-top: 12px;
+  font-size: 12px;
+  opacity: 0.75;
+}
+
+/* Legal links row */
+.contact-legal-links {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.legal-link {
+  font-size: 13px;
+  text-decoration: underline;
+  opacity: 0.85;
+}
+
+.legal-link:hover {
+  opacity: 1;
+}

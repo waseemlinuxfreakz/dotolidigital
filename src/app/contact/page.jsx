@@ -1,6 +1,8 @@
 /*  app/contact/page.jsx  */
 "use client";
+
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import Footer from "../components/Footer";
 import { HeroAllSection } from "../components/HeroAllSection";
@@ -12,7 +14,13 @@ function ProgressBar({ current, labels, setStep }) {
   return (
     <ol className="progress-bar">
       {labels.map((lbl, i) => (
-        <li key={lbl} onClick={() => setStep(i)} className={i <= current ? "done" : ""}>
+        <li
+          key={lbl}
+          onClick={() => setStep(i)}
+          className={i <= current ? "done" : ""}
+          role="button"
+          tabIndex={0}
+        >
           {lbl}
         </li>
       ))}
@@ -34,12 +42,21 @@ export default function ContactPage() {
     service: "",
     goal: "",
     budget: "",
-    referral: ""
+    referral: "",
+    smsTransactional: false,
+    smsMarketing: false,
   };
+
   const [formData, setFormData] = useState(empty);
 
   /* keep inputs controlled */
-  const onChange = (e) => setFormData((p) => ({ ...p, [e.target.name]: e.target.value }));
+  const onChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData((p) => ({
+      ...p,
+      [name]: type === "checkbox" ? checked : value,
+    }));
+  };
 
   /* single submit handler – advances steps & sends mail on last step */
   const handleSubmit = async (e) => {
@@ -47,7 +64,11 @@ export default function ContactPage() {
     const form = e.currentTarget;
 
     /* check visible required inputs on current step */
-    const visibleInvalid = Array.from(form.querySelectorAll("[required]")).some((inp) => inp.closest(".form-group")?.offsetParent !== null && !inp.checkValidity());
+    const visibleInvalid = Array.from(form.querySelectorAll("[required]")).some(
+      (inp) =>
+        inp.closest(".form-group")?.offsetParent !== null &&
+        !inp.checkValidity(),
+    );
     if (visibleInvalid) {
       form.reportValidity();
       return;
@@ -60,7 +81,10 @@ export default function ContactPage() {
     }
 
     /* guard against totally empty payload */
-    const hasContent = Object.values(formData).some((v) => typeof v === "string" && v.trim() !== "");
+    const hasContent = Object.values(formData).some((v) => {
+      if (typeof v === "boolean") return v === true;
+      return typeof v === "string" && v.trim() !== "";
+    });
     if (!hasContent) {
       setStatus("Please fill in the form before submitting.");
       return;
@@ -72,9 +96,13 @@ export default function ContactPage() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(formData),
       });
-      setStatus(res.ok ? "Message sent successfully!" : "Failed to send message.");
+
+      setStatus(
+        res.ok ? "Message sent successfully!" : "Failed to send message.",
+      );
+
       if (res.ok) {
         setFormData(empty);
         setStep(0); // reset wizard
@@ -93,34 +121,80 @@ export default function ContactPage() {
         <>
           <div className="form-group">
             <label htmlFor="name">Full Name*</label>
-            <input id="name" name="name" required value={formData.name} onChange={onChange} placeholder="Your name" />
+            <input
+              id="name"
+              name="name"
+              required
+              value={formData.name}
+              onChange={onChange}
+              placeholder="Your name"
+            />
           </div>
-          <div className="form-group">
-            <label htmlFor="email">Email Address*</label>
-            <input type="email" id="email" name="email" required value={formData.email} onChange={onChange} placeholder="you@example.com" />
-          </div>
+
           <div className="form-group">
             <label htmlFor="phone">Phone Number*</label>
-            <input id="phone" name="phone" required value={formData.phone} onChange={onChange} placeholder="(954) 383-8093" />
+            <input
+              id="phone"
+              name="phone"
+              required
+              value={formData.phone}
+              onChange={onChange}
+              placeholder="(123) 456-7890"
+            />
           </div>
+
+          <div className="form-group">
+            <label htmlFor="email">Email Address*</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              value={formData.email}
+              onChange={onChange}
+              placeholder="you@example.com"
+            />
+          </div>
+
           <div className="form-group">
             <label htmlFor="company">Company / Brand (optional)</label>
-            <input id="company" name="company" value={formData.company} onChange={onChange} placeholder="Your organisation" />
+            <input
+              id="company"
+              name="company"
+              value={formData.company}
+              onChange={onChange}
+              placeholder="Your organisation"
+            />
           </div>
+
           <div className="form-group">
             <label htmlFor="website">Website (optional)</label>
-            <input id="website" name="website" value={formData.website} onChange={onChange} placeholder="https://" />
+            <input
+              id="website"
+              name="website"
+              value={formData.website}
+              onChange={onChange}
+              placeholder="https://"
+            />
           </div>
         </>
-      )
+      ),
     },
     {
       label: "Needs",
       content: (
         <>
           <div className="form-group">
-            <label htmlFor="service">What do you need help with?* (select one)</label>
-            <select id="service" name="service" required value={formData.service} onChange={onChange}>
+            <label htmlFor="service">
+              What do you need help with?* (select one)
+            </label>
+            <select
+              id="service"
+              name="service"
+              required
+              value={formData.service}
+              onChange={onChange}
+            >
               <option value="">Select</option>
               <option>Performance Marketing (Google / Meta Ads)</option>
               <option>CRM & Automation</option>
@@ -131,19 +205,36 @@ export default function ContactPage() {
               <option>Something Else</option>
             </select>
           </div>
+
           <div className="form-group">
-            <label htmlFor="goal">Project goal or challenge* (describe briefly)</label>
-            <textarea id="goal" name="goal" required rows="4" value={formData.goal} onChange={onChange} placeholder="Tell us what success looks like to you." />
+            <label htmlFor="goal">
+              Project goal or challenge* (describe briefly)
+            </label>
+            <textarea
+              id="goal"
+              name="goal"
+              required
+              rows="4"
+              value={formData.goal}
+              onChange={onChange}
+              placeholder="Tell us what success looks like to you."
+            />
           </div>
         </>
-      )
+      ),
     },
     {
       label: "Budget",
       content: (
         <div className="form-group">
           <label htmlFor="budget">Estimated Budget*</label>
-          <select id="budget" name="budget" required value={formData.budget} onChange={onChange}>
+          <select
+            id="budget"
+            name="budget"
+            required
+            value={formData.budget}
+            onChange={onChange}
+          >
             <option value="">Select budget</option>
             <option>Less than $1,000</option>
             <option>$1,000–$5,000</option>
@@ -152,31 +243,83 @@ export default function ContactPage() {
             <option>Not sure yet</option>
           </select>
         </div>
-      )
+      ),
     },
     {
       label: "Finish",
       content: (
-        <div className="form-group">
-          <label htmlFor="referral">How did you hear about us?</label>
-          <select id="referral" name="referral" value={formData.referral} onChange={onChange}>
-            <option value="">Select</option>
-            <option value="Google">Google</option>
-            <option value="Social Media">Social Media</option>
-            <option value="Referral">Referral</option>
-            <option value="Saw your work">Saw your work</option>
-            <option value="Other">Other</option>
-          </select>
-        </div>
-      )
-    }
+        <>
+          <div className="form-group">
+            <label htmlFor="referral">How did you hear about us?</label>
+            <select
+              id="referral"
+              name="referral"
+              value={formData.referral}
+              onChange={onChange}
+            >
+              <option value="">Select</option>
+              <option value="Google">Google</option>
+              <option value="Social Media">Social Media</option>
+              <option value="Referral">Referral</option>
+              <option value="Saw your work">Saw your work</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          {/* ✅ SMS Opt-In block (Optional) */}
+          <div className="sms-optin-wrap">
+            <div className="sms-optin-head">
+              <div className="sms-optin-title">
+                SMS Opt-In <span className="sms-optin-badge">Optional</span>
+              </div>
+              <div className="sms-optin-note">NOT Required to Check</div>
+            </div>
+
+            <div className="sms-optin-box">
+              <label className="sms-check-row">
+                <input
+                  type="checkbox"
+                  name="smsTransactional"
+                  checked={formData.smsTransactional}
+                  onChange={onChange}
+                />
+                <span className="sms-check-text">
+                  I agree to receive <b>transactional</b> text messages from
+                  Dotoli Digital LLC about my inquiry (e.g., appointment
+                  reminders, updates). Message frequency may vary. Message &
+                  data rates may apply. Reply <b>STOP</b> to opt out,{" "}
+                  <b>HELP</b> for help.
+                </span>
+              </label>
+
+              <label className="sms-check-row">
+                <input
+                  type="checkbox"
+                  name="smsMarketing"
+                  checked={formData.smsMarketing}
+                  onChange={onChange}
+                />
+                <span className="sms-check-text">
+                  I agree to receive <b>marketing</b> and promotional text
+                  messages from Dotoli Digital LLC about services and offers.
+                  Message frequency may vary. Message & data rates may apply.
+                  Reply <b>STOP</b> to opt out, <b>HELP</b> for help.{" "}
+                  <b>Consent is not a condition of purchase.</b>
+                </span>
+              </label>
+            </div>
+          </div>
+        </>
+      ),
+    },
   ];
 
-  /* ─────────────── page JSX ─────────────── */
   const [showPopup, setShowPopup] = useState(false);
+
   return (
     <>
       {showPopup && <PopupForm onClose={() => setShowPopup(false)} />}
+
       <HeroAllSection
         title1="Let’s Talk About"
         title2="Growing Your Business"
@@ -184,22 +327,44 @@ export default function ContactPage() {
         btn_text="Book a Free Strategy Call"
         onBtnClick={() => setShowPopup(true)}
         id={"team-hero"}
-        
       />
+
       <div id="team-hero"></div>
-      <TextCounterSection text="Start your project — or just start the conversation." paragraph="Tell us what’s not working — and where you want to go. We’ll respond with clear steps to help." />
+
+      <TextCounterSection
+        text="Start your project — or just start the conversation."
+        paragraph="Tell us what’s not working — and where you want to go. We’ll respond with clear steps to help."
+      />
 
       <section className="contact-sec">
         <div className="container">
           <div className="flex-box">
             <form className="contact-form" onSubmit={handleSubmit} noValidate>
-              <ProgressBar current={step} setStep={setStep} labels={steps.map((s) => s.label)} />
+              {/* ✅ Title + info bar (above steps) */}
+              <div className="contact-form-title-wrap">
+                <h2 className="contact-form-title">
+                  We'll use your info to contact you about your request.{" "}
+                  <span className="accent">
+                    SMS is only sent if you opt in below.
+                  </span>
+                </h2>
+              </div>
+
+              <ProgressBar
+                current={step}
+                setStep={setStep}
+                labels={steps.map((s) => s.label)}
+              />
 
               {steps[step].content}
 
               <div className="btn-group" style={{ marginTop: "2rem" }}>
                 {step > 0 && (
-                  <button type="button" className="btn prev-btn" onClick={() => setStep(step - 1)}>
+                  <button
+                    type="button"
+                    className="btn prev-btn"
+                    onClick={() => setStep(step - 1)}
+                  >
                     Previous
                   </button>
                 )}
@@ -215,11 +380,32 @@ export default function ContactPage() {
                 )}
               </div>
 
+              {/* ✅ This text should appear in ALL steps */}
+              <p className="contact-consent-text">
+                By submitting, you agree Dotoli Digital LLC may contact you by
+                phone/email. SMS only if you opt in above.
+              </p>
+
+              {/* ✅ Privacy Policy left, Terms right */}
+              <div className="contact-legal-links">
+                <Link href="/privacy" className="legal-link">
+                  Privacy Policy
+                </Link>
+                <Link href="/terms" className="legal-link">
+                  Terms &amp; Conditions
+                </Link>
+              </div>
+
               {status && <p style={{ marginTop: "1rem" }}>{status}</p>}
             </form>
 
             <div className="contact-img">
-              <Image src="/images/contacct.webp" alt="contact" width={800} height={830} />
+              <Image
+                src="/images/contacct.webp"
+                alt="contact"
+                width={800}
+                height={830}
+              />
             </div>
           </div>
         </div>
