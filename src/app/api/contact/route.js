@@ -39,8 +39,8 @@ export async function POST(req) {
         <p><b>Referral:</b> ${data.referral || "-"}</p>
         <hr/>
         <h3>SMS Opt-In</h3>
-        <p><b>Transactional SMS:</b> ${data.smsTransactional ? "YES (Opted In)" : "NO"}</p>
-        <p><b>Marketing SMS:</b> ${data.smsMarketing ? "YES (Opted In)" : "NO"}</p>
+        <p><b>Transactional SMS:</b> ${data.smsTransactional ? "YES" : "NO"}</p>
+        <p><b>Marketing SMS:</b> ${data.smsMarketing ? "YES" : "NO"}</p>
         <p style="font-size:12px;color:#777;">
           Consent is not a condition of purchase. Reply STOP to opt out, HELP for help. Message & data rates may apply.
         </p>
