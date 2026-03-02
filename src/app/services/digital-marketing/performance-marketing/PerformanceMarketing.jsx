@@ -10,6 +10,8 @@ import IndustriesSection from "../../../components/IndustriesSection";
 import PlatformsWeUse from "../../../components/PlatformsWeUse";
 import ProcessTimeline from "../../../components/ProcessTimeline";
 import ServicesWeOffer from "../../../components/ServicesWeOffer";
+
+import PerformanceCta from "../../../components/PerformanceCta";
 import Link from "next/link";
 
 export default function PerformanceMarketing() {
@@ -337,14 +339,16 @@ export default function PerformanceMarketing() {
         Yes. Continuous management and optimization are essential for sustained performance.`}
       /> */}
 
-      <ServiceDetailsSection
+      <PerformanceCta />
+
+      {/* <ServiceDetailsSection
         img="/images/x9.webp"
         heading="Ready to Turn Marketing Spend into Measurable Results?"
         text={`Performance marketing removes guesswork and replaces it with clarity, data, and growth.<br/><br/>
         <strong>Get a Free Performance Marketing Audit</strong><br/>
         or<br/>
         <strong>Book a Strategy Call to Scale Faster</strong>`}
-      />
+      /> */}
 
       <Footer />
     </>
