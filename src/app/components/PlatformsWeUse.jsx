@@ -1,11 +1,9 @@
 // components/PlatformsWeUse.jsx
-import Link from "next/link";
-import { SiGoogleads, SiFacebook, SiGoogleanalytics } from "react-icons/si";
-
+import { SiGoogleads, SiFacebook } from "react-icons/si";
 import { FaRedoAlt } from "react-icons/fa";
 import { MdOutlineWeb } from "react-icons/md";
 
-export default function PlatformsWeUse() {
+export default function PlatformsWeUse({ onCtaClick }) {
   const platforms = [
     {
       title: "Google Ads",
@@ -49,11 +47,12 @@ export default function PlatformsWeUse() {
               Platform selection depends on audience behavior and business
               goals.
             </div>
+
             <div className="btn-group whychoose-cta">
               <div className="btn btn--pulse">
-                <Link className="btn-elem" href="/contact">
+                <button type="button" className="btn-elem" onClick={onCtaClick}>
                   Book a Free Strategy Call
-                </Link>
+                </button>
               </div>
             </div>
           </div>
@@ -64,7 +63,6 @@ export default function PlatformsWeUse() {
               {platforms.map((p) => (
                 <div className="pm-platforms-card" key={p.title}>
                   <div className="pm-platforms-icon">{p.icon}</div>
-
                   <div className="pm-platforms-text">
                     <h3>{p.title}</h3>
                     <p>{p.desc}</p>

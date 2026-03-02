@@ -73,13 +73,23 @@ export function ServiceDetailsSection({
               dangerouslySetInnerHTML={{ __html: text }}
             />
 
-            {/* ✅ Dynamic Button */}
+            {/* ✅ Dynamic Button (Link OR Popup) */}
             {cta && (
               <div className="btn-group whychoose-cta">
                 <div className="btn btn--pulse">
-                  <Link className="btn-elem" href={cta.link}>
-                    {cta.text}
-                  </Link>
+                  {cta.onClick ? (
+                    <button
+                      type="button"
+                      className="btn-elem"
+                      onClick={cta.onClick}
+                    >
+                      {cta.text}
+                    </button>
+                  ) : (
+                    <Link className="btn-elem" href={cta.link}>
+                      {cta.text}
+                    </Link>
+                  )}
                 </div>
               </div>
             )}

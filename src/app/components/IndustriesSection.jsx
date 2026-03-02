@@ -1,6 +1,7 @@
 // components/IndustriesSection.jsx
+"use client";
 import Link from "next/link";
-export default function IndustriesSection() {
+export default function IndustriesSection({ onCtaClick }) {
   const industries = [
     "eCommerce",
     "SaaS & technology",
@@ -34,11 +35,13 @@ export default function IndustriesSection() {
         <p className="pm-industries-note">
           Each industry requires a tailored funnel and targeting strategy.
         </p>
+
+        {/* ✅ Popup Button */}
         <div className="btn-group whychoose-cta">
           <div className="btn btn--pulse">
-            <Link className="btn-elem" href="/contact">
+            <button type="button" className="btn-elem" onClick={onCtaClick}>
               Book a Free Strategy Call
-            </Link>
+            </button>
           </div>
         </div>
       </div>

@@ -12,6 +12,8 @@ import ProcessTimeline from "../../../components/ProcessTimeline";
 import ServicesWeOffer from "../../../components/ServicesWeOffer";
 
 import PerformanceCta from "../../../components/PerformanceCta";
+import WhyChooseSection from "../../../components/WhyChooseSection";
+
 import Link from "next/link";
 
 export default function PerformanceMarketing() {
@@ -46,7 +48,7 @@ export default function PerformanceMarketing() {
         text={`Performance marketing is a results-driven digital marketing approach in which advertisers pay for measurable actions, such as clicks, leads, or sales. It uses data, analytics, and continuous optimization to ensure marketing budgets generate real, trackable business results.`}
         cta={{
           text: "Book a Free Strategy Call",
-          link: "/contact",
+          onClick: () => setShowPopup(true),
         }}
       />
 
@@ -77,7 +79,7 @@ export default function PerformanceMarketing() {
         `}
         cta={{
           text: "Book a Free Strategy Call",
-          link: "/contact",
+          onClick: () => setShowPopup(true),
         }}
       />
 
@@ -109,7 +111,7 @@ export default function PerformanceMarketing() {
         No campaign is static. We test creatives, audiences, messaging, and funnels continuously to improve performance. Small optimizations compound into significant gains over time.`}
       /> */}
 
-      <PlatformsWeUse />
+      <PlatformsWeUse onCtaClick={() => setShowPopup(true)} />
 
       {/* <ServiceDetailsSection
         img="/images/x9.webp"
@@ -141,7 +143,7 @@ export default function PerformanceMarketing() {
         We track performance against KPIs and extract actionable insights from campaign data. High-performing campaigns are scaled strategically, while underperforming elements are refined or replaced to maintain growth momentum.`}
       /> */}
 
-      <IndustriesSection />
+      <IndustriesSection onCtaClick={() => setShowPopup(true)} />
 
       {/* <ServiceDetailsSection
         img="/images/x9.webp"
@@ -186,110 +188,11 @@ export default function PerformanceMarketing() {
         </ul><br/>
         We build performance marketing engines that improve over time.`}
       /> */}
-
-      <section className="whychoose-sec">
-        <div className="container-w1">
-          <div className="whychoose-grid">
-            {/* LEFT SIDE */}
-            <div className="whychoose-left">
-              <div className="whychoose-pill">
-                <span className="whychoose-dot" />
-                Performance marketing, built as a system
-              </div>
-
-              <h2 className="title-4 whychoose-title">
-                Why businesses choose <span>Dotoli Digital</span> for
-                Performance Marketing
-              </h2>
-
-              <p className="text-1 whychoose-sub">
-                Businesses choose Dotoli Digital because we treat performance
-                marketing as a system, not a set of ads.
-              </p>
-
-              <div className="btn-group whychoose-cta">
-                <div className="btn btn--pulse">
-                  <Link className="btn-elem" href="/contact">
-                    Book a Free Strategy Call
-                  </Link>
-                </div>
-              </div>
-
-              {/* small proof row */}
-              <div className="whychoose-mini">
-                <div className="whychoose-mini-card">
-                  <p className="k">Data</p>
-                  <p className="v">Transparent reporting</p>
-                </div>
-                <div className="whychoose-mini-card">
-                  <p className="k">Focus</p>
-                  <p className="v">Conversions first</p>
-                </div>
-                <div className="whychoose-mini-card">
-                  <p className="k">System</p>
-                  <p className="v">SEO + CRO + automation</p>
-                </div>
-              </div>
-            </div>
-
-            {/* RIGHT SIDE */}
-            <div className="whychoose-right">
-              <div className="whychoose-cards">
-                <div className="whychoose-card">
-                  <div className="icon" />
-                  <div className="txt">
-                    <h3>Data-driven and transparent</h3>
-                    <p>
-                      Clear KPIs, clean attribution, and reporting you can
-                      trust—no guesswork.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="whychoose-card">
-                  <div className="icon" />
-                  <div className="txt">
-                    <h3>Focused on conversions</h3>
-                    <p>
-                      We optimize for leads, sales, and pipeline—not vanity
-                      metrics.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="whychoose-card">
-                  <div className="icon" />
-                  <div className="txt">
-                    <h3>Integrated with SEO, CRO, and automation</h3>
-                    <p>
-                      Paid + landing pages + lifecycle follow-up, built as one
-                      growth system.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="whychoose-card">
-                  <div className="icon" />
-                  <div className="txt">
-                    <h3>Continuously optimized</h3>
-                    <p>
-                      Continuous testing and iteration to keep up with changing
-                      algorithms.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="whychoose-outcome">
-                <p>
-                  <strong>Outcome:</strong> We build performance marketing
-                  engines that improve over time.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* 
+whychoose-sec
+WhyChooseSection
+*/}
+      <WhyChooseSection onCtaClick={() => setShowPopup(true)} />
 
       <FAQSection
         title="Frequently Asked Questions"
@@ -339,7 +242,7 @@ export default function PerformanceMarketing() {
         Yes. Continuous management and optimization are essential for sustained performance.`}
       /> */}
 
-      <PerformanceCta />
+      <PerformanceCta onStrategyClick={() => setShowPopup(true)} />
 
       {/* <ServiceDetailsSection
         img="/images/x9.webp"
