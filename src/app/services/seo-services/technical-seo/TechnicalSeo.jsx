@@ -7,6 +7,7 @@ import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
 import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
+import BenefitsPerformance from "../../../components/BenefitsPerformance";
 // TechnicalSeo
 
 export default function TechnicalSeo() {
@@ -66,15 +67,30 @@ export default function TechnicalSeo() {
         </ol>`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x9.webp"
-        heading="Benefits of Technical SEO Services"
-        text={`<ul>
-          <li>Improved crawlability and indexing</li>
-          <li>Faster website performance</li>
-          <li>Better rankings and AI visibility</li>
-          <li>Stronger foundation for content SEO</li>
-        </ul>`}
+      <BenefitsPerformance
+        data={{
+          heading: "Benefits of Technical SEO Services",
+          subText:
+            "Technical SEO builds the foundation that allows search engines and AI systems to properly understand and rank your website.",
+          benefits: [
+            {
+              title: "Improved crawlability and indexing",
+              desc: "Ensure search engines can efficiently access and process your content.",
+            },
+            {
+              title: "Faster website performance",
+              desc: "Optimize speed and technical structure to enhance user experience.",
+            },
+            {
+              title: "Better rankings and AI visibility",
+              desc: "Strengthen technical signals that improve search and AI discoverability.",
+            },
+            {
+              title: "Stronger foundation for content SEO",
+              desc: "Create a stable base that supports long-term organic growth.",
+            },
+          ],
+        }}
       />
 
       <FAQSection

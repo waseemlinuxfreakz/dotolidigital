@@ -7,6 +7,8 @@ import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection
 import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
 import WhyChooseSection from "../../../components/WhyChooseSection";
+
+import BenefitsPerformance from "../../../components/BenefitsPerformance";
 // crm-setup-integration  CrmSetupIntegration
 
 export default function CrmSetupIntegration() {
@@ -109,18 +111,38 @@ export default function CrmSetupIntegration() {
         Any business managing leads and customers benefits from proper CRM integration.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x14.webp"
-        heading="Benefits of Our CRM Setup & Integration Services"
-        text={`<ul>
-          <li>Clean and organized customer data</li>
-          <li>Faster lead response times</li>
-          <li>Reduced manual work</li>
-          <li>Better sales visibility</li>
-          <li>Improved reporting and insights</li>
-          <li>Scalable and reliable CRM systems</li>
-        </ul><br/>
-        CRM integration turns scattered tools into a connected system.`}
+      <BenefitsPerformance
+        data={{
+          heading: "Benefits of Our CRM Setup & Integration Services",
+          subText:
+            "CRM integration turns scattered tools into a connected system.",
+          benefits: [
+            {
+              title: "Clean and organized customer data",
+              desc: "Centralize contacts and interactions into a structured system.",
+            },
+            {
+              title: "Faster lead response times",
+              desc: "Route and manage leads efficiently without delays.",
+            },
+            {
+              title: "Reduced manual work",
+              desc: "Automate repetitive processes to increase team productivity.",
+            },
+            {
+              title: "Better sales visibility",
+              desc: "Track pipeline stages and performance in real time.",
+            },
+            {
+              title: "Improved reporting and insights",
+              desc: "Access actionable data to guide strategic decisions.",
+            },
+            {
+              title: "Scalable and reliable CRM systems",
+              desc: "Build infrastructure that supports long-term growth.",
+            },
+          ],
+        }}
       />
 
       <WhyChooseSection

@@ -7,6 +7,7 @@ import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
 import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
+import BenefitsPerformance from "../../../components/BenefitsPerformance";
 // AeoGeoOptimization
 
 export default function AeoGeoOptimization() {
@@ -75,15 +76,30 @@ export default function AeoGeoOptimization() {
         </ol>`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x9.webp"
-        heading="Benefits of AEO & GEO Optimization"
-        text={`<ul>
-          <li>Increased AI visibility</li>
-          <li>Inclusion in AI-generated answers</li>
-          <li>Future-proof SEO strategy</li>
-          <li>Stronger brand authority</li>
-        </ul>`}
+      <BenefitsPerformance
+        data={{
+          heading: "Benefits of AEO & GEO Optimization",
+          subText:
+            "AEO and GEO ensure your content is visible, trusted, and referenced in AI-driven search environments.",
+          benefits: [
+            {
+              title: "Increased AI visibility",
+              desc: "Improve discoverability across AI-powered search and answer engines.",
+            },
+            {
+              title: "Inclusion in AI-generated answers",
+              desc: "Structure content so it can be cited and surfaced in generative results.",
+            },
+            {
+              title: "Future-proof SEO strategy",
+              desc: "Adapt your visibility strategy for evolving AI-driven search systems.",
+            },
+            {
+              title: "Stronger brand authority",
+              desc: "Build trust signals that increase credibility across digital ecosystems.",
+            },
+          ],
+        }}
       />
 
       <FAQSection

@@ -7,6 +7,7 @@ import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection
 import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
 import WhyChooseSection from "../../../components/WhyChooseSection";
+import BenefitsPerformance from "../../../components/BenefitsPerformance";
 // ad-creative-design
 
 export default function AdCreativeDesign() {
@@ -122,18 +123,37 @@ export default function AdCreativeDesign() {
         Any business running ads benefits from strong creative.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x14.webp"
-        heading="Benefits of Our Ad Creative Design Services"
-        text={`<ul>
-          <li>Higher click-through rates</li>
-          <li>Better ad engagement</li>
-          <li>Lower advertising costs</li>
-          <li>Stronger campaign performance</li>
-          <li>Improved brand consistency</li>
-          <li>Faster creative iteration</li>
-        </ul><br/>
-        Effective ad creative turns ad spend into results.`}
+      <BenefitsPerformance
+        data={{
+          heading: "Benefits of Our Ad Creative Design Services",
+          subText: "Effective ad creative turns ad spend into results.",
+          benefits: [
+            {
+              title: "Higher click-through rates",
+              desc: "Compelling visuals and messaging increase user interaction.",
+            },
+            {
+              title: "Better ad engagement",
+              desc: "Creative concepts designed to capture and retain attention.",
+            },
+            {
+              title: "Lower advertising costs",
+              desc: "Improved relevance and performance reduce cost per result.",
+            },
+            {
+              title: "Stronger campaign performance",
+              desc: "Creative assets aligned with clear performance objectives.",
+            },
+            {
+              title: "Improved brand consistency",
+              desc: "Maintain cohesive visuals and messaging across campaigns.",
+            },
+            {
+              title: "Faster creative iteration",
+              desc: "Structured testing enables rapid refinement and optimization.",
+            },
+          ],
+        }}
       />
 
       <WhyChooseSection

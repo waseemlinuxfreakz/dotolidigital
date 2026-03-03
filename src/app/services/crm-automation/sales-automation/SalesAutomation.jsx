@@ -7,6 +7,7 @@ import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection
 import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
 import WhyChooseSection from "../../../components/WhyChooseSection";
+import BenefitsPerformance from "../../../components/BenefitsPerformance";
 
 export default function SalesAutomation() {
   const [showPopup, setShowPopup] = useState(false);
@@ -106,18 +107,38 @@ export default function SalesAutomation() {
         Any sales-driven business benefits from automation.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x14.webp"
-        heading="Benefits of Our Sales Automation Services"
-        text={`<ul>
-          <li>Faster lead response times</li>
-          <li>Improved sales efficiency</li>
-          <li>Higher close rates</li>
-          <li>Clear pipeline visibility</li>
-          <li>Reduced manual workload</li>
-          <li>Scalable sales operations</li>
-        </ul><br/>
-        Sales automation turns sales processes into predictable systems.`}
+      <BenefitsPerformance
+        data={{
+          heading: "Benefits of Our Sales Automation Services",
+          subText:
+            "Sales automation turns sales processes into predictable systems.",
+          benefits: [
+            {
+              title: "Faster lead response times",
+              desc: "Automate follow-ups to engage prospects without delay.",
+            },
+            {
+              title: "Improved sales efficiency",
+              desc: "Streamline workflows so teams focus on closing, not admin tasks.",
+            },
+            {
+              title: "Higher close rates",
+              desc: "Structured pipelines increase consistency and conversion.",
+            },
+            {
+              title: "Clear pipeline visibility",
+              desc: "Gain real-time insights into deal stages and performance.",
+            },
+            {
+              title: "Reduced manual workload",
+              desc: "Automate repetitive processes to free up team capacity.",
+            },
+            {
+              title: "Scalable sales operations",
+              desc: "Build systems that support growth without increasing headcount.",
+            },
+          ],
+        }}
       />
 
       <WhyChooseSection

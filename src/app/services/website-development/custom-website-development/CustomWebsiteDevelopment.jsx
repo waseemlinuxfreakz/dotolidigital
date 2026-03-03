@@ -7,6 +7,7 @@ import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection
 import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
 import WhyChooseSection from "../../../components/WhyChooseSection";
+import BenefitsPerformance from "../../../components/BenefitsPerformance";
 
 export default function CustomWebsiteDevelopment() {
   const [showPopup, setShowPopup] = useState(false);
@@ -108,18 +109,38 @@ export default function CustomWebsiteDevelopment() {
         Any business requiring flexibility and scalability benefits from custom development.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x14.webp"
-        heading="Benefits of Our Custom Website Development Services"
-        text={`<ul>
-          <li>Faster website performance</li>
-          <li>Better user experience</li>
-          <li>Higher conversion rates</li>
-          <li>SEO and AI search readiness</li>
-          <li>Scalable architecture</li>
-          <li>Full design and feature control</li>
-        </ul><br/>
-        Custom websites grow with your business instead of holding it back.`}
+      <BenefitsPerformance
+        data={{
+          heading: "Benefits of Our Custom Website Development Services",
+          subText:
+            "Custom websites grow with your business instead of holding it back.",
+          benefits: [
+            {
+              title: "Faster website performance",
+              desc: "Optimized architecture ensures speed, stability, and responsiveness.",
+            },
+            {
+              title: "Better user experience",
+              desc: "Structured navigation and design improve usability and engagement.",
+            },
+            {
+              title: "Higher conversion rates",
+              desc: "Strategic layouts guide users toward meaningful actions.",
+            },
+            {
+              title: "SEO and AI search readiness",
+              desc: "Built with technical foundations that support search and AI visibility.",
+            },
+            {
+              title: "Scalable architecture",
+              desc: "Flexible systems designed to grow with traffic and feature demands.",
+            },
+            {
+              title: "Full design and feature control",
+              desc: "Custom development allows complete flexibility and customization.",
+            },
+          ],
+        }}
       />
 
       <WhyChooseSection

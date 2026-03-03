@@ -7,6 +7,7 @@ import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection
 import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
 import WhyChooseSection from "../../../components/WhyChooseSection";
+import BenefitsPerformance from "../../../components/BenefitsPerformance";
 
 export default function UiUxDesign() {
   const [showPopup, setShowPopup] = useState(false);
@@ -108,18 +109,37 @@ export default function UiUxDesign() {
         Any digital product benefits from thoughtful UI/UX design.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x14.webp"
-        heading="Benefits of Our UI/UX Design Services"
-        text={`<ul>
-          <li>Improved usability and navigation</li>
-          <li>Higher engagement and retention</li>
-          <li>Better conversion rates</li>
-          <li>Reduced user friction</li>
-          <li>Clear and consistent interfaces</li>
-          <li>Stronger trust and credibility</li>
-        </ul><br/>
-        UI/UX design improves both experience and results.`}
+      <BenefitsPerformance
+        data={{
+          heading: "Benefits of Our UI/UX Design Services",
+          subText: "UI/UX design improves both experience and results.",
+          benefits: [
+            {
+              title: "Improved usability and navigation",
+              desc: "Design intuitive flows that make interactions simple and efficient.",
+            },
+            {
+              title: "Higher engagement and retention",
+              desc: "Encourage users to stay longer and return through better experiences.",
+            },
+            {
+              title: "Better conversion rates",
+              desc: "Guide users toward meaningful actions with structured design.",
+            },
+            {
+              title: "Reduced user friction",
+              desc: "Remove obstacles that prevent users from completing key tasks.",
+            },
+            {
+              title: "Clear and consistent interfaces",
+              desc: "Maintain visual harmony and usability across all touchpoints.",
+            },
+            {
+              title: "Stronger trust and credibility",
+              desc: "Professional design builds confidence and brand authority.",
+            },
+          ],
+        }}
       />
 
       <WhyChooseSection

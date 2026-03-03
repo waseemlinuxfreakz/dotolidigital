@@ -7,6 +7,7 @@ import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
 import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
+import BenefitsPerformance from "../../../components/BenefitsPerformance";
 
 export default function LocalSeo() {
   const [showPopup, setShowPopup] = useState(false);
@@ -67,15 +68,30 @@ export default function LocalSeo() {
         </ol>`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x9.webp"
-        heading="Benefits of Local SEO Services"
-        text={`<ul>
-          <li>Increased local visibility</li>
-          <li>More calls and visits</li>
-          <li>Higher trust in local markets</li>
-          <li>Improved AI-driven local recommendations</li>
-        </ul>`}
+      <BenefitsPerformance
+        data={{
+          heading: "Benefits of Local SEO Services",
+          subText:
+            "Local SEO strengthens your visibility where buying intent is highest — in your target service areas.",
+          benefits: [
+            {
+              title: "Increased local visibility",
+              desc: "Appear prominently in map results and location-based searches.",
+            },
+            {
+              title: "More calls and visits",
+              desc: "Drive high-intent traffic from nearby customers ready to act.",
+            },
+            {
+              title: "Higher trust in local markets",
+              desc: "Build credibility through optimized listings and consistent local signals.",
+            },
+            {
+              title: "Improved AI-driven local recommendations",
+              desc: "Enhance discoverability in AI-powered local search and assistant results.",
+            },
+          ],
+        }}
       />
 
       <FAQSection

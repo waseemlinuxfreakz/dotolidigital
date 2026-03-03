@@ -8,6 +8,7 @@ import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection
 import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
 import WhyChooseSection from "../../../components/WhyChooseSection";
+import BenefitsPerformance from "../../../components/BenefitsPerformance";
 // VrMarketingProductShowcases
 
 export default function VrMarketingProductShowcases() {
@@ -108,18 +109,39 @@ export default function VrMarketingProductShowcases() {
         Any business that needs to showcase products or services in an interactive, engaging way can benefit from VR marketing.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x9.webp"
-        heading="Benefits of Our VR Marketing & Product Showcase Services"
-        text={`<ul>
-          <li>Higher engagement rates and interaction</li>
-          <li>Improved product understanding and customer retention</li>
-          <li>Increased brand differentiation and awareness</li>
-          <li>Clearer value demonstration through interactive content</li>
-          <li>Stronger emotional connection with the audience</li>
-          <li>Improved conversion rates through immersive product experiences</li>
-        </ul><br/>
-        VR marketing turns passive product displays into active, engaging experiences that boost customer confidence and drive action.`}
+      <BenefitsPerformance
+        data={{
+          heading: "Benefits of Our VR Marketing & Product Showcase Services",
+          subText:
+            "VR marketing turns passive product displays into active, engaging experiences that boost customer confidence and drive action.",
+          benefits: [
+            {
+              title: "Higher engagement rates and interaction",
+              desc: "Immersive environments encourage deeper user participation and attention.",
+            },
+            {
+              title: "Improved product understanding and customer retention",
+              desc: "Interactive showcases help users better understand features and value.",
+            },
+            {
+              title: "Increased brand differentiation and awareness",
+              desc: "Stand out in competitive markets through innovative experiences.",
+            },
+            {
+              title: "Clearer value demonstration through interactive content",
+              desc: "Showcase products in dynamic ways that highlight benefits effectively.",
+            },
+            {
+              title: "Stronger emotional connection with the audience",
+              desc: "Create memorable experiences that build lasting brand affinity.",
+            },
+            {
+              title:
+                "Improved conversion rates through immersive product experiences",
+              desc: "Boost purchase confidence with hands-on virtual product interaction.",
+            },
+          ],
+        }}
       />
 
       <WhyChooseSection

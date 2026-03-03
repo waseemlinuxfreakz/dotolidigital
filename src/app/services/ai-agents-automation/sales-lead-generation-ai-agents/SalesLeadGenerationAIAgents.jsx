@@ -8,6 +8,7 @@ import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection
 import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
 import WhyChooseSection from "../../../components/WhyChooseSection";
+import BenefitsPerformance from "../../../components/BenefitsPerformance";
 // SalesLeadGenerationAIAgents
 
 export default function SalesLeadGenerationAIAgents() {
@@ -108,19 +109,40 @@ export default function SalesLeadGenerationAIAgents() {
         Any business handling inbound leads benefits from AI-driven qualification.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x9.webp"
-        heading="Benefits of Our Sales & Lead Generation AI Agents"
-        text={`<ul>
-          <li>Faster lead response times</li>
-          <li>Higher-quality leads</li>
-          <li>Improved sales efficiency</li>
-          <li>Reduced manual work</li>
-          <li>Consistent qualification process</li>
-          <li>Scalable sales operations</li>
-        </ul><br/>
-        AI agents turn inbound interest into sales-ready opportunities.`}
+      <BenefitsPerformance
+        data={{
+          heading: "Benefits of Our Sales & Lead Generation AI Agents",
+          subText:
+            "AI agents turn inbound interest into sales-ready opportunities.",
+          benefits: [
+            {
+              title: "Faster lead response times",
+              desc: "Engage and qualify leads instantly without delays.",
+            },
+            {
+              title: "Higher-quality leads",
+              desc: "Filter and prioritize prospects based on intent and readiness.",
+            },
+            {
+              title: "Improved sales efficiency",
+              desc: "Support sales teams by automating early-stage conversations.",
+            },
+            {
+              title: "Reduced manual work",
+              desc: "Automate repetitive tasks to free up team capacity.",
+            },
+            {
+              title: "Consistent qualification process",
+              desc: "Ensure every lead is evaluated through structured criteria.",
+            },
+            {
+              title: "Scalable sales operations",
+              desc: "Handle increasing lead volume without expanding headcount.",
+            },
+          ],
+        }}
       />
+
       <WhyChooseSection
         onCtaClick={() => setShowPopup(true)}
         data={{

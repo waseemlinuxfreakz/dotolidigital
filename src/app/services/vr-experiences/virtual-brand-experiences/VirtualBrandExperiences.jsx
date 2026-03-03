@@ -8,6 +8,7 @@ import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection
 import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
 import WhyChooseSection from "../../../components/WhyChooseSection";
+import BenefitsPerformance from "../../../components/BenefitsPerformance";
 // VirtualBrandExperiences
 
 export default function VirtualBrandExperiences() {
@@ -108,17 +109,34 @@ export default function VirtualBrandExperiences() {
         Any brand looking to innovate and engage in new, interactive ways can benefit from a Virtual Brand Experience.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x9.webp"
-        heading="Benefits of Our Virtual Brand Experience Services"
-        text={`<ul>
-          <li>Enhanced brand engagement and interaction</li>
-          <li>Deeper emotional connection with your audience</li>
-          <li>Increased brand awareness and loyalty</li>
-          <li>Real-time analytics and user insights</li>
-          <li>Scalable and flexible branding solutions</li>
-        </ul><br/>
-        A Virtual Brand Experience is more than just a marketing tool; it’s an opportunity to create lasting memories with your audience.`}
+      <BenefitsPerformance
+        data={{
+          heading: "Benefits of Our Virtual Brand Experience Services",
+          subText:
+            "A Virtual Brand Experience is more than just a marketing tool; it’s an opportunity to create lasting memories with your audience.",
+          benefits: [
+            {
+              title: "Enhanced brand engagement and interaction",
+              desc: "Create immersive environments that encourage active audience participation.",
+            },
+            {
+              title: "Deeper emotional connection with your audience",
+              desc: "Build meaningful brand relationships through memorable experiences.",
+            },
+            {
+              title: "Increased brand awareness and loyalty",
+              desc: "Strengthen recognition and long-term customer retention.",
+            },
+            {
+              title: "Real-time analytics and user insights",
+              desc: "Track engagement behavior to optimize performance and strategy.",
+            },
+            {
+              title: "Scalable and flexible branding solutions",
+              desc: "Design adaptable virtual platforms that grow with your brand.",
+            },
+          ],
+        }}
       />
 
       <WhyChooseSection

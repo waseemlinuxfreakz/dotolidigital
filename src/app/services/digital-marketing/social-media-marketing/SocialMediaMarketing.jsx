@@ -8,6 +8,8 @@ import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
 import WhyChooseSection from "../../../components/WhyChooseSection";
 
+import BenefitsPerformance from "../../../components/BenefitsPerformance";
+
 export default function SocialMediaMarketing() {
   const [showPopup, setShowPopup] = useState(false);
 
@@ -124,67 +126,33 @@ export default function SocialMediaMarketing() {
         Each industry requires a tailored content and engagement approach.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x14.webp"
-        heading="Benefits of Our Social Media Marketing Services"
-        text={`<ul>
-          <li>Increased brand visibility</li>
-          <li>Higher engagement quality</li>
-          <li>Stronger audience trust</li>
-          <li>Consistent brand presence</li>
-          <li>Support for lead generation and conversions</li>
-        </ul><br/>
-        Social media marketing works best as part of an integrated digital strategy.`}
-      />
-
-      <ServiceDetailsSection
-        img="/images/x14.webp"
-        heading="Why Businesses Choose Dotoli Digital for Social Media Marketing"
-        text={`Businesses choose Dotoli Digital because we understand how social media fits into the larger growth ecosystem.<br/><br/>
-        We do not treat social media as an isolated channel. Our strategies are:<br/>
-        <ul>
-          <li>Aligned with SEO, AEO, and performance marketing</li>
-          <li>Data-driven and adaptable</li>
-          <li>Focused on long-term brand value</li>
-          <li>Transparent and goal-oriented</li>
-        </ul>`}
-      />
-      <WhyChooseSection
-        onCtaClick={() => setShowPopup(true)}
+      <BenefitsPerformance
         data={{
-          pillText: "Social media marketing, built for growth",
-          title: "Why businesses choose",
-          highlightText: "Dotoli Digital for Social Media Marketing",
+          heading: "Benefits of Our Social Media Marketing Services",
           subText:
-            "Businesses choose Dotoli Digital because we understand how social media fits into a larger growth ecosystem — not as an isolated channel, but as part of a connected strategy.",
-          ctaText: "Book a Free Strategy Call",
-
-          miniCards: [
-            { k: "Alignment", v: "SEO + AEO" },
-            { k: "Clarity", v: "Clear reporting" },
-            { k: "Value", v: "Brand growth" },
-          ],
-
-          cards: [
+            "Social media marketing works best as part of an integrated digital strategy.",
+          benefits: [
             {
-              title: "Aligned with SEO & AEO",
-              desc: "Your social strategy supports visibility and measurable growth.",
+              title: "Increased brand visibility",
+              desc: "Expand your reach and maintain consistent visibility across key platforms.",
             },
             {
-              title: "Data-driven & adaptable",
-              desc: "We refine content and targeting using performance insights.",
+              title: "Higher engagement quality",
+              desc: "Attract meaningful interactions that reflect real audience interest.",
             },
             {
-              title: "Built for long-term value",
-              desc: "We grow trust and authority that compounds over time.",
+              title: "Stronger audience trust",
+              desc: "Build credibility through consistent messaging and valuable content.",
             },
             {
-              title: "Transparent & goal-focused",
-              desc: "Clear KPIs and reporting on what’s working and improving.",
+              title: "Consistent brand presence",
+              desc: "Maintain brand alignment and recognition across all channels.",
+            },
+            {
+              title: "Support for lead generation and conversions",
+              desc: "Turn engagement into measurable business outcomes.",
             },
           ],
-
-          outcome: "We build social systems that drive sustainable growth.",
         }}
       />
 

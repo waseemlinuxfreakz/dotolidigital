@@ -7,6 +7,7 @@ import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection
 import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
 import WhyChooseSection from "../../../components/WhyChooseSection";
+import BenefitsPerformance from "../../../components/BenefitsPerformance";
 
 export default function ConversionRateOptimization() {
   const [showPopup, setShowPopup] = useState(false);
@@ -122,17 +123,34 @@ export default function ConversionRateOptimization() {
         Any business with digital traffic can benefit from CRO.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x14.webp"
-        heading="Benefits of Our Conversion Rate Optimization Services"
-        text={`<ul>
-          <li>Higher conversion rates</li>
-          <li>Better ROI from existing traffic</li>
-          <li>Improved user experience</li>
-          <li>Lower cost per lead or sale</li>
-          <li>Scalable performance improvements</li>
-        </ul><br/>
-        CRO creates compounding gains without increasing traffic budgets.`}
+      <BenefitsPerformance
+        data={{
+          heading: "Benefits of Our Conversion Rate Optimization Services",
+          subText:
+            "CRO creates compounding gains without increasing traffic budgets.",
+          benefits: [
+            {
+              title: "Higher conversion rates",
+              desc: "Turn more visitors into leads and customers through structured testing.",
+            },
+            {
+              title: "Better ROI from existing traffic",
+              desc: "Maximize the value of the traffic you already generate.",
+            },
+            {
+              title: "Improved user experience",
+              desc: "Reduce friction and guide users toward clear, confident actions.",
+            },
+            {
+              title: "Lower cost per lead or sale",
+              desc: "Increase efficiency without increasing acquisition spend.",
+            },
+            {
+              title: "Scalable performance improvements",
+              desc: "Build systems that continuously improve over time.",
+            },
+          ],
+        }}
       />
 
       <WhyChooseSection

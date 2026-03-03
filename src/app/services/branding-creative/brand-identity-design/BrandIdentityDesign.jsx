@@ -7,6 +7,7 @@ import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection
 import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
 import WhyChooseSection from "../../../components/WhyChooseSection";
+import BenefitsPerformance from "../../../components/BenefitsPerformance";
 
 export default function BrandIdentityDesign() {
   const [showPopup, setShowPopup] = useState(false);
@@ -108,18 +109,37 @@ export default function BrandIdentityDesign() {
         Any business that wants to be recognizable and trusted benefits from strong identity design.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x14.webp"
-        heading="Benefits of Our Brand Identity Design Services"
-        text={`<ul>
-          <li>Clear and professional brand presence</li>
-          <li>Stronger brand recognition</li>
-          <li>Consistent visuals across platforms</li>
-          <li>Increased trust and credibility</li>
-          <li>Easier marketing and content creation</li>
-          <li>Long-term brand equity</li>
-        </ul><br/>
-        Brand identity turns visibility into memorability.`}
+      <BenefitsPerformance
+        data={{
+          heading: "Benefits of Our Brand Identity Design Services",
+          subText: "Brand identity turns visibility into memorability.",
+          benefits: [
+            {
+              title: "Clear and professional brand presence",
+              desc: "Present your business with clarity, confidence, and visual consistency.",
+            },
+            {
+              title: "Stronger brand recognition",
+              desc: "Create memorable visual elements that customers easily recall.",
+            },
+            {
+              title: "Consistent visuals across platforms",
+              desc: "Maintain cohesive design across websites, ads, and social channels.",
+            },
+            {
+              title: "Increased trust and credibility",
+              desc: "Professional branding builds confidence and authority.",
+            },
+            {
+              title: "Easier marketing and content creation",
+              desc: "Clear guidelines streamline campaign and content development.",
+            },
+            {
+              title: "Long-term brand equity",
+              desc: "Build a brand foundation that grows stronger over time.",
+            },
+          ],
+        }}
       />
 
       <WhyChooseSection

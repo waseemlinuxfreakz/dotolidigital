@@ -7,6 +7,7 @@ import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection
 import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
 import WhyChooseSection from "../../../components/WhyChooseSection";
+import BenefitsPerformance from "../../../components/BenefitsPerformance";
 // marketing-automation
 
 export default function MarketingAutomation() {
@@ -109,18 +110,38 @@ export default function MarketingAutomation() {
         Any business managing leads and customer communication benefits from automation.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x14.webp"
-        heading="Benefits of Our Marketing Automation Services"
-        text={`<ul>
-          <li>Improved lead nurturing</li>
-          <li>Higher engagement rates</li>
-          <li>Faster response times</li>
-          <li>Increased conversion rates</li>
-          <li>Reduced manual workload</li>
-          <li>Scalable and consistent marketing systems</li>
-        </ul><br/>
-        Marketing automation turns marketing into a predictable growth engine.`}
+      <BenefitsPerformance
+        data={{
+          heading: "Benefits of Our Marketing Automation Services",
+          subText:
+            "Marketing automation turns marketing into a predictable growth engine.",
+          benefits: [
+            {
+              title: "Improved lead nurturing",
+              desc: "Guide prospects through structured journeys with personalized messaging.",
+            },
+            {
+              title: "Higher engagement rates",
+              desc: "Deliver timely, relevant communication across channels.",
+            },
+            {
+              title: "Faster response times",
+              desc: "Automate follow-ups to reduce delays and increase momentum.",
+            },
+            {
+              title: "Increased conversion rates",
+              desc: "Move leads efficiently from interest to action.",
+            },
+            {
+              title: "Reduced manual workload",
+              desc: "Automate repetitive tasks to free up marketing teams.",
+            },
+            {
+              title: "Scalable and consistent marketing systems",
+              desc: "Build processes that grow without sacrificing quality.",
+            },
+          ],
+        }}
       />
 
       <WhyChooseSection

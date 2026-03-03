@@ -7,6 +7,7 @@ import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection
 import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
 import WhyChooseSection from "../../../components/WhyChooseSection";
+import BenefitsPerformance from "../../../components/BenefitsPerformance";
 // ecommerce-website-development EcommerceWebsiteDevelopment
 
 export default function EcommerceWebsiteDevelopment() {
@@ -112,18 +113,38 @@ export default function EcommerceWebsiteDevelopment() {
         Any business selling online benefits from a well-built eCommerce website.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x14.webp"
-        heading="Benefits of Our eCommerce Website Development Services"
-        text={`<ul>
-          <li>Higher conversion rates</li>
-          <li>Faster website performance</li>
-          <li>Improved product visibility</li>
-          <li>Secure and smooth checkout experience</li>
-          <li>Scalable store architecture</li>
-          <li>SEO and AI search readiness</li>
-        </ul><br/>
-        A strong eCommerce website becomes a revenue engine, not just a storefront.`}
+      <BenefitsPerformance
+        data={{
+          heading: "Benefits of Our eCommerce Website Development Services",
+          subText:
+            "A strong eCommerce website becomes a revenue engine, not just a storefront.",
+          benefits: [
+            {
+              title: "Higher conversion rates",
+              desc: "Optimize product pages and flows to increase completed purchases.",
+            },
+            {
+              title: "Faster website performance",
+              desc: "Speed-optimized architecture improves user experience and retention.",
+            },
+            {
+              title: "Improved product visibility",
+              desc: "Structured SEO and navigation enhance product discoverability.",
+            },
+            {
+              title: "Secure and smooth checkout experience",
+              desc: "Streamlined checkout reduces cart abandonment and builds trust.",
+            },
+            {
+              title: "Scalable store architecture",
+              desc: "Infrastructure designed to support traffic, inventory, and growth.",
+            },
+            {
+              title: "SEO and AI search readiness",
+              desc: "Built with technical foundations that support search and AI visibility.",
+            },
+          ],
+        }}
       />
 
       <WhyChooseSection

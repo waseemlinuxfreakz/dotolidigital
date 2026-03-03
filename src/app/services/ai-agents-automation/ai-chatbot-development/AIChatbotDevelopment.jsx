@@ -8,6 +8,7 @@ import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection
 import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
 import WhyChooseSection from "../../../components/WhyChooseSection";
+import BenefitsPerformance from "../../../components/BenefitsPerformance";
 
 export default function AIChatbotDevelopment() {
   const [showPopup, setShowPopup] = useState(false);
@@ -107,19 +108,40 @@ export default function AIChatbotDevelopment() {
         Any business managing digital inquiries benefits from AI chatbots.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x9.webp"
-        heading="Benefits of Our AI Chatbot Development Services"
-        text={`<ul>
-          <li>24/7 automated engagement</li>
-          <li>Faster response times</li>
-          <li>Reduced support workload</li>
-          <li>Better lead qualification</li>
-          <li>Consistent communication</li>
-          <li>Scalable conversation systems</li>
-        </ul><br/>
-        AI chatbots improve efficiency without sacrificing experience.`}
+      <BenefitsPerformance
+        data={{
+          heading: "Benefits of Our AI Chatbot Development Services",
+          subText:
+            "AI chatbots improve efficiency without sacrificing experience.",
+          benefits: [
+            {
+              title: "24/7 automated engagement",
+              desc: "Respond to users instantly at any time without manual effort.",
+            },
+            {
+              title: "Faster response times",
+              desc: "Reduce delays and improve customer satisfaction.",
+            },
+            {
+              title: "Reduced support workload",
+              desc: "Handle repetitive queries and free up human teams.",
+            },
+            {
+              title: "Better lead qualification",
+              desc: "Identify and route high-intent prospects efficiently.",
+            },
+            {
+              title: "Consistent communication",
+              desc: "Deliver accurate and structured responses across interactions.",
+            },
+            {
+              title: "Scalable conversation systems",
+              desc: "Manage growing user volume without increasing overhead.",
+            },
+          ],
+        }}
       />
+
       <WhyChooseSection
         onCtaClick={() => setShowPopup(true)}
         data={{

@@ -7,6 +7,7 @@ import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection
 import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
 import WhyChooseSection from "../../../components/WhyChooseSection";
+import BenefitsPerformance from "../../../components/BenefitsPerformance";
 // landing-page-design-development LandingPageDesignDevelopment
 
 export default function LandingPageDesignDevelopment() {
@@ -109,18 +110,37 @@ export default function LandingPageDesignDevelopment() {
         Any business running digital campaigns benefits from optimized landing pages.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x14.webp"
-        heading="Benefits of Our Landing Page Design & Development Services"
-        text={`<ul>
-          <li>Higher conversion rates</li>
-          <li>Better campaign ROI</li>
-          <li>Faster page load times</li>
-          <li>Clear user journeys</li>
-          <li>Easy testing and optimization</li>
-          <li>Seamless integration with ads and analytics</li>
-        </ul><br/>
-        Landing pages turn traffic into measurable results.`}
+      <BenefitsPerformance
+        data={{
+          heading: "Benefits of Our Landing Page Design & Development Services",
+          subText: "Landing pages turn traffic into measurable results.",
+          benefits: [
+            {
+              title: "Higher conversion rates",
+              desc: "Strategic layouts guide visitors toward clear and focused actions.",
+            },
+            {
+              title: "Better campaign ROI",
+              desc: "Improve ad efficiency by aligning pages with campaign intent.",
+            },
+            {
+              title: "Faster page load times",
+              desc: "Performance-optimized builds reduce bounce and increase engagement.",
+            },
+            {
+              title: "Clear user journeys",
+              desc: "Structured messaging removes distractions and improves clarity.",
+            },
+            {
+              title: "Easy testing and optimization",
+              desc: "Built to support A/B testing and continuous performance improvement.",
+            },
+            {
+              title: "Seamless integration with ads and analytics",
+              desc: "Connect landing pages directly with tracking, ads, and CRM systems.",
+            },
+          ],
+        }}
       />
 
       <WhyChooseSection

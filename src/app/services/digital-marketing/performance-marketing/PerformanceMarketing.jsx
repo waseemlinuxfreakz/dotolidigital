@@ -5,7 +5,7 @@ import Footer from "../../../components/Footer";
 import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
 import { FAQSection } from "../../../components/FAQSection";
-import BenefitsPerformance from "../../../components/BenefitsPerformance";
+
 import IndustriesSection from "../../../components/IndustriesSection";
 import PlatformsWeUse from "../../../components/PlatformsWeUse";
 import ProcessTimeline from "../../../components/ProcessTimeline";
@@ -13,6 +13,8 @@ import ServicesWeOffer from "../../../components/ServicesWeOffer";
 
 import PerformanceCta from "../../../components/PerformanceCta";
 import WhyChooseSection from "../../../components/WhyChooseSection";
+
+import BenefitsPerformance from "../../../components/BenefitsPerformance";
 
 import Link from "next/link";
 
@@ -160,7 +162,39 @@ export default function PerformanceMarketing() {
         Each industry requires a tailored funnel and targeting strategy.`}
       /> */}
 
-      <BenefitsPerformance />
+      <BenefitsPerformance
+        data={{
+          heading: "Benefits of Our Performance Marketing Services",
+          subText:
+            "Performance marketing ensures every marketing dollar works harder.",
+          benefits: [
+            {
+              title: "Measurable ROI",
+              desc: "Track conversions, revenue, and attribution with full transparency.",
+            },
+            {
+              title: "Lower cost per lead or acquisition",
+              desc: "Continuous testing and optimization reduce CPA over time.",
+            },
+            {
+              title: "Better budget control",
+              desc: "Allocate spend to high-performing campaigns and cut waste quickly.",
+            },
+            {
+              title: "Scalable growth",
+              desc: "Build systems that grow sustainably without sacrificing efficiency.",
+            },
+            {
+              title: "Data-backed decision making",
+              desc: "Make strategic decisions based on insights, not assumptions.",
+            },
+            {
+              title: "Reduced marketing waste",
+              desc: "Eliminate underperforming channels and focus on what converts.",
+            },
+          ],
+        }}
+      />
 
       {/* <ServiceDetailsSection
         img="/images/x9.webp"
@@ -176,22 +210,6 @@ export default function PerformanceMarketing() {
         Performance marketing ensures every marketing dollar works harder.`}
       /> */}
 
-      {/* <ServiceDetailsSection
-        heading="Why Businesses Choose Dotoli Digital for Performance Marketing"
-        text={`Businesses choose Dotoli Digital because we treat performance marketing as a system, not a set of ads.<br/><br/>
-        Our strategies are:<br/>
-        <ul>
-          <li>Data-driven and transparent</li>
-          <li>Focused on conversions, not vanity metrics</li>
-          <li>Integrated with SEO, CRO, and automation</li>
-          <li>Continuously optimized for changing algorithms</li>
-        </ul><br/>
-        We build performance marketing engines that improve over time.`}
-      /> */}
-      {/* 
-whychoose-sec
-WhyChooseSection
-*/}
       <WhyChooseSection
         onCtaClick={() => setShowPopup(true)}
         data={{
@@ -265,35 +283,11 @@ WhyChooseSection
         ]}
       />
 
-      {/* <ServiceDetailsSection
-        img="/images/x9.webp"
-        heading="Frequently Asked Questions"
-        text={`<strong>What makes performance marketing different from traditional digital marketing?</strong><br/>
-        Performance marketing focuses strictly on measurable results such as leads and sales, not just visibility or engagement.<br/><br/>
-        <strong>How quickly can performance marketing deliver results?</strong><br/>
-        Paid performance campaigns can generate results quickly, often within days, while optimization improves results over time.<br/><br/>
-        <strong>Is performance marketing expensive?</strong><br/>
-        It depends on goals and competition, but performance marketing allows better budget control and ROI tracking.<br/><br/>
-        <strong>Can performance marketing work with SEO and AEO?</strong><br/>
-        Yes. Performance marketing complements SEO and AEO by driving demand and supporting conversion funnels.<br/><br/>
-        <strong>Do you provide ongoing performance marketing management?</strong><br/>
-        Yes. Continuous management and optimization are essential for sustained performance.`}
-      /> */}
-
       <PerformanceCta
         onStrategyClick={() => setShowPopup(true)}
         title="Ready to Turn Marketing Spend into Measurable Results?"
         description={`Performance marketing removes guesswork and replaces it with clarity, data, and growth.`}
       />
-
-      {/* <ServiceDetailsSection
-        img="/images/x9.webp"
-        heading="Ready to Turn Marketing Spend into Measurable Results?"
-        text={`Performance marketing removes guesswork and replaces it with clarity, data, and growth.<br/><br/>
-        <strong>Get a Free Performance Marketing Audit</strong><br/>
-        or<br/>
-        <strong>Book a Strategy Call to Scale Faster</strong>`}
-      /> */}
 
       <Footer />
     </>

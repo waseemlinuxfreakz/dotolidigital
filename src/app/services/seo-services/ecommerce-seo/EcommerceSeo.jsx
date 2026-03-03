@@ -7,6 +7,7 @@ import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
 import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
+import BenefitsPerformance from "../../../components/BenefitsPerformance";
 // EcommerceSeo
 
 export default function EcommerceSeo() {
@@ -66,15 +67,30 @@ export default function EcommerceSeo() {
         </ol>`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x9.webp"
-        heading="Benefits of eCommerce SEO Services"
-        text={`<ul>
-          <li>Increased product visibility</li>
-          <li>Higher conversion rates</li>
-          <li>Sustainable organic sales growth</li>
-          <li>Reduced dependency on paid ads</li>
-        </ul>`}
+      <BenefitsPerformance
+        data={{
+          heading: "Benefits of eCommerce SEO Services",
+          subText:
+            "eCommerce SEO builds sustainable organic visibility that drives long-term sales growth.",
+          benefits: [
+            {
+              title: "Increased product visibility",
+              desc: "Improve rankings so your products appear in high-intent search results.",
+            },
+            {
+              title: "Higher conversion rates",
+              desc: "Attract qualified buyers who are ready to purchase.",
+            },
+            {
+              title: "Sustainable organic sales growth",
+              desc: "Generate consistent revenue without relying solely on paid traffic.",
+            },
+            {
+              title: "Reduced dependency on paid ads",
+              desc: "Lower acquisition costs by strengthening organic demand capture.",
+            },
+          ],
+        }}
       />
 
       <FAQSection
