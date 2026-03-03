@@ -192,7 +192,45 @@ export default function PerformanceMarketing() {
 whychoose-sec
 WhyChooseSection
 */}
-      <WhyChooseSection onCtaClick={() => setShowPopup(true)} />
+      <WhyChooseSection
+        onCtaClick={() => setShowPopup(true)}
+        data={{
+          pillText: "Performance marketing, built as a system",
+          title: "Why businesses choose",
+          highlightText: "Dotoli Digital",
+          subText:
+            "Businesses choose Dotoli Digital because we treat performance marketing as a system, not a set of ads.",
+          ctaText: "Book a Free Strategy Call",
+
+          miniCards: [
+            { k: "Data", v: "Transparent reporting" },
+            { k: "Focus", v: "Conversions first" },
+            { k: "System", v: "SEO + CRO + automation" },
+          ],
+
+          cards: [
+            {
+              title: "Data-driven and transparent",
+              desc: "Clear KPIs, clean attribution, and reporting you can trust—no guesswork.",
+            },
+            {
+              title: "Focused on conversions",
+              desc: "We optimize for leads, sales, and pipeline—not vanity metrics.",
+            },
+            {
+              title: "Integrated SEO, CRO & Automation",
+              desc: "Paid + landing pages + lifecycle follow-up, built as one growth system.",
+            },
+            {
+              title: "Continuously optimized",
+              desc: "Continuous testing and iteration to keep up with changing algorithms.",
+            },
+          ],
+
+          outcome:
+            "We build performance marketing engines that improve over time.",
+        }}
+      />
 
       <FAQSection
         title="Frequently Asked Questions"

@@ -7,6 +7,7 @@ import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
 import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
+import WhyChooseSection from "../../../components/WhyChooseSection";
 // VrMarketingProductShowcases
 
 export default function VrMarketingProductShowcases() {
@@ -121,18 +122,45 @@ export default function VrMarketingProductShowcases() {
         VR marketing turns passive product displays into active, engaging experiences that boost customer confidence and drive action.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x9.webp"
-        heading="Why Businesses Choose Dotoli Digital for VR Marketing & Product Showcases"
-        text={`Businesses choose Dotoli Digital because we design VR experiences that drive real business outcomes.<br/><br/>
-        Our VR marketing services are:<br/>
-        <ul>
-          <li>Engaging, interactive, and immersive</li>
-          <li>Aligned with marketing and sales goals</li>
-          <li>Designed for seamless user experience and easy integration</li>
-          <li>Built for measurable results and optimized performance</li>
-        </ul><br/>
-        We help businesses create VR marketing experiences that lead to increased engagement, sales, and brand loyalty.`}
+      <WhyChooseSection
+        onCtaClick={() => setShowPopup(true)}
+        data={{
+          pillText: "VR marketing & product showcases, built for impact",
+          title: "Why businesses choose",
+          highlightText: "Dotoli Digital for VR Marketing & Product Showcases",
+          subText:
+            "Businesses choose Dotoli Digital because we design VR experiences that drive real business outcomes.",
+
+          ctaText: "Book a Free Strategy Call",
+
+          miniCards: [
+            { k: "Experience", v: "Interactive & immersive" },
+            { k: "Alignment", v: "Marketing + sales goals" },
+            { k: "Results", v: "Measurable performance" },
+          ],
+
+          cards: [
+            {
+              title: "Engaging, interactive, and immersive",
+              desc: "We create VR experiences that capture attention and deepen user engagement.",
+            },
+            {
+              title: "Aligned with marketing & sales goals",
+              desc: "VR solutions are structured to support acquisition, conversion, and revenue.",
+            },
+            {
+              title: "Designed for seamless integration",
+              desc: "Experiences are built for smooth user journeys and easy technical implementation.",
+            },
+            {
+              title: "Built for measurable results",
+              desc: "Performance is tracked and optimized for engagement, sales, and retention.",
+            },
+          ],
+
+          outcome:
+            "We help businesses create VR marketing experiences that increase engagement, sales, and brand loyalty.",
+        }}
       />
 
       <FAQSection

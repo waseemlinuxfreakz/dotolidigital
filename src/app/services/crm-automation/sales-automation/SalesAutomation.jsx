@@ -6,6 +6,7 @@ import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
 import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
+import WhyChooseSection from "../../../components/WhyChooseSection";
 
 export default function SalesAutomation() {
   const [showPopup, setShowPopup] = useState(false);
@@ -119,18 +120,44 @@ export default function SalesAutomation() {
         Sales automation turns sales processes into predictable systems.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x14.webp"
-        heading="Why Businesses Choose Dotoli Digital for Sales Automation"
-        text={`Businesses choose Dotoli Digital because we focus on usability and results.<br/><br/>
-        Our sales automation solutions are:
-        <ul>
-          <li>Customized to real sales workflows</li>
-          <li>Integrated with CRM and marketing automation</li>
-          <li>Easy for teams to adopt</li>
-          <li>Designed for long-term scalability</li>
-        </ul><br/>
-        We help sales teams close more deals with less effort.`}
+      <WhyChooseSection
+        onCtaClick={() => setShowPopup(true)}
+        data={{
+          pillText: "Sales automation, built for efficiency",
+          title: "Why businesses choose",
+          highlightText: "Dotoli Digital for Sales Automation",
+          subText:
+            "Businesses choose Dotoli Digital because we focus on usability and results.",
+
+          ctaText: "Book a Free Strategy Call",
+
+          miniCards: [
+            { k: "Customization", v: "Real sales workflows" },
+            { k: "Integration", v: "CRM + marketing automation" },
+            { k: "Adoption", v: "Easy for teams" },
+          ],
+
+          cards: [
+            {
+              title: "Customized to real sales workflows",
+              desc: "Automation is built around how your team actually sells — not generic templates.",
+            },
+            {
+              title: "Integrated with CRM & marketing",
+              desc: "Seamless connection between CRM systems and marketing automation tools.",
+            },
+            {
+              title: "Easy for teams to adopt",
+              desc: "Clear processes and usability ensure fast team adoption.",
+            },
+            {
+              title: "Designed for long-term scalability",
+              desc: "Systems are structured to grow with your sales operations.",
+            },
+          ],
+
+          outcome: "We help sales teams close more deals with less effort.",
+        }}
       />
 
       <FAQSection

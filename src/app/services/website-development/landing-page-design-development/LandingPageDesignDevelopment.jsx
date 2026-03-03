@@ -6,6 +6,7 @@ import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
 import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
+import WhyChooseSection from "../../../components/WhyChooseSection";
 // landing-page-design-development LandingPageDesignDevelopment
 
 export default function LandingPageDesignDevelopment() {
@@ -122,19 +123,47 @@ export default function LandingPageDesignDevelopment() {
         Landing pages turn traffic into measurable results.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x14.webp"
-        heading="Why Businesses Choose Dotoli Digital for Landing Pages"
-        text={`Businesses choose Dotoli Digital because we build landing pages with purpose.<br/><br/>
-        Our landing pages are:
-        <ul>
-          <li>Conversion-focused</li>
-          <li>Performance-optimized</li>
-          <li>Aligned with SEO and performance marketing</li>
-          <li>Built for continuous testing and growth</li>
-        </ul><br/>
-        We design landing pages that support real business outcomes.`}
+      <WhyChooseSection
+        onCtaClick={() => setShowPopup(true)}
+        data={{
+          pillText: "Landing pages, built with purpose",
+          title: "Why businesses choose",
+          highlightText: "Dotoli Digital for Landing Pages",
+          subText:
+            "Businesses choose Dotoli Digital because we build landing pages with purpose.",
+
+          ctaText: "Book a Free Strategy Call",
+
+          miniCards: [
+            { k: "Focus", v: "Conversion-focused" },
+            { k: "Performance", v: "Optimized for speed" },
+            { k: "Growth", v: "Continuous testing" },
+          ],
+
+          cards: [
+            {
+              title: "Conversion-focused",
+              desc: "Landing pages are structured to guide visitors toward clear actions.",
+            },
+            {
+              title: "Performance-optimized",
+              desc: "Built for speed, responsiveness, and strong user experience.",
+            },
+            {
+              title: "Aligned with SEO & performance marketing",
+              desc: "Landing pages support search visibility and paid campaign results.",
+            },
+            {
+              title: "Built for continuous testing and growth",
+              desc: "Designed to support A/B testing and long-term optimization.",
+            },
+          ],
+
+          outcome:
+            "We design landing pages that support real business outcomes.",
+        }}
       />
+
       <FAQSection
         title="Frequently Asked Questions"
         faqs={[

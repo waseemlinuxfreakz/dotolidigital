@@ -6,6 +6,7 @@ import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
 import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
+import WhyChooseSection from "../../../components/WhyChooseSection";
 // marketing-automation
 
 export default function MarketingAutomation() {
@@ -122,18 +123,45 @@ export default function MarketingAutomation() {
         Marketing automation turns marketing into a predictable growth engine.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x14.webp"
-        heading="Why Businesses Choose Dotoli Digital for Marketing Automation"
-        text={`Businesses choose Dotoli Digital because we focus on systems, not just tools.<br/><br/>
-        Our marketing automation solutions are:
-        <ul>
-          <li>Customized to real customer journeys</li>
-          <li>Integrated with CRM and performance marketing</li>
-          <li>Easy for teams to manage</li>
-          <li>Designed for long-term scalability</li>
-        </ul><br/>
-        We help businesses automate without losing personalization.`}
+      <WhyChooseSection
+        onCtaClick={() => setShowPopup(true)}
+        data={{
+          pillText: "Marketing automation, built as a system",
+          title: "Why businesses choose",
+          highlightText: "Dotoli Digital for Marketing Automation",
+          subText:
+            "Businesses choose Dotoli Digital because we focus on systems, not just tools.",
+
+          ctaText: "Book a Free Strategy Call",
+
+          miniCards: [
+            { k: "Journey", v: "Real customer journeys" },
+            { k: "Integration", v: "CRM + performance marketing" },
+            { k: "Scalability", v: "Built to grow" },
+          ],
+
+          cards: [
+            {
+              title: "Customized to real customer journeys",
+              desc: "Automation is built around how your customers move from awareness to conversion.",
+            },
+            {
+              title: "Integrated with CRM & performance",
+              desc: "Seamless connection between CRM systems and performance marketing channels.",
+            },
+            {
+              title: "Easy for teams to manage",
+              desc: "Structured workflows that teams can confidently operate and optimize.",
+            },
+            {
+              title: "Designed for long-term scalability",
+              desc: "Systems are built to evolve as your business and data grow.",
+            },
+          ],
+
+          outcome:
+            "We help businesses automate without losing personalization.",
+        }}
       />
 
       <FAQSection

@@ -6,6 +6,7 @@ import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
 import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
+import WhyChooseSection from "../../../components/WhyChooseSection";
 
 export default function SocialMediaMarketing() {
   const [showPopup, setShowPopup] = useState(false);
@@ -147,6 +148,85 @@ export default function SocialMediaMarketing() {
           <li>Focused on long-term brand value</li>
           <li>Transparent and goal-oriented</li>
         </ul>`}
+      />
+      <WhyChooseSection
+        onCtaClick={() => setShowPopup(true)}
+        data={{
+          pillText: "Social media marketing, built for growth",
+          title: "Why businesses choose",
+          highlightText: "Dotoli Digital for Social Media Marketing",
+          subText:
+            "Businesses choose Dotoli Digital because we understand how social media fits into a larger growth ecosystem — not as an isolated channel, but as part of a connected strategy.",
+          ctaText: "Book a Free Strategy Call",
+
+          miniCards: [
+            { k: "Alignment", v: "SEO + AEO" },
+            { k: "Clarity", v: "Clear reporting" },
+            { k: "Value", v: "Brand growth" },
+          ],
+
+          cards: [
+            {
+              title: "Aligned with SEO & AEO",
+              desc: "Your social strategy supports visibility and measurable growth.",
+            },
+            {
+              title: "Data-driven & adaptable",
+              desc: "We refine content and targeting using performance insights.",
+            },
+            {
+              title: "Built for long-term value",
+              desc: "We grow trust and authority that compounds over time.",
+            },
+            {
+              title: "Transparent & goal-focused",
+              desc: "Clear KPIs and reporting on what’s working and improving.",
+            },
+          ],
+
+          outcome: "We build social systems that drive sustainable growth.",
+        }}
+      />
+
+      <WhyChooseSection
+        onCtaClick={() => setShowPopup(true)}
+        data={{
+          pillText: "Social media marketing, built for growth",
+          title: "Why businesses choose",
+          highlightText: "Dotoli Digital",
+          subText:
+            "Businesses choose Dotoli Digital because we understand how social media fits into the larger growth ecosystem — not as an isolated channel, but as part of a connected strategy.",
+
+          ctaText: "Book a Free Strategy Call",
+
+          miniCards: [
+            { k: "Alignment", v: "SEO + AEO + performance" },
+            { k: "Clarity", v: "Transparent goals & reporting" },
+            { k: "Value", v: "Long-term brand growth" },
+          ],
+
+          cards: [
+            {
+              title: "Aligned with SEO, AEO & performance marketing",
+              desc: "Your social strategy supports search visibility, demand capture, and measurable acquisition — working alongside your wider marketing stack.",
+            },
+            {
+              title: "Data-driven and adaptable",
+              desc: "We use performance insights to refine creative, targeting, and content — staying flexible as trends and algorithms shift.",
+            },
+            {
+              title: "Focused on long-term brand value",
+              desc: "We build trust, authority, and consistency — so your brand compounds over time, not just in short bursts.",
+            },
+            {
+              title: "Transparent and goal-oriented",
+              desc: "Clear objectives, realistic KPIs, and reporting that shows what’s working, what’s not, and what we’re improving next.",
+            },
+          ],
+
+          outcome:
+            "We build social media systems that strengthen your brand and drive sustainable growth.",
+        }}
       />
 
       <FAQSection

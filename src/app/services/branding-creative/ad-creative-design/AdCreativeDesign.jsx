@@ -6,6 +6,7 @@ import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
 import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
+import WhyChooseSection from "../../../components/WhyChooseSection";
 // ad-creative-design
 
 export default function AdCreativeDesign() {
@@ -135,18 +136,45 @@ export default function AdCreativeDesign() {
         Effective ad creative turns ad spend into results.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x14.webp"
-        heading="Why Businesses Choose Dotoli Digital for Ad Creative Design"
-        text={`Businesses choose Dotoli Digital because we design creatives with intent.<br/><br/>
-        Our ad creative services are:
-        <ul>
-          <li>Performance-focused</li>
-          <li>Data-informed</li>
-          <li>Aligned with branding and messaging</li>
-          <li>Optimized for continuous testing</li>
-        </ul><br/>
-        We help brands create ad creatives that perform consistently.`}
+      <WhyChooseSection
+        onCtaClick={() => setShowPopup(true)}
+        data={{
+          pillText: "Ad creative design, built with intent",
+          title: "Why businesses choose",
+          highlightText: "Dotoli Digital for Ad Creative Design",
+          subText:
+            "Businesses choose Dotoli Digital because we design creatives with intent.",
+
+          ctaText: "Book a Free Strategy Call",
+
+          miniCards: [
+            { k: "Performance", v: "Conversion-focused" },
+            { k: "Insights", v: "Data-informed" },
+            { k: "Testing", v: "Continuous optimization" },
+          ],
+
+          cards: [
+            {
+              title: "Performance-focused",
+              desc: "Creatives are designed to drive engagement, clicks, and conversions.",
+            },
+            {
+              title: "Data-informed",
+              desc: "Design decisions are guided by campaign insights and testing results.",
+            },
+            {
+              title: "Aligned with branding & messaging",
+              desc: "Ad creatives stay consistent with brand identity and core messaging.",
+            },
+            {
+              title: "Optimized for continuous testing",
+              desc: "We create variations that support structured A/B testing and improvement.",
+            },
+          ],
+
+          outcome:
+            "We help brands create ad creatives that perform consistently.",
+        }}
       />
 
       <FAQSection

@@ -7,6 +7,7 @@ import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
 import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
+import WhyChooseSection from "../../../components/WhyChooseSection";
 // SalesLeadGenerationAIAgents
 
 export default function SalesLeadGenerationAIAgents() {
@@ -120,19 +121,45 @@ export default function SalesLeadGenerationAIAgents() {
         </ul><br/>
         AI agents turn inbound interest into sales-ready opportunities.`}
       />
+      <WhyChooseSection
+        onCtaClick={() => setShowPopup(true)}
+        data={{
+          pillText: "Sales AI agents, built for revenue",
+          title: "Why businesses choose",
+          highlightText: "Dotoli Digital for Sales AI Agents",
+          subText:
+            "Businesses choose Dotoli Digital because we build AI agents that align with real sales processes.",
 
-      <ServiceDetailsSection
-        img="/images/x9.webp"
-        heading="Why Businesses Choose Dotoli Digital for Sales AI Agents"
-        text={`Businesses choose Dotoli Digital because we build AI agents that align with real sales processes.<br/><br/>
-        Our AI agent solutions are:<br/>
-        <ul>
-          <li>Intent-driven and conversion-focused</li>
-          <li>Integrated with CRM and automation</li>
-          <li>Easy for sales teams to use</li>
-          <li>Designed for measurable impact</li>
-        </ul><br/>
-        We focus on AI systems that support revenue, not just automation.`}
+          ctaText: "Book a Free Strategy Call",
+
+          miniCards: [
+            { k: "Intent", v: "Conversion-focused" },
+            { k: "Integration", v: "CRM + automation" },
+            { k: "Impact", v: "Measurable results" },
+          ],
+
+          cards: [
+            {
+              title: "Intent-driven and conversion-focused",
+              desc: "AI agents are structured to qualify, nurture, and move leads toward revenue.",
+            },
+            {
+              title: "Integrated with CRM & automation",
+              desc: "Seamless connection with CRM systems and automated workflows.",
+            },
+            {
+              title: "Easy for sales teams to use",
+              desc: "Built to support teams without adding operational complexity.",
+            },
+            {
+              title: "Designed for measurable impact",
+              desc: "Performance is tracked and optimized for clear revenue outcomes.",
+            },
+          ],
+
+          outcome:
+            "We focus on AI systems that support revenue, not just automation.",
+        }}
       />
 
       <FAQSection

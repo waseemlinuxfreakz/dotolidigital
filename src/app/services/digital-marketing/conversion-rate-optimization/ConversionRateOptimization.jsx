@@ -6,6 +6,7 @@ import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
 import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
+import WhyChooseSection from "../../../components/WhyChooseSection";
 
 export default function ConversionRateOptimization() {
   const [showPopup, setShowPopup] = useState(false);
@@ -134,18 +135,44 @@ export default function ConversionRateOptimization() {
         CRO creates compounding gains without increasing traffic budgets.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x15.webp"
-        heading="Why Businesses Choose Dotoli Digital for CRO"
-        text={`Businesses choose Dotoli Digital because we treat CRO as a strategic discipline, not a design exercise.<br/><br/>
-        Our CRO services are:
-        <ul>
-          <li>Data-driven and test-based</li>
-          <li>Integrated with SEO and performance marketing</li>
-          <li>Focused on real business outcomes</li>
-          <li>Transparent and measurable</li>
-        </ul><br/>
-        We optimize for actions that matter, not just aesthetics.`}
+      <WhyChooseSection
+        onCtaClick={() => setShowPopup(true)}
+        data={{
+          pillText: "Conversion rate optimization, built for performance",
+          title: "Why businesses choose",
+          highlightText: "Dotoli Digital for CRO",
+          subText:
+            "Businesses choose Dotoli Digital because we treat CRO as a strategic discipline, not a design exercise.",
+
+          ctaText: "Book a Free Strategy Call",
+
+          miniCards: [
+            { k: "Approach", v: "Data-driven & test-based" },
+            { k: "Integration", v: "SEO + performance marketing" },
+            { k: "Focus", v: "Real business outcomes" },
+          ],
+
+          cards: [
+            {
+              title: "Data-driven and test-based",
+              desc: "Every decision is backed by data, structured testing, and measurable insights.",
+            },
+            {
+              title: "Integrated with SEO & performance",
+              desc: "CRO works alongside SEO and paid campaigns to improve overall growth.",
+            },
+            {
+              title: "Focused on real outcomes",
+              desc: "We optimize for leads, sales, and revenue — not just design changes.",
+            },
+            {
+              title: "Transparent and measurable",
+              desc: "Clear reporting shows what’s improving and what’s being tested next.",
+            },
+          ],
+
+          outcome: "We optimize for actions that matter, not just aesthetics.",
+        }}
       />
 
       <FAQSection

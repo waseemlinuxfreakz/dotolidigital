@@ -6,6 +6,7 @@ import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
 import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
+import WhyChooseSection from "../../../components/WhyChooseSection";
 
 export default function BrandIdentityDesign() {
   const [showPopup, setShowPopup] = useState(false);
@@ -121,18 +122,44 @@ export default function BrandIdentityDesign() {
         Brand identity turns visibility into memorability.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x14.webp"
-        heading="Why Businesses Choose Dotoli Digital for Brand Identity Design"
-        text={`Businesses choose Dotoli Digital because we connect design with strategy.<br/><br/>
-        Our brand identity work is:
-        <ul>
-          <li>Strategy-led, not trend-driven</li>
-          <li>Consistent and scalable</li>
-          <li>Aligned with marketing and SEO goals</li>
-          <li>Designed for long-term use</li>
-        </ul><br/>
-        We design brand identities that grow with your business.`}
+      <WhyChooseSection
+        onCtaClick={() => setShowPopup(true)}
+        data={{
+          pillText: "Brand identity design, built with strategy",
+          title: "Why businesses choose",
+          highlightText: "Dotoli Digital for Brand Identity Design",
+          subText:
+            "Businesses choose Dotoli Digital because we connect design with strategy.",
+
+          ctaText: "Book a Free Strategy Call",
+
+          miniCards: [
+            { k: "Strategy", v: "Not trend-driven" },
+            { k: "Consistency", v: "Scalable systems" },
+            { k: "Alignment", v: "Marketing + SEO goals" },
+          ],
+
+          cards: [
+            {
+              title: "Strategy-led, not trend-driven",
+              desc: "Brand identity is built around positioning, clarity, and long-term differentiation.",
+            },
+            {
+              title: "Consistent and scalable",
+              desc: "Design systems ensure consistency across platforms and future expansion.",
+            },
+            {
+              title: "Aligned with marketing & SEO goals",
+              desc: "Brand identity supports visibility, authority, and digital performance.",
+            },
+            {
+              title: "Designed for long-term use",
+              desc: "Identity systems are structured to evolve as your business grows.",
+            },
+          ],
+
+          outcome: "We design brand identities that grow with your business.",
+        }}
       />
 
       <FAQSection

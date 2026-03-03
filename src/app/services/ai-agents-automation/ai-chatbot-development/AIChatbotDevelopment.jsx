@@ -7,6 +7,7 @@ import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
 import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
+import WhyChooseSection from "../../../components/WhyChooseSection";
 
 export default function AIChatbotDevelopment() {
   const [showPopup, setShowPopup] = useState(false);
@@ -119,19 +120,45 @@ export default function AIChatbotDevelopment() {
         </ul><br/>
         AI chatbots improve efficiency without sacrificing experience.`}
       />
+      <WhyChooseSection
+        onCtaClick={() => setShowPopup(true)}
+        data={{
+          pillText: "AI chatbot development, built for real use",
+          title: "Why businesses choose",
+          highlightText: "Dotoli Digital for AI Chatbot Development",
+          subText:
+            "Businesses choose Dotoli Digital because we build chatbots that work in real environments.",
 
-      <ServiceDetailsSection
-        img="/images/x9.webp"
-        heading="Why Businesses Choose Dotoli Digital for AI Chatbot Development"
-        text={`Businesses choose Dotoli Digital because we build chatbots that work in real environments.<br/><br/>
-        Our AI chatbot solutions are:<br/>
-        <ul>
-          <li>Intent-driven and contextual</li>
-          <li>Integrated with CRM and automation</li>
-          <li>Easy to scale and manage</li>
-          <li>Designed for measurable outcomes</li>
-        </ul><br/>
-        We focus on chatbots that deliver real value, not just novelty.`}
+          ctaText: "Book a Free Strategy Call",
+
+          miniCards: [
+            { k: "Intent", v: "Contextual AI" },
+            { k: "Integration", v: "CRM + automation" },
+            { k: "Scalability", v: "Easy to manage" },
+          ],
+
+          cards: [
+            {
+              title: "Intent-driven and contextual",
+              desc: "Chatbots understand user intent and respond based on real interaction flows.",
+            },
+            {
+              title: "Integrated with CRM & automation",
+              desc: "Seamless connection with CRM systems and automated workflows.",
+            },
+            {
+              title: "Easy to scale and manage",
+              desc: "Built to grow with your business without adding operational friction.",
+            },
+            {
+              title: "Designed for measurable outcomes",
+              desc: "Performance is tracked and optimized for clear business impact.",
+            },
+          ],
+
+          outcome:
+            "We focus on chatbots that deliver real value, not just novelty.",
+        }}
       />
 
       <FAQSection

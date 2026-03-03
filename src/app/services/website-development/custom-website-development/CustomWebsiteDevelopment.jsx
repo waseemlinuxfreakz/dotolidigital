@@ -6,6 +6,7 @@ import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
 import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
+import WhyChooseSection from "../../../components/WhyChooseSection";
 
 export default function CustomWebsiteDevelopment() {
   const [showPopup, setShowPopup] = useState(false);
@@ -121,18 +122,44 @@ export default function CustomWebsiteDevelopment() {
         Custom websites grow with your business instead of holding it back.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x15.webp"
-        heading="Why Businesses Choose Dotoli Digital for Custom Website Development"
-        text={`Businesses choose Dotoli Digital because we focus on outcomes, not just design.<br/><br/>
-        Our custom websites are:
-        <ul>
-          <li>Built for performance and scalability</li>
-          <li>Aligned with SEO and AEO strategies</li>
-          <li>Designed to support conversions</li>
-          <li>Easy to maintain and expand</li>
-        </ul><br/>
-        We build websites that work as long-term digital assets.`}
+      <WhyChooseSection
+        onCtaClick={() => setShowPopup(true)}
+        data={{
+          pillText: "Custom website development, built for results",
+          title: "Why businesses choose",
+          highlightText: "Dotoli Digital for Custom Website Development",
+          subText:
+            "Businesses choose Dotoli Digital because we focus on outcomes, not just design.",
+
+          ctaText: "Book a Free Strategy Call",
+
+          miniCards: [
+            { k: "Performance", v: "Scalable build" },
+            { k: "Visibility", v: "SEO & AEO aligned" },
+            { k: "Conversions", v: "Action-focused design" },
+          ],
+
+          cards: [
+            {
+              title: "Built for performance and scalability",
+              desc: "Websites are structured to handle growth while maintaining speed and stability.",
+            },
+            {
+              title: "Aligned with SEO and AEO strategies",
+              desc: "Technical and content structure supports search visibility and AI discovery.",
+            },
+            {
+              title: "Designed to support conversions",
+              desc: "User journeys are built to guide visitors toward meaningful actions.",
+            },
+            {
+              title: "Easy to maintain and expand",
+              desc: "Flexible architecture allows future updates and feature expansion.",
+            },
+          ],
+
+          outcome: "We build websites that work as long-term digital assets.",
+        }}
       />
 
       <FAQSection

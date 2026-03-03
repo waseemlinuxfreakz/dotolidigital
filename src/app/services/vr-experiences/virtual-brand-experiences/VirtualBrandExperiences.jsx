@@ -7,6 +7,7 @@ import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
 import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
+import WhyChooseSection from "../../../components/WhyChooseSection";
 // VirtualBrandExperiences
 
 export default function VirtualBrandExperiences() {
@@ -120,18 +121,45 @@ export default function VirtualBrandExperiences() {
         A Virtual Brand Experience is more than just a marketing tool; it’s an opportunity to create lasting memories with your audience.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x9.webp"
-        heading="Why Businesses Choose Dotoli Digital for Virtual Brand Experiences"
-        text={`Businesses choose Dotoli Digital because we create immersive, impactful brand experiences that drive results.<br/><br/>
-        Our Virtual Brand Experience services are:<br/>
-        <ul>
-          <li>Strategically designed for business goals</li>
-          <li>Immersive, interactive, and engaging</li>
-          <li>Fully customized to fit your brand identity</li>
-          <li>Built for long-term scalability</li>
-        </ul><br/>
-        We help brands connect with their audiences in ways that drive real business value.`}
+      <WhyChooseSection
+        onCtaClick={() => setShowPopup(true)}
+        data={{
+          pillText: "Virtual brand experiences, built for impact",
+          title: "Why businesses choose",
+          highlightText: "Dotoli Digital for Virtual Brand Experiences",
+          subText:
+            "Businesses choose Dotoli Digital because we create immersive, impactful brand experiences that drive results.",
+
+          ctaText: "Book a Free Strategy Call",
+
+          miniCards: [
+            { k: "Strategy", v: "Business-goal focused" },
+            { k: "Experience", v: "Immersive & interactive" },
+            { k: "Scalability", v: "Built to grow" },
+          ],
+
+          cards: [
+            {
+              title: "Strategically designed for business goals",
+              desc: "Every virtual experience is structured to support measurable growth objectives.",
+            },
+            {
+              title: "Immersive, interactive, and engaging",
+              desc: "We create digital environments that capture attention and deepen brand connection.",
+            },
+            {
+              title: "Fully customized to your brand identity",
+              desc: "Experiences are tailored to reflect your positioning, voice, and visual system.",
+            },
+            {
+              title: "Built for long-term scalability",
+              desc: "Virtual platforms are structured to evolve as your audience and business expand.",
+            },
+          ],
+
+          outcome:
+            "We help brands connect with their audiences in ways that drive real business value.",
+        }}
       />
 
       <FAQSection

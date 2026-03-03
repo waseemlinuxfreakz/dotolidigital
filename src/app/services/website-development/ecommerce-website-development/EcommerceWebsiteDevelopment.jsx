@@ -6,6 +6,7 @@ import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
 import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
+import WhyChooseSection from "../../../components/WhyChooseSection";
 // ecommerce-website-development EcommerceWebsiteDevelopment
 
 export default function EcommerceWebsiteDevelopment() {
@@ -125,18 +126,45 @@ export default function EcommerceWebsiteDevelopment() {
         A strong eCommerce website becomes a revenue engine, not just a storefront.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x13.webp"
-        heading="Why Businesses Choose Dotoli Digital for eCommerce Development"
-        text={`Businesses choose Dotoli Digital because we understand that eCommerce success depends on both technology and strategy.<br/><br/>
-        Our eCommerce websites are:
-        <ul>
-          <li>Conversion-focused</li>
-          <li>SEO and AEO ready</li>
-          <li>Scalable and secure</li>
-          <li>Built to support marketing and automation</li>
-        </ul><br/>
-        We create eCommerce platforms that grow with your business rather than limit it.`}
+      <WhyChooseSection
+        onCtaClick={() => setShowPopup(true)}
+        data={{
+          pillText: "eCommerce development, built for growth",
+          title: "Why businesses choose",
+          highlightText: "Dotoli Digital for eCommerce Development",
+          subText:
+            "Businesses choose Dotoli Digital because we understand that eCommerce success depends on both technology and strategy.",
+
+          ctaText: "Book a Free Strategy Call",
+
+          miniCards: [
+            { k: "Focus", v: "Conversion-first" },
+            { k: "Visibility", v: "SEO & AEO ready" },
+            { k: "Scalability", v: "Secure & scalable" },
+          ],
+
+          cards: [
+            {
+              title: "Conversion-focused",
+              desc: "Structured to guide users from product discovery to completed purchase.",
+            },
+            {
+              title: "SEO and AEO ready",
+              desc: "Built with search visibility and AI-driven discovery in mind.",
+            },
+            {
+              title: "Scalable and secure",
+              desc: "Architecture designed to handle growth while maintaining performance and safety.",
+            },
+            {
+              title: "Built to support marketing & automation",
+              desc: "Integrated with marketing systems, CRM, and automation tools.",
+            },
+          ],
+
+          outcome:
+            "We create eCommerce platforms that grow with your business rather than limit it.",
+        }}
       />
 
       <FAQSection

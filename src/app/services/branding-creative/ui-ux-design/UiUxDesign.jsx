@@ -6,6 +6,7 @@ import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
 import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
+import WhyChooseSection from "../../../components/WhyChooseSection";
 
 export default function UiUxDesign() {
   const [showPopup, setShowPopup] = useState(false);
@@ -121,18 +122,44 @@ export default function UiUxDesign() {
         UI/UX design improves both experience and results.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x14.webp"
-        heading="Why Businesses Choose Dotoli Digital for UI/UX Design"
-        text={`Businesses choose Dotoli Digital because we design with purpose.<br/><br/>
-        Our UI/UX design services are:
-        <ul>
-          <li>User-centered and data-informed</li>
-          <li>Aligned with branding and development</li>
-          <li>Focused on conversions and usability</li>
-          <li>Scalable and future-ready</li>
-        </ul><br/>
-        We design experiences that support real business goals.`}
+      <WhyChooseSection
+        onCtaClick={() => setShowPopup(true)}
+        data={{
+          pillText: "UI/UX design, built with purpose",
+          title: "Why businesses choose",
+          highlightText: "Dotoli Digital for UI/UX Design",
+          subText:
+            "Businesses choose Dotoli Digital because we design with purpose.",
+
+          ctaText: "Book a Free Strategy Call",
+
+          miniCards: [
+            { k: "Approach", v: "User-centered design" },
+            { k: "Alignment", v: "Brand + development" },
+            { k: "Focus", v: "Conversions & usability" },
+          ],
+
+          cards: [
+            {
+              title: "User-centered and data-informed",
+              desc: "Design decisions are guided by user behavior, insights, and real interaction data.",
+            },
+            {
+              title: "Aligned with branding & development",
+              desc: "UI and UX are built to support your brand identity and technical implementation.",
+            },
+            {
+              title: "Focused on conversions & usability",
+              desc: "We reduce friction and design flows that guide users toward action.",
+            },
+            {
+              title: "Scalable and future-ready",
+              desc: "Design systems structured to evolve as your product grows.",
+            },
+          ],
+
+          outcome: "We design experiences that support real business goals.",
+        }}
       />
 
       <FAQSection

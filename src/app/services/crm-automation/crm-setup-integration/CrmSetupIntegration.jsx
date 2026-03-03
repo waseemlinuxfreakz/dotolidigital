@@ -6,6 +6,7 @@ import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
 import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
+import WhyChooseSection from "../../../components/WhyChooseSection";
 // crm-setup-integration  CrmSetupIntegration
 
 export default function CrmSetupIntegration() {
@@ -122,18 +123,45 @@ export default function CrmSetupIntegration() {
         CRM integration turns scattered tools into a connected system.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x14.webp"
-        heading="Why Businesses Choose Dotoli Digital for CRM Setup & Integration"
-        text={`Businesses choose Dotoli Digital because we focus on usability and outcomes.<br/><br/>
-        Our CRM setup services are:
-        <ul>
-          <li>Customized to real workflows</li>
-          <li>Easy for teams to use</li>
-          <li>Integrated with marketing and sales systems</li>
-          <li>Designed for long-term scalability</li>
-        </ul><br/>
-        We build CRM systems that teams actually adopt and rely on.`}
+      <WhyChooseSection
+        onCtaClick={() => setShowPopup(true)}
+        data={{
+          pillText: "CRM setup & integration, built for clarity",
+          title: "Why businesses choose",
+          highlightText: "Dotoli Digital for CRM Setup & Integration",
+          subText:
+            "Businesses choose Dotoli Digital because we focus on usability and outcomes.",
+
+          ctaText: "Book a Free Strategy Call",
+
+          miniCards: [
+            { k: "Customization", v: "Real workflows" },
+            { k: "Usability", v: "Easy for teams" },
+            { k: "Integration", v: "Marketing + sales systems" },
+          ],
+
+          cards: [
+            {
+              title: "Customized to real workflows",
+              desc: "CRM systems are structured around how your teams actually operate.",
+            },
+            {
+              title: "Easy for teams to use",
+              desc: "Clear setup and intuitive processes ensure strong adoption.",
+            },
+            {
+              title: "Integrated with marketing & sales",
+              desc: "Seamless connection between CRM, automation, and sales systems.",
+            },
+            {
+              title: "Designed for long-term scalability",
+              desc: "CRM infrastructure built to grow with your business.",
+            },
+          ],
+
+          outcome:
+            "We build CRM systems that teams actually adopt and rely on.",
+        }}
       />
 
       <FAQSection

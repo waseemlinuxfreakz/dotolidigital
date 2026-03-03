@@ -1,29 +1,37 @@
 import React from "react";
-import Link from "next/link";
 
-export default function WhyChooseSection({ onCtaClick }) {
+export default function WhyChooseSection({ data, onCtaClick }) {
+  const {
+    pillText,
+    title,
+    highlightText,
+    subText,
+    ctaText,
+    miniCards = [],
+    cards = [],
+    outcome,
+  } = data || {};
+
   return (
-    <>
-      <section className="whychoose-sec">
-        <div className="container-w1">
-          <div className="whychoose-grid">
-            {/* LEFT SIDE */}
-            <div className="whychoose-left">
+    <section className="whychoose-sec">
+      <div className="container-w1">
+        <div className="whychoose-grid">
+          {/* LEFT SIDE */}
+          <div className="whychoose-left">
+            {pillText && (
               <div className="whychoose-pill">
                 <span className="whychoose-dot" />
-                Performance marketing, built as a system
+                {pillText}
               </div>
+            )}
 
-              <h2 className="title-4 whychoose-title">
-                Why businesses choose <span>Dotoli Digital</span> for
-                Performance Marketing
-              </h2>
+            <h2 className="title-4 whychoose-title">
+              {title} {highlightText ? <span>{highlightText}</span> : null}
+            </h2>
 
-              <p className="text-1 whychoose-sub">
-                Businesses choose Dotoli Digital because we treat performance
-                marketing as a system, not a set of ads.
-              </p>
+            {subText && <p className="text-1 whychoose-sub">{subText}</p>}
 
+            {ctaText && (
               <div className="btn-group whychoose-cta">
                 <div className="btn btn--pulse">
                   <button
@@ -31,86 +39,51 @@ export default function WhyChooseSection({ onCtaClick }) {
                     className="btn-elem"
                     onClick={onCtaClick}
                   >
-                    Book a Free Strategy Call
+                    {ctaText}
                   </button>
                 </div>
               </div>
+            )}
 
-              {/* small proof row */}
+            {/* small proof row */}
+            {miniCards?.length > 0 && (
               <div className="whychoose-mini">
-                <div className="whychoose-mini-card">
-                  <p className="k">Data</p>
-                  <p className="v">Transparent reporting</p>
-                </div>
-                <div className="whychoose-mini-card">
-                  <p className="k">Focus</p>
-                  <p className="v">Conversions first</p>
-                </div>
-                <div className="whychoose-mini-card">
-                  <p className="k">System</p>
-                  <p className="v">SEO + CRO + automation</p>
-                </div>
+                {miniCards.map((item, idx) => (
+                  <div className="whychoose-mini-card" key={idx}>
+                    <p className="k">{item.k}</p>
+                    <p className="v">{item.v}</p>
+                  </div>
+                ))}
               </div>
-            </div>
+            )}
+          </div>
 
-            {/* RIGHT SIDE */}
-            <div className="whychoose-right">
+          {/* RIGHT SIDE */}
+          <div className="whychoose-right">
+            {cards?.length > 0 && (
               <div className="whychoose-cards">
-                <div className="whychoose-card">
-                  <div className="icon" />
-                  <div className="txt">
-                    <h3>Data-driven and transparent</h3>
-                    <p>
-                      Clear KPIs, clean attribution, and reporting you can
-                      trust—no guesswork.
-                    </p>
+                {cards.map((card, idx) => (
+                  <div className="whychoose-card" key={idx}>
+                    <div className="icon" />
+                    <div className="txt">
+                      <h3>{card.title}</h3>
+                      <p>{card.desc}</p>
+                    </div>
                   </div>
-                </div>
-
-                <div className="whychoose-card">
-                  <div className="icon" />
-                  <div className="txt">
-                    <h3>Focused on conversions</h3>
-                    <p>
-                      We optimize for leads, sales, and pipeline—not vanity
-                      metrics.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="whychoose-card">
-                  <div className="icon" />
-                  <div className="txt">
-                    <h3>Integrated with SEO, CRO, and automation</h3>
-                    <p>
-                      Paid + landing pages + lifecycle follow-up, built as one
-                      growth system.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="whychoose-card">
-                  <div className="icon" />
-                  <div className="txt">
-                    <h3>Continuously optimized</h3>
-                    <p>
-                      Continuous testing and iteration to keep up with changing
-                      algorithms.
-                    </p>
-                  </div>
-                </div>
+                ))}
               </div>
+            )}
 
+            {outcome && (
               <div className="whychoose-outcome">
                 <p>
-                  <strong>Outcome:</strong> We build performance marketing
-                  engines that improve over time.
+                  <strong>Outcome:</strong> {outcome}
                 </p>
               </div>
-            </div>
+            )}
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }
