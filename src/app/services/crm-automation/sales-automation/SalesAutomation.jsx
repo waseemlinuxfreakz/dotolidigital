@@ -8,6 +8,7 @@ import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
 import WhyChooseSection from "../../../components/WhyChooseSection";
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
+import IndustriesSection from "../../../components/IndustriesSection";
 
 export default function SalesAutomation() {
   const [showPopup, setShowPopup] = useState(false);
@@ -93,18 +94,21 @@ export default function SalesAutomation() {
         Workflows are refined based on performance data and scaled as sales volume grows.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x13.webp"
-        heading="Industries That Benefit from Sales Automation"
-        text={`Sales automation is effective for:
-        <ul>
-          <li>SaaS and technology companies</li>
-          <li>Lead-generation businesses</li>
-          <li>Professional services</li>
-          <li>Real estate and healthcare</li>
-          <li>Agencies and startups</li>
-        </ul><br/>
-        Any sales-driven business benefits from automation.`}
+      <IndustriesSection
+        onCtaClick={() => setShowPopup(true)}
+        data={{
+          heading: "Industries That Benefit from Sales Automation",
+          subText: "Sales automation is effective for:",
+          industries: [
+            "SaaS and Technology Companies",
+            "Lead-Generation Businesses",
+            "Professional Services",
+            "Real Estate and Healthcare",
+            "Agencies and Startups",
+          ],
+          note: "Any sales-driven business benefits from automation.",
+          ctaText: "Book a Free Strategy Call",
+        }}
       />
 
       <BenefitsPerformance

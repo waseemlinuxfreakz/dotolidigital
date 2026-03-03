@@ -8,6 +8,7 @@ import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
 import WhyChooseSection from "../../../components/WhyChooseSection";
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
+import IndustriesSection from "../../../components/IndustriesSection";
 // ad-creative-design
 
 export default function AdCreativeDesign() {
@@ -108,19 +109,23 @@ export default function AdCreativeDesign() {
         Creative formats are adapted based on platform behavior and campaign goals.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x14.webp"
-        heading="Industries That Benefit from Ad Creative Design"
-        text={`Ad creative design is valuable across industries, including:
-        <ul>
-          <li>eCommerce</li>
-          <li>SaaS and technology</li>
-          <li>Professional services</li>
-          <li>Healthcare</li>
-          <li>Real estate</li>
-          <li>Agencies and startups</li>
-        </ul><br/>
-        Any business running ads benefits from strong creative.`}
+      <IndustriesSection
+        onCtaClick={() => setShowPopup(true)}
+        data={{
+          heading: "Industries That Benefit from Ad Creative Design",
+          subText:
+            "Ad creative design is valuable across industries, including:",
+          industries: [
+            "eCommerce",
+            "SaaS and Technology",
+            "Professional Services",
+            "Healthcare",
+            "Real Estate",
+            "Agencies and Startups",
+          ],
+          note: "Any business running ads benefits from strong creative.",
+          ctaText: "Book a Free Strategy Call",
+        }}
       />
 
       <BenefitsPerformance

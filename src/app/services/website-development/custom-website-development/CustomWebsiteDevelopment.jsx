@@ -8,6 +8,7 @@ import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
 import WhyChooseSection from "../../../components/WhyChooseSection";
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
+import IndustriesSection from "../../../components/IndustriesSection";
 
 export default function CustomWebsiteDevelopment() {
   const [showPopup, setShowPopup] = useState(false);
@@ -94,19 +95,22 @@ export default function CustomWebsiteDevelopment() {
         After launch, we provide support and optimization to ensure continued performance as needs evolve.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x13.webp"
-        heading="Industries That Benefit from Custom Website Development"
-        text={`Custom websites are ideal for:
-        <ul>
-          <li>SaaS & technology companies</li>
-          <li>Professional services</li>
-          <li>eCommerce brands</li>
-          <li>Healthcare organizations</li>
-          <li>Real estate businesses</li>
-          <li>Agencies and startups</li>
-        </ul><br/>
-        Any business requiring flexibility and scalability benefits from custom development.`}
+      <IndustriesSection
+        onCtaClick={() => setShowPopup(true)}
+        data={{
+          heading: "Industries That Benefit from Custom Website Development",
+          subText: "Custom websites are ideal for:",
+          industries: [
+            "SaaS & Technology Companies",
+            "Professional Services",
+            "eCommerce Brands",
+            "Healthcare Organizations",
+            "Real Estate Businesses",
+            "Agencies and Startups",
+          ],
+          note: "Any business requiring flexibility and scalability benefits from custom development.",
+          ctaText: "Book a Free Strategy Call",
+        }}
       />
 
       <BenefitsPerformance

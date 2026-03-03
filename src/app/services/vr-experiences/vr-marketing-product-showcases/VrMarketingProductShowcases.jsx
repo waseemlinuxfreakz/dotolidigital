@@ -9,6 +9,7 @@ import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
 import WhyChooseSection from "../../../components/WhyChooseSection";
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
+import IndustriesSection from "../../../components/IndustriesSection";
 // VrMarketingProductShowcases
 
 export default function VrMarketingProductShowcases() {
@@ -94,19 +95,24 @@ export default function VrMarketingProductShowcases() {
         After launch, we monitor user engagement and collect performance data. Continuous optimization ensures the experience remains effective and up to date.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x9.webp"
-        heading="Industries That Benefit from VR Marketing & Product Showcases"
-        text={`VR marketing and product showcases are highly effective across industries, including:<br/>
-        <ul>
-          <li>e-commerce and retail</li>
-          <li>Real estate and property development</li>
-          <li>Automotive and manufacturing</li>
-          <li>Travel and tourism</li>
-          <li>SaaS and technology companies</li>
-          <li>Education and training</li>
-        </ul><br/>
-        Any business that needs to showcase products or services in an interactive, engaging way can benefit from VR marketing.`}
+      <IndustriesSection
+        onCtaClick={() => setShowPopup(true)}
+        data={{
+          heading:
+            "Industries That Benefit from VR Marketing & Product Showcases",
+          subText:
+            "VR marketing and product showcases are highly effective across industries, including:",
+          industries: [
+            "eCommerce and Retail",
+            "Real Estate and Property Development",
+            "Automotive and Manufacturing",
+            "Travel and Tourism",
+            "SaaS and Technology Companies",
+            "Education and Training",
+          ],
+          note: "Any business that needs to showcase products or services in an interactive, engaging way can benefit from VR marketing.",
+          ctaText: "Book a Free Strategy Call",
+        }}
       />
 
       <BenefitsPerformance

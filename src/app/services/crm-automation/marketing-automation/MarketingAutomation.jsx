@@ -8,6 +8,7 @@ import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
 import WhyChooseSection from "../../../components/WhyChooseSection";
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
+import IndustriesSection from "../../../components/IndustriesSection";
 // marketing-automation
 
 export default function MarketingAutomation() {
@@ -95,19 +96,22 @@ export default function MarketingAutomation() {
         Workflows are tested, refined, and scaled based on performance data and engagement insights.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x13.webp"
-        heading="Industries That Benefit from Marketing Automation"
-        text={`Marketing automation is effective for:
-        <ul>
-          <li>SaaS and technology companies</li>
-          <li>eCommerce businesses</li>
-          <li>Lead-generation businesses</li>
-          <li>Professional services</li>
-          <li>Healthcare and real estate</li>
-          <li>Agencies and startups</li>
-        </ul><br/>
-        Any business managing leads and customer communication benefits from automation.`}
+      <IndustriesSection
+        onCtaClick={() => setShowPopup(true)}
+        data={{
+          heading: "Industries That Benefit from Marketing Automation",
+          subText: "Marketing automation is effective for:",
+          industries: [
+            "SaaS and Technology Companies",
+            "eCommerce Businesses",
+            "Lead-Generation Businesses",
+            "Professional Services",
+            "Healthcare and Real Estate",
+            "Agencies and Startups",
+          ],
+          note: "Any business managing leads and customer communication benefits from automation.",
+          ctaText: "Book a Free Strategy Call",
+        }}
       />
 
       <BenefitsPerformance

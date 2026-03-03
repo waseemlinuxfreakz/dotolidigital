@@ -6,7 +6,6 @@ import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
 import { FAQSection } from "../../../components/FAQSection";
 
-import IndustriesSection from "../../../components/IndustriesSection";
 import PlatformsWeUse from "../../../components/PlatformsWeUse";
 import ProcessTimeline from "../../../components/ProcessTimeline";
 import ServicesWeOffer from "../../../components/ServicesWeOffer";
@@ -15,6 +14,8 @@ import PerformanceCta from "../../../components/PerformanceCta";
 import WhyChooseSection from "../../../components/WhyChooseSection";
 
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
+
+import IndustriesSection from "../../../components/IndustriesSection";
 
 import Link from "next/link";
 
@@ -145,7 +146,24 @@ export default function PerformanceMarketing() {
         We track performance against KPIs and extract actionable insights from campaign data. High-performing campaigns are scaled strategically, while underperforming elements are refined or replaced to maintain growth momentum.`}
       /> */}
 
-      <IndustriesSection onCtaClick={() => setShowPopup(true)} />
+      <IndustriesSection
+        onCtaClick={() => setShowPopup(true)}
+        data={{
+          heading: "Industries That Benefit Most from Performance Marketing",
+          subText:
+            "Performance marketing is effective across many industries, including:",
+          industries: [
+            "eCommerce",
+            "SaaS & Technology",
+            "Professional Services",
+            "Healthcare",
+            "Real Estate",
+            "Agencies",
+          ],
+          note: "Each industry requires a tailored funnel and targeting strategy.",
+          ctaText: "Book a Free Strategy Call",
+        }}
+      />
 
       {/* <ServiceDetailsSection
         img="/images/x9.webp"
@@ -195,20 +213,6 @@ export default function PerformanceMarketing() {
           ],
         }}
       />
-
-      {/* <ServiceDetailsSection
-        img="/images/x9.webp"
-        heading="Benefits of Our Performance Marketing Services"
-        text={`<ul>
-          <li>Measurable ROI</li>
-          <li>Lower cost per lead or acquisition</li>
-          <li>Better budget control</li>
-          <li>Scalable growth</li>
-          <li>Data-backed decision making</li>
-          <li>Reduced marketing waste</li>
-        </ul><br/>
-        Performance marketing ensures every marketing dollar works harder.`}
-      /> */}
 
       <WhyChooseSection
         onCtaClick={() => setShowPopup(true)}

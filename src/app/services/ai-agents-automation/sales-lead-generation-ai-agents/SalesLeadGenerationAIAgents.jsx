@@ -9,6 +9,7 @@ import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
 import WhyChooseSection from "../../../components/WhyChooseSection";
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
+import IndustriesSection from "../../../components/IndustriesSection";
 // SalesLeadGenerationAIAgents
 
 export default function SalesLeadGenerationAIAgents() {
@@ -94,19 +95,23 @@ export default function SalesLeadGenerationAIAgents() {
         AI agents are monitored continuously and optimized based on performance data.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x9.webp"
-        heading="Industries That Benefit from Sales & Lead Generation AI Agents"
-        text={`Sales and lead generation AI agents are effective for:<br/>
-        <ul>
-          <li>SaaS and technology companies</li>
-          <li>eCommerce businesses</li>
-          <li>Professional services</li>
-          <li>Real estate and healthcare</li>
-          <li>Agencies and startups</li>
-          <li>B2B and lead-driven businesses</li>
-        </ul><br/>
-        Any business handling inbound leads benefits from AI-driven qualification.`}
+      <IndustriesSection
+        onCtaClick={() => setShowPopup(true)}
+        data={{
+          heading:
+            "Industries That Benefit from Sales & Lead Generation AI Agents",
+          subText: "Sales and lead generation AI agents are effective for:",
+          industries: [
+            "SaaS and Technology Companies",
+            "eCommerce Businesses",
+            "Professional Services",
+            "Real Estate and Healthcare",
+            "Agencies and Startups",
+            "B2B and Lead-Driven Businesses",
+          ],
+          note: "Any business handling inbound leads benefits from AI-driven qualification.",
+          ctaText: "Book a Free Strategy Call",
+        }}
       />
 
       <BenefitsPerformance

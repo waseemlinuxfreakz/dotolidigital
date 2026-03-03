@@ -8,6 +8,7 @@ import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection
 import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
+import IndustriesSection from "../../../components/IndustriesSection";
 // AeoGeoOptimization
 
 export default function AeoGeoOptimization() {

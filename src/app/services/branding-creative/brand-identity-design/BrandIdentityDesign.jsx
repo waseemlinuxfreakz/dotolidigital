@@ -8,6 +8,7 @@ import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
 import WhyChooseSection from "../../../components/WhyChooseSection";
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
+import IndustriesSection from "../../../components/IndustriesSection";
 
 export default function BrandIdentityDesign() {
   const [showPopup, setShowPopup] = useState(false);
@@ -94,19 +95,22 @@ export default function BrandIdentityDesign() {
         Final brand assets and usage guidelines are delivered to ensure long-term consistency.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x13.webp"
-        heading="Industries That Benefit from Brand Identity Design"
-        text={`Brand identity design is essential for:
-        <ul>
-          <li>Startups and growing businesses</li>
-          <li>SaaS and technology companies</li>
-          <li>eCommerce brands</li>
-          <li>Professional services</li>
-          <li>Healthcare and real estate</li>
-          <li>Personal brands and agencies</li>
-        </ul><br/>
-        Any business that wants to be recognizable and trusted benefits from strong identity design.`}
+      <IndustriesSection
+        onCtaClick={() => setShowPopup(true)}
+        data={{
+          heading: "Industries That Benefit from Brand Identity Design",
+          subText: "Brand identity design is essential for:",
+          industries: [
+            "Startups and Growing Businesses",
+            "SaaS and Technology Companies",
+            "eCommerce Brands",
+            "Professional Services",
+            "Healthcare and Real Estate",
+            "Personal Brands and Agencies",
+          ],
+          note: "Any business that wants to be recognizable and trusted benefits from strong identity design.",
+          ctaText: "Book a Free Strategy Call",
+        }}
       />
 
       <BenefitsPerformance

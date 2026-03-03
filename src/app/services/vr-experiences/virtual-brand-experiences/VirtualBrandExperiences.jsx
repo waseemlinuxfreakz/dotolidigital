@@ -9,6 +9,7 @@ import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
 import WhyChooseSection from "../../../components/WhyChooseSection";
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
+import IndustriesSection from "../../../components/IndustriesSection";
 // VirtualBrandExperiences
 
 export default function VirtualBrandExperiences() {
@@ -94,19 +95,23 @@ export default function VirtualBrandExperiences() {
         Once the experience is live, we monitor user interactions and provide ongoing support to ensure it continues to meet your business needs.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x9.webp"
-        heading="Industries That Benefit from Virtual Brand Experiences"
-        text={`Virtual Brand Experiences are valuable for businesses across a wide range of industries, including:<br/>
-        <ul>
-          <li>eCommerce and retail</li>
-          <li>SaaS and technology</li>
-          <li>Real estate</li>
-          <li>Automotive and manufacturing</li>
-          <li>Professional services</li>
-          <li>Entertainment and media</li>
-        </ul><br/>
-        Any brand looking to innovate and engage in new, interactive ways can benefit from a Virtual Brand Experience.`}
+      <IndustriesSection
+        onCtaClick={() => setShowPopup(true)}
+        data={{
+          heading: "Industries That Benefit from Virtual Brand Experiences",
+          subText:
+            "Virtual Brand Experiences are valuable for businesses across a wide range of industries, including:",
+          industries: [
+            "eCommerce and Retail",
+            "SaaS and Technology",
+            "Real Estate",
+            "Automotive and Manufacturing",
+            "Professional Services",
+            "Entertainment and Media",
+          ],
+          note: "Any brand looking to innovate and engage in new, interactive ways can benefit from a Virtual Brand Experience.",
+          ctaText: "Book a Free Strategy Call",
+        }}
       />
 
       <BenefitsPerformance

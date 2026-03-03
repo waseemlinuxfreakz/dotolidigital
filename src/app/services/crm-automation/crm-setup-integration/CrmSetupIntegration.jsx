@@ -9,6 +9,8 @@ import { FAQSection } from "../../../components/FAQSection";
 import WhyChooseSection from "../../../components/WhyChooseSection";
 
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
+
+import IndustriesSection from "../../../components/IndustriesSection";
 // crm-setup-integration  CrmSetupIntegration
 
 export default function CrmSetupIntegration() {
@@ -96,21 +98,23 @@ export default function CrmSetupIntegration() {
         We test all integrations, train your team, and refine setups for long-term reliability.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x13.webp"
-        heading="Industries That Benefit from CRM Setup & Integration"
-        text={`CRM setup and integration are valuable for:
-        <ul>
-          <li>Sales-driven businesses</li>
-          <li>eCommerce and online services</li>
-          <li>SaaS and technology companies</li>
-          <li>Professional services</li>
-          <li>Healthcare and real estate</li>
-          <li>Agencies and startups</li>
-        </ul><br/>
-        Any business managing leads and customers benefits from proper CRM integration.`}
+      <IndustriesSection
+        onCtaClick={() => setShowPopup(true)}
+        data={{
+          heading: "Industries That Benefit from CRM Setup & Integration",
+          subText: "CRM setup and integration are valuable for:",
+          industries: [
+            "Sales-Driven Businesses",
+            "eCommerce and Online Services",
+            "SaaS and Technology Companies",
+            "Professional Services",
+            "Healthcare and Real Estate",
+            "Agencies and Startups",
+          ],
+          note: "Any business managing leads and customers benefits from proper CRM integration.",
+          ctaText: "Book a Free Strategy Call",
+        }}
       />
-
       <BenefitsPerformance
         data={{
           heading: "Benefits of Our CRM Setup & Integration Services",

@@ -8,6 +8,7 @@ import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
 import WhyChooseSection from "../../../components/WhyChooseSection";
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
+import IndustriesSection from "../../../components/IndustriesSection";
 
 export default function UiUxDesign() {
   const [showPopup, setShowPopup] = useState(false);
@@ -94,19 +95,22 @@ export default function UiUxDesign() {
         Designs are tested and refined based on feedback to improve usability and performance.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x13.webp"
-        heading="Industries That Benefit from UI/UX Design"
-        text={`UI/UX design is valuable for:
-        <ul>
-          <li>SaaS and technology platforms</li>
-          <li>eCommerce websites</li>
-          <li>Mobile and web applications</li>
-          <li>Professional service websites</li>
-          <li>Healthcare and fintech products</li>
-          <li>Startups and enterprises</li>
-        </ul><br/>
-        Any digital product benefits from thoughtful UI/UX design.`}
+      <IndustriesSection
+        onCtaClick={() => setShowPopup(true)}
+        data={{
+          heading: "Industries That Benefit from UI/UX Design",
+          subText: "UI/UX design is valuable for:",
+          industries: [
+            "SaaS and Technology Platforms",
+            "eCommerce Websites",
+            "Mobile and Web Applications",
+            "Professional Service Websites",
+            "Healthcare and Fintech Products",
+            "Startups and Enterprises",
+          ],
+          note: "Any digital product benefits from thoughtful UI/UX design.",
+          ctaText: "Book a Free Strategy Call",
+        }}
       />
 
       <BenefitsPerformance

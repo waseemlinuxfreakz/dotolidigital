@@ -9,6 +9,7 @@ import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
 import WhyChooseSection from "../../../components/WhyChooseSection";
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
+import IndustriesSection from "../../../components/IndustriesSection";
 
 export default function AIChatbotDevelopment() {
   const [showPopup, setShowPopup] = useState(false);
@@ -93,19 +94,22 @@ export default function AIChatbotDevelopment() {
         After launch, chatbot performance is monitored and optimized continuously.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x9.webp"
-        heading="Industries That Benefit from AI Chatbot Development"
-        text={`AI chatbot development is effective for:<br/>
-        <ul>
-          <li>SaaS and technology companies</li>
-          <li>eCommerce businesses</li>
-          <li>Professional services</li>
-          <li>Healthcare and real estate</li>
-          <li>Agencies and startups</li>
-          <li>Customer support-driven organizations</li>
-        </ul><br/>
-        Any business managing digital inquiries benefits from AI chatbots.`}
+      <IndustriesSection
+        onCtaClick={() => setShowPopup(true)}
+        data={{
+          heading: "Industries That Benefit from AI Chatbot Development",
+          subText: "AI chatbot development is effective for:",
+          industries: [
+            "SaaS and Technology Companies",
+            "eCommerce Businesses",
+            "Professional Services",
+            "Healthcare and Real Estate",
+            "Agencies and Startups",
+            "Customer Support-Driven Organizations",
+          ],
+          note: "Any business managing digital inquiries benefits from AI chatbots.",
+          ctaText: "Book a Free Strategy Call",
+        }}
       />
 
       <BenefitsPerformance

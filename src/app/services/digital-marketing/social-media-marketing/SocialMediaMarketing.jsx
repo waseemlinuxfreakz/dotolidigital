@@ -9,6 +9,7 @@ import { FAQSection } from "../../../components/FAQSection";
 import WhyChooseSection from "../../../components/WhyChooseSection";
 
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
+import IndustriesSection from "../../../components/IndustriesSection";
 
 export default function SocialMediaMarketing() {
   const [showPopup, setShowPopup] = useState(false);
@@ -111,19 +112,23 @@ export default function SocialMediaMarketing() {
         We analyze engagement data, identify patterns, and refine content strategy to improve results over time.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x14.webp"
-        heading="Industries That Benefit Most from Social Media Marketing"
-        text={`Social media marketing is effective across industries, including:<br/>
-        <ul>
-          <li>eCommerce</li>
-          <li>SaaS & technology</li>
-          <li>Professional services</li>
-          <li>Healthcare</li>
-          <li>Real estate</li>
-          <li>Personal brands and agencies</li>
-        </ul><br/>
-        Each industry requires a tailored content and engagement approach.`}
+      <IndustriesSection
+        onCtaClick={() => setShowPopup(true)}
+        data={{
+          heading: "Industries That Benefit Most from Social Media Marketing",
+          subText:
+            "Social media marketing is effective across industries, including:",
+          industries: [
+            "eCommerce",
+            "SaaS & Technology",
+            "Professional Services",
+            "Healthcare",
+            "Real Estate",
+            "Personal Brands and Agencies",
+          ],
+          note: "Each industry requires a tailored content and engagement approach.",
+          ctaText: "Book a Free Strategy Call",
+        }}
       />
 
       <BenefitsPerformance

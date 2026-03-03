@@ -8,6 +8,7 @@ import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
 import WhyChooseSection from "../../../components/WhyChooseSection";
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
+import IndustriesSection from "../../../components/IndustriesSection";
 // ecommerce-website-development EcommerceWebsiteDevelopment
 
 export default function EcommerceWebsiteDevelopment() {
@@ -99,18 +100,21 @@ export default function EcommerceWebsiteDevelopment() {
         After launch, we support ongoing improvements, integrations, and optimization as your store grows.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x13.webp"
-        heading="Industries That Benefit from eCommerce Website Development"
-        text={`Our eCommerce development services support:
-        <ul>
-          <li>Retail brands</li>
-          <li>DTC (Direct-to-Consumer) businesses</li>
-          <li>Subscription-based businesses</li>
-          <li>B2B product companies</li>
-          <li>Digital product sellers</li>
-        </ul><br/>
-        Any business selling online benefits from a well-built eCommerce website.`}
+      <IndustriesSection
+        onCtaClick={() => setShowPopup(true)}
+        data={{
+          heading: "Industries That Benefit from eCommerce Website Development",
+          subText: "Our eCommerce development services support:",
+          industries: [
+            "Retail Brands",
+            "DTC (Direct-to-Consumer) Businesses",
+            "Subscription-Based Businesses",
+            "B2B Product Companies",
+            "Digital Product Sellers",
+          ],
+          note: "Any business selling online benefits from a well-built eCommerce website.",
+          ctaText: "Book a Free Strategy Call",
+        }}
       />
 
       <BenefitsPerformance

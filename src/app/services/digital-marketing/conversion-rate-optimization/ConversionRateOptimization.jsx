@@ -8,6 +8,7 @@ import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
 import WhyChooseSection from "../../../components/WhyChooseSection";
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
+import IndustriesSection from "../../../components/IndustriesSection";
 
 export default function ConversionRateOptimization() {
   const [showPopup, setShowPopup] = useState(false);
@@ -108,21 +109,24 @@ export default function ConversionRateOptimization() {
         Winning variations are scaled, and new tests are introduced to maintain continuous growth over time.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x13.webp"
-        heading="Industries That Benefit Most from CRO"
-        text={`Conversion Rate Optimization is valuable across industries, including:
-        <ul>
-          <li>eCommerce</li>
-          <li>SaaS & technology</li>
-          <li>Lead-generation businesses</li>
-          <li>Professional services</li>
-          <li>Healthcare</li>
-          <li>Real estate</li>
-        </ul><br/>
-        Any business with digital traffic can benefit from CRO.`}
+      <IndustriesSection
+        onCtaClick={() => setShowPopup(true)}
+        data={{
+          heading: "Industries That Benefit Most from CRO",
+          subText:
+            "Conversion Rate Optimization is valuable across industries, including:",
+          industries: [
+            "eCommerce",
+            "SaaS & Technology",
+            "Lead-Generation Businesses",
+            "Professional Services",
+            "Healthcare",
+            "Real Estate",
+          ],
+          note: "Any business with digital traffic can benefit from CRO.",
+          ctaText: "Book a Free Strategy Call",
+        }}
       />
-
       <BenefitsPerformance
         data={{
           heading: "Benefits of Our Conversion Rate Optimization Services",

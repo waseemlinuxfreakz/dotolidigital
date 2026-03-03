@@ -8,6 +8,7 @@ import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
 import WhyChooseSection from "../../../components/WhyChooseSection";
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
+import IndustriesSection from "../../../components/IndustriesSection";
 // landing-page-design-development LandingPageDesignDevelopment
 
 export default function LandingPageDesignDevelopment() {
@@ -96,18 +97,21 @@ export default function LandingPageDesignDevelopment() {
         After launch, we support optimization and testing to improve conversion rates continuously.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x13.webp"
-        heading="Industries That Benefit Most from Landing Pages"
-        text={`Landing pages are highly effective for:
-        <ul>
-          <li>eCommerce campaigns</li>
-          <li>SaaS and technology companies</li>
-          <li>Lead-generation businesses</li>
-          <li>Healthcare and professional services</li>
-          <li>Real estate and agencies</li>
-        </ul><br/>
-        Any business running digital campaigns benefits from optimized landing pages.`}
+      <IndustriesSection
+        onCtaClick={() => setShowPopup(true)}
+        data={{
+          heading: "Industries That Benefit Most from Landing Pages",
+          subText: "Landing pages are highly effective for:",
+          industries: [
+            "eCommerce Campaigns",
+            "SaaS and Technology Companies",
+            "Lead-Generation Businesses",
+            "Healthcare and Professional Services",
+            "Real Estate and Agencies",
+          ],
+          note: "Any business running digital campaigns benefits from optimized landing pages.",
+          ctaText: "Book a Free Strategy Call",
+        }}
       />
 
       <BenefitsPerformance
