@@ -5,6 +5,7 @@ import PopupForm from "../../../components/PopupForm";
 import Footer from "../../../components/Footer";
 import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
+import PerformanceCta from "../../../components/PerformanceCta";
 // AeoGeoOptimization
 
 export default function AeoGeoOptimization() {
@@ -103,10 +104,10 @@ export default function AeoGeoOptimization() {
         AEO and GEO are optimized by creating clear, structured, and concise content that directly answers user questions, uses schema markup, and includes relevant entities and locations so search engines and AI tools can easily understand and surface the content.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x9.webp"
-        heading="CTA"
-        text={`Get Your Brand Cited Inside AI Answers – Book a Free Audit`}
+      <PerformanceCta
+        onStrategyClick={() => setShowPopup(true)}
+        title="Ready to Future-Proof Your Visibility with AEO & GEO?"
+        description={`AEO & GEO Optimization helps your brand appear in AI-powered answers, voice search results, and generative search experiences. We optimize your content and structure to improve discoverability, authority, and long-term search visibility.`}
       />
 
       <Footer />

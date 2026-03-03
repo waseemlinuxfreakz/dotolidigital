@@ -5,6 +5,7 @@ import PopupForm from "../../../components/PopupForm";
 import Footer from "../../../components/Footer";
 import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
+import PerformanceCta from "../../../components/PerformanceCta";
 // VrMarketingProductShowcases
 
 export default function VrMarketingProductShowcases() {
@@ -148,13 +149,10 @@ export default function VrMarketingProductShowcases() {
         The cost depends on the project's complexity and scale. However, VR offers a high return on investment by significantly enhancing customer engagement and conversions.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x9.webp"
-        heading="Ready to Create an Immersive Product Showcase That Drives Conversions?"
-        text={`VR marketing and product showcases provide businesses with an innovative way to connect with customers, improve product understanding, and increase conversions. We help brands create compelling, interactive experiences that capture attention and drive results.<br/><br/>
-        <strong>Get a Free VR Product Showcase Consultation</strong><br/>
-        or<br/>
-        <strong>Book a VR Strategy Call</strong>`}
+      <PerformanceCta
+        onStrategyClick={() => setShowPopup(true)}
+        title="Ready to Create an Immersive Product Showcase That Drives Conversions?"
+        description={`VR marketing and product showcases provide businesses with an innovative way to connect with customers, improve product understanding, and increase conversions. We help brands create compelling, interactive experiences that capture attention and drive results.`}
       />
 
       <Footer />

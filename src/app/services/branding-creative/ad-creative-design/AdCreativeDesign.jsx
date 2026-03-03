@@ -4,6 +4,7 @@ import PopupForm from "../../../components/PopupForm";
 import Footer from "../../../components/Footer";
 import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
+import PerformanceCta from "../../../components/PerformanceCta";
 // ad-creative-design
 
 export default function AdCreativeDesign() {
@@ -162,13 +163,10 @@ export default function AdCreativeDesign() {
         Yes. Strong creative balances brand consistency with performance goals.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x14.webp"
-        heading="Ready to Improve Ad Performance with Better Creative?"
-        text={`Your ads are only as strong as their creative. We help businesses design ad creatives that attract attention and drive action.<br/><br/>
-        <strong>Get a Free Ad Creative Review</strong><br/>
-        or<br/>
-        <strong>Book an Ad Creative Strategy Call</strong>`}
+      <PerformanceCta
+        onStrategyClick={() => setShowPopup(true)}
+        title="Ready to Improve Ad Performance with Better Creative?"
+        description={`Your ads are only as strong as their creative. We help businesses design ad creatives that attract attention and drive action.`}
       />
 
       <Footer />

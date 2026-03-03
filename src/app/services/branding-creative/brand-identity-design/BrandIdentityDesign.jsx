@@ -4,6 +4,7 @@ import PopupForm from "../../../components/PopupForm";
 import Footer from "../../../components/Footer";
 import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
+import PerformanceCta from "../../../components/PerformanceCta";
 
 export default function BrandIdentityDesign() {
   const [showPopup, setShowPopup] = useState(false);
@@ -148,13 +149,10 @@ export default function BrandIdentityDesign() {
         Yes. Clear branding improves authority signals and digital consistency.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x14.webp"
-        heading="Ready to Build a Strong Brand Identity?"
-        text={`Your brand identity should communicate trust, clarity, and value instantly. We help businesses create identities that stand out and support growth.<br/><br/>
-        <strong>Get a Free Brand Identity Review</strong><br/>
-        or<br/>
-        <strong>Book a Brand Strategy Call</strong>`}
+      <PerformanceCta
+        onStrategyClick={() => setShowPopup(true)}
+        title="Ready to Build a Strong Brand Identity?"
+        description={`Your brand identity should communicate trust, clarity, and value instantly. We help businesses create identities that stand out and support growth.`}
       />
 
       <Footer />

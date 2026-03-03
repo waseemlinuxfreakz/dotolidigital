@@ -4,6 +4,7 @@ import PopupForm from "../../../components/PopupForm";
 import Footer from "../../../components/Footer";
 import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
+import PerformanceCta from "../../../components/PerformanceCta";
 // landing-page-design-development LandingPageDesignDevelopment
 
 export default function LandingPageDesignDevelopment() {
@@ -149,13 +150,10 @@ export default function LandingPageDesignDevelopment() {
         Yes. We help structure messaging and CTAs to improve conversions.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x14.webp"
-        heading="Ready to Launch High-Converting Landing Pages?"
-        text={`Strong landing pages make the difference between wasted traffic and measurable growth. We help businesses turn campaigns into conversions.<br/><br/>
-        <strong>Get a Free Landing Page Review</strong><br/>
-        or<br/>
-        <strong>Book a Landing Page Strategy Call</strong>`}
+      <PerformanceCta
+        onStrategyClick={() => setShowPopup(true)}
+        title="Ready to Launch High-Converting Landing Pages?"
+        description={`Strong landing pages make the difference between wasted traffic and measurable growth. We help businesses turn campaigns into conversions.`}
       />
 
       <Footer />

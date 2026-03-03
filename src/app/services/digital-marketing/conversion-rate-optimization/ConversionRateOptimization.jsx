@@ -4,6 +4,7 @@ import PopupForm from "../../../components/PopupForm";
 import Footer from "../../../components/Footer";
 import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
+import PerformanceCta from "../../../components/PerformanceCta";
 
 export default function ConversionRateOptimization() {
   const [showPopup, setShowPopup] = useState(false);
@@ -165,13 +166,10 @@ export default function ConversionRateOptimization() {
         Yes. Continuous testing and optimization deliver the best long-term results.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x14.webp"
-        heading="Ready to Convert More Visitors into Customers?"
-        text={`Conversion Rate Optimization turns existing traffic into real growth. We help businesses unlock hidden potential and scale results without increasing ad spend.<br/><br/>
-        <strong>Get a Free CRO Audit</strong><br/>
-        or<br/>
-        <strong>Book a Strategy Call to Get Started</strong>`}
+      <PerformanceCta
+        onStrategyClick={() => setShowPopup(true)}
+        title="Ready to Convert More Visitors into Customers?"
+        description={`Conversion Rate Optimization turns existing traffic into real growth. We help businesses unlock hidden potential and scale results without increasing ad spend.`}
       />
 
       <Footer />

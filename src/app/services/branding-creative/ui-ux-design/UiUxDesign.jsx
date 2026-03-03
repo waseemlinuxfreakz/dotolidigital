@@ -4,6 +4,7 @@ import PopupForm from "../../../components/PopupForm";
 import Footer from "../../../components/Footer";
 import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
+import PerformanceCta from "../../../components/PerformanceCta";
 
 export default function UiUxDesign() {
   const [showPopup, setShowPopup] = useState(false);
@@ -148,13 +149,10 @@ export default function UiUxDesign() {
         Yes. We collaborate closely with development teams to ensure designs are implemented correctly.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x14.webp"
-        heading="Ready to Improve User Experience and Conversions?"
-        text={`Great design makes digital experiences effortless. We help businesses create UI/UX that users enjoy and trust.<br/><br/>
-        <strong>Get a Free UI/UX Review</strong><br/>
-        or<br/>
-        <strong>Book a UI/UX Strategy Call</strong>`}
+      <PerformanceCta
+        onStrategyClick={() => setShowPopup(true)}
+        title="Ready to Improve User Experience and Conversions?"
+        description={`Great design makes digital experiences effortless. We help businesses create UI/UX that users enjoy and trust.`}
       />
 
       <Footer />

@@ -4,6 +4,7 @@ import PopupForm from "../../../components/PopupForm";
 import Footer from "../../../components/Footer";
 import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
+import PerformanceCta from "../../../components/PerformanceCta";
 // marketing-automation
 
 export default function MarketingAutomation() {
@@ -149,13 +150,10 @@ export default function MarketingAutomation() {
         Yes. Automation workflows perform best with continuous refinement.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x14.webp"
-        heading="Ready to Automate Your Marketing Without Losing Personalization?"
-        text={`Marketing automation helps businesses scale communication while staying relevant. We build automation systems that nurture leads and drive growth.<br/><br/>
-        <strong>Get a Free Marketing Automation Audit</strong><br/>
-        or<br/>
-        <strong>Book a Marketing Automation Strategy Call</strong>`}
+      <PerformanceCta
+        onStrategyClick={() => setShowPopup(true)}
+        title="Ready to Automate Your Marketing Without Losing Personalization?"
+        description={`Marketing automation helps businesses scale communication while staying relevant. We build automation systems that nurture leads and drive growth.`}
       />
 
       <Footer />

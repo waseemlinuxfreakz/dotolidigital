@@ -5,6 +5,7 @@ import PopupForm from "../../../components/PopupForm";
 import Footer from "../../../components/Footer";
 import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
+import PerformanceCta from "../../../components/PerformanceCta";
 
 export default function AIChatbotDevelopment() {
   const [showPopup, setShowPopup] = useState(false);
@@ -147,13 +148,10 @@ export default function AIChatbotDevelopment() {
         Yes. AI chatbots help small businesses scale communication efficiently.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x9.webp"
-        heading="Ready to Build an Intelligent AI Chatbot?"
-        text={`AI chatbots help businesses respond faster, engage better, and scale conversations without friction. We build chatbots that support real business goals.<br/><br/>
-        <strong>Get a Free AI Chatbot Consultation</strong><br/>
-        or<br/>
-        <strong>Book an AI Chatbot Strategy Call</strong>`}
+      <PerformanceCta
+        onStrategyClick={() => setShowPopup(true)}
+        title="Ready to Build an Intelligent AI Chatbot?"
+        description={`AI chatbots help businesses respond faster, engage better, and scale conversations without friction. We build chatbots that support real business goals.`}
       />
 
       <Footer />

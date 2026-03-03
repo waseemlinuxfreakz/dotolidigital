@@ -5,6 +5,7 @@ import PopupForm from "../../../components/PopupForm";
 import Footer from "../../../components/Footer";
 import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
+import PerformanceCta from "../../../components/PerformanceCta";
 // VirtualBrandExperiences
 
 export default function VirtualBrandExperiences() {
@@ -147,13 +148,10 @@ export default function VirtualBrandExperiences() {
         Yes. We offer ongoing support, optimization, and updates to ensure your virtual experience continues to meet your business objectives.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x9.webp"
-        heading="Ready to Create a Virtual Brand Experience That Engages & Inspires?"
-        text={`Your brand’s story deserves to be told in a way that captures attention and leaves a lasting impact. We help businesses create immersive virtual experiences that drive engagement, trust, and conversions.<br/><br/>
-        <strong>Get a Free Virtual Brand Experience Consultation</strong><br/>
-        or<br/>
-        <strong>Book a Virtual Brand Strategy Call</strong>`}
+      <PerformanceCta
+        onStrategyClick={() => setShowPopup(true)}
+        title="Ready to Create a Virtual Brand Experience That Engages & Inspires?"
+        description={`Your brand’s story deserves to be told in a way that captures attention and leaves a lasting impact. We help businesses create immersive virtual experiences that drive engagement, trust, and conversions.`}
       />
 
       <Footer />

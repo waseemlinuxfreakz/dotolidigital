@@ -5,6 +5,7 @@ import PopupForm from "../../../components/PopupForm";
 import Footer from "../../../components/Footer";
 import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
+import PerformanceCta from "../../../components/PerformanceCta";
 // SalesLeadGenerationAIAgents
 
 export default function SalesLeadGenerationAIAgents() {
@@ -148,13 +149,10 @@ export default function SalesLeadGenerationAIAgents() {
         Yes. Integration is a core part of effective AI agent deployment.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x9.webp"
-        heading="Ready to Automate Lead Qualification and Sales Support?"
-        text={`Sales and lead generation AI agents help businesses respond faster, qualify better, and close more deals. We build AI systems that support revenue growth at scale.<br/><br/>
-        <strong>Get a Free Sales AI Agent Audit</strong><br/>
-        or<br/>
-        <strong>Book a Sales AI Strategy Call</strong>`}
+      <PerformanceCta
+        onStrategyClick={() => setShowPopup(true)}
+        title="Ready to Automate Lead Qualification and Sales Support?"
+        description={`Sales and lead generation AI agents help businesses respond faster, qualify better, and close more deals. We build AI systems that support revenue growth at scale.`}
       />
 
       <Footer />

@@ -4,6 +4,7 @@ import PopupForm from "../../../components/PopupForm";
 import Footer from "../../../components/Footer";
 import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
+import PerformanceCta from "../../../components/PerformanceCta";
 
 export default function SalesAutomation() {
   const [showPopup, setShowPopup] = useState(false);
@@ -146,13 +147,10 @@ export default function SalesAutomation() {
         Yes. Sales automation performs best with continuous refinement.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x14.webp"
-        heading="Ready to Automate Your Sales Process?"
-        text={`Sales automation helps businesses close deals faster and scale revenue efficiently. We build systems that support sales teams and improve performance.<br/><br/>
-        <strong>Get a Free Sales Automation Review</strong><br/>
-        or<br/>
-        <strong>Book a Sales Automation Strategy Call</strong>`}
+      <PerformanceCta
+        onStrategyClick={() => setShowPopup(true)}
+        title="Ready to Automate Your Sales Process?"
+        description={`Sales automation helps businesses close deals faster and scale revenue efficiently. We build systems that support sales teams and improve performance.`}
       />
 
       <Footer />

@@ -242,7 +242,11 @@ WhyChooseSection
         Yes. Continuous management and optimization are essential for sustained performance.`}
       /> */}
 
-      <PerformanceCta onStrategyClick={() => setShowPopup(true)} />
+      <PerformanceCta
+        onStrategyClick={() => setShowPopup(true)}
+        title="Ready to Turn Marketing Spend into Measurable Results?"
+        description={`Performance marketing removes guesswork and replaces it with clarity, data, and growth.`}
+      />
 
       {/* <ServiceDetailsSection
         img="/images/x9.webp"

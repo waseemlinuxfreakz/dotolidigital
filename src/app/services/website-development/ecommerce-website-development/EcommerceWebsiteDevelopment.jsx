@@ -4,6 +4,7 @@ import PopupForm from "../../../components/PopupForm";
 import Footer from "../../../components/Footer";
 import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
+import PerformanceCta from "../../../components/PerformanceCta";
 // ecommerce-website-development EcommerceWebsiteDevelopment
 
 export default function EcommerceWebsiteDevelopment() {
@@ -152,13 +153,10 @@ export default function EcommerceWebsiteDevelopment() {
         Yes. SEO and AEO best practices are built into the development process from the start.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x13.webp"
-        heading="Ready to Build an eCommerce Website That Sells?"
-        text={`Your online store should work as hard as your marketing. We help businesses build eCommerce websites that convert visitors into customers and scale revenue.<br/><br/>
-        <strong>Get a Free eCommerce Website Audit</strong><br/>
-        or<br/>
-        <strong>Book an eCommerce Strategy Call</strong>`}
+      <PerformanceCta
+        onStrategyClick={() => setShowPopup(true)}
+        title="Ready to Build an eCommerce Website That Sells?"
+        description={`Your online store should work as hard as your marketing. We help businesses build eCommerce websites that convert visitors into customers and scale revenue.`}
       />
 
       <Footer />

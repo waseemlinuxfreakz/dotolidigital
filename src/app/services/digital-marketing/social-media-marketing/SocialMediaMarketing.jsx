@@ -4,6 +4,7 @@ import PopupForm from "../../../components/PopupForm";
 import Footer from "../../../components/Footer";
 import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
+import PerformanceCta from "../../../components/PerformanceCta";
 
 export default function SocialMediaMarketing() {
   const [showPopup, setShowPopup] = useState(false);
@@ -160,13 +161,10 @@ export default function SocialMediaMarketing() {
         Yes. Ongoing management ensures consistent performance and improvement.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x14.webp"
-        heading="Ready to Build a Strong Social Media Presence?"
-        text={`Social media success requires clarity, consistency, and strategy. We help brands move beyond random posting to purposeful growth.<br/><br/>
-        <strong>Get a Free Social Media Strategy Review</strong><br/>
-        or<br/>
-        <strong>Book a Strategy Call to Get Started</strong>`}
+      <PerformanceCta
+        onStrategyClick={() => setShowPopup(true)}
+        title="Ready to Build a Strong Social Media Presence?"
+        description={`Social media success requires clarity, consistency, and strategy. We help brands move beyond random posting to purposeful growth.`}
       />
 
       <Footer />

@@ -5,6 +5,7 @@ import PopupForm from "../../../components/PopupForm";
 import Footer from "../../../components/Footer";
 import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
+import PerformanceCta from "../../../components/PerformanceCta";
 
 export default function LocalSeo() {
   const [showPopup, setShowPopup] = useState(false);
@@ -89,10 +90,10 @@ export default function LocalSeo() {
         Local SEO focuses on ranking a business for location-based searches (like “near me” or city names), while traditional SEO targets broader, non-location-specific searches to reach a wider audience.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x9.webp"
-        heading="CTA"
-        text={`Get Found by Local Customers – Book a Free Local SEO Audit`}
+      <PerformanceCta
+        onStrategyClick={() => setShowPopup(true)}
+        title="Ready to Get More Local Customers from Google?"
+        description={`Local SEO helps your business show up when nearby customers are searching for what you offer. We improve your visibility in Google Maps and local search results so you can drive more calls, website visits, and in-store traffic.`}
       />
 
       <Footer />

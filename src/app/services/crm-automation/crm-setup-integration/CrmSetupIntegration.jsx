@@ -4,6 +4,7 @@ import PopupForm from "../../../components/PopupForm";
 import Footer from "../../../components/Footer";
 import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
+import PerformanceCta from "../../../components/PerformanceCta";
 // crm-setup-integration  CrmSetupIntegration
 
 export default function CrmSetupIntegration() {
@@ -149,13 +150,10 @@ export default function CrmSetupIntegration() {
         Yes. CRM integration is the foundation for marketing and sales automation.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x14.webp"
-        heading="Ready to Set Up a CRM That Actually Works?"
-        text={`Your CRM should simplify operations, not complicate them. We help businesses build CRM systems that are clean, connected, and scalable.<br/><br/>
-        <strong>Get a Free CRM Setup Review</strong><br/>
-        or<br/>
-        <strong>Book a CRM Integration Strategy Call</strong>`}
+      <PerformanceCta
+        onStrategyClick={() => setShowPopup(true)}
+        title="Ready to Set Up a CRM That Actually Works?"
+        description={`Your CRM should simplify operations, not complicate them. We help businesses build CRM systems that are clean, connected, and scalable.`}
       />
 
       <Footer />

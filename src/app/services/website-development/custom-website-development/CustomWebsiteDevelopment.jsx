@@ -4,6 +4,7 @@ import PopupForm from "../../../components/PopupForm";
 import Footer from "../../../components/Footer";
 import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
+import PerformanceCta from "../../../components/PerformanceCta";
 
 export default function CustomWebsiteDevelopment() {
   const [showPopup, setShowPopup] = useState(false);
@@ -148,13 +149,10 @@ export default function CustomWebsiteDevelopment() {
         Yes. We offer maintenance and optimization services post-launch.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x17.webp"
-        heading="Ready to Build a Website Tailored to Your Business?"
-        text={`Your website should adapt as your business grows. Custom website development gives you the flexibility and performance needed to scale.<br/><br/>
-        <strong>Get a Free Website Consultation</strong><br/>
-        or<br/>
-        <strong>Book a Custom Website Strategy Call</strong>`}
+      <PerformanceCta
+        onStrategyClick={() => setShowPopup(true)}
+        title="Ready to Build a Website Tailored to Your Business?"
+        description={`Your website should evolve as your business grows. Custom website development gives you the flexibility, performance, and scalability needed to support long-term success.`}
       />
 
       <Footer />

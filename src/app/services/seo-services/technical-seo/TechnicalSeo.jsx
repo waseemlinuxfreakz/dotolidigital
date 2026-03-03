@@ -5,6 +5,7 @@ import PopupForm from "../../../components/PopupForm";
 import Footer from "../../../components/Footer";
 import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
+import PerformanceCta from "../../../components/PerformanceCta";
 // TechnicalSeo
 
 export default function TechnicalSeo() {
@@ -86,10 +87,10 @@ export default function TechnicalSeo() {
         Technical SEO is used by optimizing a website’s technical setup so search engines can easily crawl, index, and understand it. This includes improving site speed, mobile usability, secure HTTPS, clean URLs, and fixing crawl errors.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x9.webp"
-        heading="CTA"
-        text={`Fix Hidden SEO Issues with a Free Technical SEO Audit`}
+      <PerformanceCta
+        onStrategyClick={() => setShowPopup(true)}
+        title="Ready to Strengthen Your Website’s Technical Foundation?"
+        description={`Technical SEO ensures your website is fast, crawlable, and optimized for search engines. We help businesses fix hidden issues, improve performance, and build a strong foundation for sustainable organic growth.`}
       />
 
       <Footer />

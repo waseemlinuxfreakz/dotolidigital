@@ -83,8 +83,8 @@ export default function ContactPage() {
       <div id="team-hero"></div>
 
       <TextCounterSection
-        text="Start your project — or just start the conversation."
-        paragraph="Tell us what’s not working — and where you want to go. We’ll respond with clear steps to help."
+        text="Start your project or just start the conversation."
+        paragraph="Tell us what’s not working, and where you want to go. We’ll respond with clear steps to help."
       />
 
       <section className="contact-sec">
@@ -93,12 +93,12 @@ export default function ContactPage() {
             <form className="contact-form" onSubmit={handleSubmit} noValidate>
               {/* Title + info */}
               <div className="contact-form-title-wrap">
-                <h2 className="contact-form-title">
+                <h4 className="">
                   We'll use your info to contact you about your request.{" "}
                   <span className="accent">
                     SMS is only sent if you opt in below.
                   </span>
-                </h2>
+                </h4>
               </div>
 
               {/* Required fields */}
