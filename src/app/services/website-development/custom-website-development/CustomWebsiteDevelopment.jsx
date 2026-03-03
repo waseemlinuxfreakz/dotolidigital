@@ -5,6 +5,7 @@ import Footer from "../../../components/Footer";
 import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
 import PerformanceCta from "../../../components/PerformanceCta";
+import { FAQSection } from "../../../components/FAQSection";
 
 export default function CustomWebsiteDevelopment() {
   const [showPopup, setShowPopup] = useState(false);
@@ -134,19 +135,35 @@ export default function CustomWebsiteDevelopment() {
         We build websites that work as long-term digital assets.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x16.webp"
-        heading="Frequently Asked Questions"
-        text={`<strong>Is a custom website better than using a template?</strong><br/>
-        Yes. Custom websites offer better performance, flexibility, and scalability compared to templates.<br/><br/>
-        <strong>How long does custom website development take?</strong><br/>
-        Timelines depend on complexity, but custom websites follow structured phases with clear milestones.<br/><br/>
-        <strong>Are custom websites SEO-friendly?</strong><br/>
-        Yes. All custom websites are built with SEO, AEO, and performance best practices.<br/><br/>
-        <strong>Can custom websites integrate with CRM and tools?</strong><br/>
-        Yes. Custom development allows seamless integration with third-party platforms and automation tools.<br/><br/>
-        <strong>Do you provide ongoing support after launch?</strong><br/>
-        Yes. We offer maintenance and optimization services post-launch.`}
+      <FAQSection
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question: "Is a custom website better than using a template?",
+            answer:
+              "Yes. Custom websites offer better performance, flexibility, and scalability compared to templates.",
+          },
+          {
+            question: "How long does custom website development take?",
+            answer:
+              "Timelines depend on complexity, but custom websites follow structured phases with clear milestones.",
+          },
+          {
+            question: "Are custom websites SEO-friendly?",
+            answer:
+              "Yes. All custom websites are built with SEO, AEO, and performance best practices.",
+          },
+          {
+            question: "Can custom websites integrate with CRM and tools?",
+            answer:
+              "Yes. Custom development allows seamless integration with third-party platforms and automation tools.",
+          },
+          {
+            question: "Do you provide ongoing support after launch?",
+            answer:
+              "Yes. We offer maintenance and optimization services post-launch.",
+          },
+        ]}
       />
 
       <PerformanceCta

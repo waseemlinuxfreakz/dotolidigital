@@ -5,6 +5,7 @@ import Footer from "../../../components/Footer";
 import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
 import PerformanceCta from "../../../components/PerformanceCta";
+import { FAQSection } from "../../../components/FAQSection";
 // ad-creative-design
 
 export default function AdCreativeDesign() {
@@ -148,19 +149,35 @@ export default function AdCreativeDesign() {
         We help brands create ad creatives that perform consistently.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x14.webp"
-        heading="Frequently Asked Questions"
-        text={`<strong>Do you design ads for different platforms?</strong><br/>
-        Yes. We design platform-specific creatives optimized for each advertising environment.<br/><br/>
-        <strong>Can ad creative really impact ad performance?</strong><br/>
-        Yes. Creative quality directly affects engagement, cost, and conversion rates.<br/><br/>
-        <strong>Do you support creative testing?</strong><br/>
-        Yes. We design multiple creative variations for A/B testing and optimization.<br/><br/>
-        <strong>Do you provide ad copy as well?</strong><br/>
-        Yes. We help structure messaging and headlines for better performance.<br/><br/>
-        <strong>Can ad creative support both branding and conversions?</strong><br/>
-        Yes. Strong creative balances brand consistency with performance goals.`}
+      <FAQSection
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question: "Do you design ads for different platforms?",
+            answer:
+              "Yes. We design platform-specific creatives optimized for each advertising environment.",
+          },
+          {
+            question: "Can ad creative really impact ad performance?",
+            answer:
+              "Yes. Creative quality directly affects engagement, cost, and conversion rates.",
+          },
+          {
+            question: "Do you support creative testing?",
+            answer:
+              "Yes. We design multiple creative variations for A/B testing and optimization.",
+          },
+          {
+            question: "Do you provide ad copy as well?",
+            answer:
+              "Yes. We help structure messaging and headlines for better performance.",
+          },
+          {
+            question: "Can ad creative support both branding and conversions?",
+            answer:
+              "Yes. Strong creative balances brand consistency with performance goals.",
+          },
+        ]}
       />
 
       <PerformanceCta

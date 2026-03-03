@@ -5,6 +5,7 @@ import Footer from "../../../components/Footer";
 import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
 import PerformanceCta from "../../../components/PerformanceCta";
+import { FAQSection } from "../../../components/FAQSection";
 
 export default function SocialMediaMarketing() {
   const [showPopup, setShowPopup] = useState(false);
@@ -148,17 +149,30 @@ export default function SocialMediaMarketing() {
         </ul>`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x14.webp"
-        heading="Frequently Asked Questions"
-        text={`<strong>How often should businesses post on social media?</strong><br/>
-        Posting frequency depends on platform, audience, and goals. Consistency matters more than volume.<br/><br/>
-        <strong>Is social media marketing effective without paid ads?</strong><br/>
-        Yes. Organic social media builds trust and visibility, while paid ads can accelerate reach.<br/><br/>
-        <strong>Can social media support SEO and AEO?</strong><br/>
-        Yes. Social engagement supports brand authority and content discovery.<br/><br/>
-        <strong>Do you provide ongoing social media management?</strong><br/>
-        Yes. Ongoing management ensures consistent performance and improvement.`}
+      <FAQSection
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question: "How often should businesses post on social media?",
+            answer:
+              "Posting frequency depends on platform, audience, and goals. Consistency matters more than volume.",
+          },
+          {
+            question: "Is social media marketing effective without paid ads?",
+            answer:
+              "Yes. Organic social media builds trust and visibility, while paid ads can accelerate reach.",
+          },
+          {
+            question: "Can social media support SEO and AEO?",
+            answer:
+              "Yes. Social engagement supports brand authority and content discovery.",
+          },
+          {
+            question: "Do you provide ongoing social media management?",
+            answer:
+              "Yes. Ongoing management ensures consistent performance and improvement.",
+          },
+        ]}
       />
 
       <PerformanceCta

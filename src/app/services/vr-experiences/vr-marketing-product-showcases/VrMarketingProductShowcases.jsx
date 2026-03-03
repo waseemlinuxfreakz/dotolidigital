@@ -6,6 +6,7 @@ import Footer from "../../../components/Footer";
 import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
 import PerformanceCta from "../../../components/PerformanceCta";
+import { FAQSection } from "../../../components/FAQSection";
 // VrMarketingProductShowcases
 
 export default function VrMarketingProductShowcases() {
@@ -134,19 +135,36 @@ export default function VrMarketingProductShowcases() {
         We help businesses create VR marketing experiences that lead to increased engagement, sales, and brand loyalty.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x9.webp"
-        heading="Frequently Asked Questions"
-        text={`<strong>How do VR product showcases work in marketing?</strong><br/>
-        VR product showcases allow users to interact with products virtually, giving them a deeper understanding and greater confidence in their purchase decisions.<br/><br/>
-        <strong>Do users need special VR headsets to experience these showcases?</strong><br/>
-        While VR headsets provide the most immersive experience, many VR marketing showcases can also be accessed on mobile devices or in web browsers via 360-degree videos and interactive simulations.<br/><br/>
-        <strong>How long does it take to develop a VR product showcase?</strong><br/>
-        Development time depends on the complexity of the showcase, but most projects can be completed within a few weeks to a few months, depending on the scope.<br/><br/>
-        <strong>Can VR product showcases be used for e-commerce?</strong><br/>
-        Yes, VR product showcases enhance eCommerce by allowing customers to interact with products in a way that traditional photos and videos cannot match, driving higher conversions.<br/><br/>
-        <strong>Is VR marketing expensive?</strong><br/>
-        The cost depends on the project's complexity and scale. However, VR offers a high return on investment by significantly enhancing customer engagement and conversions.`}
+      <FAQSection
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question: "How do VR product showcases work in marketing?",
+            answer:
+              "VR product showcases allow users to interact with products virtually, giving them a deeper understanding and greater confidence in their purchase decisions.",
+          },
+          {
+            question:
+              "Do users need special VR headsets to experience these showcases?",
+            answer:
+              "While VR headsets provide the most immersive experience, many VR marketing showcases can also be accessed on mobile devices or in web browsers via 360-degree videos and interactive simulations.",
+          },
+          {
+            question: "How long does it take to develop a VR product showcase?",
+            answer:
+              "Development time depends on the complexity of the showcase, but most projects can be completed within a few weeks to a few months, depending on the scope.",
+          },
+          {
+            question: "Can VR product showcases be used for e-commerce?",
+            answer:
+              "Yes. VR product showcases enhance eCommerce by allowing customers to interact with products in a way that traditional photos and videos cannot match, driving higher conversions.",
+          },
+          {
+            question: "Is VR marketing expensive?",
+            answer:
+              "The cost depends on the project's complexity and scale. However, VR offers a high return on investment by significantly enhancing customer engagement and conversions.",
+          },
+        ]}
       />
 
       <PerformanceCta

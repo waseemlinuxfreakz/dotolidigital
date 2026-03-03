@@ -5,6 +5,7 @@ import Footer from "../../../components/Footer";
 import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
 import PerformanceCta from "../../../components/PerformanceCta";
+import { FAQSection } from "../../../components/FAQSection";
 
 export default function UiUxDesign() {
   const [showPopup, setShowPopup] = useState(false);
@@ -134,19 +135,35 @@ export default function UiUxDesign() {
         We design experiences that support real business goals.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x14.webp"
-        heading="Frequently Asked Questions"
-        text={`<strong>What is the difference between UI and UX design?</strong><br/>
-        UI focuses on visual design, while UX focuses on overall user experience and usability.<br/><br/>
-        <strong>Does UI/UX design improve conversions?</strong><br/>
-        Yes. Clear and intuitive design reduces friction and increases the likelihood of users taking action.<br/><br/>
-        <strong>Can you redesign an existing interface?</strong><br/>
-        Yes. We improve existing designs to enhance usability and performance.<br/><br/>
-        <strong>Is UI/UX design important for SEO and AEO?</strong><br/>
-        Yes. Better user experience improves engagement signals and AI trust indicators.<br/><br/>
-        <strong>Do you work with developers during implementation?</strong><br/>
-        Yes. We collaborate closely with development teams to ensure designs are implemented correctly.`}
+      <FAQSection
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question: "What is the difference between UI and UX design?",
+            answer:
+              "UI focuses on visual design, while UX focuses on overall user experience and usability.",
+          },
+          {
+            question: "Does UI/UX design improve conversions?",
+            answer:
+              "Yes. Clear and intuitive design reduces friction and increases the likelihood of users taking action.",
+          },
+          {
+            question: "Can you redesign an existing interface?",
+            answer:
+              "Yes. We improve existing designs to enhance usability and performance.",
+          },
+          {
+            question: "Is UI/UX design important for SEO and AEO?",
+            answer:
+              "Yes. Better user experience improves engagement signals and AI trust indicators.",
+          },
+          {
+            question: "Do you work with developers during implementation?",
+            answer:
+              "Yes. We collaborate closely with development teams to ensure designs are implemented correctly.",
+          },
+        ]}
       />
 
       <PerformanceCta

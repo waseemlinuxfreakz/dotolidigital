@@ -5,6 +5,7 @@ import Footer from "../../../components/Footer";
 import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
 import PerformanceCta from "../../../components/PerformanceCta";
+import { FAQSection } from "../../../components/FAQSection";
 // marketing-automation
 
 export default function MarketingAutomation() {
@@ -135,19 +136,35 @@ export default function MarketingAutomation() {
         We help businesses automate without losing personalization.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x14.webp"
-        heading="Frequently Asked Questions"
-        text={`<strong>Is marketing automation only for email marketing?</strong><br/>
-        No. It includes email, lead nurturing, segmentation, and behavior-based workflows across channels.<br/><br/>
-        <strong>Can marketing automation work for small businesses?</strong><br/>
-        Yes. Automation helps small teams scale communication efficiently.<br/><br/>
-        <strong>Does marketing automation replace human interaction?</strong><br/>
-        No. It supports human teams by handling repetitive tasks and improving consistency.<br/><br/>
-        <strong>Can marketing automation improve conversion rates?</strong><br/>
-        Yes. Timely, personalized messaging significantly improves conversions.<br/><br/>
-        <strong>Do you provide ongoing optimization?</strong><br/>
-        Yes. Automation workflows perform best with continuous refinement.`}
+      <FAQSection
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question: "Is marketing automation only for email marketing?",
+            answer:
+              "No. It includes email, lead nurturing, segmentation, and behavior-based workflows across channels.",
+          },
+          {
+            question: "Can marketing automation work for small businesses?",
+            answer:
+              "Yes. Automation helps small teams scale communication efficiently.",
+          },
+          {
+            question: "Does marketing automation replace human interaction?",
+            answer:
+              "No. It supports human teams by handling repetitive tasks and improving consistency.",
+          },
+          {
+            question: "Can marketing automation improve conversion rates?",
+            answer:
+              "Yes. Timely, personalized messaging significantly improves conversions.",
+          },
+          {
+            question: "Do you provide ongoing optimization?",
+            answer:
+              "Yes. Automation workflows perform best with continuous refinement.",
+          },
+        ]}
       />
 
       <PerformanceCta

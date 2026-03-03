@@ -6,6 +6,7 @@ import Footer from "../../../components/Footer";
 import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
 import PerformanceCta from "../../../components/PerformanceCta";
+import { FAQSection } from "../../../components/FAQSection";
 // TechnicalSeo
 
 export default function TechnicalSeo() {
@@ -76,15 +77,25 @@ export default function TechnicalSeo() {
         </ul>`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x9.webp"
-        heading="FAQs – Technical SEO"
-        text={`<strong>Is technical SEO a one-time task?</strong><br/>
-        No. Technical SEO requires regular audits as websites evolve and search systems update.<br/><br/>
-        <strong>Does technical SEO affect AI search visibility?</strong><br/>
-        Yes. AI systems rely on technically sound websites to extract and trust information.<br/><br/>
-        <strong>How to use technical SEO?</strong><br/>
-        Technical SEO is used by optimizing a website’s technical setup so search engines can easily crawl, index, and understand it. This includes improving site speed, mobile usability, secure HTTPS, clean URLs, and fixing crawl errors.`}
+      <FAQSection
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question: "Is technical SEO a one-time task?",
+            answer:
+              "No. Technical SEO requires regular audits as websites evolve and search systems update.",
+          },
+          {
+            question: "Does technical SEO affect AI search visibility?",
+            answer:
+              "Yes. AI systems rely on technically sound websites to extract and trust information.",
+          },
+          {
+            question: "How to use technical SEO?",
+            answer:
+              "Technical SEO is used by optimizing a website’s technical setup so search engines can easily crawl, index, and understand it. This includes improving site speed, mobile usability, secure HTTPS, clean URLs, and fixing crawl errors.",
+          },
+        ]}
       />
 
       <PerformanceCta

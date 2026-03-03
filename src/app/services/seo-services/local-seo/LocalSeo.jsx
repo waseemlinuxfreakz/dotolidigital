@@ -6,6 +6,7 @@ import Footer from "../../../components/Footer";
 import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
 import PerformanceCta from "../../../components/PerformanceCta";
+import { FAQSection } from "../../../components/FAQSection";
 
 export default function LocalSeo() {
   const [showPopup, setShowPopup] = useState(false);
@@ -77,17 +78,26 @@ export default function LocalSeo() {
         </ul>`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x9.webp"
-        heading="FAQs – Local SEO"
-        text={`<strong>Does local SEO work for service-based businesses?</strong><br/>
-        Yes. Local SEO is highly effective for service providers targeting specific areas.<br/><br/>
-
-        <strong>How long does local SEO take?</strong><br/>
-        Initial improvements may appear quickly, with stronger results building over time.<br/><br/>
-
-        <strong>What is the difference between local SEO and traditional SEO?</strong><br/>
-        Local SEO focuses on ranking a business for location-based searches (like “near me” or city names), while traditional SEO targets broader, non-location-specific searches to reach a wider audience.`}
+      <FAQSection
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question: "Does local SEO work for service-based businesses?",
+            answer:
+              "Yes. Local SEO is highly effective for service providers targeting specific areas.",
+          },
+          {
+            question: "How long does local SEO take?",
+            answer:
+              "Initial improvements may appear quickly, with stronger results building over time.",
+          },
+          {
+            question:
+              "What is the difference between local SEO and traditional SEO?",
+            answer:
+              "Local SEO focuses on ranking a business for location-based searches (like “near me” or city names), while traditional SEO targets broader, non-location-specific searches to reach a wider audience.",
+          },
+        ]}
       />
 
       <PerformanceCta

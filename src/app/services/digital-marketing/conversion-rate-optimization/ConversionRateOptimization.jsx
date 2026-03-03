@@ -5,6 +5,7 @@ import Footer from "../../../components/Footer";
 import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
 import PerformanceCta from "../../../components/PerformanceCta";
+import { FAQSection } from "../../../components/FAQSection";
 
 export default function ConversionRateOptimization() {
   const [showPopup, setShowPopup] = useState(false);
@@ -147,23 +148,35 @@ export default function ConversionRateOptimization() {
         We optimize for actions that matter, not just aesthetics.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x16.webp"
-        heading="Frequently Asked Questions"
-        text={`<strong>What types of conversions can CRO improve?</strong><br/>
-        CRO can improve leads, sign-ups, purchases, downloads, and any other defined business goal.<br/><br/>
-
-        <strong>How long does CRO take to show results?</strong><br/>
-        Some improvements can show results quickly, while long-term gains build through continuous testing.<br/><br/>
-
-        <strong>Does CRO work without paid ads?</strong><br/>
-        Yes. CRO improves performance across organic, paid, and referral traffic.<br/><br/>
-
-        <strong>Can CRO work alongside SEO and AEO?</strong><br/>
-        Yes. CRO enhances SEO and AEO by improving engagement and user satisfaction signals.<br/><br/>
-
-        <strong>Do you provide ongoing CRO services?</strong><br/>
-        Yes. Continuous testing and optimization deliver the best long-term results.`}
+      <FAQSection
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question: "What types of conversions can CRO improve?",
+            answer:
+              "CRO can improve leads, sign-ups, purchases, downloads, and any other defined business goal.",
+          },
+          {
+            question: "How long does CRO take to show results?",
+            answer:
+              "Some improvements can show results quickly, while long-term gains build through continuous testing.",
+          },
+          {
+            question: "Does CRO work without paid ads?",
+            answer:
+              "Yes. CRO improves performance across organic, paid, and referral traffic.",
+          },
+          {
+            question: "Can CRO work alongside SEO and AEO?",
+            answer:
+              "Yes. CRO enhances SEO and AEO by improving engagement and user satisfaction signals.",
+          },
+          {
+            question: "Do you provide ongoing CRO services?",
+            answer:
+              "Yes. Continuous testing and optimization deliver the best long-term results.",
+          },
+        ]}
       />
 
       <PerformanceCta

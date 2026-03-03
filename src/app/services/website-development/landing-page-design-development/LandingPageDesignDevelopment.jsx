@@ -5,6 +5,7 @@ import Footer from "../../../components/Footer";
 import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
 import PerformanceCta from "../../../components/PerformanceCta";
+import { FAQSection } from "../../../components/FAQSection";
 // landing-page-design-development LandingPageDesignDevelopment
 
 export default function LandingPageDesignDevelopment() {
@@ -134,20 +135,36 @@ export default function LandingPageDesignDevelopment() {
         </ul><br/>
         We design landing pages that support real business outcomes.`}
       />
-
-      <ServiceDetailsSection
-        img="/images/x14.webp"
-        heading="Frequently Asked Questions"
-        text={`<strong>How is a landing page different from a regular website page?</strong><br/>
-        Landing pages focus on a single goal and remove distractions, while website pages serve broader navigation purposes.<br/><br/>
-        <strong>Can landing pages work for SEO?</strong><br/>
-        Yes. Landing pages can support SEO when structured correctly, though they are often used with paid campaigns.<br/><br/>
-        <strong>Do you design mobile-friendly landing pages?</strong><br/>
-        Yes. All landing pages are fully responsive and optimized for mobile users.<br/><br/>
-        <strong>Can landing pages be tested and improved over time?</strong><br/>
-        Yes. We build landing pages to support A/B testing and continuous optimization.<br/><br/>
-        <strong>Do you provide copywriting for landing pages?</strong><br/>
-        Yes. We help structure messaging and CTAs to improve conversions.`}
+      <FAQSection
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question:
+              "How is a landing page different from a regular website page?",
+            answer:
+              "Landing pages focus on a single goal and remove distractions, while website pages serve broader navigation purposes.",
+          },
+          {
+            question: "Can landing pages work for SEO?",
+            answer:
+              "Yes. Landing pages can support SEO when structured correctly, though they are often used with paid campaigns.",
+          },
+          {
+            question: "Do you design mobile-friendly landing pages?",
+            answer:
+              "Yes. All landing pages are fully responsive and optimized for mobile users.",
+          },
+          {
+            question: "Can landing pages be tested and improved over time?",
+            answer:
+              "Yes. We build landing pages to support A/B testing and continuous optimization.",
+          },
+          {
+            question: "Do you provide copywriting for landing pages?",
+            answer:
+              "Yes. We help structure messaging and CTAs to improve conversions.",
+          },
+        ]}
       />
 
       <PerformanceCta

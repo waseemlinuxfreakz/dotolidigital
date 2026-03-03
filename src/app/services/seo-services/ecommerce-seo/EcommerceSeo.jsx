@@ -6,6 +6,7 @@ import Footer from "../../../components/Footer";
 import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
 import PerformanceCta from "../../../components/PerformanceCta";
+import { FAQSection } from "../../../components/FAQSection";
 // EcommerceSeo
 
 export default function EcommerceSeo() {
@@ -76,14 +77,20 @@ export default function EcommerceSeo() {
         </ul>`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x9.webp"
-        heading="FAQs – eCommerce SEO"
-        text={`<strong>Is eCommerce SEO different from regular SEO?</strong><br/>
-        Yes. It focuses more on transactional intent, product structure, and conversions.<br/><br/>
-
-        <strong>Can SEO increase sales, not just traffic?</strong><br/>
-        Yes. Proper eCommerce SEO targets buyers, not just visitors.`}
+      <FAQSection
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question: "Is eCommerce SEO different from regular SEO?",
+            answer:
+              "Yes. It focuses more on transactional intent, product structure, and conversions.",
+          },
+          {
+            question: "Can SEO increase sales, not just traffic?",
+            answer:
+              "Yes. Proper eCommerce SEO targets buyers, not just visitors.",
+          },
+        ]}
       />
 
       <PerformanceCta

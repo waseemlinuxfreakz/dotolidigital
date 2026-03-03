@@ -6,6 +6,7 @@ import Footer from "../../../components/Footer";
 import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
 import PerformanceCta from "../../../components/PerformanceCta";
+import { FAQSection } from "../../../components/FAQSection";
 // AeoGeoOptimization
 
 export default function AeoGeoOptimization() {
@@ -85,23 +86,34 @@ export default function AeoGeoOptimization() {
         </ul>`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x9.webp"
-        heading="FAQs – AEO & GEO"
-        text={`<strong>What is AEO optimization?</strong><br/>
-        AEO optimization (Answer Engine Optimization) is the process of creating clear, well-structured content that directly answers user questions so search engines and AI-based tools can easily find, understand, and display those answers.<br/><br/>
-
-        <strong>What is GEO optimization?</strong><br/>
-        GEO optimization (Generative Engine Optimization) is the practice of optimizing content so it is easily understood, trusted, and reused by AI-driven search and generative engines when producing answers for users.<br/><br/>
-
-        <strong>Is AEO replacing SEO?</strong><br/>
-        No. AEO enhances SEO by adapting it for AI-driven search.<br/><br/>
-
-        <strong>Can small businesses benefit from AEO & GEO?</strong><br/>
-        Yes. AI systems prioritize clarity and relevance, not brand size.<br/><br/>
-
-        <strong>How to optimize AEO and GEO?</strong><br/>
-        AEO and GEO are optimized by creating clear, structured, and concise content that directly answers user questions, uses schema markup, and includes relevant entities and locations so search engines and AI tools can easily understand and surface the content.`}
+      <FAQSection
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question: "What is AEO optimization?",
+            answer:
+              "AEO optimization (Answer Engine Optimization) is the process of creating clear, well-structured content that directly answers user questions so search engines and AI-based tools can easily find, understand, and display those answers.",
+          },
+          {
+            question: "What is GEO optimization?",
+            answer:
+              "GEO optimization (Generative Engine Optimization) is the practice of optimizing content so it is easily understood, trusted, and reused by AI-driven search and generative engines when producing answers for users.",
+          },
+          {
+            question: "Is AEO replacing SEO?",
+            answer: "No. AEO enhances SEO by adapting it for AI-driven search.",
+          },
+          {
+            question: "Can small businesses benefit from AEO & GEO?",
+            answer:
+              "Yes. AI systems prioritize clarity and relevance, not brand size.",
+          },
+          {
+            question: "How to optimize AEO and GEO?",
+            answer:
+              "AEO and GEO are optimized by creating clear, structured, and concise content that directly answers user questions, uses schema markup, and includes relevant entities and locations so search engines and AI tools can easily understand and surface the content.",
+          },
+        ]}
       />
 
       <PerformanceCta

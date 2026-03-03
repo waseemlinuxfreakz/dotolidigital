@@ -5,6 +5,7 @@ import Footer from "../../../components/Footer";
 import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
 import PerformanceCta from "../../../components/PerformanceCta";
+import { FAQSection } from "../../../components/FAQSection";
 // ecommerce-website-development EcommerceWebsiteDevelopment
 
 export default function EcommerceWebsiteDevelopment() {
@@ -138,19 +139,35 @@ export default function EcommerceWebsiteDevelopment() {
         We create eCommerce platforms that grow with your business rather than limit it.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x13.webp"
-        heading="Frequently Asked Questions"
-        text={`<strong>Which platforms do you use for eCommerce development?</strong><br/>
-        We work with modern, scalable platforms and custom solutions based on business requirements.<br/><br/>
-        <strong>Can you redesign an existing eCommerce website?</strong><br/>
-        Yes. We redesign and optimize existing stores to improve performance and conversions.<br/><br/>
-        <strong>Are your eCommerce websites mobile-friendly?</strong><br/>
-        Yes. All eCommerce websites are fully responsive and optimized for mobile users.<br/><br/>
-        <strong>Do you provide ongoing support after launch?</strong><br/>
-        Yes. We offer maintenance, performance optimization, and feature updates as needed.<br/><br/>
-        <strong>Is SEO included in eCommerce website development?</strong><br/>
-        Yes. SEO and AEO best practices are built into the development process from the start.`}
+      <FAQSection
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question: "Which platforms do you use for eCommerce development?",
+            answer:
+              "We work with modern, scalable platforms and custom solutions based on business requirements.",
+          },
+          {
+            question: "Can you redesign an existing eCommerce website?",
+            answer:
+              "Yes. We redesign and optimize existing stores to improve performance and conversions.",
+          },
+          {
+            question: "Are your eCommerce websites mobile-friendly?",
+            answer:
+              "Yes. All eCommerce websites are fully responsive and optimized for mobile users.",
+          },
+          {
+            question: "Do you provide ongoing support after launch?",
+            answer:
+              "Yes. We offer maintenance, performance optimization, and feature updates as needed.",
+          },
+          {
+            question: "Is SEO included in eCommerce website development?",
+            answer:
+              "Yes. SEO and AEO best practices are built into the development process from the start.",
+          },
+        ]}
       />
 
       <PerformanceCta

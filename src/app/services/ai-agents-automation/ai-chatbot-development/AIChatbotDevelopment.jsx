@@ -6,6 +6,7 @@ import Footer from "../../../components/Footer";
 import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
 import PerformanceCta from "../../../components/PerformanceCta";
+import { FAQSection } from "../../../components/FAQSection";
 
 export default function AIChatbotDevelopment() {
   const [showPopup, setShowPopup] = useState(false);
@@ -133,19 +134,34 @@ export default function AIChatbotDevelopment() {
         We focus on chatbots that deliver real value, not just novelty.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x9.webp"
-        heading="Frequently Asked Questions"
-        text={`<strong>How are AI chatbots different from rule-based chatbots?</strong><br/>
-        AI chatbots understand intent and context, while rule-based chatbots rely on fixed scripts.<br/><br/>
-        <strong>Can AI chatbots integrate with CRM systems?</strong><br/>
-        Yes. CRM integration is a key part of effective AI chatbot deployment.<br/><br/>
-        <strong>Do AI chatbots replace human support?</strong><br/>
-        No. They handle repetitive queries and support teams by escalating complex issues.<br/><br/>
-        <strong>Can AI chatbots work on websites and messaging apps?</strong><br/>
-        Yes. Chatbots can be deployed across multiple platforms.<br/><br/>
-        <strong>Are AI chatbots suitable for small businesses?</strong><br/>
-        Yes. AI chatbots help small businesses scale communication efficiently.`}
+      <FAQSection
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question: "How are AI chatbots different from rule-based chatbots?",
+            answer:
+              "AI chatbots understand intent and context, while rule-based chatbots rely on fixed scripts.",
+          },
+          {
+            question: "Can AI chatbots integrate with CRM systems?",
+            answer:
+              "Yes. CRM integration is a key part of effective AI chatbot deployment.",
+          },
+          {
+            question: "Do AI chatbots replace human support?",
+            answer:
+              "No. They handle repetitive queries and support teams by escalating complex issues.",
+          },
+          {
+            question: "Can AI chatbots work on websites and messaging apps?",
+            answer: "Yes. Chatbots can be deployed across multiple platforms.",
+          },
+          {
+            question: "Are AI chatbots suitable for small businesses?",
+            answer:
+              "Yes. AI chatbots help small businesses scale communication efficiently.",
+          },
+        ]}
       />
 
       <PerformanceCta

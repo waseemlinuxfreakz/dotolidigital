@@ -5,6 +5,7 @@ import Footer from "../../../components/Footer";
 import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
 import PerformanceCta from "../../../components/PerformanceCta";
+import { FAQSection } from "../../../components/FAQSection";
 
 export default function BrandIdentityDesign() {
   const [showPopup, setShowPopup] = useState(false);
@@ -134,19 +135,35 @@ export default function BrandIdentityDesign() {
         We design brand identities that grow with your business.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x14.webp"
-        heading="Frequently Asked Questions"
-        text={`<strong>Is brand identity the same as a logo?</strong><br/>
-        No. A logo is one part of brand identity. Brand identity includes colors, typography, visual style, and guidelines.<br/><br/>
-        <strong>Can you redesign an existing brand identity?</strong><br/>
-        Yes. We help businesses refresh or refine their identity while maintaining recognition.<br/><br/>
-        <strong>Do you provide brand guidelines?</strong><br/>
-        Yes. Brand guidelines are included to ensure consistent use across platforms.<br/><br/>
-        <strong>Does brand identity affect marketing performance?</strong><br/>
-        Yes. Consistent branding improves trust, engagement, and conversion rates.<br/><br/>
-        <strong>Can brand identity support SEO and AEO?</strong><br/>
-        Yes. Clear branding improves authority signals and digital consistency.`}
+      <FAQSection
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question: "Is brand identity the same as a logo?",
+            answer:
+              "No. A logo is one part of brand identity. Brand identity includes colors, typography, visual style, and guidelines.",
+          },
+          {
+            question: "Can you redesign an existing brand identity?",
+            answer:
+              "Yes. We help businesses refresh or refine their identity while maintaining recognition.",
+          },
+          {
+            question: "Do you provide brand guidelines?",
+            answer:
+              "Yes. Brand guidelines are included to ensure consistent use across platforms.",
+          },
+          {
+            question: "Does brand identity affect marketing performance?",
+            answer:
+              "Yes. Consistent branding improves trust, engagement, and conversion rates.",
+          },
+          {
+            question: "Can brand identity support SEO and AEO?",
+            answer:
+              "Yes. Clear branding improves authority signals and digital consistency.",
+          },
+        ]}
       />
 
       <PerformanceCta

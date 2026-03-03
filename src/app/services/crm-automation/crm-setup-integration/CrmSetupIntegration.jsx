@@ -5,6 +5,7 @@ import Footer from "../../../components/Footer";
 import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
 import PerformanceCta from "../../../components/PerformanceCta";
+import { FAQSection } from "../../../components/FAQSection";
 // crm-setup-integration  CrmSetupIntegration
 
 export default function CrmSetupIntegration() {
@@ -135,19 +136,35 @@ export default function CrmSetupIntegration() {
         We build CRM systems that teams actually adopt and rely on.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x14.webp"
-        heading="Frequently Asked Questions"
-        text={`<strong>Can you work with our existing CRM?</strong><br/>
-        Yes. We optimize and integrate existing CRM platforms or recommend better alternatives if needed.<br/><br/>
-        <strong>Do you integrate CRM with websites and landing pages?</strong><br/>
-        Yes. We connect forms, landing pages, and lead sources directly to your CRM.<br/><br/>
-        <strong>Is CRM setup suitable for small businesses?</strong><br/>
-        Yes. Proper setup helps small businesses stay organized and scale efficiently.<br/><br/>
-        <strong>Do you provide training for CRM usage?</strong><br/>
-        Yes. We train teams to use the CRM effectively and confidently.<br/><br/>
-        <strong>Can CRM integration support automation?</strong><br/>
-        Yes. CRM integration is the foundation for marketing and sales automation.`}
+      <FAQSection
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question: "Can you work with our existing CRM?",
+            answer:
+              "Yes. We optimize and integrate existing CRM platforms or recommend better alternatives if needed.",
+          },
+          {
+            question: "Do you integrate CRM with websites and landing pages?",
+            answer:
+              "Yes. We connect forms, landing pages, and lead sources directly to your CRM.",
+          },
+          {
+            question: "Is CRM setup suitable for small businesses?",
+            answer:
+              "Yes. Proper setup helps small businesses stay organized and scale efficiently.",
+          },
+          {
+            question: "Do you provide training for CRM usage?",
+            answer:
+              "Yes. We train teams to use the CRM effectively and confidently.",
+          },
+          {
+            question: "Can CRM integration support automation?",
+            answer:
+              "Yes. CRM integration is the foundation for marketing and sales automation.",
+          },
+        ]}
       />
 
       <PerformanceCta

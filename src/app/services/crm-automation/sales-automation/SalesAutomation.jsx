@@ -5,6 +5,7 @@ import Footer from "../../../components/Footer";
 import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
 import PerformanceCta from "../../../components/PerformanceCta";
+import { FAQSection } from "../../../components/FAQSection";
 
 export default function SalesAutomation() {
   const [showPopup, setShowPopup] = useState(false);
@@ -132,19 +133,35 @@ export default function SalesAutomation() {
         We help sales teams close more deals with less effort.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x14.webp"
-        heading="Frequently Asked Questions"
-        text={`<strong>Does sales automation replace salespeople?</strong><br/>
-        No. It supports sales teams by handling repetitive tasks and improving consistency.<br/><br/>
-        <strong>Can sales automation work for small teams?</strong><br/>
-        Yes. Automation helps small teams scale without increasing headcount.<br/><br/>
-        <strong>Is sales automation part of CRM?</strong><br/>
-        Sales automation typically operates within or alongside a CRM system.<br/><br/>
-        <strong>Can sales automation improve conversion rates?</strong><br/>
-        Yes. Faster follow-ups and structured pipelines increase close rates.<br/><br/>
-        <strong>Do you provide ongoing optimization?</strong><br/>
-        Yes. Sales automation performs best with continuous refinement.`}
+      <FAQSection
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question: "Does sales automation replace salespeople?",
+            answer:
+              "No. It supports sales teams by handling repetitive tasks and improving consistency.",
+          },
+          {
+            question: "Can sales automation work for small teams?",
+            answer:
+              "Yes. Automation helps small teams scale without increasing headcount.",
+          },
+          {
+            question: "Is sales automation part of CRM?",
+            answer:
+              "Sales automation typically operates within or alongside a CRM system.",
+          },
+          {
+            question: "Can sales automation improve conversion rates?",
+            answer:
+              "Yes. Faster follow-ups and structured pipelines increase close rates.",
+          },
+          {
+            question: "Do you provide ongoing optimization?",
+            answer:
+              "Yes. Sales automation performs best with continuous refinement.",
+          },
+        ]}
       />
 
       <PerformanceCta

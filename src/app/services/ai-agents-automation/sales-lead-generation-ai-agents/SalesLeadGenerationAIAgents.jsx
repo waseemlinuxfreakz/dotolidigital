@@ -6,6 +6,7 @@ import Footer from "../../../components/Footer";
 import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
 import PerformanceCta from "../../../components/PerformanceCta";
+import { FAQSection } from "../../../components/FAQSection";
 // SalesLeadGenerationAIAgents
 
 export default function SalesLeadGenerationAIAgents() {
@@ -134,19 +135,33 @@ export default function SalesLeadGenerationAIAgents() {
         We focus on AI systems that support revenue, not just automation.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x9.webp"
-        heading="Frequently Asked Questions"
-        text={`<strong>Can AI agents replace sales teams?</strong><br/>
-        No. AI agents support sales teams by handling early-stage tasks, freeing up time for closing.<br/><br/>
-        <strong>Do AI agents work 24/7?</strong><br/>
-        Yes. AI agents engage and qualify leads at any time.<br/><br/>
-        <strong>Can AI agents book meetings automatically?</strong><br/>
-        Yes. Meeting and demo scheduling are common use cases.<br/><br/>
-        <strong>Are AI agents suitable for small businesses?</strong><br/>
-        Yes. AI agents help small teams handle more leads without increasing headcount.<br/><br/>
-        <strong>Can AI agents integrate with existing CRM systems?</strong><br/>
-        Yes. Integration is a core part of effective AI agent deployment.`}
+      <FAQSection
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question: "Can AI agents replace sales teams?",
+            answer:
+              "No. AI agents support sales teams by handling early-stage tasks, freeing up time for closing.",
+          },
+          {
+            question: "Do AI agents work 24/7?",
+            answer: "Yes. AI agents engage and qualify leads at any time.",
+          },
+          {
+            question: "Can AI agents book meetings automatically?",
+            answer: "Yes. Meeting and demo scheduling are common use cases.",
+          },
+          {
+            question: "Are AI agents suitable for small businesses?",
+            answer:
+              "Yes. AI agents help small teams handle more leads without increasing headcount.",
+          },
+          {
+            question: "Can AI agents integrate with existing CRM systems?",
+            answer:
+              "Yes. Integration is a core part of effective AI agent deployment.",
+          },
+        ]}
       />
 
       <PerformanceCta

@@ -6,6 +6,7 @@ import Footer from "../../../components/Footer";
 import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
 import PerformanceCta from "../../../components/PerformanceCta";
+import { FAQSection } from "../../../components/FAQSection";
 // VirtualBrandExperiences
 
 export default function VirtualBrandExperiences() {
@@ -133,19 +134,38 @@ export default function VirtualBrandExperiences() {
         We help brands connect with their audiences in ways that drive real business value.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x9.webp"
-        heading="Frequently Asked Questions"
-        text={`<strong>What technology do you use to create virtual brand experiences?</strong><br/>
-        We use cutting-edge VR, 3D modeling, and interactive design tools to create fully immersive brand experiences.<br/><br/>
-        <strong>Are Virtual Brand Experiences only for large businesses?</strong><br/>
-        No. Virtual Brand Experiences can be scaled to fit businesses of all sizes and budgets.<br/><br/>
-        <strong>Can VR experiences be accessed on mobile devices?</strong><br/>
-        Yes. While VR headsets provide the most immersive experience, many virtual experiences can also be accessed through mobile devices and browsers.<br/><br/>
-        <strong>How long does it take to create a Virtual Brand Experience?</strong><br/>
-        The timeline depends on the complexity of the experience. Typically, projects take a few weeks to a few months, depending on the scope.<br/><br/>
-        <strong>Do you provide support after the launch?</strong><br/>
-        Yes. We offer ongoing support, optimization, and updates to ensure your virtual experience continues to meet your business objectives.`}
+      <FAQSection
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question:
+              "What technology do you use to create virtual brand experiences?",
+            answer:
+              "We use cutting-edge VR, 3D modeling, and interactive design tools to create fully immersive brand experiences.",
+          },
+          {
+            question:
+              "Are Virtual Brand Experiences only for large businesses?",
+            answer:
+              "No. Virtual Brand Experiences can be scaled to fit businesses of all sizes and budgets.",
+          },
+          {
+            question: "Can VR experiences be accessed on mobile devices?",
+            answer:
+              "Yes. While VR headsets provide the most immersive experience, many virtual experiences can also be accessed through mobile devices and browsers.",
+          },
+          {
+            question:
+              "How long does it take to create a Virtual Brand Experience?",
+            answer:
+              "The timeline depends on the complexity of the experience. Typically, projects take a few weeks to a few months, depending on the scope.",
+          },
+          {
+            question: "Do you provide support after the launch?",
+            answer:
+              "Yes. We offer ongoing support, optimization, and updates to ensure your virtual experience continues to meet your business objectives.",
+          },
+        ]}
       />
 
       <PerformanceCta
