@@ -9,6 +9,7 @@ import { FAQSection } from "../../../components/FAQSection";
 import WhyChooseSection from "../../../components/WhyChooseSection";
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
 import IndustriesSection from "../../../components/IndustriesSection";
+import ProcessTimeline from "../../../components/ProcessTimeline";
 
 export default function CustomWebsiteDevelopment() {
   const [showPopup, setShowPopup] = useState(false);
@@ -80,19 +81,32 @@ export default function CustomWebsiteDevelopment() {
         Custom websites are built to integrate with CRMs, analytics, automation tools, and third-party platforms, ensuring long-term scalability.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x12.webp"
-        heading="How Our Custom Website Development Process Works"
-        text={`<strong>1. Discovery & Planning</strong><br/>
-        We gather requirements, define goals, and map user journeys to ensure clarity before development begins.<br/><br/>
-        <strong>2. Wireframing & UX Design</strong><br/>
-        We design layouts and flows that prioritize usability, accessibility, and conversion efficiency.<br/><br/>
-        <strong>3. Custom Design & Development</strong><br/>
-        Designs are transformed into fully functional websites using clean code and performance best practices.<br/><br/>
-        <strong>4. Testing & Optimization</strong><br/>
-        We test speed, responsiveness, functionality, and usability across devices and browsers.<br/><br/>
-        <strong>5. Launch & Ongoing Support</strong><br/>
-        After launch, we provide support and optimization to ensure continued performance as needs evolve.`}
+      <ProcessTimeline
+        data={{
+          heading: "How Our Custom Website Development Process Works",
+          steps: [
+            {
+              title: "Discovery & Planning",
+              desc: "We gather requirements, define goals, and map user journeys to ensure clarity before development begins.",
+            },
+            {
+              title: "Wireframing & UX Design",
+              desc: "We design layouts and flows that prioritize usability, accessibility, and conversion efficiency.",
+            },
+            {
+              title: "Custom Design & Development",
+              desc: "Designs are transformed into fully functional websites using clean code and performance best practices.",
+            },
+            {
+              title: "Testing & Optimization",
+              desc: "We test speed, responsiveness, functionality, and usability across devices and browsers.",
+            },
+            {
+              title: "Launch & Ongoing Support",
+              desc: "After launch, we provide support and optimization to ensure continued performance as needs evolve.",
+            },
+          ],
+        }}
       />
 
       <IndustriesSection

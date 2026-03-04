@@ -9,6 +9,7 @@ import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
 import IndustriesSection from "../../../components/IndustriesSection";
+import ProcessTimeline from "../../../components/ProcessTimeline";
 // EcommerceSeo
 
 export default function EcommerceSeo() {
@@ -56,16 +57,32 @@ export default function EcommerceSeo() {
         We enhance speed and usability to support both rankings and sales.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x9.webp"
-        heading="How Our eCommerce SEO Process Works"
-        text={`<ol>
-          <li>Store SEO audit</li>
-          <li>Keyword and intent mapping</li>
-          <li>Product and category optimization</li>
-          <li>Technical and performance improvements</li>
-          <li>Continuous optimization</li>
-        </ol>`}
+      <ProcessTimeline
+        data={{
+          heading: "How Our eCommerce SEO Process Works",
+          steps: [
+            {
+              title: "Store SEO Audit",
+              desc: "We analyze your online store’s technical setup, product pages, category structure, and existing search visibility to identify opportunities for improvement.",
+            },
+            {
+              title: "Keyword & Intent Mapping",
+              desc: "We research buyer-focused keywords and map them to the right product, category, and content pages to match search intent.",
+            },
+            {
+              title: "Product & Category Optimization",
+              desc: "Product titles, descriptions, metadata, and category structures are optimized to improve discoverability and conversions.",
+            },
+            {
+              title: "Technical & Performance Improvements",
+              desc: "We improve site speed, indexing, internal linking, and structured data to strengthen the store’s technical SEO foundation.",
+            },
+            {
+              title: "Continuous Optimization",
+              desc: "Performance data is monitored regularly, and optimizations are applied to improve rankings, traffic, and sales over time.",
+            },
+          ],
+        }}
       />
 
       <BenefitsPerformance

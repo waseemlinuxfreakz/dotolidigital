@@ -10,6 +10,7 @@ import { FAQSection } from "../../../components/FAQSection";
 import WhyChooseSection from "../../../components/WhyChooseSection";
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
 import IndustriesSection from "../../../components/IndustriesSection";
+import ProcessTimeline from "../../../components/ProcessTimeline";
 
 export default function AIChatbotDevelopment() {
   const [showPopup, setShowPopup] = useState(false);
@@ -79,19 +80,32 @@ export default function AIChatbotDevelopment() {
         Each chatbot conversation is designed to reflect your brand and business goals, with clarity, tone, and purpose.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x9.webp"
-        heading="How Our AI Chatbot Development Process Works"
-        text={`<strong>1. Use Case & Requirement Analysis</strong><br/>
-        We identify chatbot goals such as support, lead generation, or onboarding and define success criteria.<br/><br/>
-        <strong>2. Conversation Flow & Logic Design</strong><br/>
-        We design conversation paths, fallback responses, and logic to handle various user scenarios.<br/><br/>
-        <strong>3. AI Model & System Integration</strong><br/>
-        Chatbots are connected to CRM, websites, and automation tools to enable real actions.<br/><br/>
-        <strong>4. Testing & Training</strong><br/>
-        We test chatbot responses using real-world scenarios and refine accuracy and clarity.<br/><br/>
-        <strong>5. Launch, Monitoring & Optimization</strong><br/>
-        After launch, chatbot performance is monitored and optimized continuously.`}
+      <ProcessTimeline
+        data={{
+          heading: "How Our AI Chatbot Development Process Works",
+          steps: [
+            {
+              title: "Use Case & Requirement Analysis",
+              desc: "We identify chatbot goals such as support, lead generation, or onboarding and define success criteria.",
+            },
+            {
+              title: "Conversation Flow & Logic Design",
+              desc: "We design conversation paths, fallback responses, and logic to handle various user scenarios.",
+            },
+            {
+              title: "AI Model & System Integration",
+              desc: "Chatbots are connected to CRM, websites, and automation tools to enable real actions.",
+            },
+            {
+              title: "Testing & Training",
+              desc: "We test chatbot responses using real-world scenarios and refine accuracy and clarity.",
+            },
+            {
+              title: "Launch, Monitoring & Optimization",
+              desc: "After launch, chatbot performance is monitored and optimized continuously.",
+            },
+          ],
+        }}
       />
 
       <IndustriesSection

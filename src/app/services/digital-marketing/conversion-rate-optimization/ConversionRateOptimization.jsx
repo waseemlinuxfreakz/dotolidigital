@@ -10,6 +10,8 @@ import WhyChooseSection from "../../../components/WhyChooseSection";
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
 import IndustriesSection from "../../../components/IndustriesSection";
 
+import ProcessTimeline from "../../../components/ProcessTimeline";
+
 export default function ConversionRateOptimization() {
   const [showPopup, setShowPopup] = useState(false);
 
@@ -90,23 +92,32 @@ export default function ConversionRateOptimization() {
         We test variations of headlines, layouts, CTAs, and content to identify which combinations convert best. Testing removes guesswork and improves performance incrementally.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x12.webp"
-        heading="How Our Conversion Rate Optimization Process Works"
-        text={`<strong>1. Conversion & Funnel Audit</strong><br/>
-        We begin by reviewing existing funnels, analytics, and conversion data to identify leaks and performance gaps.<br/><br/>
-
-        <strong>2. User Behavior & Data Analysis</strong><br/>
-        We study how users behave on key pages, where they hesitate, and what prevents them from converting.<br/><br/>
-
-        <strong>3. Hypothesis & Strategy Development</strong><br/>
-        Based on insights, we develop clear hypotheses for improvement and prioritize changes with the highest impact potential.<br/><br/>
-
-        <strong>4. Testing & Implementation</strong><br/>
-        We implement changes and run controlled tests to accurately measure performance improvements.<br/><br/>
-
-        <strong>5. Optimization & Continuous Improvement</strong><br/>
-        Winning variations are scaled, and new tests are introduced to maintain continuous growth over time.`}
+      <ProcessTimeline
+        data={{
+          heading: "How Our Conversion Rate Optimization Process Works",
+          steps: [
+            {
+              title: "Conversion & Funnel Audit",
+              desc: "We begin by reviewing existing funnels, analytics, and conversion data to identify leaks and performance gaps.",
+            },
+            {
+              title: "User Behavior & Data Analysis",
+              desc: "We study how users behave on key pages, where they hesitate, and what prevents them from converting.",
+            },
+            {
+              title: "Hypothesis & Strategy Development",
+              desc: "Based on insights, we develop clear hypotheses for improvement and prioritize changes with the highest impact potential.",
+            },
+            {
+              title: "Testing & Implementation",
+              desc: "We implement changes and run controlled tests to accurately measure performance improvements.",
+            },
+            {
+              title: "Optimization & Continuous Improvement",
+              desc: "Winning variations are scaled, and new tests are introduced to maintain continuous growth over time.",
+            },
+          ],
+        }}
       />
 
       <IndustriesSection
@@ -127,6 +138,7 @@ export default function ConversionRateOptimization() {
           ctaText: "Book a Free Strategy Call",
         }}
       />
+
       <BenefitsPerformance
         data={{
           heading: "Benefits of Our Conversion Rate Optimization Services",

@@ -10,6 +10,7 @@ import { FAQSection } from "../../../components/FAQSection";
 import WhyChooseSection from "../../../components/WhyChooseSection";
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
 import IndustriesSection from "../../../components/IndustriesSection";
+import ProcessTimeline from "../../../components/ProcessTimeline";
 // SalesLeadGenerationAIAgents
 
 export default function SalesLeadGenerationAIAgents() {
@@ -80,19 +81,32 @@ export default function SalesLeadGenerationAIAgents() {
         We deploy AI agents across websites, landing pages, and messaging platforms to capture leads wherever prospects engage.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x9.webp"
-        heading="How Our Sales & Lead Generation AI Agent Process Works"
-        text={`<strong>1. Sales Funnel & Goal Analysis</strong><br/>
-        We understand your sales funnel, lead criteria, and conversion goals to design effective AI workflows.<br/><br/>
-        <strong>2. Conversation & Qualification Design</strong><br/>
-        We design conversation flows that qualify leads based on intent, budget, and readiness.<br/><br/>
-        <strong>3. CRM & Tool Integration</strong><br/>
-        AI agents are integrated with CRM, calendars, and automation tools to trigger real actions.<br/><br/>
-        <strong>4. Testing & Refinement</strong><br/>
-        We test conversations with real scenarios and refine responses for accuracy and clarity.<br/><br/>
-        <strong>5. Launch, Monitoring & Optimization</strong><br/>
-        AI agents are monitored continuously and optimized based on performance data.`}
+      <ProcessTimeline
+        data={{
+          heading: "How Our Sales & Lead Generation AI Agent Process Works",
+          steps: [
+            {
+              title: "Sales Funnel & Goal Analysis",
+              desc: "We understand your sales funnel, lead criteria, and conversion goals to design effective AI workflows.",
+            },
+            {
+              title: "Conversation & Qualification Design",
+              desc: "We design conversation flows that qualify leads based on intent, budget, and readiness.",
+            },
+            {
+              title: "CRM & Tool Integration",
+              desc: "AI agents are integrated with CRM, calendars, and automation tools to trigger real actions.",
+            },
+            {
+              title: "Testing & Refinement",
+              desc: "We test conversations with real scenarios and refine responses for accuracy and clarity.",
+            },
+            {
+              title: "Launch, Monitoring & Optimization",
+              desc: "AI agents are monitored continuously and optimized based on performance data.",
+            },
+          ],
+        }}
       />
 
       <IndustriesSection

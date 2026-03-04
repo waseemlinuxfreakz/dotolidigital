@@ -9,6 +9,7 @@ import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
 import IndustriesSection from "../../../components/IndustriesSection";
+import ProcessTimeline from "../../../components/ProcessTimeline";
 
 export default function LocalSeo() {
   const [showPopup, setShowPopup] = useState(false);
@@ -57,16 +58,32 @@ export default function LocalSeo() {
         We create location-relevant content that proves where you work and what you do best. We build authority with local citations, consistent NAP details, and trusted mentions. This improves local trust, ranking stability, and coverage across multiple nearby areas.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x9.webp"
-        heading="How Our Local SEO Process Works"
-        text={`<ol>
-          <li>Local visibility audit</li>
-          <li>Business profile optimization</li>
-          <li>Location-based content optimization</li>
-          <li>Map ranking improvements</li>
-          <li>Performance tracking</li>
-        </ol>`}
+      <ProcessTimeline
+        data={{
+          heading: "How Our Local SEO Process Works",
+          steps: [
+            {
+              title: "Local Visibility Audit",
+              desc: "We review your current local search presence, citations, map rankings, and competitors to identify visibility gaps and opportunities.",
+            },
+            {
+              title: "Business Profile Optimization",
+              desc: "Your Google Business Profile and other listings are optimized with accurate information, categories, images, and keyword alignment.",
+            },
+            {
+              title: "Location-Based Content Optimization",
+              desc: "We optimize location pages and local content to match search intent and improve relevance for nearby searches.",
+            },
+            {
+              title: "Map Ranking Improvements",
+              desc: "We strengthen local signals such as citations, reviews, and on-page factors to improve your position in map results.",
+            },
+            {
+              title: "Performance Tracking",
+              desc: "We monitor rankings, traffic, calls, and conversions from local searches to continuously refine the strategy.",
+            },
+          ],
+        }}
       />
 
       <BenefitsPerformance

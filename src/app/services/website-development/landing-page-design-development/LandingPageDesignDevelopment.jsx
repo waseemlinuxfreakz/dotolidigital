@@ -9,6 +9,7 @@ import { FAQSection } from "../../../components/FAQSection";
 import WhyChooseSection from "../../../components/WhyChooseSection";
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
 import IndustriesSection from "../../../components/IndustriesSection";
+import ProcessTimeline from "../../../components/ProcessTimeline";
 // landing-page-design-development LandingPageDesignDevelopment
 
 export default function LandingPageDesignDevelopment() {
@@ -82,19 +83,32 @@ export default function LandingPageDesignDevelopment() {
         Landing pages are built to support testing and experimentation, allowing continuous improvement over time.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x12.webp"
-        heading="How Our Landing Page Design & Development Process Works"
-        text={`<strong>1. Campaign Goal & Audience Alignment</strong><br/>
-        We identify the campaign objective and understand the audience’s intent to ensure messaging aligns with expectations.<br/><br/>
-        <strong>2. Wireframing & Messaging Structure</strong><br/>
-        We plan layout, content hierarchy, and CTA placement to guide users toward action clearly.<br/><br/>
-        <strong>3. Design & Development</strong><br/>
-        Landing pages are designed and developed with performance, responsiveness, and conversion principles in mind.<br/><br/>
-        <strong>4. Testing & Optimization</strong><br/>
-        We test load speed, usability, and messaging effectiveness before launch.<br/><br/>
-        <strong>5. Launch & Performance Support</strong><br/>
-        After launch, we support optimization and testing to improve conversion rates continuously.`}
+      <ProcessTimeline
+        data={{
+          heading: "How Our Landing Page Design & Development Process Works",
+          steps: [
+            {
+              title: "Campaign Goal & Audience Alignment",
+              desc: "We identify the campaign objective and understand the audience’s intent to ensure messaging aligns with expectations.",
+            },
+            {
+              title: "Wireframing & Messaging Structure",
+              desc: "We plan layout, content hierarchy, and CTA placement to guide users toward action clearly.",
+            },
+            {
+              title: "Design & Development",
+              desc: "Landing pages are designed and developed with performance, responsiveness, and conversion principles in mind.",
+            },
+            {
+              title: "Testing & Optimization",
+              desc: "We test load speed, usability, and messaging effectiveness before launch.",
+            },
+            {
+              title: "Launch & Performance Support",
+              desc: "After launch, we support optimization and testing to improve conversion rates continuously.",
+            },
+          ],
+        }}
       />
 
       <IndustriesSection

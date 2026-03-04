@@ -10,6 +10,7 @@ import { FAQSection } from "../../../components/FAQSection";
 import WhyChooseSection from "../../../components/WhyChooseSection";
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
 import IndustriesSection from "../../../components/IndustriesSection";
+import ProcessTimeline from "../../../components/ProcessTimeline";
 // VrMarketingProductShowcases
 
 export default function VrMarketingProductShowcases() {
@@ -80,19 +81,32 @@ export default function VrMarketingProductShowcases() {
         We design interactive experiences where users can click, drag, or tap to explore product features, specifications, and benefits, helping them understand every aspect of your offerings in a hands-on way.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x9.webp"
-        heading="How Our VR Marketing & Product Showcase Process Works"
-        text={`<strong>1. Discovery & Business Goal Alignment</strong><br/>
-        We begin by understanding your business, product, and target audience to create VR experiences that align with your goals and objectives.<br/><br/>
-        <strong>2. Experience Design & Storyboarding</strong><br/>
-        We design the user experience by creating clear storyboards that map out interactions, key moments, and CTAs in the VR showcase.<br/><br/>
-        <strong>3. Development & Immersive Creation</strong><br/>
-        We develop interactive 3D models, environments, and scenes that are optimized for engagement, performance, and compatibility across VR devices.<br/><br/>
-        <strong>4. Testing & Optimization</strong><br/>
-        We test the VR experience to ensure smooth performance, user interaction, and usability. Any areas of friction are addressed to ensure the best possible experience.<br/><br/>
-        <strong>5. Launch, Analytics & Ongoing Support</strong><br/>
-        After launch, we monitor user engagement and collect performance data. Continuous optimization ensures the experience remains effective and up to date.`}
+      <ProcessTimeline
+        data={{
+          heading: "How Our VR Marketing & Product Showcase Process Works",
+          steps: [
+            {
+              title: "Discovery & Business Goal Alignment",
+              desc: "We begin by understanding your business, product, and target audience to create VR experiences that align with your goals and objectives.",
+            },
+            {
+              title: "Experience Design & Storyboarding",
+              desc: "We design the user experience by creating clear storyboards that map out interactions, key moments, and CTAs in the VR showcase.",
+            },
+            {
+              title: "Development & Immersive Creation",
+              desc: "We develop interactive 3D models, environments, and scenes that are optimized for engagement, performance, and compatibility across VR devices.",
+            },
+            {
+              title: "Testing & Optimization",
+              desc: "We test the VR experience to ensure smooth performance, user interaction, and usability. Any areas of friction are addressed to ensure the best possible experience.",
+            },
+            {
+              title: "Launch, Analytics & Ongoing Support",
+              desc: "After launch, we monitor user engagement and collect performance data. Continuous optimization ensures the experience remains effective and up to date.",
+            },
+          ],
+        }}
       />
 
       <IndustriesSection

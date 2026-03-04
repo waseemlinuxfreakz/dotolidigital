@@ -11,6 +11,7 @@ import WhyChooseSection from "../../../components/WhyChooseSection";
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
 
 import IndustriesSection from "../../../components/IndustriesSection";
+import ProcessTimeline from "../../../components/ProcessTimeline";
 // crm-setup-integration  CrmSetupIntegration
 
 export default function CrmSetupIntegration() {
@@ -83,19 +84,32 @@ export default function CrmSetupIntegration() {
         We integrate CRMs with sales tools and workflows to ensure leads are assigned, tracked, and followed up on efficiently.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x12.webp"
-        heading="How Our CRM Setup & Integration Process Works"
-        text={`<strong>1. Workflow & Data Review</strong><br/>
-        We analyze your existing tools, workflows, and customer journey to define integration requirements.<br/><br/>
-        <strong>2. CRM Selection or Review</strong><br/>
-        We help select the right CRM or optimize your existing system based on business needs.<br/><br/>
-        <strong>3. CRM Setup & Configuration</strong><br/>
-        Pipelines, fields, user roles, and permissions are configured for clarity and efficiency.<br/><br/>
-        <strong>4. Integration & Automation Setup</strong><br/>
-        We connect your CRM with websites, marketing tools, and sales platforms to automate data flow.<br/><br/>
-        <strong>5. Testing, Training & Optimization</strong><br/>
-        We test all integrations, train your team, and refine setups for long-term reliability.`}
+      <ProcessTimeline
+        data={{
+          heading: "How Our CRM Setup & Integration Process Works",
+          steps: [
+            {
+              title: "Workflow & Data Review",
+              desc: "We analyze your existing tools, workflows, and customer journey to define integration requirements.",
+            },
+            {
+              title: "CRM Selection or Review",
+              desc: "We help select the right CRM or optimize your existing system based on business needs.",
+            },
+            {
+              title: "CRM Setup & Configuration",
+              desc: "Pipelines, fields, user roles, and permissions are configured for clarity and efficiency.",
+            },
+            {
+              title: "Integration & Automation Setup",
+              desc: "We connect your CRM with websites, marketing tools, and sales platforms to automate data flow.",
+            },
+            {
+              title: "Testing, Training & Optimization",
+              desc: "We test all integrations, train your team, and refine setups for long-term reliability.",
+            },
+          ],
+        }}
       />
 
       <IndustriesSection

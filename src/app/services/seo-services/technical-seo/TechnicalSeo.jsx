@@ -9,6 +9,7 @@ import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
 import IndustriesSection from "../../../components/IndustriesSection";
+import ProcessTimeline from "../../../components/ProcessTimeline";
 // TechnicalSeo
 
 export default function TechnicalSeo() {
@@ -56,16 +57,32 @@ export default function TechnicalSeo() {
         We implement schema markup to help AI systems interpret content context and credibility.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x9.webp"
-        heading="How Our Technical SEO Process Works"
-        text={`<ol>
-          <li>Full technical SEO audit</li>
-          <li>Performance and crawl diagnostics</li>
-          <li>Priority-based fixes</li>
-          <li>Validation and testing</li>
-          <li>Ongoing monitoring</li>
-        </ol>`}
+      <ProcessTimeline
+        data={{
+          heading: "How Our Technical SEO Process Works",
+          steps: [
+            {
+              title: "Full Technical SEO Audit",
+              desc: "We conduct a comprehensive audit of your website to identify technical issues affecting crawlability, indexing, performance, and overall search visibility.",
+            },
+            {
+              title: "Performance & Crawl Diagnostics",
+              desc: "We analyze site speed, crawl errors, indexing behavior, and technical signals to understand how search engines interact with your website.",
+            },
+            {
+              title: "Priority-Based Fixes",
+              desc: "Issues are prioritized based on impact and implemented systematically to improve site performance and search engine accessibility.",
+            },
+            {
+              title: "Validation & Testing",
+              desc: "All technical fixes are validated and tested to ensure they work correctly across search engines, browsers, and devices.",
+            },
+            {
+              title: "Ongoing Monitoring",
+              desc: "We continuously monitor technical performance and address new issues as your website evolves.",
+            },
+          ],
+        }}
       />
 
       <BenefitsPerformance

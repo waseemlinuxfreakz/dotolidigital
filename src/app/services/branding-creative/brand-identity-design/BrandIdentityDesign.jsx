@@ -9,6 +9,7 @@ import { FAQSection } from "../../../components/FAQSection";
 import WhyChooseSection from "../../../components/WhyChooseSection";
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
 import IndustriesSection from "../../../components/IndustriesSection";
+import ProcessTimeline from "../../../components/ProcessTimeline";
 
 export default function BrandIdentityDesign() {
   const [showPopup, setShowPopup] = useState(false);
@@ -80,19 +81,32 @@ export default function BrandIdentityDesign() {
         We ensure your brand identity works seamlessly across websites, social media, ads, and marketing assets.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x12.webp"
-        heading="How Our Brand Identity Design Process Works"
-        text={`<strong>1. Brand Discovery & Research</strong><br/>
-        We analyze your business, audience, competitors, and market positioning to define clear brand direction.<br/><br/>
-        <strong>2. Brand Strategy & Visual Direction</strong><br/>
-        We establish brand personality, tone, and visual direction before starting design.<br/><br/>
-        <strong>3. Concept Development & Design</strong><br/>
-        Multiple design concepts are created and refined based on feedback and strategic alignment.<br/><br/>
-        <strong>4. Refinement & Finalization</strong><br/>
-        Designs are polished and prepared for real-world use across platforms.<br/><br/>
-        <strong>5. Delivery & Brand Guidelines</strong><br/>
-        Final brand assets and usage guidelines are delivered to ensure long-term consistency.`}
+      <ProcessTimeline
+        data={{
+          heading: "How Our Brand Identity Design Process Works",
+          steps: [
+            {
+              title: "Brand Discovery & Research",
+              desc: "We analyze your business, audience, competitors, and market positioning to define clear brand direction.",
+            },
+            {
+              title: "Brand Strategy & Visual Direction",
+              desc: "We establish brand personality, tone, and visual direction before starting design.",
+            },
+            {
+              title: "Concept Development & Design",
+              desc: "Multiple design concepts are created and refined based on feedback and strategic alignment.",
+            },
+            {
+              title: "Refinement & Finalization",
+              desc: "Designs are polished and prepared for real-world use across platforms.",
+            },
+            {
+              title: "Delivery & Brand Guidelines",
+              desc: "Final brand assets and usage guidelines are delivered to ensure long-term consistency.",
+            },
+          ],
+        }}
       />
 
       <IndustriesSection

@@ -9,6 +9,7 @@ import { FAQSection } from "../../../components/FAQSection";
 import WhyChooseSection from "../../../components/WhyChooseSection";
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
 import IndustriesSection from "../../../components/IndustriesSection";
+import ProcessTimeline from "../../../components/ProcessTimeline";
 
 export default function SalesAutomation() {
   const [showPopup, setShowPopup] = useState(false);
@@ -79,19 +80,32 @@ export default function SalesAutomation() {
         Automated reporting provides real-time insights into pipeline health, conversion rates, and sales performance.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x12.webp"
-        heading="How Our Sales Automation Process Works"
-        text={`<strong>1. Sales Workflow & Pipeline Analysis</strong><br/>
-        We review your existing sales process to identify inefficiencies and opportunities for automation.<br/><br/>
-        <strong>2. CRM & Tool Configuration</strong><br/>
-        Sales automation tools are configured in your CRM to align with pipeline stages and team structure.<br/><br/>
-        <strong>3. Automation Rules & Trigger Setup</strong><br/>
-        Triggers and workflows are created for lead assignment, follow-ups, and pipeline updates.<br/><br/>
-        <strong>4. Testing & Team Training</strong><br/>
-        We test automation workflows and train your sales team to use the system confidently.<br/><br/>
-        <strong>5. Optimization & Scaling</strong><br/>
-        Workflows are refined based on performance data and scaled as sales volume grows.`}
+      <ProcessTimeline
+        data={{
+          heading: "How Our Sales Automation Process Works",
+          steps: [
+            {
+              title: "Sales Workflow & Pipeline Analysis",
+              desc: "We review your existing sales process to identify inefficiencies and opportunities for automation.",
+            },
+            {
+              title: "CRM & Tool Configuration",
+              desc: "Sales automation tools are configured in your CRM to align with pipeline stages and team structure.",
+            },
+            {
+              title: "Automation Rules & Trigger Setup",
+              desc: "Triggers and workflows are created for lead assignment, follow-ups, and pipeline updates.",
+            },
+            {
+              title: "Testing & Team Training",
+              desc: "We test automation workflows and train your sales team to use the system confidently.",
+            },
+            {
+              title: "Optimization & Scaling",
+              desc: "Workflows are refined based on performance data and scaled as sales volume grows.",
+            },
+          ],
+        }}
       />
 
       <IndustriesSection

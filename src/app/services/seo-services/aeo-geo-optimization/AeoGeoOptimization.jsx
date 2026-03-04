@@ -9,6 +9,7 @@ import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
 import IndustriesSection from "../../../components/IndustriesSection";
+import ProcessTimeline from "../../../components/ProcessTimeline";
 // AeoGeoOptimization
 
 export default function AeoGeoOptimization() {
@@ -65,16 +66,32 @@ export default function AeoGeoOptimization() {
         You get clear insights on what’s improving, what’s missing, and what to optimize next for stronger AI reach.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x9.webp"
-        heading="How Our AEO & GEO Process Works"
-        text={`<ol>
-          <li>AI intent and question mapping</li>
-          <li>Content restructuring</li>
-          <li>Authority signal enhancement</li>
-          <li>Schema implementation</li>
-          <li>Continuous refinement</li>
-        </ol>`}
+      <ProcessTimeline
+        data={{
+          heading: "How Our AEO & GEO Process Works",
+          steps: [
+            {
+              title: "AI Intent & Question Mapping",
+              desc: "We identify the questions users ask and map search intent to ensure content aligns with how AI engines interpret queries.",
+            },
+            {
+              title: "Content Restructuring",
+              desc: "Existing content is reorganized with clear answers, structured sections, and concise explanations to improve AI readability.",
+            },
+            {
+              title: "Authority Signal Enhancement",
+              desc: "We strengthen credibility signals such as expertise, topical authority, and trusted references to improve AI trust.",
+            },
+            {
+              title: "Schema Implementation",
+              desc: "Structured data and schema markup are implemented to help AI systems and search engines better understand content context.",
+            },
+            {
+              title: "Continuous Refinement",
+              desc: "Performance and AI visibility are monitored regularly, and content is refined to maintain long-term relevance.",
+            },
+          ],
+        }}
       />
 
       <BenefitsPerformance

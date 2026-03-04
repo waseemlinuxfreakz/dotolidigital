@@ -9,6 +9,7 @@ import { FAQSection } from "../../../components/FAQSection";
 import WhyChooseSection from "../../../components/WhyChooseSection";
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
 import IndustriesSection from "../../../components/IndustriesSection";
+import ProcessTimeline from "../../../components/ProcessTimeline";
 
 export default function UiUxDesign() {
   const [showPopup, setShowPopup] = useState(false);
@@ -80,19 +81,32 @@ export default function UiUxDesign() {
         Designs are tested in real-world use cases to ensure usability and effectiveness before final implementation.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x12.webp"
-        heading="How Our UI/UX Design Process Works"
-        text={`<strong>1. User & Business Discovery</strong><br/>
-        We understand your business goals, target users, and existing challenges to align design with outcomes.<br/><br/>
-        <strong>2. Research & UX Strategy</strong><br/>
-        We conduct research and define user journeys that support clarity, accessibility, and engagement.<br/><br/>
-        <strong>3. Wireframing & Prototyping</strong><br/>
-        Layouts and interaction flows are created to test structure and usability early in the process.<br/><br/>
-        <strong>4. UI Design & Refinement</strong><br/>
-        Visual design is applied while ensuring consistency, accessibility, and brand alignment.<br/><br/>
-        <strong>5. Testing & Optimization</strong><br/>
-        Designs are tested and refined based on feedback to improve usability and performance.`}
+      <ProcessTimeline
+        data={{
+          heading: "How Our UI/UX Design Process Works",
+          steps: [
+            {
+              title: "User & Business Discovery",
+              desc: "We understand your business goals, target users, and existing challenges to align design with outcomes.",
+            },
+            {
+              title: "Research & UX Strategy",
+              desc: "We conduct research and define user journeys that support clarity, accessibility, and engagement.",
+            },
+            {
+              title: "Wireframing & Prototyping",
+              desc: "Layouts and interaction flows are created to test structure and usability early in the process.",
+            },
+            {
+              title: "UI Design & Refinement",
+              desc: "Visual design is applied while ensuring consistency, accessibility, and brand alignment.",
+            },
+            {
+              title: "Testing & Optimization",
+              desc: "Designs are tested and refined based on feedback to improve usability and performance.",
+            },
+          ],
+        }}
       />
 
       <IndustriesSection

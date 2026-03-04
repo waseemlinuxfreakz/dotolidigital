@@ -10,6 +10,7 @@ import WhyChooseSection from "../../../components/WhyChooseSection";
 
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
 import IndustriesSection from "../../../components/IndustriesSection";
+import ProcessTimeline from "../../../components/ProcessTimeline";
 
 export default function SocialMediaMarketing() {
   const [showPopup, setShowPopup] = useState(false);
@@ -97,19 +98,32 @@ export default function SocialMediaMarketing() {
         Platform selection is based on audience intent and business goals.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x13.webp"
-        heading="How Our Social Media Marketing Process Works"
-        text={`<strong>1. Audience & Platform Research</strong><br/>
-        We analyze where your audience spends time, how they engage with content, and what formats perform best on each platform.<br/><br/>
-        <strong>2. Content & Messaging Strategy</strong><br/>
-        We define content themes, messaging pillars, and posting cadence aligned with brand goals and audience expectations.<br/><br/>
-        <strong>3. Content Creation & Scheduling</strong><br/>
-        Content is created, reviewed, and scheduled consistently to maintain visibility and engagement without overwhelming your audience.<br/><br/>
-        <strong>4. Engagement & Community Management</strong><br/>
-        We monitor interactions, respond to comments, and support meaningful conversations that build trust and credibility.<br/><br/>
-        <strong>5. Performance Review & Optimization</strong><br/>
-        We analyze engagement data, identify patterns, and refine content strategy to improve results over time.`}
+      <ProcessTimeline
+        data={{
+          heading: "How Our Social Media Marketing Process Works",
+          steps: [
+            {
+              title: "Audience & Platform Research",
+              desc: "We analyze where your audience spends time, how they engage with content, and what formats perform best on each platform.",
+            },
+            {
+              title: "Content & Messaging Strategy",
+              desc: "We define content themes, messaging pillars, and posting cadence aligned with brand goals and audience expectations.",
+            },
+            {
+              title: "Content Creation & Scheduling",
+              desc: "Content is created, reviewed, and scheduled consistently to maintain visibility and engagement without overwhelming your audience.",
+            },
+            {
+              title: "Engagement & Community Management",
+              desc: "We monitor interactions, respond to comments, and support meaningful conversations that build trust and credibility.",
+            },
+            {
+              title: "Performance Review & Optimization",
+              desc: "We analyze engagement data, identify patterns, and refine content strategy to improve results over time.",
+            },
+          ],
+        }}
       />
 
       <IndustriesSection

@@ -7,7 +7,7 @@ import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection
 import { FAQSection } from "../../../components/FAQSection";
 
 import PlatformsWeUse from "../../../components/PlatformsWeUse";
-import ProcessTimeline from "../../../components/ProcessTimeline";
+
 import ServicesWeOffer from "../../../components/ServicesWeOffer";
 
 import PerformanceCta from "../../../components/PerformanceCta";
@@ -16,6 +16,8 @@ import WhyChooseSection from "../../../components/WhyChooseSection";
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
 
 import IndustriesSection from "../../../components/IndustriesSection";
+
+import ProcessTimeline from "../../../components/ProcessTimeline";
 
 import Link from "next/link";
 
@@ -129,7 +131,33 @@ export default function PerformanceMarketing() {
         Platform selection depends on audience behavior and business goals.`}
       /> */}
 
-      <ProcessTimeline />
+      <ProcessTimeline
+        data={{
+          heading: "How Our Performance Marketing Process Works",
+          steps: [
+            {
+              title: "Goal & KPI Definition",
+              desc: "We begin by clearly defining what success looks like for your business. This includes measurable KPIs such as leads, cost per acquisition, revenue, or return on ad spend.",
+            },
+            {
+              title: "Audience & Intent Research",
+              desc: "We analyze audience behavior, search intent, and platform data to identify who is most likely to convert.",
+            },
+            {
+              title: "Campaign & Funnel Setup",
+              desc: "Campaigns are built around structured funnels, aligning messaging, creatives, and landing pages.",
+            },
+            {
+              title: "Launch & Continuous Optimization",
+              desc: "Once campaigns go live, we monitor performance metrics and continuously optimize targeting, creatives, and budgets.",
+            },
+            {
+              title: "Reporting, Insights & Scaling",
+              desc: "We analyze campaign data, scale winning strategies, and refine underperforming elements.",
+            },
+          ],
+        }}
+      />
 
       {/* <ServiceDetailsSection
         img="/images/x9.webp"
@@ -164,21 +192,6 @@ export default function PerformanceMarketing() {
           ctaText: "Book a Free Strategy Call",
         }}
       />
-
-      {/* <ServiceDetailsSection
-        img="/images/x9.webp"
-        heading="Industries That Benefit Most from Performance Marketing"
-        text={`Performance marketing is effective across many industries, including:<br/>
-        <ul>
-          <li>eCommerce</li>
-          <li>SaaS & technology</li>
-          <li>Professional services</li>
-          <li>Healthcare</li>
-          <li>Real estate</li>
-          <li>Agencies</li>
-        </ul><br/>
-        Each industry requires a tailored funnel and targeting strategy.`}
-      /> */}
 
       <BenefitsPerformance
         data={{

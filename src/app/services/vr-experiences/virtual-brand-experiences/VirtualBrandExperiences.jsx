@@ -10,6 +10,7 @@ import { FAQSection } from "../../../components/FAQSection";
 import WhyChooseSection from "../../../components/WhyChooseSection";
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
 import IndustriesSection from "../../../components/IndustriesSection";
+import ProcessTimeline from "../../../components/ProcessTimeline";
 // VirtualBrandExperiences
 
 export default function VirtualBrandExperiences() {
@@ -80,19 +81,32 @@ export default function VirtualBrandExperiences() {
         Bring your products or services to life with a virtual showroom. We create 3D environments where customers can walk through your offerings, interact with products, and get a sense of your brand’s atmosphere and values.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x9.webp"
-        heading="How Our Virtual Brand Experience Process Works"
-        text={`<strong>1. Discovery & Goal Alignment</strong><br/>
-        We start by understanding your brand, target audience, and business goals. This ensures that the experience we design aligns with your vision and objectives.<br/><br/>
-        <strong>2. Concept & Storyboarding</strong><br/>
-        We create a clear roadmap for the experience, defining the key moments, interactions, and messaging that will guide users through the journey.<br/><br/>
-        <strong>3. Design & Development</strong><br/>
-        Using cutting-edge VR and 3D design tools, we build immersive virtual environments that are interactive, engaging, and visually stunning.<br/><br/>
-        <strong>4. Testing & Optimization</strong><br/>
-        We test the experience to ensure smooth navigation, performance, and usability across devices. Any friction points are identified and refined.<br/><br/>
-        <strong>5. Launch & Ongoing Support</strong><br/>
-        Once the experience is live, we monitor user interactions and provide ongoing support to ensure it continues to meet your business needs.`}
+      <ProcessTimeline
+        data={{
+          heading: "How Our Virtual Brand Experience Process Works",
+          steps: [
+            {
+              title: "Discovery & Goal Alignment",
+              desc: "We start by understanding your brand, target audience, and business goals. This ensures that the experience we design aligns with your vision and objectives.",
+            },
+            {
+              title: "Concept & Storyboarding",
+              desc: "We create a clear roadmap for the experience, defining the key moments, interactions, and messaging that will guide users through the journey.",
+            },
+            {
+              title: "Design & Development",
+              desc: "Using cutting-edge VR and 3D design tools, we build immersive virtual environments that are interactive, engaging, and visually stunning.",
+            },
+            {
+              title: "Testing & Optimization",
+              desc: "We test the experience to ensure smooth navigation, performance, and usability across devices. Any friction points are identified and refined.",
+            },
+            {
+              title: "Launch & Ongoing Support",
+              desc: "Once the experience is live, we monitor user interactions and provide ongoing support to ensure it continues to meet your business needs.",
+            },
+          ],
+        }}
       />
 
       <IndustriesSection

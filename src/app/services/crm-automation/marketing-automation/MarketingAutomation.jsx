@@ -9,6 +9,7 @@ import { FAQSection } from "../../../components/FAQSection";
 import WhyChooseSection from "../../../components/WhyChooseSection";
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
 import IndustriesSection from "../../../components/IndustriesSection";
+import ProcessTimeline from "../../../components/ProcessTimeline";
 // marketing-automation
 
 export default function MarketingAutomation() {
@@ -81,19 +82,32 @@ export default function MarketingAutomation() {
         We map and automate customer journeys across awareness, consideration, conversion, and retention stages.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x12.webp"
-        heading="How Our Marketing Automation Process Works"
-        text={`<strong>1. Funnel & Journey Mapping</strong><br/>
-        We analyze your customer journey to identify where automation can improve engagement and conversions.<br/><br/>
-        <strong>2. Tool & Platform Alignment</strong><br/>
-        We configure automation tools that integrate with your CRM, website, and marketing stack.<br/><br/>
-        <strong>3. Workflow & Trigger Setup</strong><br/>
-        Automated workflows are built with clear triggers, conditions, and actions aligned with business goals.<br/><br/>
-        <strong>4. Content & Messaging Integration</strong><br/>
-        We align automation workflows with messaging, content, and offers to maintain relevance and consistency.<br/><br/>
-        <strong>5. Testing, Optimization & Scaling</strong><br/>
-        Workflows are tested, refined, and scaled based on performance data and engagement insights.`}
+      <ProcessTimeline
+        data={{
+          heading: "How Our Marketing Automation Process Works",
+          steps: [
+            {
+              title: "Funnel & Journey Mapping",
+              desc: "We analyze your customer journey to identify where automation can improve engagement and conversions.",
+            },
+            {
+              title: "Tool & Platform Alignment",
+              desc: "We configure automation tools that integrate with your CRM, website, and marketing stack.",
+            },
+            {
+              title: "Workflow & Trigger Setup",
+              desc: "Automated workflows are built with clear triggers, conditions, and actions aligned with business goals.",
+            },
+            {
+              title: "Content & Messaging Integration",
+              desc: "We align automation workflows with messaging, content, and offers to maintain relevance and consistency.",
+            },
+            {
+              title: "Testing, Optimization & Scaling",
+              desc: "Workflows are tested, refined, and scaled based on performance data and engagement insights.",
+            },
+          ],
+        }}
       />
 
       <IndustriesSection

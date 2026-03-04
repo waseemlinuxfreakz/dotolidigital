@@ -9,6 +9,7 @@ import { FAQSection } from "../../../components/FAQSection";
 import WhyChooseSection from "../../../components/WhyChooseSection";
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
 import IndustriesSection from "../../../components/IndustriesSection";
+import ProcessTimeline from "../../../components/ProcessTimeline";
 // ad-creative-design
 
 export default function AdCreativeDesign() {
@@ -82,21 +83,6 @@ export default function AdCreativeDesign() {
       />
 
       <ServiceDetailsSection
-        img="/images/x12.webp"
-        heading="How Our Ad Creative Design Process Works"
-        text={`<strong>1. Campaign Goal & Audience Alignment</strong><br/>
-        We understand campaign objectives and audience intent to ensure the creative aligns with user expectations.<br/><br/>
-        <strong>2. Messaging & Creative Direction</strong><br/>
-        We define creative angles, messaging hooks, and visual direction before design begins.<br/><br/>
-        <strong>3. Creative Design & Production</strong><br/>
-        Ad creatives are designed using platform best practices and performance principles.<br/><br/>
-        <strong>4. Testing & Performance Feedback</strong><br/>
-        Creatives are tested in live campaigns to gather performance insights.<br/><br/>
-        <strong>5. Optimization & Scaling</strong><br/>
-        High-performing creatives are refined and scaled, while underperforming assets are improved or replaced.`}
-      />
-
-      <ServiceDetailsSection
         img="/images/x13.webp"
         heading="Platforms We Design Ad Creatives For"
         text={`Our ad creative design services support major advertising platforms, including:
@@ -107,6 +93,34 @@ export default function AdCreativeDesign() {
           <li>Display & retargeting networks</li>
         </ul><br/>
         Creative formats are adapted based on platform behavior and campaign goals.`}
+      />
+
+      <ProcessTimeline
+        data={{
+          heading: "How Our Ad Creative Design Process Works",
+          steps: [
+            {
+              title: "Campaign Goal & Audience Alignment",
+              desc: "We understand campaign objectives and audience intent to ensure the creative aligns with user expectations.",
+            },
+            {
+              title: "Messaging & Creative Direction",
+              desc: "We define creative angles, messaging hooks, and visual direction before design begins.",
+            },
+            {
+              title: "Creative Design & Production",
+              desc: "Ad creatives are designed using platform best practices and performance principles.",
+            },
+            {
+              title: "Testing & Performance Feedback",
+              desc: "Creatives are tested in live campaigns to gather performance insights.",
+            },
+            {
+              title: "Optimization & Scaling",
+              desc: "High-performing creatives are refined and scaled, while underperforming assets are improved or replaced.",
+            },
+          ],
+        }}
       />
 
       <IndustriesSection

@@ -9,6 +9,7 @@ import { FAQSection } from "../../../components/FAQSection";
 import WhyChooseSection from "../../../components/WhyChooseSection";
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
 import IndustriesSection from "../../../components/IndustriesSection";
+import ProcessTimeline from "../../../components/ProcessTimeline";
 // ecommerce-website-development EcommerceWebsiteDevelopment
 
 export default function EcommerceWebsiteDevelopment() {
@@ -85,19 +86,32 @@ export default function EcommerceWebsiteDevelopment() {
         We build eCommerce websites with SEO, AEO, and AI search readiness in mind, including clean URLs, structured product data, and scalable content frameworks.`}
       />
 
-      <ServiceDetailsSection
-        img="/images/x12.webp"
-        heading="How Our eCommerce Website Development Process Works"
-        text={`<strong>1. Business & Product Discovery</strong><br/>
-        We understand your products, audience, pricing, and sales goals to design a store that supports growth.<br/><br/>
-        <strong>2. Store Structure & UX Planning</strong><br/>
-        We plan category hierarchy, product layouts, and user flows to simplify browsing and purchasing.<br/><br/>
-        <strong>3. Custom Design & Development</strong><br/>
-        The store is developed using clean code, responsive design, and scalable frameworks to ensure reliability.<br/><br/>
-        <strong>4. Testing & Optimization</strong><br/>
-        We test functionality, performance, checkout flow, and responsiveness across devices and browsers.<br/><br/>
-        <strong>5. Launch & Growth Support</strong><br/>
-        After launch, we support ongoing improvements, integrations, and optimization as your store grows.`}
+      <ProcessTimeline
+        data={{
+          heading: "How Our eCommerce Website Development Process Works",
+          steps: [
+            {
+              title: "Business & Product Discovery",
+              desc: "We understand your products, audience, pricing, and sales goals to design a store that supports growth.",
+            },
+            {
+              title: "Store Structure & UX Planning",
+              desc: "We plan category hierarchy, product layouts, and user flows to simplify browsing and purchasing.",
+            },
+            {
+              title: "Custom Design & Development",
+              desc: "The store is developed using clean code, responsive design, and scalable frameworks to ensure reliability.",
+            },
+            {
+              title: "Testing & Optimization",
+              desc: "We test functionality, performance, checkout flow, and responsiveness across devices and browsers.",
+            },
+            {
+              title: "Launch & Growth Support",
+              desc: "After launch, we support ongoing improvements, integrations, and optimization as your store grows.",
+            },
+          ],
+        }}
       />
 
       <IndustriesSection
