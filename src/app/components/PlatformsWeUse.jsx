@@ -1,31 +1,14 @@
 // components/PlatformsWeUse.jsx
-import { SiGoogleads, SiFacebook } from "react-icons/si";
-import { FaRedoAlt } from "react-icons/fa";
-import { MdOutlineWeb } from "react-icons/md";
 
-export default function PlatformsWeUse({ onCtaClick }) {
-  const platforms = [
-    {
-      title: "Google Ads",
-      desc: "High-intent search campaigns built to convert.",
-      icon: <SiGoogleads />,
-    },
-    {
-      title: "Meta (Facebook & Instagram)",
-      desc: "Demand generation + retargeting across social.",
-      icon: <SiFacebook />,
-    },
-    {
-      title: "Retargeting Networks",
-      desc: "Bring visitors back and close more leads.",
-      icon: <FaRedoAlt />,
-    },
-    {
-      title: "Conversion Landing Pages",
-      desc: "Fast pages designed for higher conversion rate.",
-      icon: <MdOutlineWeb />,
-    },
-  ];
+export default function PlatformsWeUse({ onCtaClick, data }) {
+  const {
+    heading,
+    subText,
+    note,
+    ctaText,
+    platforms = [],
+    footText,
+  } = data || {};
 
   return (
     <section className="pm-platforms">
@@ -33,25 +16,19 @@ export default function PlatformsWeUse({ onCtaClick }) {
         <div className="pm-platforms-grid">
           {/* LEFT */}
           <div className="pm-platforms-left">
-            <h2 className="title-4">
-              Platforms We Use for Performance Marketing
-            </h2>
+            <h2 className="title-4">{heading}</h2>
 
-            <p className="text-1 pm-platforms-sub">
-              Our performance marketing strategies are executed across
-              high-intent platforms, depending on your audience and goals.
-            </p>
+            <p className="text-1 pm-platforms-sub">{subText}</p>
 
             <div className="pm-platforms-note">
               <span className="pm-platforms-note-dot" />
-              Platform selection depends on audience behavior and business
-              goals.
+              {note}
             </div>
 
             <div className="btn-group whychoose-cta">
               <div className="btn btn--pulse">
                 <button type="button" className="btn-elem" onClick={onCtaClick}>
-                  Book a Free Strategy Call
+                  {ctaText}
                 </button>
               </div>
             </div>
@@ -60,8 +37,8 @@ export default function PlatformsWeUse({ onCtaClick }) {
           {/* RIGHT */}
           <div className="pm-platforms-right">
             <div className="pm-platforms-cards">
-              {platforms.map((p) => (
-                <div className="pm-platforms-card" key={p.title}>
+              {platforms.map((p, i) => (
+                <div className="pm-platforms-card" key={`${p.title}-${i}`}>
                   <div className="pm-platforms-icon">{p.icon}</div>
                   <div className="pm-platforms-text">
                     <h3>{p.title}</h3>
@@ -72,9 +49,7 @@ export default function PlatformsWeUse({ onCtaClick }) {
             </div>
 
             <div className="pm-platforms-foot">
-              <p>
-                We’ll choose the mix that drives the best ROI for your funnel.
-              </p>
+              <p>{footText}</p>
             </div>
           </div>
         </div>

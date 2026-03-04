@@ -9,7 +9,6 @@ import { FAQSection } from "../../../components/FAQSection";
 import WhyChooseSection from "../../../components/WhyChooseSection";
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
 import IndustriesSection from "../../../components/IndustriesSection";
-
 import ProcessTimeline from "../../../components/ProcessTimeline";
 
 export default function ConversionRateOptimization() {

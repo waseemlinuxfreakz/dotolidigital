@@ -12,6 +12,16 @@ import BenefitsPerformance from "../../../components/BenefitsPerformance";
 import IndustriesSection from "../../../components/IndustriesSection";
 import ProcessTimeline from "../../../components/ProcessTimeline";
 
+import PlatformsWeUse from "../../../components/PlatformsWeUse";
+import {
+  SiInstagram,
+  SiFacebook,
+  SiLinkedin,
+  SiTiktok,
+  SiX,
+  SiYoutube,
+} from "react-icons/si";
+
 export default function SocialMediaMarketing() {
   const [showPopup, setShowPopup] = useState(false);
 
@@ -96,6 +106,53 @@ export default function SocialMediaMarketing() {
           <li>YouTube</li>
         </ul><br/>
         Platform selection is based on audience intent and business goals.`}
+      />
+
+      <PlatformsWeUse
+        onCtaClick={() => setShowPopup(true)}
+        data={{
+          heading: "Platforms We Support",
+          subText:
+            "Our social media marketing strategies are executed across major platforms, including:",
+          note: "Platform selection is based on audience intent and business goals.",
+          ctaText: "Book a Free Strategy Call",
+
+          platforms: [
+            {
+              title: "Instagram",
+              desc: "Visual-first platform ideal for brand storytelling, short-form content, and engagement.",
+              icon: <SiInstagram />,
+            },
+            {
+              title: "Facebook",
+              desc: "Strong reach and community engagement through content, ads, and groups.",
+              icon: <SiFacebook />,
+            },
+            {
+              title: "LinkedIn",
+              desc: "Best suited for B2B marketing, professional networking, and thought leadership.",
+              icon: <SiLinkedin />,
+            },
+            {
+              title: "TikTok",
+              desc: "High-growth platform for short-form video content and viral brand exposure.",
+              icon: <SiTiktok />,
+            },
+            {
+              title: "X (Twitter)",
+              desc: "Real-time conversations, updates, and brand voice engagement.",
+              icon: <SiX />,
+            },
+            {
+              title: "YouTube",
+              desc: "Long-form and short-form video content that builds authority and audience trust.",
+              icon: <SiYoutube />,
+            },
+          ],
+
+          footText:
+            "We select platforms based on where your audience is most active and where your brand can create the most impact.",
+        }}
       />
 
       <ProcessTimeline

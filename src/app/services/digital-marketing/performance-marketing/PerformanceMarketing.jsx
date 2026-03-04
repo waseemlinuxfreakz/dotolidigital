@@ -5,19 +5,17 @@ import Footer from "../../../components/Footer";
 import { HeroAllSection } from "../../../components/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
 import { FAQSection } from "../../../components/FAQSection";
-
-import PlatformsWeUse from "../../../components/PlatformsWeUse";
-
 import ServicesWeOffer from "../../../components/ServicesWeOffer";
-
 import PerformanceCta from "../../../components/PerformanceCta";
 import WhyChooseSection from "../../../components/WhyChooseSection";
-
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
-
 import IndustriesSection from "../../../components/IndustriesSection";
-
 import ProcessTimeline from "../../../components/ProcessTimeline";
+
+import PlatformsWeUse from "../../../components/PlatformsWeUse";
+import { SiGoogleads, SiFacebook } from "react-icons/si";
+import { FaRedoAlt } from "react-icons/fa";
+import { MdOutlineWeb } from "react-icons/md";
 
 import Link from "next/link";
 
@@ -116,7 +114,42 @@ export default function PerformanceMarketing() {
         No campaign is static. We test creatives, audiences, messaging, and funnels continuously to improve performance. Small optimizations compound into significant gains over time.`}
       /> */}
 
-      <PlatformsWeUse onCtaClick={() => setShowPopup(true)} />
+      {/* <PlatformsWeUse onCtaClick={() => setShowPopup(true)} /> */}
+
+      <PlatformsWeUse
+        onCtaClick={() => setShowPopup(true)}
+        data={{
+          heading: "Platforms We Use for Performance Marketing",
+          subText:
+            "Our performance marketing strategies are executed across high-intent platforms, depending on your audience and goals.",
+          note: "Platform selection depends on audience behavior and business goals.",
+          ctaText: "Book a Free Strategy Call",
+          platforms: [
+            {
+              title: "Google Ads",
+              desc: "High-intent search campaigns built to convert.",
+              icon: <SiGoogleads />,
+            },
+            {
+              title: "Meta (Facebook & Instagram)",
+              desc: "Demand generation + retargeting across social.",
+              icon: <SiFacebook />,
+            },
+            {
+              title: "Retargeting Networks",
+              desc: "Bring visitors back and close more leads.",
+              icon: <FaRedoAlt />,
+            },
+            {
+              title: "Conversion Landing Pages",
+              desc: "Fast pages designed for higher conversion rate.",
+              icon: <MdOutlineWeb />,
+            },
+          ],
+          footText:
+            "We’ll choose the mix that drives the best ROI for your funnel.",
+        }}
+      />
 
       {/* <ServiceDetailsSection
         img="/images/x9.webp"
