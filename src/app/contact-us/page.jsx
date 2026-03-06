@@ -157,7 +157,6 @@ export default function ContactPage() {
                   <div className="sms-optin-title">
                     SMS Opt-In <span className="sms-optin-badge">Optional</span>
                   </div>
-                  <div className="sms-optin-note">NOT Required to Check</div>
                 </div>
 
                 <div className="sms-optin-box">
