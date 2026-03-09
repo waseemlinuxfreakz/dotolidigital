@@ -34,7 +34,7 @@ export default function UiUxDesign() {
         img="/images/x7.webp"
         heading="UI/UX Design Services That Improve Usability, Engagement & Conversions"
         text={`A website or app may look good, but if users struggle to navigate, understand, or complete actions, it fails its purpose. UI/UX design focuses on how users interact with digital products and how those experiences guide them toward meaningful outcomes.<br/><br/>
-        At Dotoli Digital, our UI/UX design services create intuitive, user-friendly, and conversion-focused experiences that help businesses retain users, build trust, and achieve measurable results.`}
+        At <Link href="/">Dotoli Digital</Link>, our UI/UX design services create intuitive, user-friendly, and conversion-focused experiences that help businesses retain users, build trust, and achieve measurable results.`}
       />
 
       <ServiceDetailsSection
@@ -62,7 +62,7 @@ export default function UiUxDesign() {
         img="/images/x10.webp"
         heading="Our UI/UX Design Approach"
         text={`<strong>User-Centered Design First</strong><br/><br/>
-        We design experiences around real user behavior, not assumptions. Understanding user needs, expectations, and pain points allows us to create interfaces that feel natural and intuitive.<br/><br/>
+        We <Link href="/services/branding-creative" >design experiences</Link> around real user behavior, not assumptions. Understanding user needs, expectations, and pain points allows us to create interfaces that feel natural and intuitive.<br/><br/>
         <strong>Designed for Humans and Digital Systems</strong><br/><br/>
         UI/UX design must satisfy both users and systems that evaluate engagement. Our designs are structured to support accessibility, performance, and clarity, helping search engines and AI systems interpret quality signals accurately.`}
       />

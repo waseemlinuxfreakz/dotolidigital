@@ -11,6 +11,7 @@ import WhyChooseSection from "../../../components/WhyChooseSection";
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
 import IndustriesSection from "../../../components/IndustriesSection";
 import ProcessTimeline from "../../../components/ProcessTimeline";
+import Link from "next/link";
 // VirtualBrandExperiences
 
 export default function VirtualBrandExperiences() {
@@ -34,13 +35,13 @@ export default function VirtualBrandExperiences() {
         img="/images/x7.webp"
         heading="Virtual Brand Experiences to Innovate, Engage & Connect"
         text={`As the digital landscape evolves, the need for innovative and engaging experiences becomes more important than ever. A Virtual Brand Experience allows businesses to stand out by creating immersive, interactive environments that capture users' attention, tell powerful brand stories, and connect with audiences more deeply. Whether you're showcasing products, promoting services, or telling your brand's story, Virtual Brand Experiences elevate how your customers engage with your brand.<br/><br/>
-        At Dotoli Digital, we create Virtual Brand Experiences that give businesses a competitive edge by bringing their brands to life in a fully interactive, immersive virtual world. From immersive VR environments to virtual events, we design experiences that build lasting emotional connections and brand loyalty.`}
+        At <Link href="/">Dotoli Digital</Link>, we create Virtual Brand Experiences that give businesses a competitive edge by bringing their brands to life in a fully interactive, immersive virtual world. From immersive VR environments to virtual events, we design experiences that build lasting emotional connections and brand loyalty.`}
       />
 
       <ServiceDetailsSection
         img="/images/x8.webp"
         heading="What Is a Virtual Brand Experience?"
-        text={`A Virtual Brand Experience is an immersive, interactive digital experience that allows users to engage with a brand in a virtual environment. It can involve virtual reality (VR), 3D simulations, or interactive digital experiences designed to connect audiences with a brand’s products, services, and identity in a meaningful way.`}
+        text={`A <Link href="/services/seo-services/local-seo" >Virtual Brand Experience</Link> is an immersive, interactive digital experience that allows users to engage with a brand in a virtual environment. It can involve virtual reality (VR), 3D simulations, or interactive digital experiences designed to connect audiences with a brand’s products, services, and identity in a meaningful way.`}
       />
 
       <ServiceDetailsSection
@@ -74,7 +75,7 @@ export default function VirtualBrandExperiences() {
         <strong>Virtual Product Showcases</strong><br/>
         We build immersive virtual environments where users can explore your products in 3D, interact with features, and better understand their value. This experience is perfect for eCommerce brands or businesses with complex products that benefit from hands-on, virtual demonstrations.<br/><br/>
         <strong>Virtual Events & Exhibitions</strong><br/>
-        Host virtual brand events, trade shows, or product launches that bring people together in a 3D environment. Our virtual events are designed to simulate in-person experiences, complete with interactive booths, live presentations, networking areas, and more.<br/><br/>
+        Host virtual brand events, trade shows, or <Link href="/services/vr-experiences/vr-marketing-product-showcases">product launches</Link> that bring people together in a 3D environment. Our virtual events are designed to simulate in-person experiences, complete with interactive booths, live presentations, networking areas, and more.<br/><br/>
         <strong>Immersive Brand Storytelling</strong><br/>
         We help brands tell their story in an engaging way. Through virtual reality, 3D simulations, and interactive elements, we craft immersive experiences that build a deeper connection with your audience and communicate your brand’s values, mission, and vision.<br/><br/>
         <strong>Virtual Showrooms & 3D Experiences</strong><br/>
@@ -99,7 +100,16 @@ export default function VirtualBrandExperiences() {
             },
             {
               title: "Testing & Optimization",
-              desc: "We test the experience to ensure smooth navigation, performance, and usability across devices. Any friction points are identified and refined.",
+              desc: (
+                <>
+                  We test the experience to ensure smooth navigation,{" "}
+                  <Link href="/services/digital-marketing/performance-marketing">
+                    performance
+                  </Link>
+                  , and usability across devices. Any friction points are
+                  identified and refined.
+                </>
+              ),
             },
             {
               title: "Launch & Ongoing Support",

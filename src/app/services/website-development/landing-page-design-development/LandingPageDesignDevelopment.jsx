@@ -10,6 +10,7 @@ import WhyChooseSection from "../../../components/WhyChooseSection";
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
 import IndustriesSection from "../../../components/IndustriesSection";
 import ProcessTimeline from "../../../components/ProcessTimeline";
+import Link from "next/link";
 // landing-page-design-development LandingPageDesignDevelopment
 
 export default function LandingPageDesignDevelopment() {
@@ -35,7 +36,7 @@ export default function LandingPageDesignDevelopment() {
         img="/images/x7.webp"
         heading="Landing Page Design & Development Services for High-Converting Campaigns"
         text={`A landing page has one job: convert visitors into action. Whether the goal is leads, sign-ups, or sales, a poorly designed landing page wastes traffic and marketing spend. Strong landing pages combine clarity, speed, and persuasive structure to guide users toward a single outcome.<br/><br/>
-        At Dotoli Digital, our landing page design and development services focus on building conversion-driven pages that support paid ads, SEO, and performance marketing campaigns.`}
+        At <Link href="/">Dotoli Digital</Link>, our landing page design and development services focus on building conversion-driven pages that support paid ads, SEO, and performance marketing campaigns.`}
       />
 
       <ServiceDetailsSection
@@ -47,17 +48,17 @@ export default function LandingPageDesignDevelopment() {
       <ServiceDetailsSection
         img="/images/x9.webp"
         heading="Why Landing Pages Are Critical for Digital Growth"
-        text={`Sending traffic to a homepage or generic page often leads to poor results. Users need clarity and direction. Landing pages provide a controlled environment where messaging, design, and calls to action work together.<br/><br/>
+        text={`Sending traffic to a homepage or generic page often leads to poor results. Users need clarity and direction. <Link href="/services/website-development/landing-page-design-development" >Landing pages</Link> provide a controlled environment where messaging, design, and calls to action work together.<br/><br/>
         Landing pages matter because they:
         <ul>
           <li>Increase conversion rates</li>
           <li>Reduce cost per lead or sale</li>
           <li>Improve campaign performance</li>
-          <li>Support performance marketing and SEO</li>
+          <li>Support <Link href="/services/digital-marketing/performance-marketing" >performance marketing</Link> and SEO</li>
           <li>Enable faster testing and optimization</li>
         </ul><br/>
         High-performing campaigns rely on strong landing pages.<br/><br/>
-        Landing pages convert 160% better than other signup methods, such as pop-ups or embedded forms, meaning they turn more visitors into leads or customers.`}
+        <Link href="https://www.sellerscommerce.com/blog/landing-page-statistics" target="_blank">Landing pages convert 160% </Link> better than other signup methods, such as pop-ups or embedded forms, meaning they turn more visitors into leads or customers.`}
       />
 
       <ServiceDetailsSection
@@ -188,7 +189,14 @@ export default function LandingPageDesignDevelopment() {
               desc: "Built for speed, responsiveness, and strong user experience.",
             },
             {
-              title: "Aligned with SEO & performance marketing",
+              title: (
+                <>
+                  <Link href="/services/seo-services/aeo-geo-optimization">
+                    Aligned with SEO
+                  </Link>{" "}
+                  & performance marketing
+                </>
+              ),
               desc: "Landing pages support search visibility and paid campaign results.",
             },
             {

@@ -33,7 +33,7 @@ export default function ConversionRateOptimization() {
         img="/images/x7.webp"
         heading="Conversion Rate Optimization Services to Turn Traffic into Revenue"
         text={`Driving traffic is only half the job. The real growth happens when visitors take action. Conversion Rate Optimization focuses on improving how users interact with your website so more of them become leads, customers, or subscribers.<br/><br/>
-        At Dotoli Digital, our CRO services help businesses increase results from existing traffic by optimizing user experience, messaging, and conversion paths using data, testing, and behavioral insights.`}
+        At <Link href="/">Dotoli Digital</Link>, our CRO services help businesses increase results from existing traffic by optimizing user experience, messaging, and conversion paths using data, testing, and behavioral insights.`}
       />
 
       <ServiceDetailsSection
@@ -53,9 +53,9 @@ export default function ConversionRateOptimization() {
           <li>Improves ROI from existing traffic</li>
           <li>Reduces customer acquisition costs</li>
           <li>Enhances user experience</li>
-          <li>Supports SEO, AEO, and paid campaigns</li>
+          <li>Supports <Link href="/services/seo-services">SEO</Link>, AEO, and paid campaigns</li>
         </ul><br/>
-        Most websites convert only around 2–5% of visitors into customers, meaning up to 95% of traffic leaves without taking action unless optimized.`}
+        Most websites convert only around <Link href="https://www.fullstory.com/blog/conversion-rate-optimization/" target="_blank" >2–5% of visitors into customers</Link>, meaning up to 95% of traffic leaves without taking action unless optimized.`}
       />
 
       <ServiceDetailsSection

@@ -10,6 +10,7 @@ import { FAQSection } from "../../../components/FAQSection";
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
 import IndustriesSection from "../../../components/IndustriesSection";
 import ProcessTimeline from "../../../components/ProcessTimeline";
+import Link from "next/link";
 // AeoGeoOptimization
 
 export default function AeoGeoOptimization() {
@@ -39,7 +40,7 @@ export default function AeoGeoOptimization() {
         heading="Why AEO & GEO Matter in Modern Search"
         text={`Search engines now deliver answers, not just links. AI systems decide which sources to reference. AEO and GEO ensure your content is eligible for selection.<br/><br/>
         Without these optimizations, brands risk losing visibility even with strong traditional rankings.<br/><br/>
-        <strong>Recent research indicates that AI Overviews appear in about 20% to 50% of Google queries, depending on the market and query type.</strong>`}
+        <strong><Link href="https://www.searchenginejournal.com/google-ai-overviews-appear-on-21-of-searches-new-data/560471/#:~:text" target="_blank" >Recent research indicates</Link> that AI Overviews appear in about 20% to 50% of Google queries, depending on the market and query type.</strong>`}
       />
 
       <ServiceDetailsSection
@@ -57,7 +58,7 @@ export default function AeoGeoOptimization() {
 
         <strong>Schema & Semantic Enhancements</strong><br/>
         We implement structured data to help search engines accurately and consistently interpret your content.<br/>
-        This includes schema for FAQs, services, organization, reviews, and local business signals where relevant.<br/>
+        This includes schema for FAQs, services, organization, reviews, and <Link href="/services/seo-services/local-seo" >local business</Link> signals where relevant.<br/>
         Semantic improvements reduce ambiguity and increase eligibility for rich results and AI-generated citations.<br/><br/>
 
         <strong>AI Visibility Monitoring</strong><br/>
@@ -109,7 +110,12 @@ export default function AeoGeoOptimization() {
               desc: "Structure content so it can be cited and surfaced in generative results.",
             },
             {
-              title: "Future-proof SEO strategy",
+              title: (
+                <>
+                  Future-proof{" "}
+                  <Link href="/services/seo-services">SEO strategy</Link>
+                </>
+              ),
               desc: "Adapt your visibility strategy for evolving AI-driven search systems.",
             },
             {

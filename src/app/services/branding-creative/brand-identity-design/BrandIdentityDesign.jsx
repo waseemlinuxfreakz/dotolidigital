@@ -10,6 +10,7 @@ import WhyChooseSection from "../../../components/WhyChooseSection";
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
 import IndustriesSection from "../../../components/IndustriesSection";
 import ProcessTimeline from "../../../components/ProcessTimeline";
+import Link from "next/link";
 
 export default function BrandIdentityDesign() {
   const [showPopup, setShowPopup] = useState(false);
@@ -34,7 +35,7 @@ export default function BrandIdentityDesign() {
         img="/images/x7.webp"
         heading="Brand Identity Design Services That Build Recognition & Trust"
         text={`Your brand identity is often the first impression people have of your business. Before customers read your content or explore your services, they notice your logo, colors, typography, and overall visual consistency. A weak or inconsistent brand identity creates confusion, while a strong one builds trust instantly.<br/><br/>
-        At Dotoli Digital, our brand identity design services help businesses define how they look, feel, and are remembered. We design identities that are clear, consistent, and aligned with long-term business growth.`}
+        At <Link href="/">Dotoli Digital</Link>, our brand identity design services help businesses define how they look, feel, and are remembered. We design identities that are clear, consistent, and aligned with long-term business growth.`}
       />
 
       <ServiceDetailsSection
@@ -46,7 +47,7 @@ export default function BrandIdentityDesign() {
       <ServiceDetailsSection
         img="/images/x9.webp"
         heading="Why Brand Identity Design Matters Today"
-        text={`People interact with brands across websites, social media, ads, and AI-generated summaries. Inconsistent visuals or unclear identity reduce credibility and recognition.<br/><br/>
+        text={`People interact with brands across websites, social media, <Link href="/services/branding-creative/ad-creative-design" >ads</Link>, and AI-generated summaries. Inconsistent visuals or unclear identity reduce credibility and recognition.<br/><br/>
         Brand identity design matters because it:
         <ul>
           <li>Creates instant brand recognition</li>
@@ -187,7 +188,12 @@ export default function BrandIdentityDesign() {
               desc: "Design systems ensure consistency across platforms and future expansion.",
             },
             {
-              title: "Aligned with marketing & SEO goals",
+              title: (
+                <>
+                  Aligned with marketing and{" "}
+                  <Link href="/services/seo-services">SEO goals</Link>
+                </>
+              ),
               desc: "Brand identity supports visibility, authority, and digital performance.",
             },
             {

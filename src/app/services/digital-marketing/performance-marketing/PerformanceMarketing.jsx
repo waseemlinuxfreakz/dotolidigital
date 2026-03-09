@@ -42,13 +42,13 @@ export default function PerformanceMarketing() {
         img="/images/x7.webp"
         heading="Performance Marketing Services for Measurable Growth & ROI"
         text={`Performance marketing is not about spending more. It is about spending smarter. In a digital landscape driven by data, algorithms, and AI-powered platforms, businesses need marketing strategies that deliver clear, measurable results.<br/><br/>
-        At Dotoli Digital, our performance marketing services focus on accountability. Every campaign, click, and conversion is tracked, optimized, and tied directly to business outcomes such as leads, sales, and revenue growth.`}
+        At <Link href="/">Dotoli Digital</Link>, our performance marketing services focus on accountability. Every campaign, click, and conversion is tracked, optimized, and tied directly to business outcomes such as leads, sales, and revenue growth.`}
       />
 
       <ServiceDetailsSection
         img="/images/x8.webp"
         heading="What Is Performance Marketing?"
-        text={`Performance marketing is a results-driven digital marketing approach in which advertisers pay for measurable actions, such as clicks, leads, or sales. It uses data, analytics, and continuous optimization to ensure marketing budgets generate real, trackable business results.`}
+        text={`Performance marketing is a results-driven <Link href="/services/digital-marketing">digital marketing approach</Link> in which advertisers pay for measurable actions, such as clicks, leads, or sales. It uses data, analytics, and continuous optimization to ensure marketing budgets generate real, trackable business results.`}
         cta={{
           text: "Book a Free Strategy Call",
           onClick: () => setShowPopup(true),
@@ -67,7 +67,7 @@ export default function PerformanceMarketing() {
           <li>Supports scalable and predictable growth</li>
         </ul><br/>
         AI-driven ad platforms reward relevance, engagement, and efficiency. Performance marketing ensures your campaigns meet these expectations.<br/><br/>
-        Global advertising revenue is projected to hit ~$1.08 trillion in 2025, with digital accounting for ~73.2% of total ad spend, reflecting a continued shift to measurable online strategies.`}
+        <Link href="http://uters.com/business/media-telecom/wpp-media-cuts-2025-global-advertising-revenue-growth-forecast-6-trade-concerns-2025-06-09" target="_blank">Global advertising revenue</Link> is projected to hit ~$1.08 trillion in 2025, with digital accounting for ~73.2% of total ad spend, reflecting a continued shift to measurable online strategies.`}
       />
 
       <ServiceDetailsSection

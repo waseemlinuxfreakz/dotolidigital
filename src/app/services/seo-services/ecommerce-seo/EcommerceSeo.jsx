@@ -38,7 +38,7 @@ export default function EcommerceSeo() {
         img="/images/x8.webp"
         heading="Why eCommerce SEO Requires a Specialized Approach"
         text={`Online stores face unique challenges, including managing large inventories, avoiding duplicate content, and optimizing conversions. eCommerce SEO addresses these challenges while aligning with modern AI-driven search behavior.<br/><br/>
-        <strong>According to a study, Organic search drives ~51% of website traffic, one of the biggest reasons SEO remains a primary growth channel for e-commerce.</strong>`}
+        <strong><Link href="https://www.brightedge.com/glossary/increase-organic-traffic" target="_blank" >According to a study</Link>, Organic search drives ~51% of website traffic, one of the biggest reasons SEO remains a primary growth channel for e-commerce.</strong>`}
       />
 
       <ServiceDetailsSection

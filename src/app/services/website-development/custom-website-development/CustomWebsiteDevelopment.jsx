@@ -10,6 +10,7 @@ import WhyChooseSection from "../../../components/WhyChooseSection";
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
 import IndustriesSection from "../../../components/IndustriesSection";
 import ProcessTimeline from "../../../components/ProcessTimeline";
+import Link from "next/link";
 
 export default function CustomWebsiteDevelopment() {
   const [showPopup, setShowPopup] = useState(false);
@@ -34,7 +35,7 @@ export default function CustomWebsiteDevelopment() {
         img="/images/x7.webp"
         heading="Custom Website Development Services Built for Performance & Growth"
         text={`Every business is different, and your website should reflect that. Template-based websites often limit performance, flexibility, and scalability. Custom website development gives you full control over how your website looks, works, and grows with your business.<br/><br/>
-        At Dotoli Digital, we build custom websites designed around your goals, users, and long-term growth strategy. Our focus is not just design, but performance, usability, SEO readiness, and conversion support.`}
+        At <Link href="/">Dotoli Digital</Link>, we build custom websites designed around your goals, users, and long-term growth strategy. Our focus is not just design, but performance, usability, SEO readiness, and conversion support.`}
       />
 
       <ServiceDetailsSection
@@ -52,7 +53,7 @@ export default function CustomWebsiteDevelopment() {
           <li>Delivers faster load times</li>
           <li>Supports unique user journeys</li>
           <li>Scales with business needs</li>
-          <li>Improves SEO and AI search readiness</li>
+          <li><Link href="/services/seo-services" >Improves SEO</Link> and AI search readiness</li>
           <li>Provides full control over features and integrations</li>
         </ul><br/>
         A custom website is an investment in long-term digital success.`}
@@ -62,7 +63,7 @@ export default function CustomWebsiteDevelopment() {
         img="/images/x10.webp"
         heading="Our Custom Website Development Approach"
         text={`<strong>Built Around Your Business Goals</strong><br/><br/>
-        We start by understanding what your website needs to achieve. Whether the goal is lead generation, brand authority, or conversion optimization, the website is designed to support those outcomes.<br/><br/>
+        We start by understanding what your website needs to achieve. Whether the goal is lead generation, brand authority, or <Link href="/services/digital-marketing/conversion-rate-optimization" >conversion optimization</Link>, the website is designed to support those outcomes.<br/><br/>
         <strong>Designed for Users, Search Engines & AI</strong><br/><br/>
         Our custom websites are structured for clarity and usability. Clean architecture and logical content hierarchy help users navigate easily while enabling search engines and AI systems to understand and rank your site effectively.`}
       />
@@ -70,7 +71,7 @@ export default function CustomWebsiteDevelopment() {
       <ServiceDetailsSection
         img="/images/x11.webp"
         heading="Custom Website Development Services We Offer"
-        text={`Our custom website development services are comprehensive and flexible.<br/><br/>
+        text={`Our custom <Link href="/services/website-development" >website development services</Link> are comprehensive and flexible.<br/><br/>
         <strong>Custom Design & UX Development</strong><br/>
         We design unique interfaces that align with your brand identity and guide users toward action without confusion or friction.<br/><br/>
         <strong>Performance-Focused Development</strong><br/>
@@ -78,7 +79,7 @@ export default function CustomWebsiteDevelopment() {
         <strong>SEO & AEO-Ready Structure</strong><br/>
         We build websites with SEO, AEO, and future AI search visibility in mind, including optimized site architecture and content structure.<br/><br/>
         <strong>Integrations & Scalability</strong><br/>
-        Custom websites are built to integrate with CRMs, analytics, automation tools, and third-party platforms, ensuring long-term scalability.`}
+        Custom websites are built to <Link href="/services/crm-automation/crm-setup-integration" >integrate with CRMs</Link>, analytics, automation tools, and third-party platforms, ensuring long-term scalability.`}
       />
 
       <ProcessTimeline
@@ -184,7 +185,14 @@ export default function CustomWebsiteDevelopment() {
               desc: "Websites are structured to handle growth while maintaining speed and stability.",
             },
             {
-              title: "Aligned with SEO and AEO strategies",
+              title: (
+                <>
+                  Aligned with SEO and{" "}
+                  <Link href="/services/seo-services/aeo-geo-optimization">
+                    AEO strategies
+                  </Link>
+                </>
+              ),
               desc: "Technical and content structure supports search visibility and AI discovery.",
             },
             {

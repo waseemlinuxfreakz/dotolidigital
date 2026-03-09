@@ -35,7 +35,7 @@ export default function EcommerceWebsiteDevelopment() {
         img="/images/x7.webp"
         heading="eCommerce Website Development Services Built to Sell & Scale"
         text={`An eCommerce website is more than an online store. It is a complete sales system that must attract users, build trust, and convert visitors into customers smoothly and efficiently. If an eCommerce website is slow, confusing, or poorly structured, even strong marketing efforts will fail to generate consistent sales.<br/><br/>
-        At Dotoli Digital, our eCommerce website development services focus on building fast, scalable, and conversion-ready online stores that support SEO, digital marketing, and long-term revenue growth.`}
+        At <Link href="/">Dotoli Digital</Link>, our eCommerce website development services focus on building fast, scalable, and conversion-ready online stores that support SEO, digital marketing, and long-term revenue growth.`}
       />
 
       <ServiceDetailsSection
@@ -57,7 +57,7 @@ export default function EcommerceWebsiteDevelopment() {
           <li>Enables scalability as product catalogs grow</li>
         </ul><br/>
         A well-built eCommerce website turns traffic into consistent sales.<br/><br/>
-        Global e-commerce sales are projected to reach approximately $6.86 trillion in 2025, representing a sustained year-over-year increase and now accounting for more than 20% of total global retail sales.<br/><br/>
+        <Link href="https://craftberry.co/articles/global-e-commerce-statistics" target="_blank">Global e-commerce sales </Link> are projected to reach approximately $6.86 trillion in 2025, representing a sustained year-over-year increase and now accounting for more than 20% of total global retail sales.<br/><br/>
         Forecasts also indicate that e-commerce could reach nearly $7.89 trillion by 2028.`}
       />
 
@@ -65,7 +65,7 @@ export default function EcommerceWebsiteDevelopment() {
         img="/images/x10.webp"
         heading="Our eCommerce Website Development Approach"
         text={`<strong>Built for Conversions First</strong><br/><br/>
-        Every design and development decision is made with conversions in mind. From product pages to checkout flows, we optimize the user journey to reduce friction and increase purchase completion rates.<br/><br/>
+        Every design and <Link href="/services/website-development">development decision</Link> is made with conversions in mind. From product pages to checkout flows, we optimize the user journey to reduce friction and increase purchase completion rates.<br/><br/>
         <strong>Designed for Users, Search Engines & AI</strong><br/><br/>
         Our eCommerce websites are structured so users can find products easily, while search engines and AI systems can clearly understand product data, categories, and relevance. Clean architecture improves discoverability and performance.`}
       />
@@ -83,7 +83,7 @@ export default function EcommerceWebsiteDevelopment() {
         <strong>Performance & Speed Optimization</strong><br/>
         eCommerce websites are optimized for fast loading times, smooth browsing, and reliable performance even with large product catalogs.<br/><br/>
         <strong>SEO & AEO-Ready eCommerce Architecture</strong><br/>
-        We build eCommerce websites with SEO, AEO, and AI search readiness in mind, including clean URLs, structured product data, and scalable content frameworks.`}
+        We build eCommerce <Link href="/services/seo-services">websites with SEO</Link>, AEO, and AI search readiness in mind, including clean URLs, structured product data, and scalable content frameworks.`}
       />
 
       <ProcessTimeline

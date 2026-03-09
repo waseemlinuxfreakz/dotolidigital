@@ -65,7 +65,7 @@ export default function CrmSetupIntegration() {
         img="/images/x10.webp"
         heading="Our CRM Setup & Integration Approach"
         text={`<strong>Designed Around Your Workflows</strong><br/><br/>
-        We do not force businesses to adapt to software limitations. Instead, we configure CRM systems around your sales process, customer journey, and internal workflows.<br/><br/>
+        We do not force businesses to adapt to software limitations. Instead, we <Link href="/services/crm-automation" >configure CRM systems</Link> around your sales process, customer journey, and internal workflows.<br/><br/>
         <strong>Built for Reliability and Scale</strong><br/><br/>
         CRM systems must work consistently as your business grows. We focus on clean data structures, logical pipelines, and reliable integrations that scale without breaking.`}
       />
@@ -81,7 +81,7 @@ export default function CrmSetupIntegration() {
         <strong>Marketing Tool Integration</strong><br/>
         Email platforms, automation tools, and ad platforms are integrated to ensure leads are tracked and nurtured correctly.<br/><br/>
         <strong>Sales & Pipeline Integration</strong><br/>
-        We integrate CRMs with sales tools and workflows to ensure leads are assigned, tracked, and followed up on efficiently.`}
+        We integrate <Link href="/services/crm-automation/sales-automation" >CRMs with sales tools</Link> and workflows to ensure leads are assigned, tracked, and followed up on efficiently.`}
       />
 
       <ProcessTimeline

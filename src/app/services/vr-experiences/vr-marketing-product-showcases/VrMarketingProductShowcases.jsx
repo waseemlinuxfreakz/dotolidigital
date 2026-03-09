@@ -34,7 +34,7 @@ export default function VrMarketingProductShowcases() {
         img="/images/x7.webp"
         heading="VR Marketing & Product Showcases to Engage, Educate & Convert"
         text={`In a competitive digital landscape, capturing your audience's attention requires more than just words or static images. Virtual Reality (VR) marketing and product showcases offer brands an immersive, interactive way to showcase their products, tell stories, and drive engagement, ultimately leading to increased conversions and customer loyalty.<br/><br/>
-        At Dotoli Digital, our VR marketing and product showcase services help businesses create interactive, captivating virtual experiences that highlight their products in ways traditional media cannot, enhancing brand perception and driving real results.`}
+        At <Link href="/">Dotoli Digital</Link>, our VR marketing and product showcase services help businesses create interactive, captivating virtual experiences that highlight their products in ways traditional media cannot, enhancing brand perception and driving real results.`}
       />
 
       <ServiceDetailsSection
@@ -62,7 +62,7 @@ export default function VrMarketingProductShowcases() {
         img="/images/x9.webp"
         heading="Our VR Marketing & Product Showcase Approach"
         text={`<strong>Designed for Interactive Engagement</strong><br/><br/>
-        We do not simply display products in VR; we create experiences. Our approach ensures that users can explore and interact with your products or services from every angle, helping them better understand the value and functionality before making a purchase.<br/><br/>
+        We do not simply display products in VR; we <Link href="/services/vr-experiences" >create experiences</Link>. Our approach ensures that users can explore and interact with your products or services from every angle, helping them better understand the value and functionality before making a purchase.<br/><br/>
         <strong>Optimized for Conversion</strong><br/><br/>
         We integrate product showcases with clear calls to action (CTAs) and lead-generation mechanisms, ensuring users move seamlessly from interest to action. Whether it's a product purchase, sign-up, or inquiry, we ensure the experience ends with a conversion.`}
       />

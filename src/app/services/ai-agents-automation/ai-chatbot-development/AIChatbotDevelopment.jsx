@@ -33,7 +33,7 @@ export default function AIChatbotDevelopment() {
         img="/images/x7.webp"
         heading="AI Chatbot Development Services for Smart, Scalable Conversations"
         text={`Modern customers expect instant answers, smooth interactions, and consistent support across digital channels. Traditional chatbots with fixed scripts often fail to understand intent or provide meaningful assistance. AI chatbot development solves this by enabling intelligent, context-aware conversations that adapt to user needs.<br/><br/>
-        At Dotoli Digital, our AI chatbot development services help businesses automate conversations, qualify leads, and support customers in real time while maintaining accuracy, clarity, and a human-like experience.`}
+        At <Link href="/">Dotoli Digital</Link>, our AI chatbot development services help businesses automate conversations, qualify leads, and support customers in real time while maintaining accuracy, clarity, and a human-like experience.`}
       />
 
       <ServiceDetailsSection
@@ -73,7 +73,7 @@ export default function AIChatbotDevelopment() {
         <strong>Customer Support Chatbots</strong><br/>
         We build chatbots that handle frequently asked questions, provide service information, and escalate complex queries to human teams when needed.<br/><br/>
         <strong>Lead Capture & Qualification Chatbots</strong><br/>
-        Chatbots are designed to collect user details, ask qualifying questions, and route leads directly into CRM systems.<br/><br/>
+        Chatbots are designed to collect user details, ask qualifying questions, and route leads directly into <Link href="/services/ai-agents-automation" >CRM systems</Link>.<br/><br/>
         <strong>Website & Messaging Platform Chatbots</strong><br/>
         We develop chatbots for websites and messaging platforms to ensure consistent engagement across channels.<br/><br/>
         <strong>Custom Conversation Design</strong><br/>

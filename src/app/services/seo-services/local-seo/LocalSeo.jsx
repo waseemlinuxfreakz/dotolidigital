@@ -10,6 +10,7 @@ import { FAQSection } from "../../../components/FAQSection";
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
 import IndustriesSection from "../../../components/IndustriesSection";
 import ProcessTimeline from "../../../components/ProcessTimeline";
+import Link from "next/link";
 
 export default function LocalSeo() {
   const [showPopup, setShowPopup] = useState(false);
@@ -39,7 +40,7 @@ export default function LocalSeo() {
         heading="Why Local SEO Is Essential for Businesses"
         text={`Local searches often have strong intent. People searching locally are usually ready to call, visit, or buy. Local SEO ensures your business appears at the right moment.<br/><br/>
         AI-driven search tools also rely on accurate local data to recommend nearby businesses.<br/><br/>
-        <strong>According to a study, 76% of people who search on their smartphones for "something nearby" visit a related business within 24 hours, and 28% of those searches result in a purchase.</strong>`}
+        <strong><Link href="https://www.thinkwithgoogle.com/marketing-strategies/search/mobile-near-me-searches" target="_blank">According to a study</Link>, 76% of people who search on their smartphones for "something nearby" visit a related business within 24 hours, and 28% of those searches result in a purchase.</strong>`}
       />
 
       <ServiceDetailsSection
@@ -128,8 +129,14 @@ export default function LocalSeo() {
           {
             question:
               "What is the difference between local SEO and traditional SEO?",
-            answer:
-              "Local SEO focuses on ranking a business for location-based searches (like “near me” or city names), while traditional SEO targets broader, non-location-specific searches to reach a wider audience.",
+            answer: (
+              <>
+                Local SEO focuses on ranking a business for location-based
+                searches (like “near me” or city names), while traditional{" "}
+                <Link href="/services/seo-services">SEO targets broader</Link>,
+                non-location-specific searches to reach a wider audience.
+              </>
+            ),
           },
         ]}
       />

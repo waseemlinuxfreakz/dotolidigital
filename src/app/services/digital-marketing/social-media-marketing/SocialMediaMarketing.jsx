@@ -22,6 +22,8 @@ import {
   SiYoutube,
 } from "react-icons/si";
 
+import Link from "next/link";
+
 export default function SocialMediaMarketing() {
   const [showPopup, setShowPopup] = useState(false);
 
@@ -45,7 +47,7 @@ export default function SocialMediaMarketing() {
         img="/images/x7.webp"
         heading="Social Media Marketing Services for Visibility, Engagement & Trust"
         text={`Social media is no longer just a place to post updates. It is where people discover brands, build trust, ask questions, and make decisions. With algorithms and AI shaping what users see, social media marketing requires strategy, consistency, and data-driven execution.<br/><br/>
-        At Dotoli Digital, our social media marketing services help businesses grow visibility, engage the right audience, and turn attention into meaningful interactions that support long-term growth.`}
+        At <Link href="/">Dotoli Digital</Link>, our social media marketing services help businesses grow visibility, engage the right audience, and turn attention into meaningful interactions that support long-term growth.`}
       />
 
       <ServiceDetailsSection
@@ -63,11 +65,11 @@ export default function SocialMediaMarketing() {
         <ul>
           <li>Builds trust and brand authority</li>
           <li>Increases visibility where audiences spend time</li>
-          <li>Supports SEO, AEO, and demand generation</li>
+          <li>Supports SEO, <Link href="/services/seo-services/aeo-geo-optimization">AEO</Link>, and demand generation</li>
           <li>Influences purchasing decisions over time</li>
         </ul><br/>
         Without a clear strategy, social media becomes noise instead of value.<br/><br/>
-        There are 5.04 billion social media users worldwide, representing more than 62% of the global population. This makes social platforms one of the largest and most direct channels for reaching modern consumers.`}
+        There are <Link href="https://datareportal.com/reports/digital-2025-global-overview-report" target="_blank">5.04 billion social media users worldwide</Link>, representing more than 62% of the global population. This makes social platforms one of the largest and most direct channels for reaching modern consumers.`}
       />
 
       <ServiceDetailsSection
@@ -225,7 +227,14 @@ export default function SocialMediaMarketing() {
               desc: "Maintain brand alignment and recognition across all channels.",
             },
             {
-              title: "Support for lead generation and conversions",
+              title: (
+                <>
+                  Support for lead generation and{" "}
+                  <Link href="/services/digital-marketing/conversion-rate-optimization">
+                    conversions
+                  </Link>
+                </>
+              ),
               desc: "Turn engagement into measurable business outcomes.",
             },
           ],

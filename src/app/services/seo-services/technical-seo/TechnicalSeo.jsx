@@ -37,9 +37,9 @@ export default function TechnicalSeo() {
       <ServiceDetailsSection
         img="/images/x8.webp"
         heading="Why Technical SEO Matters Today"
-        text={`Even the best content cannot rank if search engines struggle to access or understand a website. Technical SEO ensures your site meets modern performance standards required by search engines and AI-driven search systems.<br/><br/>
+        text={`Even the best content cannot rank if search engines struggle to access or understand a website. Technical SEO ensures your site meets modern performance standards required by search engines and <Link href="/services/seo-services/aeo-geo-optimization" >AI-driven search systems</Link>.<br/><br/>
         As AI search relies heavily on structured, fast, and accessible websites, technical SEO has become the foundation of visibility.<br/><br/>
-        <strong>According to a study, 53% of mobile visits are abandoned if a page takes longer than 3 seconds to load.</strong>`}
+        <strong><Link href="https://www.thinkwithgoogle.com/consumer-insights/consumer-trends/mobile-site-load-time-statistics" target="_blank">According to a study</Link>, 53% of mobile visits are abandoned if a page takes longer than 3 seconds to load.</strong>`}
       />
 
       <ServiceDetailsSection

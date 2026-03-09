@@ -10,7 +10,7 @@ import WhyChooseSection from "../../../components/WhyChooseSection";
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
 import IndustriesSection from "../../../components/IndustriesSection";
 import ProcessTimeline from "../../../components/ProcessTimeline";
-// marketing-automation
+import Link from "next/link";
 
 export default function MarketingAutomation() {
   const [showPopup, setShowPopup] = useState(false);
@@ -35,7 +35,7 @@ export default function MarketingAutomation() {
         img="/images/x7.webp"
         heading="Marketing Automation Services to Nurture Leads & Scale Growth"
         text={`Marketing automation allows businesses to communicate consistently, personally, and at scale without manual effort. As customer journeys become more complex and expectations rise, automation ensures no lead is ignored and no opportunity is missed.<br/><br/>
-        At Dotoli Digital, our marketing automation services help businesses build intelligent systems that nurture leads, improve conversions, and support long-term customer relationships across digital channels.`}
+        At <Link href="/">Dotoli Digital</Link>, our marketing automation services help businesses build intelligent systems that nurture leads, improve conversions, and support long-term customer relationships across digital channels.`}
       />
 
       <ServiceDetailsSection
@@ -65,7 +65,7 @@ export default function MarketingAutomation() {
         text={`<strong>Behavior-Driven, Not Generic</strong><br/><br/>
         We design automation workflows based on how users actually behave, not generic email blasts. Triggers, conditions, and timing are aligned with real user actions and intent.<br/><br/>
         <strong>Integrated with CRM & Marketing Systems</strong><br/><br/>
-        Marketing automation works best when connected to CRM, websites, and performance marketing tools. We ensure automation workflows are part of a unified system, not isolated campaigns.`}
+        Marketing automation works best when <Link href="/services/crm-automation" >connected to CRM</Link>, websites, and performance marketing tools. We ensure automation workflows are part of a unified system, not isolated campaigns.`}
       />
 
       <ServiceDetailsSection
@@ -185,7 +185,14 @@ export default function MarketingAutomation() {
               desc: "Automation is built around how your customers move from awareness to conversion.",
             },
             {
-              title: "Integrated with CRM & performance",
+              title: (
+                <>
+                  Integrated with CRM &{" "}
+                  <Link href="/services/digital-marketing/performance-marketing">
+                    performance marketing
+                  </Link>
+                </>
+              ),
               desc: "Seamless connection between CRM systems and performance marketing channels.",
             },
             {

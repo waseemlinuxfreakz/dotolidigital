@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import gsap from "gsap";
@@ -9,12 +9,92 @@ import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
+function normalizeCustomLinks(text) {
+  if (!text) return "";
+
+  return text.replace(
+    /<Link\s+([^>]*?)href=(["'])(.*?)\2([^>]*)>(.*?)<\/Link>/gis,
+    (_, beforeHref, _quote, href, afterHref, content) => {
+      const attrs = `${beforeHref} href="${href}" ${afterHref}`.trim();
+      return `<a data-next-link="true" ${attrs}>${content}</a>`;
+    },
+  );
+}
+
+function renderTextWithLink(text) {
+  if (!text) return null;
+
+  const normalizedText = normalizeCustomLinks(text);
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(normalizedText, "text/html");
+
+  function convertNode(node, key) {
+    if (node.nodeType === Node.TEXT_NODE) {
+      return node.textContent;
+    }
+
+    if (node.nodeType !== Node.ELEMENT_NODE) {
+      return null;
+    }
+
+    const tag = node.tagName.toLowerCase();
+    const children = Array.from(node.childNodes).map((child, index) =>
+      convertNode(child, `${key}-${index}`),
+    );
+
+    if (tag === "br") {
+      return <br key={key} />;
+    }
+
+    if (tag === "a") {
+      const href = node.getAttribute("href") || "#";
+      const target = node.getAttribute("target") || undefined;
+      const rel =
+        node.getAttribute("rel") ||
+        (target === "_blank" ? "noopener noreferrer" : undefined);
+      const isNextLink = node.getAttribute("data-next-link") === "true";
+      const isExternal =
+        href.startsWith("http://") ||
+        href.startsWith("https://") ||
+        href.startsWith("//") ||
+        href.startsWith("mailto:") ||
+        href.startsWith("tel:");
+
+      if (isNextLink || !isExternal) {
+        return (
+          <Link key={key} href={href} target={target || undefined} rel={rel}>
+            {children}
+          </Link>
+        );
+      }
+
+      return (
+        <a key={key} href={href} target={target} rel={rel}>
+          {children}
+        </a>
+      );
+    }
+
+    const allowedTags = ["p", "ul", "ol", "li", "strong", "em", "span", "div"];
+
+    if (allowedTags.includes(tag)) {
+      return React.createElement(tag, { key }, children);
+    }
+
+    return React.createElement("span", { key }, children);
+  }
+
+  return Array.from(doc.body.childNodes).map((node, index) =>
+    convertNode(node, `node-${index}`),
+  );
+}
+
 export function ServiceDetailsSection({
   img,
   heading,
   text,
   headertag = "h2",
-  cta, // ✅ new prop
+  cta,
 }) {
   const sectionRef = useRef(null);
   const imgBoxRef = useRef(null);
@@ -38,8 +118,24 @@ export function ServiceDetailsSection({
           duration: 1.2,
           ease: "power2.out",
         })
-        .from(headingRef.current, { opacity: 0, y: 30, duration: 0.8 }, "-=0.6")
-        .from(textRef.current, { opacity: 0, y: 20, duration: 0.8 }, "-=0.4");
+        .from(
+          headingRef.current,
+          {
+            opacity: 0,
+            y: 30,
+            duration: 0.8,
+          },
+          "-=0.6",
+        )
+        .from(
+          textRef.current,
+          {
+            opacity: 0,
+            y: 20,
+            duration: 0.8,
+          },
+          "-=0.4",
+        );
     },
     { scope: sectionRef },
   );
@@ -67,13 +163,10 @@ export function ServiceDetailsSection({
               <span>{heading}</span>
             </HeaderTag>
 
-            <div
-              className="text-1"
-              ref={textRef}
-              dangerouslySetInnerHTML={{ __html: text }}
-            />
+            <div className="text-1" ref={textRef}>
+              {renderTextWithLink(text)}
+            </div>
 
-            {/* ✅ Dynamic Button (Link OR Popup) */}
             {cta && (
               <div className="btn-group whychoose-cta">
                 <div className="btn btn--pulse">

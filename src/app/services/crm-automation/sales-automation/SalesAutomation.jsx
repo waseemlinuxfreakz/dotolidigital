@@ -10,6 +10,7 @@ import WhyChooseSection from "../../../components/WhyChooseSection";
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
 import IndustriesSection from "../../../components/IndustriesSection";
 import ProcessTimeline from "../../../components/ProcessTimeline";
+import Link from "next/link";
 
 export default function SalesAutomation() {
   const [showPopup, setShowPopup] = useState(false);
@@ -33,7 +34,7 @@ export default function SalesAutomation() {
         img="/images/x7.webp"
         heading="Sales Automation Services to Close Deals Faster & Scale Revenue"
         text={`Sales teams lose time and deals due to manual follow-ups, disorganized pipelines, and missed opportunities. As lead volume increases, managing sales processes manually becomes inefficient and inconsistent. Sales automation solves this by creating structured, responsive systems that guide leads from interest to conversion.<br/><br/>
-        At Dotoli Digital, our sales automation services help businesses streamline pipelines, automate follow-ups, and improve sales efficiency without increasing workload.`}
+        At <Link href="/">Dotoli Digital</Link>, our sales automation services help businesses streamline pipelines, automate follow-ups, and improve sales efficiency without increasing workload.`}
       />
 
       <ServiceDetailsSection
@@ -63,7 +64,7 @@ export default function SalesAutomation() {
         text={`<strong>Built Around Your Sales Process</strong><br/><br/>
         We do not force generic sales systems. Our sales automation workflows are designed around how your sales team actually operates to ensure adoption and effectiveness.<br/><br/>
         <strong>Integrated with CRM & Marketing Automation</strong><br/><br/>
-        Sales automation works best when connected to CRM and marketing automation systems. We ensure a smooth handoff between marketing and sales to ensure a seamless customer journey.`}
+        Sales automation works best when connected to CRM and <Link href="/services/crm-automation/marketing-automation" >marketing automation systems</Link>. We ensure a smooth handoff between marketing and sales to ensure a seamless customer journey.`}
       />
 
       <ServiceDetailsSection
@@ -182,7 +183,14 @@ export default function SalesAutomation() {
               desc: "Automation is built around how your team actually sells — not generic templates.",
             },
             {
-              title: "Integrated with CRM & marketing",
+              title: (
+                <>
+                  Integrated with CRM and{" "}
+                  <Link href="/services/crm-automation/marketing-automation">
+                    marketing automation
+                  </Link>
+                </>
+              ),
               desc: "Seamless connection between CRM systems and marketing automation tools.",
             },
             {

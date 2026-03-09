@@ -10,6 +10,7 @@ import WhyChooseSection from "../../../components/WhyChooseSection";
 import BenefitsPerformance from "../../../components/BenefitsPerformance";
 import IndustriesSection from "../../../components/IndustriesSection";
 import ProcessTimeline from "../../../components/ProcessTimeline";
+import Link from "next/link";
 // ad-creative-design
 
 export default function AdCreativeDesign() {
@@ -35,7 +36,7 @@ export default function AdCreativeDesign() {
         img="/images/x7.webp"
         heading="Ad Creative Design Services That Drive Clicks, Engagement & Conversions"
         text={`Ads do not fail because of platforms. They fail because of weak creativity. In a world where users scroll fast and algorithms reward engagement, ad creatives must communicate value instantly and clearly.<br/><br/>
-        At Dotoli Digital, our ad creative design services focus on creating visuals and messaging that stop the scroll, align with user intent, and drive measurable results across digital advertising platforms.`}
+        At <Link href="/">Dotoli Digital</Link>, our ad creative design services focus on creating visuals and messaging that stop the scroll, align with user intent, and drive measurable results across digital advertising platforms.`}
       />
 
       <ServiceDetailsSection
@@ -71,7 +72,7 @@ export default function AdCreativeDesign() {
       <ServiceDetailsSection
         img="/images/x11.webp"
         heading="Ad Creative Design Services We Offer"
-        text={`Our ad creative design services support performance marketing across platforms.<br/><br/>
+        text={`Our ad creative design services <Link href="/services/digital-marketing/performance-marketing" >support performance marketing</Link> across platforms.<br/><br/>
         <strong>Static Ad Design</strong><br/>
         We design scroll-stopping static creatives optimized for clarity, messaging, and engagement across digital ad platforms.<br/><br/>
         <strong>Video & Motion Ad Concepts</strong><br/>
@@ -226,8 +227,15 @@ export default function AdCreativeDesign() {
           },
           {
             question: "Can ad creative really impact ad performance?",
-            answer:
-              "Yes. Creative quality directly affects engagement, cost, and conversion rates.",
+            answer: (
+              <>
+                Yes. Creative quality directly affects engagement, cost, and{" "}
+                <Link href="/services/digital-marketing/conversion-rate-optimization">
+                  conversion rates
+                </Link>
+                .
+              </>
+            ),
           },
           {
             question: "Do you support creative testing?",
