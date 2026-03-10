@@ -1,0 +1,177 @@
+.terms-policy-section {
+  width: 100%;
+  padding: 60px 20px 80px;
+  background: var(--background);
+}
+
+.terms-policy-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.terms-policy-card {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 24px;
+  padding: 48px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(6px);
+}
+
+.terms-policy-header {
+  margin-bottom: 40px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.terms-policy-company {
+  margin-bottom: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+.terms-policy-title {
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--foreground);
+}
+
+.terms-policy-date {
+  margin-top: 10px;
+  font-size: 18px;
+  color: var(--foreground);
+  opacity: 0.7;
+}
+
+.terms-policy-content {
+  color: var(--foreground);
+}
+
+.terms-block {
+  margin-bottom: 36px;
+}
+
+.terms-block h2 {
+  font-size: 30px;
+  margin-bottom: 18px;
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+.terms-block h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.terms-block p {
+  font-size: 18px;
+  line-height: 1.85;
+  margin-bottom: 16px;
+}
+
+.terms-block ul {
+  padding-left: 24px;
+  margin-bottom: 18px;
+}
+
+.terms-block li {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+.terms-sub-block {
+  margin-bottom: 24px;
+}
+
+.terms-notice {
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid var(--primary);
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.terms-notice h2 {
+  font-size: 22px;
+  color: var(--primary);
+}
+
+.contact-box {
+  padding: 22px 24px;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(0, 0, 0, 0.03);
+  margin-bottom: 18px;
+}
+
+.terms-policy-content a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.terms-policy-content a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 991px) {
+  .terms-policy-card {
+    padding: 36px 28px;
+  }
+
+  .terms-policy-title {
+    font-size: 40px;
+  }
+
+  .terms-block h2 {
+    font-size: 26px;
+  }
+
+  .terms-block h3 {
+    font-size: 20px;
+  }
+
+  .terms-block p,
+  .terms-block li {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 768px) {
+  .terms-policy-section {
+    padding: 40px 16px;
+  }
+
+  .terms-policy-card {
+    padding: 26px 20px;
+  }
+
+  .terms-policy-title {
+    font-size: 32px;
+  }
+
+  .terms-block h2 {
+    font-size: 22px;
+  }
+
+  .terms-block p,
+  .terms-block li {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .terms-policy-title {
+    font-size: 28px;
+  }
+
+  .terms-block h2 {
+    font-size: 20px;
+  }
+}
