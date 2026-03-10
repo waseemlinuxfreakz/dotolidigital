@@ -119,7 +119,6 @@ export default function ContactPage() {
                 <input
                   id="phone"
                   name="phone"
-                  required
                   value={formData.phone}
                   onChange={onChange}
                   placeholder="(123) 456-7890"

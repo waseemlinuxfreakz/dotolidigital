@@ -624,7 +624,7 @@ function Header() {
 
                 <li>
                   <Link
-                    href="/contact"
+                    href="/contact-us"
                     className="title-1 menu-link"
                     onClick={closeMenu}
                     tabIndex={isMenuOpen ? 0 : -1}
