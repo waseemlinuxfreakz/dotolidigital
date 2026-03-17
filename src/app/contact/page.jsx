@@ -272,7 +272,7 @@ export default function ContactPage() {
               <div className="sms-optin-title">
                 SMS Opt-In <span className="sms-optin-badge">Optional</span>
               </div>
-              <div className="sms-optin-note">NOT Required to Check</div>
+              
             </div>
 
             <div className="sms-optin-box">
@@ -285,10 +285,10 @@ export default function ContactPage() {
                 />
                 <span className="sms-check-text">
                   I agree to receive <b>transactional</b> text messages from
-                  Dotoli Digital LLC about my inquiry (e.g., appointment
-                  reminders, updates). Message frequency may vary. Message &
-                  data rates may apply. Reply <b>STOP</b> to opt out,{" "}
-                  <b>HELP</b> for help.
+                      Dotoli Digital LLC about my inquiry (e.g., appointment
+                      reminders, updates). Message frequency may vary. Message &
+                      data rates may apply. Reply <b>STOP</b> to opt out,{" "}
+                      <b>HELP</b> for help.
                 </span>
               </label>
 
@@ -301,10 +301,10 @@ export default function ContactPage() {
                 />
                 <span className="sms-check-text">
                   I agree to receive <b>marketing</b> and promotional text
-                  messages from Dotoli Digital LLC about services and offers.
-                  Message frequency may vary. Message & data rates may apply.
-                  Reply <b>STOP</b> to opt out, <b>HELP</b> for help.{" "}
-                  <b>Consent is not a condition of purchase.</b>
+                      messages from Dotoli Digital LLC about services and
+                      offers. Message frequency may vary. Message & data rates
+                      may apply. Reply <b>STOP</b> to opt out, <b>HELP</b> for
+                      help. <b>Consent is not a condition of purchase.</b>
                 </span>
               </label>
             </div>
@@ -342,12 +342,12 @@ export default function ContactPage() {
             <form className="contact-form" onSubmit={handleSubmit} noValidate>
               {/* ✅ Title + info bar (above steps) */}
               <div className="contact-form-title-wrap">
-                <h2 className="contact-form-title">
+                <h4 className="">
                   We'll use your info to contact you about your request.{" "}
                   <span className="accent">
                     SMS is only sent if you opt in below.
                   </span>
-                </h2>
+                </h4>
               </div>
 
               <ProgressBar
