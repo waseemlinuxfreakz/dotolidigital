@@ -201,21 +201,9 @@ export default function ContactPage() {
               </div>
 
               {/* Consent + legal */}
-              <label className="sms-check-row">
-                <input
-                  type="checkbox"
-                  name="smsMarketing"
-                  checked={formData.smsMarketing}
-                  onChange={onChange}
-                />
-                <span className="sms-check-text">
-                  I agree to receive <b>marketing</b> and promotional text
-                      messages from Dotoli Digital LLC about services and
-                      offers. Message frequency may vary. Message & data rates
-                      may apply. Reply <b>STOP</b> to opt out, <b>HELP</b> for
-                      help. <b>Consent is not a condition of purchase.</b>
-                </span>
-              </label>
+              <p className="contact-consent-text">
+                By submitting this form, you agree to receive SMS messages from Dotoli Digital. Message and data rates may apply. Reply STOP to unsubscribe, HELP for help.
+              </p>
 
               <div className="contact-legal-links">
                 <Link href="/privacy" className="legal-link">

@@ -382,8 +382,7 @@ export default function ContactPage() {
 
               {/* ✅ This text should appear in ALL steps */}
               <p className="contact-consent-text">
-                By submitting, you agree Dotoli Digital LLC may contact you by
-                phone/email. SMS only if you opt in above.
+                By submitting this form, you agree to receive SMS messages from Dotoli Digital. Message and data rates may apply. Reply STOP to unsubscribe, HELP for help.
               </p>
 
               {/* ✅ Privacy Policy left, Terms right */}
