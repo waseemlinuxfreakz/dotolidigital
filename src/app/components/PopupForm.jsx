@@ -55,6 +55,14 @@ export default function PopupForm({ onClose }) {
         <p className="text-1">
           Tell us what you need—we’ll show you how we can help.
         </p>
+        <div className="contact-form-title-wrap">
+          <h4 className="">
+            We'll use your info to contact you about your request.{" "}
+            <span className="accent">
+              SMS is only sent if you opt in below.
+            </span>
+          </h4>
+        </div>
 
         <form className="contact-form" onSubmit={handleSubmit}>
           <div className="form-group">
@@ -109,6 +117,49 @@ export default function PopupForm({ onClose }) {
               <option>Not sure yet</option>
             </select>
           </div>
+
+          {/* SMS Opt-In block (Optional) */}
+              <div className="sms-optin-wrap">
+                <div className="sms-optin-head">
+                  <div className="sms-optin-title">
+                    SMS Opt-In <span className="sms-optin-badge">Optional</span>
+                  </div>
+                </div>
+
+                <div className="sms-optin-box">
+                  <label className="sms-check-row">
+                    <input
+                      type="checkbox"
+                      name="smsTransactional"
+                      checked={formData.smsTransactional}
+                      onChange={onChange}
+                    />
+                    <span className="sms-check-text">
+                      I agree to receive <b>transactional</b> text messages from
+                      Dotoli Digital LLC about my inquiry (e.g., appointment
+                      reminders, updates). Message frequency may vary. Message &
+                      data rates may apply. Reply <b>STOP</b> to opt out,{" "}
+                      <b>HELP</b> for help.
+                    </span>
+                  </label>
+
+                  <label className="sms-check-row">
+                    <input
+                      type="checkbox"
+                      name="smsMarketing"
+                      checked={formData.smsMarketing}
+                      onChange={onChange}
+                    />
+                    <span className="sms-check-text">
+                      I agree to receive <b>marketing</b> and promotional text
+                      messages from Dotoli Digital LLC about services and
+                      offers. Message frequency may vary. Message & data rates
+                      may apply. Reply <b>STOP</b> to opt out, <b>HELP</b> for
+                      help. <b>Consent is not a condition of purchase.</b>
+                    </span>
+                  </label>
+                </div>
+              </div>
 
           <div className="btn form-btn">
             <button type="submit">Book My Free Consultation</button>
