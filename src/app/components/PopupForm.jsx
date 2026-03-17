@@ -185,6 +185,11 @@ export default function PopupForm({ onClose }) {
           <div className="btn form-btn">
             <button type="submit">Book My Free Consultation</button>
           </div>
+          
+          {/* Consent + legal */}
+          <p className="contact-consent-text">
+            By submitting this form, you agree to receive SMS messages from Dotoli Digital. Message and data rates may apply. Reply STOP to unsubscribe, HELP for help.
+          </p>
 
           {status && <p style={{ marginTop: "1rem" }}>{status}</p>}
           <p className="micro-trust">
