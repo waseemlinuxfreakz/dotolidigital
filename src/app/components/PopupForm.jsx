@@ -4,6 +4,25 @@ import { useEffect, useRef, useState } from "react";
 
 export default function PopupForm({ onClose }) {
   const [status, setStatus] = useState("");
+  const empty = {
+    name: "",
+    email: "",
+    phone: "",
+    company: "",
+    smsTransactional: false,
+    smsMarketing: false,
+  };
+
+  const [formData, setFormData] = useState(empty);
+
+  const onChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData((p) => ({
+      ...p,
+      [name]: type === "checkbox" ? checked : value,
+    }));
+  };
+  
   const overlayRef = useRef(null);
 
   useEffect(() => {
