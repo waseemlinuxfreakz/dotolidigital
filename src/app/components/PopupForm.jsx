@@ -1,6 +1,7 @@
 /* ── app/components/PopupForm.jsx ── */
 "use client";
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 
 export default function PopupForm({ onClose }) {
   const [status, setStatus] = useState("");
