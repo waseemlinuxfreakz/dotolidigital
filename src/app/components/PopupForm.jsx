@@ -190,7 +190,14 @@ export default function PopupForm({ onClose }) {
           <p className="contact-consent-text">
             By submitting this form, you agree to receive SMS messages from Dotoli Digital. Message and data rates may apply. Reply STOP to unsubscribe, HELP for help.
           </p>
-          
+          <div className="contact-legal-links">
+                <Link href="/privacy" className="legal-link">
+                  Privacy Policy
+                </Link>
+                <Link href="/terms" className="legal-link">
+                  Terms &amp; Conditions
+                </Link>
+              </div>
           {status && <p style={{ marginTop: "1rem" }}>{status}</p>}
           
         </form>
