@@ -73,7 +73,7 @@ export default function PopupForm({ onClose }) {
 
         <h2 className="sm-title">Need a Trusted Digital Partner? We’re In.</h2>
         <p className="text-1">
-          Tell us what you need—we’ll show you how we can help.
+          Tell us what you need we’ll show you how we can help.
         </p>
         <div className="contact-form-title-wrap">
           <h4 className="">
