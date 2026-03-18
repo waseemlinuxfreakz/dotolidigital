@@ -91,12 +91,11 @@ export default function PopupForm({ onClose }) {
           </div>
 
           <div className="form-group">
-            <label htmlFor="phone">Phone Number*</label>
+            <label htmlFor="phone">Phone Number</label>
             <input
               type="tel"
               id="phone"
               name="phone"
-              required
               placeholder="(123) 456-7890"
             />
           </div>
