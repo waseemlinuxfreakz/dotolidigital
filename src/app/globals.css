@@ -333,6 +333,9 @@ h6 span {
     font-size: 16px;
     line-height: 26px;
   }
+  .text-1.popup-subtext{
+    font-size: 15px;
+  }
   .text-2 {
     font-size: 21px;
     line-height: 31px;
