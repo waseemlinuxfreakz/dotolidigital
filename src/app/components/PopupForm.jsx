@@ -72,7 +72,7 @@ export default function PopupForm({ onClose }) {
 
         <h2 className="sm-title">Need a Trusted Digital Partner? We’re In.</h2>
         <p className="text-1">
-          Tell us what you need—we’ll show you how we can help.
+          Tell us what you need we’ll show you how we can help.
         </p>
         <div className="contact-form-title-wrap">
           <h4 className="">
@@ -190,9 +190,17 @@ export default function PopupForm({ onClose }) {
           <p className="contact-consent-text">
             By submitting this form, you agree to receive SMS messages from Dotoli Digital. Message and data rates may apply. Reply STOP to unsubscribe, HELP for help.
           </p>
+          <div className="contact-legal-links">
+                <Link href="/privacy" className="legal-link">
+                  Privacy Policy
+                </Link>
+                <Link href="/terms" className="legal-link">
+                  Terms &amp; Conditions
+                </Link>
+              </div>
 
           {status && <p style={{ marginTop: "1rem" }}>{status}</p>}
-          <p className="micro-trust">
+          <p className="micro-trust" >
             🔒 100% privacy. No spam. Just real conversations.
           </p>
         </form>
