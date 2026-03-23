@@ -380,9 +380,7 @@ export default function ContactPage() {
               </div>
 
               {/* ✅ This text should appear in ALL steps */}
-              <p className="contact-consent-text">
-                By submitting this form, you agree to receive SMS messages from Dotoli Digital. Message and data rates may apply. Reply STOP to unsubscribe, HELP for help.
-              </p>
+              
 
               {/* ✅ Privacy Policy left, Terms right */}
               <div className="contact-legal-links">
