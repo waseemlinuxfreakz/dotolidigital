@@ -6,6 +6,15 @@
 }
 @media (min-width: 1920px) {
 }
+
+.dropdown-link:hover {
+  transform: scale(1.05);
+}
+
+.dropdown-link {
+  transition: all 0.3s ease;
+}
+
 .video-wrapper {
   margin-bottom: 40px;
 }
