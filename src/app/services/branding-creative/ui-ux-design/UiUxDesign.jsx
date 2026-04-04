@@ -197,6 +197,12 @@ export default function UiUxDesign() {
         }}
       />
 
+      <PerformanceCta
+        onStrategyClick={() => setShowPopup(true)}
+        title="Ready to Improve User Experience and Conversions?"
+        description={`Great design makes digital experiences effortless. We help businesses create UI/UX that users enjoy and trust.`}
+      />
+
       <FAQSection
         title="Frequently Asked Questions"
         faqs={[
@@ -226,12 +232,6 @@ export default function UiUxDesign() {
               "Yes. We collaborate closely with development teams to ensure designs are implemented correctly.",
           },
         ]}
-      />
-
-      <PerformanceCta
-        onStrategyClick={() => setShowPopup(true)}
-        title="Ready to Improve User Experience and Conversions?"
-        description={`Great design makes digital experiences effortless. We help businesses create UI/UX that users enjoy and trust.`}
       />
 
       <Footer />

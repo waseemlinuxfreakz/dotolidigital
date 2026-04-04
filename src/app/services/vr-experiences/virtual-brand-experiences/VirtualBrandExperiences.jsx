@@ -207,6 +207,12 @@ export default function VirtualBrandExperiences() {
         }}
       />
 
+      <PerformanceCta
+        onStrategyClick={() => setShowPopup(true)}
+        title="Ready to Create a Virtual Brand Experience That Engages & Inspires?"
+        description={`Your brand’s story deserves to be told in a way that captures attention and leaves a lasting impact. We help businesses create immersive virtual experiences that drive engagement, trust, and conversions.`}
+      />
+
       <FAQSection
         title="Frequently Asked Questions"
         faqs={[
@@ -239,12 +245,6 @@ export default function VirtualBrandExperiences() {
               "Yes. We offer ongoing support, optimization, and updates to ensure your virtual experience continues to meet your business objectives.",
           },
         ]}
-      />
-
-      <PerformanceCta
-        onStrategyClick={() => setShowPopup(true)}
-        title="Ready to Create a Virtual Brand Experience That Engages & Inspires?"
-        description={`Your brand’s story deserves to be told in a way that captures attention and leaves a lasting impact. We help businesses create immersive virtual experiences that drive engagement, trust, and conversions.`}
       />
 
       <Footer />

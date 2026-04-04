@@ -206,6 +206,12 @@ export default function SalesAutomation() {
         }}
       />
 
+      <PerformanceCta
+        onStrategyClick={() => setShowPopup(true)}
+        title="Ready to Automate Your Sales Process?"
+        description={`Sales automation helps businesses close deals faster and scale revenue efficiently. We build systems that support sales teams and improve performance.`}
+      />
+
       <FAQSection
         title="Frequently Asked Questions"
         faqs={[
@@ -235,12 +241,6 @@ export default function SalesAutomation() {
               "Yes. Sales automation performs best with continuous refinement.",
           },
         ]}
-      />
-
-      <PerformanceCta
-        onStrategyClick={() => setShowPopup(true)}
-        title="Ready to Automate Your Sales Process?"
-        description={`Sales automation helps businesses close deals faster and scale revenue efficiently. We build systems that support sales teams and improve performance.`}
       />
 
       <Footer />

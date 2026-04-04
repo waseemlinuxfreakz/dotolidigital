@@ -300,6 +300,12 @@ export default function PerformanceMarketing() {
         }}
       />
 
+      <PerformanceCta
+        onStrategyClick={() => setShowPopup(true)}
+        title="Ready to Turn Marketing Spend into Measurable Results?"
+        description={`Performance marketing removes guesswork and replaces it with clarity, data, and growth.`}
+      />
+
       <FAQSection
         title="Frequently Asked Questions"
         faqs={[
@@ -331,12 +337,6 @@ export default function PerformanceMarketing() {
               "Yes. Performance marketing requires continuous testing, optimization, and scaling. We manage and improve campaigns over time to ensure sustained ROI.",
           },
         ]}
-      />
-
-      <PerformanceCta
-        onStrategyClick={() => setShowPopup(true)}
-        title="Ready to Turn Marketing Spend into Measurable Results?"
-        description={`Performance marketing removes guesswork and replaces it with clarity, data, and growth.`}
       />
 
       <Footer />

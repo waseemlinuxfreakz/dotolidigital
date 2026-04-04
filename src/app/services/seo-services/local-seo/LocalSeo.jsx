@@ -112,6 +112,12 @@ export default function LocalSeo() {
         }}
       />
 
+      <PerformanceCta
+        onStrategyClick={() => setShowPopup(true)}
+        title="Ready to Get More Local Customers from Google?"
+        description={`Local SEO helps your business show up when nearby customers are searching for what you offer. We improve your visibility in Google Maps and local search results so you can drive more calls, website visits, and in-store traffic.`}
+      />
+
       <FAQSection
         title="Frequently Asked Questions"
         faqs={[
@@ -138,12 +144,6 @@ export default function LocalSeo() {
             ),
           },
         ]}
-      />
-
-      <PerformanceCta
-        onStrategyClick={() => setShowPopup(true)}
-        title="Ready to Get More Local Customers from Google?"
-        description={`Local SEO helps your business show up when nearby customers are searching for what you offer. We improve your visibility in Google Maps and local search results so you can drive more calls, website visits, and in-store traffic.`}
       />
 
       <Footer />

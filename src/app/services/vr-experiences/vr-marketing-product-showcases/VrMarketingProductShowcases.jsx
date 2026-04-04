@@ -202,6 +202,12 @@ export default function VrMarketingProductShowcases() {
         }}
       />
 
+      <PerformanceCta
+        onStrategyClick={() => setShowPopup(true)}
+        title="Ready to Create an Immersive Product Showcase That Drives Conversions?"
+        description={`VR marketing and product showcases provide businesses with an innovative way to connect with customers, improve product understanding, and increase conversions. We help brands create compelling, interactive experiences that capture attention and drive results.`}
+      />
+
       <FAQSection
         title="Frequently Asked Questions"
         faqs={[
@@ -232,12 +238,6 @@ export default function VrMarketingProductShowcases() {
               "The cost depends on the project's complexity and scale. However, VR offers a high return on investment by significantly enhancing customer engagement and conversions.",
           },
         ]}
-      />
-
-      <PerformanceCta
-        onStrategyClick={() => setShowPopup(true)}
-        title="Ready to Create an Immersive Product Showcase That Drives Conversions?"
-        description={`VR marketing and product showcases provide businesses with an innovative way to connect with customers, improve product understanding, and increase conversions. We help brands create compelling, interactive experiences that capture attention and drive results.`}
       />
 
       <Footer />

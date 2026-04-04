@@ -214,6 +214,12 @@ export default function AdCreativeDesign() {
         }}
       />
 
+      <PerformanceCta
+        onStrategyClick={() => setShowPopup(true)}
+        title="Ready to Improve Ad Performance with Better Creative?"
+        description={`Your ads are only as strong as their creative. We help businesses design ad creatives that attract attention and drive action.`}
+      />
+
       <FAQSection
         title="Frequently Asked Questions"
         faqs={[
@@ -250,12 +256,6 @@ export default function AdCreativeDesign() {
               "Yes. Strong creative balances brand consistency with performance goals.",
           },
         ]}
-      />
-
-      <PerformanceCta
-        onStrategyClick={() => setShowPopup(true)}
-        title="Ready to Improve Ad Performance with Better Creative?"
-        description={`Your ads are only as strong as their creative. We help businesses design ad creatives that attract attention and drive action.`}
       />
 
       <Footer />

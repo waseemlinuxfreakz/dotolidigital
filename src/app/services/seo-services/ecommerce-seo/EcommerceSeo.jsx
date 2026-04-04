@@ -110,6 +110,12 @@ export default function EcommerceSeo() {
         }}
       />
 
+      <PerformanceCta
+        onStrategyClick={() => setShowPopup(true)}
+        title="Ready to Increase eCommerce Sales with SEO?"
+        description={`eCommerce SEO helps your products rank for high-intent searches so you can drive qualified traffic and grow revenue. We optimize your store’s structure, category and product pages, and technical foundation to turn more searches into purchases.`}
+      />
+
       <FAQSection
         title="Frequently Asked Questions"
         faqs={[
@@ -124,12 +130,6 @@ export default function EcommerceSeo() {
               "Yes. Proper eCommerce SEO targets buyers, not just visitors.",
           },
         ]}
-      />
-
-      <PerformanceCta
-        onStrategyClick={() => setShowPopup(true)}
-        title="Ready to Increase eCommerce Sales with SEO?"
-        description={`eCommerce SEO helps your products rank for high-intent searches so you can drive qualified traffic and grow revenue. We optimize your store’s structure, category and product pages, and technical foundation to turn more searches into purchases.`}
       />
 
       <Footer />

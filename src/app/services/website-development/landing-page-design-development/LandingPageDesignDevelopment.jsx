@@ -210,6 +210,12 @@ export default function LandingPageDesignDevelopment() {
         }}
       />
 
+      <PerformanceCta
+        onStrategyClick={() => setShowPopup(true)}
+        title="Ready to Launch High-Converting Landing Pages?"
+        description={`Strong landing pages make the difference between wasted traffic and measurable growth. We help businesses turn campaigns into conversions.`}
+      />
+
       <FAQSection
         title="Frequently Asked Questions"
         faqs={[
@@ -240,12 +246,6 @@ export default function LandingPageDesignDevelopment() {
               "Yes. We help structure messaging and CTAs to improve conversions.",
           },
         ]}
-      />
-
-      <PerformanceCta
-        onStrategyClick={() => setShowPopup(true)}
-        title="Ready to Launch High-Converting Landing Pages?"
-        description={`Strong landing pages make the difference between wasted traffic and measurable growth. We help businesses turn campaigns into conversions.`}
       />
 
       <Footer />

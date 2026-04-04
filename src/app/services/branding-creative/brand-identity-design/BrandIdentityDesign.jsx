@@ -203,6 +203,12 @@ export default function BrandIdentityDesign() {
         }}
       />
 
+      <PerformanceCta
+        onStrategyClick={() => setShowPopup(true)}
+        title="Ready to Build a Strong Brand Identity?"
+        description={`Your brand identity should communicate trust, clarity, and value instantly. We help businesses create identities that stand out and support growth.`}
+      />
+
       <FAQSection
         title="Frequently Asked Questions"
         faqs={[
@@ -232,12 +238,6 @@ export default function BrandIdentityDesign() {
               "Yes. Clear branding improves authority signals and digital consistency.",
           },
         ]}
-      />
-
-      <PerformanceCta
-        onStrategyClick={() => setShowPopup(true)}
-        title="Ready to Build a Strong Brand Identity?"
-        description={`Your brand identity should communicate trust, clarity, and value instantly. We help businesses create identities that stand out and support growth.`}
       />
 
       <Footer />

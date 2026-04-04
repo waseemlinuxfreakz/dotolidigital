@@ -208,6 +208,12 @@ export default function SalesLeadGenerationAIAgents() {
         }}
       />
 
+      <PerformanceCta
+        onStrategyClick={() => setShowPopup(true)}
+        title="Ready to Automate Lead Qualification and Sales Support?"
+        description={`Sales and lead generation AI agents help businesses respond faster, qualify better, and close more deals. We build AI systems that support revenue growth at scale.`}
+      />
+
       <FAQSection
         title="Frequently Asked Questions"
         faqs={[
@@ -235,12 +241,6 @@ export default function SalesLeadGenerationAIAgents() {
               "Yes. Integration is a core part of effective AI agent deployment.",
           },
         ]}
-      />
-
-      <PerformanceCta
-        onStrategyClick={() => setShowPopup(true)}
-        title="Ready to Automate Lead Qualification and Sales Support?"
-        description={`Sales and lead generation AI agents help businesses respond faster, qualify better, and close more deals. We build AI systems that support revenue growth at scale.`}
       />
 
       <Footer />

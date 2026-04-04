@@ -206,6 +206,12 @@ export default function EcommerceWebsiteDevelopment() {
         }}
       />
 
+      <PerformanceCta
+        onStrategyClick={() => setShowPopup(true)}
+        title="Ready to Build an eCommerce Website That Sells?"
+        description={`Your online store should work as hard as your marketing. We help businesses build eCommerce websites that convert visitors into customers and scale revenue.`}
+      />
+
       <FAQSection
         title="Frequently Asked Questions"
         faqs={[
@@ -235,12 +241,6 @@ export default function EcommerceWebsiteDevelopment() {
               "Yes. SEO and AEO best practices are built into the development process from the start.",
           },
         ]}
-      />
-
-      <PerformanceCta
-        onStrategyClick={() => setShowPopup(true)}
-        title="Ready to Build an eCommerce Website That Sells?"
-        description={`Your online store should work as hard as your marketing. We help businesses build eCommerce websites that convert visitors into customers and scale revenue.`}
       />
 
       <Footer />

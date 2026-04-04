@@ -282,6 +282,12 @@ export default function SocialMediaMarketing() {
         }}
       />
 
+      <PerformanceCta
+        onStrategyClick={() => setShowPopup(true)}
+        title="Ready to Build a Strong Social Media Presence?"
+        description={`Social media success requires clarity, consistency, and strategy. We help brands move beyond random posting to purposeful growth.`}
+      />
+
       <FAQSection
         title="Frequently Asked Questions"
         faqs={[
@@ -306,12 +312,6 @@ export default function SocialMediaMarketing() {
               "Yes. Ongoing management ensures consistent performance and improvement.",
           },
         ]}
-      />
-
-      <PerformanceCta
-        onStrategyClick={() => setShowPopup(true)}
-        title="Ready to Build a Strong Social Media Presence?"
-        description={`Social media success requires clarity, consistency, and strategy. We help brands move beyond random posting to purposeful growth.`}
       />
 
       <Footer />

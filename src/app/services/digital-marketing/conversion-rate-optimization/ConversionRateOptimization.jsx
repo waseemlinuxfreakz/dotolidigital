@@ -205,6 +205,12 @@ export default function ConversionRateOptimization() {
         }}
       />
 
+      <PerformanceCta
+        onStrategyClick={() => setShowPopup(true)}
+        title="Ready to Convert More Visitors into Customers?"
+        description={`Conversion Rate Optimization turns existing traffic into real growth. We help businesses unlock hidden potential and scale results without increasing ad spend.`}
+      />
+
       <FAQSection
         title="Frequently Asked Questions"
         faqs={[
@@ -234,12 +240,6 @@ export default function ConversionRateOptimization() {
               "Yes. Continuous testing and optimization deliver the best long-term results.",
           },
         ]}
-      />
-
-      <PerformanceCta
-        onStrategyClick={() => setShowPopup(true)}
-        title="Ready to Convert More Visitors into Customers?"
-        description={`Conversion Rate Optimization turns existing traffic into real growth. We help businesses unlock hidden potential and scale results without increasing ad spend.`}
       />
 
       <Footer />

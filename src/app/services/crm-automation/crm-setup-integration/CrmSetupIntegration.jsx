@@ -201,6 +201,12 @@ export default function CrmSetupIntegration() {
         }}
       />
 
+      <PerformanceCta
+        onStrategyClick={() => setShowPopup(true)}
+        title="Ready to Set Up a CRM That Actually Works?"
+        description={`Your CRM should simplify operations, not complicate them. We help businesses build CRM systems that are clean, connected, and scalable.`}
+      />
+
       <FAQSection
         title="Frequently Asked Questions"
         faqs={[
@@ -230,12 +236,6 @@ export default function CrmSetupIntegration() {
               "Yes. CRM integration is the foundation for marketing and sales automation.",
           },
         ]}
-      />
-
-      <PerformanceCta
-        onStrategyClick={() => setShowPopup(true)}
-        title="Ready to Set Up a CRM That Actually Works?"
-        description={`Your CRM should simplify operations, not complicate them. We help businesses build CRM systems that are clean, connected, and scalable.`}
       />
 
       <Footer />

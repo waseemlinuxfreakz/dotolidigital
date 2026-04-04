@@ -203,6 +203,12 @@ export default function AIChatbotDevelopment() {
         }}
       />
 
+      <PerformanceCta
+        onStrategyClick={() => setShowPopup(true)}
+        title="Ready to Build an Intelligent AI Chatbot?"
+        description={`AI chatbots help businesses respond faster, engage better, and scale conversations without friction. We build chatbots that support real business goals.`}
+      />
+
       <FAQSection
         title="Frequently Asked Questions"
         faqs={[
@@ -231,12 +237,6 @@ export default function AIChatbotDevelopment() {
               "Yes. AI chatbots help small businesses scale communication efficiently.",
           },
         ]}
-      />
-
-      <PerformanceCta
-        onStrategyClick={() => setShowPopup(true)}
-        title="Ready to Build an Intelligent AI Chatbot?"
-        description={`AI chatbots help businesses respond faster, engage better, and scale conversations without friction. We build chatbots that support real business goals.`}
       />
 
       <Footer />

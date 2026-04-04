@@ -209,6 +209,12 @@ export default function CustomWebsiteDevelopment() {
         }}
       />
 
+      <PerformanceCta
+        onStrategyClick={() => setShowPopup(true)}
+        title="Ready to Build a Website Tailored to Your Business?"
+        description={`Your website should evolve as your business grows. Custom website development gives you the flexibility, performance, and scalability needed to support long-term success.`}
+      />
+
       <FAQSection
         title="Frequently Asked Questions"
         faqs={[
@@ -238,12 +244,6 @@ export default function CustomWebsiteDevelopment() {
               "Yes. We offer maintenance and optimization services post-launch.",
           },
         ]}
-      />
-
-      <PerformanceCta
-        onStrategyClick={() => setShowPopup(true)}
-        title="Ready to Build a Website Tailored to Your Business?"
-        description={`Your website should evolve as your business grows. Custom website development gives you the flexibility, performance, and scalability needed to support long-term success.`}
       />
 
       <Footer />

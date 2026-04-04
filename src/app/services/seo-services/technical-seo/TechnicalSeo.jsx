@@ -110,6 +110,12 @@ export default function TechnicalSeo() {
         }}
       />
 
+      <PerformanceCta
+        onStrategyClick={() => setShowPopup(true)}
+        title="Ready to Strengthen Your Website’s Technical Foundation?"
+        description={`Technical SEO ensures your website is fast, crawlable, and optimized for search engines. We help businesses fix hidden issues, improve performance, and build a strong foundation for sustainable organic growth.`}
+      />
+
       <FAQSection
         title="Frequently Asked Questions"
         faqs={[
@@ -129,12 +135,6 @@ export default function TechnicalSeo() {
               "Technical SEO is used by optimizing a website’s technical setup so search engines can easily crawl, index, and understand it. This includes improving site speed, mobile usability, secure HTTPS, clean URLs, and fixing crawl errors.",
           },
         ]}
-      />
-
-      <PerformanceCta
-        onStrategyClick={() => setShowPopup(true)}
-        title="Ready to Strengthen Your Website’s Technical Foundation?"
-        description={`Technical SEO ensures your website is fast, crawlable, and optimized for search engines. We help businesses fix hidden issues, improve performance, and build a strong foundation for sustainable organic growth.`}
       />
 
       <Footer />

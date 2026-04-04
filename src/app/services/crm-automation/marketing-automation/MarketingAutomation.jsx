@@ -209,6 +209,12 @@ export default function MarketingAutomation() {
         }}
       />
 
+      <PerformanceCta
+        onStrategyClick={() => setShowPopup(true)}
+        title="Ready to Automate Your Marketing Without Losing Personalization?"
+        description={`Marketing automation helps businesses scale communication while staying relevant. We build automation systems that nurture leads and drive growth.`}
+      />
+
       <FAQSection
         title="Frequently Asked Questions"
         faqs={[
@@ -238,12 +244,6 @@ export default function MarketingAutomation() {
               "Yes. Automation workflows perform best with continuous refinement.",
           },
         ]}
-      />
-
-      <PerformanceCta
-        onStrategyClick={() => setShowPopup(true)}
-        title="Ready to Automate Your Marketing Without Losing Personalization?"
-        description={`Marketing automation helps businesses scale communication while staying relevant. We build automation systems that nurture leads and drive growth.`}
       />
 
       <Footer />
