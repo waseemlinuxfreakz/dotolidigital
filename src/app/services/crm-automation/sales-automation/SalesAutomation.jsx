@@ -31,20 +31,18 @@ export default function SalesAutomation() {
       <div id="team-hero"></div>
 
       <ServiceDetailsSection
-        img="/images/x7.webp"
+        img="/images/Hubspot Screenshot 2.png"
         heading="Sales Automation Services to Close Deals Faster & Scale Revenue"
         text={`Sales teams lose time and deals due to manual follow-ups, disorganized pipelines, and missed opportunities. As lead volume increases, managing sales processes manually becomes inefficient and inconsistent. Sales automation solves this by creating structured, responsive systems that guide leads from interest to conversion.<br/><br/>
         At <Link href="/">Dotoli Digital</Link>, our sales automation services help businesses streamline pipelines, automate follow-ups, and improve sales efficiency without increasing workload.`}
       />
 
       <ServiceDetailsSection
-        img="/images/x8.webp"
         heading="What Is Sales Automation?"
         text={`Sales automation is the use of software and workflows to automate repetitive sales tasks such as lead assignment, follow-ups, pipeline updates, and task reminders. It helps sales teams respond faster, stay organized, and close deals more efficiently by reducing manual effort and human error.`}
       />
 
       <ServiceDetailsSection
-        img="/images/x9.webp"
         heading="Why Sales Automation Matters Today"
         text={`Modern buyers expect quick responses and consistent communication. Delayed follow-ups or missed leads often result in lost sales. Sales automation ensures no opportunity slips through the cracks.<br/><br/>
         Sales automation matters because it:
@@ -59,7 +57,7 @@ export default function SalesAutomation() {
       />
 
       <ServiceDetailsSection
-        img="/images/x10.webp"
+        img="/images/Gemini_Generated_Image_y1o3mpy1o3mpy1o3.png"
         heading="Our Sales Automation Approach"
         text={`<strong>Built Around Your Sales Process</strong><br/><br/>
         We do not force generic sales systems. Our sales automation workflows are designed around how your sales team actually operates to ensure adoption and effectiveness.<br/><br/>
@@ -68,7 +66,6 @@ export default function SalesAutomation() {
       />
 
       <ServiceDetailsSection
-        img="/images/x11.webp"
         heading="Sales Automation Services We Offer"
         text={`Our sales automation services are flexible and scalable.<br/><br/>
         <strong>Lead Assignment & Routing Automation</strong><br/>
@@ -108,6 +105,8 @@ export default function SalesAutomation() {
           ],
         }}
       />
+
+      <ServiceDetailsSection img="/images/Gemini_Generated_Image_9iqcf59iqcf59iqc.png" />
 
       <IndustriesSection
         onCtaClick={() => setShowPopup(true)}

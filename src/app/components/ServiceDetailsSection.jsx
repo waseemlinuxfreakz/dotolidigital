@@ -89,17 +89,29 @@ function renderTextWithLink(text) {
   );
 }
 
+// ইউটিউব ভিডিও আইডি বের করার ফাংশন
+function getYouTubeId(url) {
+  if (!url) return null;
+  const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+  const match = url.match(regExp);
+  return match && match[2].length === 11 ? match[2] : null;
+}
+
 export function ServiceDetailsSection({
   img,
+  videoUrl, // নতুন প্রপ: ইউটিউব ভিডিও লিংক
   heading,
   text,
   headertag = "h2",
   cta,
 }) {
   const sectionRef = useRef(null);
-  const imgBoxRef = useRef(null);
+  const mediaBoxRef = useRef(null);
   const headingRef = useRef(null);
   const textRef = useRef(null);
+
+  const videoId = videoUrl ? getYouTubeId(videoUrl) : null;
+  const hasVideo = videoUrl && videoId;
 
   useGSAP(
     () => {
@@ -111,7 +123,7 @@ export function ServiceDetailsSection({
             toggleActions: "play none none none",
           },
         })
-        .from(imgBoxRef.current, {
+        .from(mediaBoxRef.current, {
           scale: 0.95,
           opacity: 0,
           y: 50,
@@ -146,8 +158,23 @@ export function ServiceDetailsSection({
     <section className="work-sec1" ref={sectionRef}>
       <div className="container-w1">
         <div className="img-text-box">
-          <div className="img-box" ref={imgBoxRef}>
-            {img && (
+          <div className="img-box" ref={mediaBoxRef}>
+            {hasVideo ? (
+              // ইউটিউব ভিডিও এম্বেড
+              <div className="video-wrapper">
+                <iframe
+                  src={`https://www.youtube.com/embed/${videoId}`}
+                  title={heading}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                  className="youtube-iframe"
+                  onLoad={() => ScrollTrigger.refresh()}
+                ></iframe>
+              </div>
+            ) : img ? (
+              // ইমেজ দেখানো হবে যদি ভিডিও না থাকে
               <Image
                 src={img}
                 alt={heading}
@@ -155,7 +182,7 @@ export function ServiceDetailsSection({
                 height={700}
                 onLoadingComplete={() => ScrollTrigger.refresh()}
               />
-            )}
+            ) : null}
           </div>
 
           <div className="content">

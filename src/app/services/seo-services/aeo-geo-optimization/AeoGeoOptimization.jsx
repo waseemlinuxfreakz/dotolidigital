@@ -24,19 +24,18 @@ export default function AeoGeoOptimization() {
         id={"team-hero"}
         title1="AEO & GEO"
         title2="Optimization"
+        btn_text="Book a Free Strategy Call"
         onBtnClick={() => setShowPopup(true)}
       />
 
       <div id="team-hero"></div>
 
       <ServiceDetailsSection
-        img="/images/x7.webp"
         heading="What Is AEO & GEO Optimization?"
         text={`AEO (Answer Engine Optimization) and GEO (Generative Engine Optimization) help brands appear inside AI-generated answers, voice search results, and zero-click experiences. These strategies structure content for clarity, authority, and context so AI systems can understand, trust, and cite it.`}
       />
 
       <ServiceDetailsSection
-        img="/images/x8.webp"
         heading="Why AEO & GEO Matter in Modern Search"
         text={`Search engines now deliver answers, not just links. AI systems decide which sources to reference. AEO and GEO ensure your content is eligible for selection.<br/><br/>
         Without these optimizations, brands risk losing visibility even with strong traditional rankings.<br/><br/>
@@ -44,7 +43,7 @@ export default function AeoGeoOptimization() {
       />
 
       <ServiceDetailsSection
-        img="/images/x9.webp"
+        img="/images/Gemini_Generated_Image_q909h2q909h2q909.png"
         heading="What Our AEO & GEO Services Include"
         text={`<strong>Answer-Focused Content Structuring</strong><br/>
         We structure your pages so key answers are easy to extract and reuse by search and AI systems.<br/>

@@ -32,20 +32,18 @@ export default function MarketingAutomation() {
 
       {/* Marketing Automation */}
       <ServiceDetailsSection
-        img="/images/x7.webp"
+        img="/images/Screenshot 2026-03-30 at 9.21.40 PM.png"
         heading="Marketing Automation Services to Nurture Leads & Scale Growth"
         text={`Marketing automation allows businesses to communicate consistently, personally, and at scale without manual effort. As customer journeys become more complex and expectations rise, automation ensures no lead is ignored and no opportunity is missed.<br/><br/>
         At <Link href="/">Dotoli Digital</Link>, our marketing automation services help businesses build intelligent systems that nurture leads, improve conversions, and support long-term customer relationships across digital channels.`}
       />
 
       <ServiceDetailsSection
-        img="/images/x8.webp"
         heading="What Is Marketing Automation?"
         text={`Marketing automation is the use of software and workflows to automate marketing actions such as emails, lead nurturing, follow-ups, and customer segmentation. It allows businesses to deliver timely, relevant messages based on user behavior, improving engagement, conversions, and efficiency without manual intervention.`}
       />
 
       <ServiceDetailsSection
-        img="/images/x9.webp"
         heading="Why Marketing Automation Matters Today"
         text={`Customers expect timely and relevant communication. Manual marketing processes often lead to delayed responses, inconsistent follow-ups, and lost leads. Marketing automation solves this by creating structured, responsive journeys that adapt to user behavior.<br/><br/>
         Marketing automation matters because it:
@@ -60,7 +58,7 @@ export default function MarketingAutomation() {
       />
 
       <ServiceDetailsSection
-        img="/images/x10.webp"
+        img="/images/Gemini_Generated_Image_sec5bcsec5bcsec5.png"
         heading="Our Marketing Automation Approach"
         text={`<strong>Behavior-Driven, Not Generic</strong><br/><br/>
         We design automation workflows based on how users actually behave, not generic email blasts. Triggers, conditions, and timing are aligned with real user actions and intent.<br/><br/>
@@ -69,7 +67,6 @@ export default function MarketingAutomation() {
       />
 
       <ServiceDetailsSection
-        img="/images/x11.webp"
         heading="Marketing Automation Services We Offer"
         text={`Our marketing automation services are flexible and tailored to business needs.<br/><br/>
         <strong>Lead Nurturing & Drip Campaigns</strong><br/>
@@ -81,6 +78,8 @@ export default function MarketingAutomation() {
         <strong>Funnel & Lifecycle Automation</strong><br/>
         We map and automate customer journeys across awareness, consideration, conversion, and retention stages.`}
       />
+
+      <ServiceDetailsSection img="/images/Screenshot 2026-03-30 at 9.21.40 PM (1).png" />
 
       <ProcessTimeline
         data={{

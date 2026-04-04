@@ -12,6 +12,8 @@ import BenefitsPerformance from "../../../components/BenefitsPerformance";
 import IndustriesSection from "../../../components/IndustriesSection";
 import ProcessTimeline from "../../../components/ProcessTimeline";
 
+import { SingleImageSlider2 } from "../../../components/SingleImageSlider2";
+
 export default function AIChatbotDevelopment() {
   const [showPopup, setShowPopup] = useState(false);
 
@@ -29,21 +31,20 @@ export default function AIChatbotDevelopment() {
 
       <div id="team-hero"></div>
 
+      <SingleImageSlider2 />
+
       <ServiceDetailsSection
-        img="/images/x7.webp"
         heading="AI Chatbot Development Services for Smart, Scalable Conversations"
         text={`Modern customers expect instant answers, smooth interactions, and consistent support across digital channels. Traditional chatbots with fixed scripts often fail to understand intent or provide meaningful assistance. AI chatbot development solves this by enabling intelligent, context-aware conversations that adapt to user needs.<br/><br/>
         At <Link href="/">Dotoli Digital</Link>, our AI chatbot development services help businesses automate conversations, qualify leads, and support customers in real time while maintaining accuracy, clarity, and a human-like experience.`}
       />
 
       <ServiceDetailsSection
-        img="/images/x8.webp"
         heading="What Is AI Chatbot Development?"
         text={`AI chatbot development is the process of designing and building intelligent chatbots that use artificial intelligence to understand user intent, respond accurately, and perform actions such as answering questions or collecting information. These chatbots go beyond scripted responses by adapting to context and user behavior.`}
       />
 
       <ServiceDetailsSection
-        img="/images/x9.webp"
         heading="Why AI Chatbot Development Matters Today"
         text={`Customers interact with businesses across websites, messaging apps, and digital platforms. Delayed responses or inconsistent communication reduce trust and conversions. AI chatbots ensure businesses stay responsive without increasing operational costs.<br/><br/>
         AI chatbot development matters because it:<br/>
@@ -58,7 +59,7 @@ export default function AIChatbotDevelopment() {
       />
 
       <ServiceDetailsSection
-        img="/images/x9.webp"
+        img="/images/Gemini_Generated_Image_ptgnjtptgnjtptgn.png"
         heading="Our AI Chatbot Development Approach"
         text={`<strong>Built Around Real User Intent</strong><br/><br/>
         We design chatbots that understand what users are trying to achieve. Conversation flows are structured to guide users naturally toward answers, actions, or next steps without confusion.<br/><br/>
@@ -67,7 +68,6 @@ export default function AIChatbotDevelopment() {
       />
 
       <ServiceDetailsSection
-        img="/images/x9.webp"
         heading="AI Chatbot Development Services We Offer"
         text={`Our AI chatbot development services are modular and customizable.<br/><br/>
         <strong>Customer Support Chatbots</strong><br/>
@@ -107,6 +107,8 @@ export default function AIChatbotDevelopment() {
           ],
         }}
       />
+
+      <ServiceDetailsSection img="/images/rawsqe.jpeg" />
 
       <IndustriesSection
         onCtaClick={() => setShowPopup(true)}

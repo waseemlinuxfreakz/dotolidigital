@@ -34,20 +34,18 @@ export default function CrmSetupIntegration() {
 
       {/* CRM Setup & Integration */}
       <ServiceDetailsSection
-        img="/images/x7.webp"
         heading="CRM Setup & Integration Services for Organized Data & Scalable Growth"
         text={`A CRM is only effective when it is set up correctly and connected to the tools your business already uses. Poor CRM configuration leads to incomplete data, missed follow-ups, and frustrated teams. CRM setup and integration ensure your system works as a central source of truth for sales, marketing, and customer management.<br/><br/>
         At Dotoli Digital, our CRM setup and integration services help businesses implement clean, structured, and connected CRM systems that support daily operations and long-term growth.`}
       />
 
       <ServiceDetailsSection
-        img="/images/x8.webp"
         heading="What Is CRM Setup & Integration?"
         text={`CRM setup and integration involve configuring a customer relationship management system and connecting it with websites, marketing tools, and sales platforms. This ensures customer data flows automatically between systems, enabling better lead tracking, follow-ups, reporting, and personalized communication.`}
       />
 
       <ServiceDetailsSection
-        img="/images/x9.webp"
+        img="/images/imm-cmr.png"
         heading="Why CRM Setup & Integration Matter"
         text={`Many businesses invest in CRM software but fail to use it effectively due to poor setup or disconnected tools. A properly configured and integrated CRM improves efficiency, visibility, and consistency across teams.<br/><br/>
         CRM setup and integration matter because they:
@@ -62,7 +60,6 @@ export default function CrmSetupIntegration() {
       />
 
       <ServiceDetailsSection
-        img="/images/x10.webp"
         heading="Our CRM Setup & Integration Approach"
         text={`<strong>Designed Around Your Workflows</strong><br/><br/>
         We do not force businesses to adapt to software limitations. Instead, we <Link href="/services/crm-automation" >configure CRM systems</Link> around your sales process, customer journey, and internal workflows.<br/><br/>
@@ -71,7 +68,7 @@ export default function CrmSetupIntegration() {
       />
 
       <ServiceDetailsSection
-        img="/images/x11.webp"
+        img="/images/Screenshot 2026-03-30 at 9.20.28 PM.png"
         heading="CRM Setup & Integration Services We Offer"
         text={`Our CRM setup and integration services are flexible and customized.<br/><br/>
         <strong>CRM Configuration & Custom Fields</strong><br/>

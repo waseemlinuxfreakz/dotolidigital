@@ -23,19 +23,18 @@ export default function TechnicalSeo() {
         id={"team-hero"}
         title1="Technical SEO "
         title2="Services"
+        btn_text="Book a Free Strategy Call"
         onBtnClick={() => setShowPopup(true)}
       />
 
       <div id="team-hero"></div>
 
       <ServiceDetailsSection
-        img="/images/x7.webp"
         heading="What Is Technical SEO?"
         text={`Technical SEO focuses on optimizing a website’s infrastructure so search engines and AI systems can crawl, index, and understand it efficiently. It improves site speed, mobile performance, indexing, and overall technical health, ensuring content can rank and appear in AI-generated search experiences.`}
       />
 
       <ServiceDetailsSection
-        img="/images/x8.webp"
         heading="Why Technical SEO Matters Today"
         text={`Even the best content cannot rank if search engines struggle to access or understand a website. Technical SEO ensures your site meets modern performance standards required by search engines and <Link href="/services/seo-services/aeo-geo-optimization" >AI-driven search systems</Link>.<br/><br/>
         As AI search relies heavily on structured, fast, and accessible websites, technical SEO has become the foundation of visibility.<br/><br/>
@@ -43,7 +42,7 @@ export default function TechnicalSeo() {
       />
 
       <ServiceDetailsSection
-        img="/images/x9.webp"
+        img="/images/Gemini_Generated_Image_dda7bsdda7bsdda7.png"
         heading="What Our Technical SEO Services Include"
         text={`<strong>Website Crawl & Indexing Optimization</strong><br/>
         We fix crawl errors, broken links, and indexing issues that prevent pages from appearing in search results.<br/><br/>

@@ -23,26 +23,25 @@ export default function EcommerceSeo() {
         id={"team-hero"}
         title1="eCommerce SEO"
         title2="Services"
+        btn_text="Book a Free Strategy Call"
         onBtnClick={() => setShowPopup(true)}
       />
 
       <div id="team-hero"></div>
 
       <ServiceDetailsSection
-        img="/images/x7.webp"
         heading="What is eCommerce SEO?"
         text={`eCommerce SEO optimizes online stores to rank product and category pages in search results. It focuses on transactional keywords, site structure, and user experience to attract buyers who are ready to purchase, increasing both traffic and revenue.`}
       />
 
       <ServiceDetailsSection
-        img="/images/x8.webp"
         heading="Why eCommerce SEO Requires a Specialized Approach"
         text={`Online stores face unique challenges, including managing large inventories, avoiding duplicate content, and optimizing conversions. eCommerce SEO addresses these challenges while aligning with modern AI-driven search behavior.<br/><br/>
         <strong><Link href="https://www.brightedge.com/glossary/increase-organic-traffic" target="_blank" >According to a study</Link>, Organic search drives ~51% of website traffic, one of the biggest reasons SEO remains a primary growth channel for e-commerce.</strong>`}
       />
 
       <ServiceDetailsSection
-        img="/images/x9.webp"
+        img="/images/Gemini_Generated_Image_i1kss1i1kss1i1ks.png"
         heading="What Our eCommerce SEO Services Include"
         text={`<strong>Product & Category Optimization</strong><br/>
         We optimize product titles, descriptions, and category pages for search intent and conversions.<br/><br/>

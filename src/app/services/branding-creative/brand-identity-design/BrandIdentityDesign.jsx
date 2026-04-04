@@ -32,20 +32,18 @@ export default function BrandIdentityDesign() {
 
       {/* Hero Section */}
       <ServiceDetailsSection
-        img="/images/x7.webp"
         heading="Brand Identity Design Services That Build Recognition & Trust"
         text={`Your brand identity is often the first impression people have of your business. Before customers read your content or explore your services, they notice your logo, colors, typography, and overall visual consistency. A weak or inconsistent brand identity creates confusion, while a strong one builds trust instantly.<br/><br/>
         At <Link href="/">Dotoli Digital</Link>, our brand identity design services help businesses define how they look, feel, and are remembered. We design identities that are clear, consistent, and aligned with long-term business growth.`}
       />
 
       <ServiceDetailsSection
-        img="/images/x8.webp"
         heading="What Is Brand Identity Design?"
         text={`Brand identity design is the process of creating the visual elements that represent a brand, including logos, colors, typography, and design guidelines. It ensures a business presents itself consistently across all platforms, helping audiences recognize, trust, and remember the brand more easily.`}
       />
 
       <ServiceDetailsSection
-        img="/images/x9.webp"
+        img="/images/Gemini_Generated_Image_jgpu00jgpu00jgpu.png"
         heading="Why Brand Identity Design Matters Today"
         text={`People interact with brands across websites, social media, <Link href="/services/branding-creative/ad-creative-design" >ads</Link>, and AI-generated summaries. Inconsistent visuals or unclear identity reduce credibility and recognition.<br/><br/>
         Brand identity design matters because it:
@@ -60,7 +58,6 @@ export default function BrandIdentityDesign() {
       />
 
       <ServiceDetailsSection
-        img="/images/x10.webp"
         heading="Our Brand Identity Design Approach"
         text={`<strong>Strategy Before Visuals</strong><br/><br/>
         Great brand identity is not just about looking good. We start by understanding your business values, audience, positioning, and goals. This ensures the identity reflects who you are and where you are going.<br/><br/>
@@ -69,7 +66,7 @@ export default function BrandIdentityDesign() {
       />
 
       <ServiceDetailsSection
-        img="/images/x11.webp"
+        img="/images/Gemini_Generated_Image_fcfuv2fcfuv2fcfu.png"
         heading="Brand Identity Design Services We Offer"
         text={`Our brand identity design services are comprehensive and scalable.<br/><br/>
         <strong>Logo Design & Visual Marks</strong><br/>

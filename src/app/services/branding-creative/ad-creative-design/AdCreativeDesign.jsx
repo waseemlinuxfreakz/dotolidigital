@@ -33,20 +33,18 @@ export default function AdCreativeDesign() {
 
       {/* Ad Creative Design */}
       <ServiceDetailsSection
-        img="/images/x7.webp"
         heading="Ad Creative Design Services That Drive Clicks, Engagement & Conversions"
         text={`Ads do not fail because of platforms. They fail because of weak creativity. In a world where users scroll fast and algorithms reward engagement, ad creatives must communicate value instantly and clearly.<br/><br/>
         At <Link href="/">Dotoli Digital</Link>, our ad creative design services focus on creating visuals and messaging that stop the scroll, align with user intent, and drive measurable results across digital advertising platforms.`}
       />
 
       <ServiceDetailsSection
-        img="/images/x8.webp"
         heading="What Is Ad Creative Design?"
         text={`Ad creative design is the process of creating visual and messaging assets used in digital advertisements to attract attention and encourage action. It includes imagery, graphics, video concepts, and copy structure designed to align with platform requirements, audience behavior, and campaign goals.`}
       />
 
       <ServiceDetailsSection
-        img="/images/x9.webp"
+        img="/images/Gemini_Generated_Image_meont7meont7meon.png"
         heading="Why Ad Creative Design Matters More Than Ever"
         text={`Digital advertising platforms are crowded and highly competitive. Algorithms prioritize ads that generate engagement, relevance, and positive user interaction. Poor creative leads to higher costs and lower performance, regardless of targeting.<br/><br/>
         Ad creative design matters because it:
@@ -61,7 +59,6 @@ export default function AdCreativeDesign() {
       />
 
       <ServiceDetailsSection
-        img="/images/x10.webp"
         heading="Our Ad Creative Design Approach"
         text={`<strong>Built for Performance, Not Just Aesthetics</strong><br/><br/>
         Our ad creatives are designed to perform. Every visual element and message is created with a clear objective, whether that is clicks, leads, or sales.<br/><br/>
@@ -70,7 +67,7 @@ export default function AdCreativeDesign() {
       />
 
       <ServiceDetailsSection
-        img="/images/x11.webp"
+        videoUrl="https://www.youtube.com/watch?v=uvgCfvXq3vE"
         heading="Ad Creative Design Services We Offer"
         text={`Our ad creative design services <Link href="/services/digital-marketing/performance-marketing" >support performance marketing</Link> across platforms.<br/><br/>
         <strong>Static Ad Design</strong><br/>
@@ -84,7 +81,7 @@ export default function AdCreativeDesign() {
       />
 
       <ServiceDetailsSection
-        img="/images/x13.webp"
+        videoUrl="https://www.youtube.com/watch?v=YHanqxqBoz8"
         heading="Platforms We Design Ad Creatives For"
         text={`Our ad creative design services support major advertising platforms, including:
         <ul>

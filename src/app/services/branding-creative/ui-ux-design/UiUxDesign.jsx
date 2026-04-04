@@ -31,20 +31,18 @@ export default function UiUxDesign() {
 
       {/* UI/UX Design */}
       <ServiceDetailsSection
-        img="/images/x7.webp"
         heading="UI/UX Design Services That Improve Usability, Engagement & Conversions"
         text={`A website or app may look good, but if users struggle to navigate, understand, or complete actions, it fails its purpose. UI/UX design focuses on how users interact with digital products and how those experiences guide them toward meaningful outcomes.<br/><br/>
         At <Link href="/">Dotoli Digital</Link>, our UI/UX design services create intuitive, user-friendly, and conversion-focused experiences that help businesses retain users, build trust, and achieve measurable results.`}
       />
 
       <ServiceDetailsSection
-        img="/images/x8.webp"
         heading="What Is UI/UX Design?"
         text={`UI/UX design is the process of designing digital interfaces that are visually appealing, easy to use, and aligned with user behavior. UI (User Interface) focuses on visual elements, while UX (User Experience) focuses on usability, navigation, and interaction to ensure users can complete tasks efficiently.`}
       />
 
       <ServiceDetailsSection
-        img="/images/x9.webp"
+        img="/images/Gemini_Generated_Image_9bop8h9bop8h9bop.png"
         heading="Why UI/UX Design Matters Today"
         text={`Users expect clarity and simplicity. If an interface is confusing or slow, users leave. Search engines and AI-driven systems also prioritize websites and apps that deliver strong user experience signals such as engagement, usability, and satisfaction.<br/><br/>
         UI/UX design matters because it:
@@ -59,7 +57,6 @@ export default function UiUxDesign() {
       />
 
       <ServiceDetailsSection
-        img="/images/x10.webp"
         heading="Our UI/UX Design Approach"
         text={`<strong>User-Centered Design First</strong><br/><br/>
         We <Link href="/services/branding-creative" >design experiences</Link> around real user behavior, not assumptions. Understanding user needs, expectations, and pain points allows us to create interfaces that feel natural and intuitive.<br/><br/>
@@ -68,7 +65,7 @@ export default function UiUxDesign() {
       />
 
       <ServiceDetailsSection
-        img="/images/x11.webp"
+        img="/images/Gemini_Generated_Image_i2fz9wi2fz9wi2fz.png"
         heading="UI/UX Design Services We Offer"
         text={`Our UI/UX design services are adaptable across websites, applications, and digital platforms.<br/><br/>
         <strong>User Research & Behavior Analysis</strong><br/>

@@ -23,20 +23,19 @@ export default function LocalSeo() {
         id={"team-hero"}
         title1="Local SEO"
         title2="Services"
+        btn_text="Book a Free Strategy Call"
         onBtnClick={() => setShowPopup(true)}
       />
 
       <div id="team-hero"></div>
 
       <ServiceDetailsSection
-        img="/images/x7.webp"
         heading="What Is Local SEO?"
-        text={`<span style="font-style: italic;">(AEO Direct Answer – 45–55 words)</span><br/><br/>
+        text={`
         Local SEO helps businesses appear in location-based search results, map listings, and nearby searches. It optimizes business information, local content, and geographic relevance so customers can find and contact you when searching for services in their area.`}
       />
 
       <ServiceDetailsSection
-        img="/images/x8.webp"
         heading="Why Local SEO Is Essential for Businesses"
         text={`Local searches often have strong intent. People searching locally are usually ready to call, visit, or buy. Local SEO ensures your business appears at the right moment.<br/><br/>
         AI-driven search tools also rely on accurate local data to recommend nearby businesses.<br/><br/>
@@ -44,7 +43,7 @@ export default function LocalSeo() {
       />
 
       <ServiceDetailsSection
-        img="/images/x9.webp"
+        img="/images/Gemini_Generated_Image_mr3bglmr3bglmr3b.png"
         heading="What Our Local SEO Services Include"
         text={`<strong>Google Business Profile Optimization</strong><br/>
         We optimize your listing for accuracy, relevance, and stronger engagement. This includes categories, services, photos, business info, and keyword-aligned descriptions. We also improve trust signals like reviews, responses, and ongoing updates to boost visibility.<br/><br/>

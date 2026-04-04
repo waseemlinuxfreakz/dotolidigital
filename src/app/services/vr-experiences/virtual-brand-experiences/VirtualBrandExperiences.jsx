@@ -32,20 +32,18 @@ export default function VirtualBrandExperiences() {
       <div id="team-hero"></div>
 
       <ServiceDetailsSection
-        img="/images/x7.webp"
         heading="Virtual Brand Experiences to Innovate, Engage & Connect"
         text={`As the digital landscape evolves, the need for innovative and engaging experiences becomes more important than ever. A Virtual Brand Experience allows businesses to stand out by creating immersive, interactive environments that capture users' attention, tell powerful brand stories, and connect with audiences more deeply. Whether you're showcasing products, promoting services, or telling your brand's story, Virtual Brand Experiences elevate how your customers engage with your brand.<br/><br/>
         At <Link href="/">Dotoli Digital</Link>, we create Virtual Brand Experiences that give businesses a competitive edge by bringing their brands to life in a fully interactive, immersive virtual world. From immersive VR environments to virtual events, we design experiences that build lasting emotional connections and brand loyalty.`}
       />
 
       <ServiceDetailsSection
-        img="/images/x8.webp"
         heading="What Is a Virtual Brand Experience?"
         text={`A <Link href="/services/seo-services/local-seo" >Virtual Brand Experience</Link> is an immersive, interactive digital experience that allows users to engage with a brand in a virtual environment. It can involve virtual reality (VR), 3D simulations, or interactive digital experiences designed to connect audiences with a brand’s products, services, and identity in a meaningful way.`}
       />
 
       <ServiceDetailsSection
-        img="/images/x9.webp"
+        img="/images/Gemini_Generated_Image_55j4pk55j4pk55j4.png"
         heading="Why Virtual Brand Experiences Matter"
         text={`The digital world is crowded, and brands must capture attention and create lasting impressions quickly. Traditional marketing approaches, such as static ads or simple product descriptions, are no longer enough. Virtual Brand Experiences offer an innovative way to engage your audience by creating immersive environments that entertain, educate, and inspire.<br/><br/>
         Virtual Brand Experiences matter because they:<br/>

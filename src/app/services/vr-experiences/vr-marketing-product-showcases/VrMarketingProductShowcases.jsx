@@ -31,20 +31,18 @@ export default function VrMarketingProductShowcases() {
       <div id="team-hero"></div>
 
       <ServiceDetailsSection
-        img="/images/x7.webp"
         heading="VR Marketing & Product Showcases to Engage, Educate & Convert"
         text={`In a competitive digital landscape, capturing your audience's attention requires more than just words or static images. Virtual Reality (VR) marketing and product showcases offer brands an immersive, interactive way to showcase their products, tell stories, and drive engagement, ultimately leading to increased conversions and customer loyalty.<br/><br/>
         At <Link href="/">Dotoli Digital</Link>, our VR marketing and product showcase services help businesses create interactive, captivating virtual experiences that highlight their products in ways traditional media cannot, enhancing brand perception and driving real results.`}
       />
 
       <ServiceDetailsSection
-        img="/images/x8.webp"
         heading="What Is VR Marketing & Product Showcases?"
         text={`VR marketing and product showcases use virtual reality to create immersive, interactive experiences that allow users to engage with products in 3D or 360-degree environments. These experiences provide a unique opportunity for businesses to highlight features, functionality, and benefits in a visually engaging way, leading to better customer understanding and higher conversion rates.`}
       />
 
       <ServiceDetailsSection
-        img="/images/x9.webp"
+        img="/images/Gemini_Generated_Image_d87djvd87djvd87d.png"
         heading="Why VR Marketing & Product Showcases Matter Today"
         text={`With so many options available to consumers, the buying decision process can be overwhelming. Traditional methods of showcasing products are static and limited in their ability to engage users. VR marketing and product showcases break those barriers by allowing users to interact with products and services in a fully immersive virtual environment, leading to deeper engagement and higher conversion rates.<br/><br/>
         VR marketing and product showcases matter because they:<br/>
@@ -59,7 +57,6 @@ export default function VrMarketingProductShowcases() {
       />
 
       <ServiceDetailsSection
-        img="/images/x9.webp"
         heading="Our VR Marketing & Product Showcase Approach"
         text={`<strong>Designed for Interactive Engagement</strong><br/><br/>
         We do not simply display products in VR; we <Link href="/services/vr-experiences" >create experiences</Link>. Our approach ensures that users can explore and interact with your products or services from every angle, helping them better understand the value and functionality before making a purchase.<br/><br/>
@@ -68,7 +65,7 @@ export default function VrMarketingProductShowcases() {
       />
 
       <ServiceDetailsSection
-        img="/images/x9.webp"
+        videoUrl="https://www.youtube.com/watch?v=JFSgnmjf9TE"
         heading="VR Marketing & Product Showcase Services We Offer"
         text={`Our VR marketing and product showcase services are designed to create engaging, high-impact experiences that support brand goals.<br/><br/>
         <strong>3D Product Demonstrations</strong><br/>

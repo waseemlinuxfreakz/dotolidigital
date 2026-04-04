@@ -12,6 +12,7 @@ import BenefitsPerformance from "../../../components/BenefitsPerformance";
 import IndustriesSection from "../../../components/IndustriesSection";
 import ProcessTimeline from "../../../components/ProcessTimeline";
 import Link from "next/link";
+import { SingleImageSlider2 } from "../../../components/SingleImageSlider2";
 // SalesLeadGenerationAIAgents
 
 export default function SalesLeadGenerationAIAgents() {
@@ -30,22 +31,19 @@ export default function SalesLeadGenerationAIAgents() {
       />
 
       <div id="team-hero"></div>
-
+      <SingleImageSlider2 />
       <ServiceDetailsSection
-        img="/images/x7.webp"
         heading="Sales & Lead Generation AI Agents to Qualify Leads & Close Faster"
         text={`Generating leads is only valuable when those leads are qualified, followed up on time, and guided toward conversion. Manual lead handling slows response times, creates inconsistencies, and limits scale. Sales and lead generation AI agents solve this by automating qualification, routing, and follow-ups in real time.<br/><br/>
         At <Link href="/">Dotoli Digital</Link>, our sales and lead generation AI agents help businesses capture intent, qualify prospects, and support sales teams with intelligent automation that works 24/7.`}
       />
 
       <ServiceDetailsSection
-        img="/images/x8.webp"
         heading="What Are Sales & Lead Generation AI Agents?"
         text={`Sales and lead-generation <Link href="/services/ai-agents-automation" >AI agents are intelligent systems</Link> that automate the capture, qualification, and routing of leads. They interact with users through chat or messaging, ask qualifying questions, collect data, and trigger actions such as CRM updates, follow-ups, or meeting bookings.`}
       />
 
       <ServiceDetailsSection
-        img="/images/x9.webp"
         heading="Why Sales & Lead Generation AI Agents Matter Today"
         text={`Speed matters in sales. Prospects who receive fast, relevant responses are far more likely to convert. Manual processes often cause delays, missed opportunities, and inconsistent follow-ups.<br/><br/>
         Sales and lead generation AI agents matter because they:<br/>
@@ -60,7 +58,7 @@ export default function SalesLeadGenerationAIAgents() {
       />
 
       <ServiceDetailsSection
-        img="/images/x9.webp"
+        img="/images/Gemini_Generated_Image_xgrvj5xgrvj5xgrv.png"
         heading="Our Sales & Lead Generation AI Agents Approach"
         text={`<strong>Built Around Buyer Intent</strong><br/><br/>
         We design AI agents to understand what prospects are looking for. Conversations are structured to identify intent, urgency, and fit before passing leads to sales teams.<br/><br/>
@@ -69,7 +67,6 @@ export default function SalesLeadGenerationAIAgents() {
       />
 
       <ServiceDetailsSection
-        img="/images/x9.webp"
         heading="Sales & Lead Generation AI Agent Services We Offer"
         text={`Our AI agent solutions are flexible and customizable.<br/><br/>
         <strong>AI Lead Qualification Agents</strong><br/>
@@ -81,6 +78,8 @@ export default function SalesLeadGenerationAIAgents() {
         <strong>Multi-Channel Lead Capture Agents</strong><br/>
         We deploy AI agents across websites, landing pages, and messaging platforms to capture leads wherever prospects engage.`}
       />
+
+      <ServiceDetailsSection img="/images/Screenshot 2025-06-19 at 8.48.40 PM.png" />
 
       <ProcessTimeline
         data={{

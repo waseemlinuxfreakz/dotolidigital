@@ -30,21 +30,19 @@ export default function ConversionRateOptimization() {
       <div id="team-hero"></div>
 
       <ServiceDetailsSection
-        img="/images/x7.webp"
         heading="Conversion Rate Optimization Services to Turn Traffic into Revenue"
         text={`Driving traffic is only half the job. The real growth happens when visitors take action. Conversion Rate Optimization focuses on improving how users interact with your website so more of them become leads, customers, or subscribers.<br/><br/>
         At <Link href="/">Dotoli Digital</Link>, our CRO services help businesses increase results from existing traffic by optimizing user experience, messaging, and conversion paths using data, testing, and behavioral insights.`}
       />
 
       <ServiceDetailsSection
-        img="/images/x8.webp"
+        img="/images/Gemini_Generated_Image_xof1sexof1sexof1.png"
         heading="What Is Conversion Rate Optimization (CRO)?"
         text={`<strong>(AEO Direct Answer – 45–55 words)</strong><br/>
         Conversion Rate Optimization is the process of improving a website or landing page to increase the percentage of visitors who complete a desired action, such as filling out a form or making a purchase. CRO uses data analysis, user behavior insights, and testing to improve conversions without increasing traffic.`}
       />
 
       <ServiceDetailsSection
-        img="/images/x9.webp"
         heading="Why Conversion Rate Optimization Matters Today"
         text={`Traffic costs are rising across paid and organic channels. Sending more users to an underperforming website increases spend but not results. CRO ensures that the traffic you already have works harder.<br/><br/>
         Modern users expect fast, clear, and frictionless experiences. AI-driven platforms also reward engagement and usability, making CRO essential for both conversions and visibility.<br/><br/>
@@ -59,7 +57,7 @@ export default function ConversionRateOptimization() {
       />
 
       <ServiceDetailsSection
-        img="/images/x10.webp"
+        img="/images/Gemini_Generated_Image_b4lsqib4lsqib4ls.png"
         heading="Our Conversion Rate Optimization Approach"
         text={`<strong>Data Before Design</strong><br/><br/>
         We do not rely on opinions or assumptions. Every CRO decision is backed by real user data, analytics, and behavior tracking. This ensures changes are purposeful and measurable.<br/><br/>
@@ -68,7 +66,6 @@ export default function ConversionRateOptimization() {
       />
 
       <ServiceDetailsSection
-        img="/images/x11.webp"
         heading="Conversion Rate Optimization Services We Offer"
         text={`Our CRO services focus on identifying conversion barriers and systematically improving performance.<br/><br/>
 
