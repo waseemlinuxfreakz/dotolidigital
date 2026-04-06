@@ -22,28 +22,33 @@ export default function Page() {
         onBtnClick={() => setShowPopup(true)}
       />
       <div id="team-hero"></div>
+
+      {/*     img25="/images/project-last.webp"*/}
       <PortfolioImage
-        img1="/images/w2.webp"
-        img2="/images/w1.webp"
-        img3="/images/w3.webp"
-        img4="/images/w4.webp"
-        img5="/images/w5.webp"
-        img6="/images/w6.webp"
-        img7="/images/w7.webp"
-        img8="/images/w8.webp"
-        img9="/images/w9.webp"
-        img10="/images/w10.webp"
-        img11="/images/w11.webp"
-        img12="/images/w12.webp"
-        img13="/images/project-1.webp"
-        img14="/images/project-2.webp"
-        img15="/images/project-3.webp"
-        img16="/images/project-4.webp"
-        img17="/images/project-5.webp"
-        img18="/images/project-6.webp"
-        img19="/images/project-7.webp"
-        img20="/images/project-last.webp"
-        
+        img1="/images/dd-web-1.jpg"
+        img2="/images/dd-web-2.jpg"
+        img3="/images/dd-web-3.jpg"
+        img4="/images/dd-web-4.jpg"
+        img5="/images/dd-web-5.jpg"
+        img6="/images/dd-web-7.jpg"
+        img7="/images/w1.webp"
+        img8="/images/w3.webp"
+        img9="/images/w4.webp"
+        img10="/images/w5.webp"
+        img11="/images/w6.webp"
+        img12="/images/w7.webp"
+        img13="/images/w8.webp"
+        img14="/images/w9.webp"
+        img15="/images/w10.webp"
+        img16="/images/w11.webp"
+        img17="/images/w12.webp"
+        img18="/images/project-1.webp"
+        img19="/images/project-2.webp"
+        img20="/images/project-3.webp"
+        img21="/images/project-4.webp"
+        img22="/images/project-5.webp"
+        img23="/images/project-6.webp"
+        img24="/images/project-7.webp"
       />
       <Footer />
     </>
