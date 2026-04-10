@@ -5,7 +5,7 @@ export const metadata = {
   description:
     "Turn local searches into customers with DOTOLI DIGITAL’s expert Local SEO. Optimized listings, reviews, and keyword targeting for real growth.",
   alternates: {
-    canonical: "",
+    canonical: "https://www.dotolidigital.com/services/seo-services/local-seo",
   },
 };
 export default function Page() {

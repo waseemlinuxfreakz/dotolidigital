@@ -5,7 +5,7 @@ export const metadata = {
   description:
     "Grow your online store with DOTOLI DIGITAL’s eCommerce SEO. Strategic optimization drives more traffic, improves rankings, and boosts revenue.",
   alternates: {
-    canonical: "",
+    canonical: "https://www.dotolidigital.com/services/seo-services/ecommerce-seo",
   },
 };
 export default function Page() {

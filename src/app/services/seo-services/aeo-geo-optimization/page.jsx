@@ -5,7 +5,7 @@ export const metadata = {
   description:
     "DOTOLI DIGITAL helps you rank in AI responses and local searches. AEO & GEO strategies that increase trust, traffic, and conversions.",
   alternates: {
-    canonical: "",
+    canonical: "https://www.dotolidigital.com/services/seo-services/aeo-geo-optimization",
   },
 };
 export default function Page() {

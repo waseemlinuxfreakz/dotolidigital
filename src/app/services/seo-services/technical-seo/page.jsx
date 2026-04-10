@@ -5,7 +5,7 @@ export const metadata = {
   description:
     "Power your website with DOTOLI DIGITAL’s technical SEO services. Deep audits, performance fixes, and scalable search optimization.",
   alternates: {
-    canonical: "",
+    canonical: "https://www.dotolidigital.com/services/seo-services/technical-seo",
   },
 };
 export default function Page() {
