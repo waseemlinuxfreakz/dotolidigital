@@ -5,7 +5,7 @@ export const metadata = {
   description:
     "Explore our digital marketing services including SEO, AI automation, and lead generation solutions to grow your business and increase conversions.",
   alternates: {
-    canonical: "",
+    canonical: "https://www.dotolidigital.com/services/ai-agents-automation",
   },
 };
 export default function Page() {
