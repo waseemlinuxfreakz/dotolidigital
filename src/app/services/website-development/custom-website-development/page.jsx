@@ -4,11 +4,9 @@ export const metadata = {
   title: "High-Performance Custom Websites | DOTOLI DIGITAL",
   description:
     "Scale your business with custom websites from DOTOLI DIGITAL. Performance-focused development that improves SEO visibility, UX, and conversion rates.",
-    alternates: {
-    canonical: "https://www.dotolidigital.com/services/website-development/custom-website-development",
-  },
+    
   alternates: {
-    canonical: "",
+    canonical: "https://www.dotolidigital.com/services/website-development/custom-website-development",
   },
 };
 export default function Page() {
