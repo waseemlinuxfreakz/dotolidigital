@@ -6,6 +6,9 @@ export const metadata = {
   title: "ROI-Focused Performance Marketing | DOTOLI DIGITAL",
   description:
     "Turn ad spend into predictable growth with DOTOLI DIGITAL. Our performance marketing experts create data-backed campaigns designed to increase revenue and efficiency.",
+    alternates: {
+    canonical: "https://www.dotolidigital.com/services/digital-marketing/performance-marketing",
+  },
 };
 
 export default function Page() {
