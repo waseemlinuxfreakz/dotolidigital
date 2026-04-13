@@ -1,21 +1,13 @@
-"use client";
-import Footer from "../components/Footer";
-import { HeroAllSection } from "../components/HeroAllSection";
-import { LogoTracker } from "../components/LogoTracker";
-import { WorkSection1 } from "../components/WorkSection1";
-export default function page() {
-  return (
-    <>
-      <HeroAllSection
-        id={"sm-bg-text-sec"}
-        title1={"work that builds trust"}
-        title2={"and drives results"}
-        description={`Explore how we help service businesses stand out,<br/> rank higher, and convert better — through SEO, branding,<br/> and aerial content that moves people.`}
-      />
-      <WorkSection1 />
+import Work from "./Work";
 
-      <LogoTracker />
-      <Footer />
-    </>
-  );
+export const metadata = {
+  title: "Enterprise Technical SEO | DOTOLI DIGITAL",
+  description:
+    "Power your website with DOTOLI DIGITAL’s technical SEO services. Deep audits, performance fixes, and scalable search optimization.",
+  alternates: {
+    canonical: "https://www.dotolidigital.com/services/seo-services/technical-seo",
+  },
+};
+export default function Page() {
+  return <Work />;
 }
