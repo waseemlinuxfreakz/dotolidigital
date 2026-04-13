@@ -9,7 +9,7 @@ import { HeroAllSection } from "../components/HeroAllSection";
 import PopupForm from "../components/PopupForm";
 import { TextCounterSection } from "../components/TextCounterSection";
 
-export default function ContactPage() {
+export default function Contactus() {
   const [status, setStatus] = useState("");
   const [showPopup, setShowPopup] = useState(false);
 
