@@ -5,7 +5,7 @@ export const metadata = {
   description:
     "DOTOLI DIGITAL designs virtual brand environments that engage users, strengthen storytelling, and create unforgettable digital impressions.",
     alternates: {
-    canonical: "https://www.dotolidigital.com/services/vr-experiences/virtual-brand-experiences",
+    canonical: "https://www.dotolidigital.com/services/seo-services",
   },
 };
 export default function Page() {
