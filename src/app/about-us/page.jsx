@@ -1,4 +1,4 @@
-import AboutUs from "./AboutUs";
+import AboutUs from "./about-us";
 
 export const metadata = {
   title: "24/7 AI Chatbot Automation | DOTOLI DIGITAL",
