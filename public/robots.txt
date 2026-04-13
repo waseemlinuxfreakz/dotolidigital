@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://dotolidigital.com/
+Host: https://www.dotolidigital.com
 
 # Sitemaps
-Sitemap: https://dotolidigital.com/sitemap.xml
+Sitemap: https://www.dotolidigital.com/sitemap.xml
