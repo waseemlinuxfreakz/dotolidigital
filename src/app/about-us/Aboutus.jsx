@@ -10,7 +10,7 @@ import PopupForm from "../components/PopupForm";
 import { VideoSection } from "../components/VideoSection";
 import { WhoWeAre } from "../components/WhoWeAre";
 
-export default function Aboutus() {
+export default function AboutUs() {
   const [showPopup, setShowPopup] = useState(false);
   return (
     <>
