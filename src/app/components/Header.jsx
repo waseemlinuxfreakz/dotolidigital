@@ -366,7 +366,7 @@ function Header() {
                       URL: http://dotolidigital.com/services/vr-experiences/virtual-brand/
                       URL: http://dotolidigital.com/services/vr-experiences/vr-marketing-product-showcases/
                       */}
-                      <li className="dropdown-item-with-submenu">
+                      {/* <li className="dropdown-item-with-submenu">
                         <div className="submenu-title-row sm-submenu">
                           <Link
                             href="/services/vr-experiences"
@@ -417,7 +417,7 @@ function Header() {
                             </li>
                           </ul>
                         )}
-                      </li>
+                      </li> */}
 
                       {/* Branding & Creative with Submenu */}
                       <li className="dropdown-item-with-submenu">
