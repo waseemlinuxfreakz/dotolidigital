@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://dotolidigital.com/
+
+# Sitemaps
+Sitemap: https://dotolidigital.com/sitemap.xml
