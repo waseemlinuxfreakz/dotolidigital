@@ -7,7 +7,7 @@ import PopupForm from "../../components/PopupForm";
 import { ServiceDetailsSection } from "../../components/ServiceDetailsSection";
 import { WhoWeAre } from "../../components/WhoWeAre";
 
-export default function Page() {
+export default function Seoservices() {
   const [showPopup, setShowPopup] = useState(false);
   return (
     <>
