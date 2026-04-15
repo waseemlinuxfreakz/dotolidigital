@@ -7,5 +7,6 @@ module.exports = {
     "/services/vr-experiences",
     "/services/vr-experiences/virtual-brand-experiences",
     "/services/vr-experiences/vr-marketing-product-showcases",
+    "/work",
   ],
 };
