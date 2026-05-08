@@ -189,6 +189,7 @@ section {
 :root {
   /* color variables */
   --background: #eef3f3;
+  --bg1: hsla(222, 6%, 67%, 0.2);
   --foreground: #3f4144;
   --primary: #3f4144;
 
@@ -202,6 +203,7 @@ section {
 /* Dark theme overrides */
 :root.dark {
   --background: #121315;
+  --bg1: #262626;
   --foreground: #c5fcfc;
   --primary: #c5fcfc;
 
