@@ -1,14 +1,33 @@
-// File: /app/blog/[slug]/page.js
-
-import blogPosts from "@/data/blogPosts.json";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import { HeroAllSection } from "../../components/HeroAllSection";
 import Footer from "../../components/Footer";
 
-export default function SingleBlogPage({ params }) {
-  const { slug } = params;
-  const post = blogPosts.find((p) => p.slug === slug);
+async function getBlog(slug) {
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+
+  const res = await fetch(`${baseUrl}/api/blog?slug=${slug}`, {
+    cache: "no-store",
+  });
+
+  if (!res.ok) return null;
+
+  const data = await res.json();
+  return data.blog;
+}
+
+function cleanHtml(html = "") {
+  return html
+    .replace(/&nbsp;/g, " ")
+    .replace(/<p><br><\/p>/g, "")
+    .replace(/undefined/g, "");
+}
+
+export default async function SingleBlogPage({ params }) {
+  const { slug } = await params;
+
+  const post = await getBlog(slug);
+
   if (!post) return notFound();
 
   return (
@@ -19,8 +38,20 @@ export default function SingleBlogPage({ params }) {
 
       <main className="blog-single">
         <div className="container">
-          <Image src={post.image} alt={post.title} width={800} height={500} />
-          <article dangerouslySetInnerHTML={{ __html: post.content }} />
+          {post.featuredImage && (
+            <Image
+              src={post.featuredImage}
+              alt={post.title}
+              width={800}
+              height={500}
+            />
+          )}
+
+          <article
+            dangerouslySetInnerHTML={{
+              __html: cleanHtml(post.content),
+            }}
+          />
         </div>
       </main>
 
