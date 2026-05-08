@@ -1,4 +1,4 @@
-// /src/app/api/auth/seed/route.js
+// /src/app/api/auth/seed/route.js--
 import { connectToDB } from "../../../../lib/db";
 import Admin from "@/models/Admin";
 import bcrypt from "bcryptjs";
