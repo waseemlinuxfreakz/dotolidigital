@@ -20,6 +20,7 @@ export default function EditBlogPage() {
   const [content, setContent] = useState("");
   const [metaTitle, setMetaTitle] = useState("");
   const [metaDescription, setMetaDescription] = useState("");
+  const [targetKeywords, setTargetKeywords] = useState("");
   const [featuredImage, setFeaturedImage] = useState("");
   const [submitting, setSubmitting] = useState(false);
 
@@ -43,6 +44,11 @@ export default function EditBlogPage() {
         setContent(blog.content || "");
         setMetaTitle(blog.metaTitle || "");
         setMetaDescription(blog.metaDescription || "");
+        setTargetKeywords(
+          Array.isArray(blog.targetKeywords)
+            ? blog.targetKeywords.join(", ")
+            : "",
+        );
         setFeaturedImage(blog.featuredImage || "");
       } catch (err) {
         console.error("Failed to fetch blog:", err);
@@ -98,6 +104,7 @@ export default function EditBlogPage() {
           content,
           metaTitle,
           metaDescription,
+          targetKeywords,
           featuredImage,
         }),
       });
@@ -149,6 +156,14 @@ export default function EditBlogPage() {
           placeholder="Meta Description"
           value={metaDescription}
           onChange={(e) => setMetaDescription(e.target.value)}
+          className="input"
+        />
+
+        <input
+          type="text"
+          placeholder="Target Keywords (comma separated)"
+          value={targetKeywords}
+          onChange={(e) => setTargetKeywords(e.target.value)}
           className="input"
         />
 

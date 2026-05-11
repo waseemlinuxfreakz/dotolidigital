@@ -19,6 +19,7 @@ export default function CreateBlogPage() {
   const [content, setContent] = useState("");
   const [metaTitle, setMetaTitle] = useState("");
   const [metaDescription, setMetaDescription] = useState("");
+  const [targetKeywords, setTargetKeywords] = useState("");
   const [featuredImage, setFeaturedImage] = useState("");
   const [submitting, setSubmitting] = useState(false);
 
@@ -68,6 +69,7 @@ export default function CreateBlogPage() {
       content,
       metaTitle,
       metaDescription,
+      targetKeywords,
       featuredImage,
     };
 
@@ -127,6 +129,14 @@ export default function CreateBlogPage() {
           placeholder="Meta Description"
           value={metaDescription}
           onChange={(e) => setMetaDescription(e.target.value)}
+          className="input"
+        />
+
+        <input
+          type="text"
+          placeholder="Target Keywords (comma separated)"
+          value={targetKeywords}
+          onChange={(e) => setTargetKeywords(e.target.value)}
           className="input"
         />
 

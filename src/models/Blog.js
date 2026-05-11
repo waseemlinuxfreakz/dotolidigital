@@ -1,3 +1,4 @@
+// src/models/Blog.js
 import mongoose from "mongoose";
 
 const BlogSchema = new mongoose.Schema(
@@ -13,6 +14,7 @@ const BlogSchema = new mongoose.Schema(
 
     metaTitle: { type: String, default: "" },
     metaDescription: { type: String, default: "" },
+    targetKeywords: { type: [String], default: [] },
 
     featuredImage: { type: String, default: "" },
   },

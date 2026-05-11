@@ -1,3 +1,4 @@
+// src/app/api/blog/route.js
 import Blog from "@/models/Blog";
 import { connectToDB } from "@/lib/db";
 
@@ -8,6 +9,21 @@ function generateSlug(title = "") {
     .replace(/\s+/g, "-")
     .replace(/-+/g, "-")
     .slice(0, 100);
+}
+
+function normalizeKeywords(value) {
+  if (Array.isArray(value)) {
+    return value.map((item) => String(item).trim()).filter(Boolean);
+  }
+
+  if (typeof value === "string") {
+    return value
+      .split(",")
+      .map((item) => item.trim())
+      .filter(Boolean);
+  }
+
+  return [];
 }
 
 export async function GET(req) {
@@ -59,6 +75,7 @@ export async function POST(req) {
       content: body.content,
       metaTitle: body.metaTitle || "",
       metaDescription: body.metaDescription || "",
+      targetKeywords: normalizeKeywords(body.targetKeywords),
       featuredImage: body.featuredImage || "",
     });
 
@@ -85,6 +102,7 @@ export async function PUT(req) {
       content: body.content,
       metaTitle: body.metaTitle || "",
       metaDescription: body.metaDescription || "",
+      targetKeywords: normalizeKeywords(body.targetKeywords),
       featuredImage: body.featuredImage || "",
     };
 

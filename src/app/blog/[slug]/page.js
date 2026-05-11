@@ -23,7 +23,6 @@ function cleanHtml(html = "") {
     .replace(/undefined/g, "");
 }
 
-// ✅ Dynamic SEO Metadata
 export async function generateMetadata({ params }) {
   const { slug } = await params;
 
@@ -39,6 +38,7 @@ export async function generateMetadata({ params }) {
   return {
     title: post.metaTitle || post.title,
     description: post.metaDescription || post.shortDesc,
+    keywords: Array.isArray(post.targetKeywords) ? post.targetKeywords : [],
 
     alternates: {
       canonical: `/blog/${post.slug}`,
