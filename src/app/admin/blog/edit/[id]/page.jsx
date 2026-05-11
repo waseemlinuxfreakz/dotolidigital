@@ -18,6 +18,8 @@ export default function EditBlogPage() {
   const [slug, setSlug] = useState("");
   const [shortDesc, setShortDesc] = useState("");
   const [content, setContent] = useState("");
+  const [metaTitle, setMetaTitle] = useState("");
+  const [metaDescription, setMetaDescription] = useState("");
   const [featuredImage, setFeaturedImage] = useState("");
   const [submitting, setSubmitting] = useState(false);
 
@@ -39,6 +41,8 @@ export default function EditBlogPage() {
         setSlug(blog.slug || "");
         setShortDesc(blog.shortDesc || "");
         setContent(blog.content || "");
+        setMetaTitle(blog.metaTitle || "");
+        setMetaDescription(blog.metaDescription || "");
         setFeaturedImage(blog.featuredImage || "");
       } catch (err) {
         console.error("Failed to fetch blog:", err);
@@ -92,6 +96,8 @@ export default function EditBlogPage() {
           slug: slug?.trim(),
           shortDesc,
           content,
+          metaTitle,
+          metaDescription,
           featuredImage,
         }),
       });
@@ -128,6 +134,21 @@ export default function EditBlogPage() {
           placeholder="Slug (optional)"
           value={slug}
           onChange={(e) => setSlug(e.target.value)}
+          className="input"
+        />
+
+        <input
+          type="text"
+          placeholder="Meta Title"
+          value={metaTitle}
+          onChange={(e) => setMetaTitle(e.target.value)}
+          className="input"
+        />
+
+        <textarea
+          placeholder="Meta Description"
+          value={metaDescription}
+          onChange={(e) => setMetaDescription(e.target.value)}
           className="input"
         />
 

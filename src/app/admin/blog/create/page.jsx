@@ -17,6 +17,8 @@ export default function CreateBlogPage() {
   const [slug, setSlug] = useState("");
   const [shortDesc, setShortDesc] = useState("");
   const [content, setContent] = useState("");
+  const [metaTitle, setMetaTitle] = useState("");
+  const [metaDescription, setMetaDescription] = useState("");
   const [featuredImage, setFeaturedImage] = useState("");
   const [submitting, setSubmitting] = useState(false);
 
@@ -64,6 +66,8 @@ export default function CreateBlogPage() {
       slug: slug?.trim(),
       shortDesc,
       content,
+      metaTitle,
+      metaDescription,
       featuredImage,
     };
 
@@ -108,6 +112,21 @@ export default function CreateBlogPage() {
           placeholder="Slug (optional)"
           value={slug}
           onChange={(e) => setSlug(e.target.value)}
+          className="input"
+        />
+
+        <input
+          type="text"
+          placeholder="Meta Title"
+          value={metaTitle}
+          onChange={(e) => setMetaTitle(e.target.value)}
+          className="input"
+        />
+
+        <textarea
+          placeholder="Meta Description"
+          value={metaDescription}
+          onChange={(e) => setMetaDescription(e.target.value)}
           className="input"
         />
 

@@ -1,3 +1,4 @@
+// ✅ src/app/blog/page.jsx
 "use client";
 
 import { useEffect, useState } from "react";

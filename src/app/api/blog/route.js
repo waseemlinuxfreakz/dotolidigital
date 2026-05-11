@@ -57,6 +57,8 @@ export async function POST(req) {
       slug: body.slug?.trim() || generateSlug(body.title),
       shortDesc: body.shortDesc,
       content: body.content,
+      metaTitle: body.metaTitle || "",
+      metaDescription: body.metaDescription || "",
       featuredImage: body.featuredImage || "",
     });
 
@@ -81,6 +83,8 @@ export async function PUT(req) {
       slug: body.slug?.trim() || generateSlug(body.title),
       shortDesc: body.shortDesc,
       content: body.content,
+      metaTitle: body.metaTitle || "",
+      metaDescription: body.metaDescription || "",
       featuredImage: body.featuredImage || "",
     };
 

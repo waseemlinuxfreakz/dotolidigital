@@ -23,6 +23,37 @@ function cleanHtml(html = "") {
     .replace(/undefined/g, "");
 }
 
+// ✅ Dynamic SEO Metadata
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+
+  const post = await getBlog(slug);
+
+  if (!post) {
+    return {
+      title: "Blog Not Found",
+      description: "This blog could not be found.",
+    };
+  }
+
+  return {
+    title: post.metaTitle || post.title,
+    description: post.metaDescription || post.shortDesc,
+
+    alternates: {
+      canonical: `/blog/${post.slug}`,
+    },
+
+    openGraph: {
+      title: post.metaTitle || post.title,
+      description: post.metaDescription || post.shortDesc,
+      images: post.featuredImage ? [post.featuredImage] : [],
+      url: `/blog/${post.slug}`,
+      type: "article",
+    },
+  };
+}
+
 export default async function SingleBlogPage({ params }) {
   const { slug } = await params;
 

@@ -11,6 +11,9 @@ const BlogSchema = new mongoose.Schema(
     shortDesc: { type: String, required: true },
     content: { type: String, required: true },
 
+    metaTitle: { type: String, default: "" },
+    metaDescription: { type: String, default: "" },
+
     featuredImage: { type: String, default: "" },
   },
   { timestamps: true },

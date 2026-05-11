@@ -6,7 +6,10 @@
 }
 @media (min-width: 1920px) {
 }
-
+.blog-card img {
+  height: 280px;
+  object-fit: cover;
+}
 .dropdown-link:hover {
   transform: scale(1.05);
 }
