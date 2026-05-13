@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useMemo, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import dynamic from "next/dynamic";
@@ -12,6 +12,7 @@ const ReactQuill = dynamic(() => import("react-quill-new"), {
 
 export default function CreateBlogPage() {
   const router = useRouter();
+  const quillRef = useRef(null); // <-- Quill Editor Ref
 
   const [title, setTitle] = useState("");
   const [slug, setSlug] = useState("");
@@ -29,10 +30,10 @@ export default function CreateBlogPage() {
     year: "2-digit",
   });
 
+  // Featured Image Upload (Existing)
   const uploadImage = async (e) => {
     const file = e.target.files?.[0];
     if (!file) return;
-
     const formData = new FormData();
     formData.append("file", file);
 
@@ -40,7 +41,6 @@ export default function CreateBlogPage() {
       method: "POST",
       body: formData,
     });
-
     const data = await res.json();
 
     if (data.success) {
@@ -49,6 +49,67 @@ export default function CreateBlogPage() {
       alert(data.error || data.message || "Image upload failed");
     }
   };
+
+  // --- Custom Image Handler for Quill Editor ---
+  const imageHandler = useCallback(() => {
+    const input = document.createElement("input");
+    input.setAttribute("type", "file");
+    input.setAttribute("accept", "image/*");
+    input.click();
+
+    input.onchange = async () => {
+      const file = input.files[0];
+      if (!file) return;
+
+      const formData = new FormData();
+      formData.append("file", file);
+
+      try {
+        const res = await fetch("/api/upload", {
+          method: "POST",
+          body: formData,
+        });
+
+        const data = await res.json();
+
+        if (data.success) {
+          // Get editor and current cursor position
+          const quill = quillRef.current.getEditor();
+          const range = quill.getSelection(true);
+
+          // Insert uploaded image URL into the editor
+          quill.insertEmbed(range.index, "image", data.url);
+
+          // Move cursor to next position
+          quill.setSelection(range.index + 1);
+        } else {
+          alert("Image upload failed");
+        }
+      } catch (err) {
+        console.error("Upload error:", err);
+        alert("Image upload failed");
+      }
+    };
+  }, []);
+
+  // --- Quill Modules Configuration ---
+  const modules = useMemo(
+    () => ({
+      toolbar: {
+        container: [
+          [{ header: [1, 2, 3, 4, 5, 6, false] }],
+          ["bold", "italic", "underline", "link"],
+          [{ list: "ordered" }, { list: "bullet" }],
+          ["clean"], // Remove formatting
+          ["image"], // <-- Added Image Button
+        ],
+        handlers: {
+          image: imageHandler, // Map custom handler to the image button
+        },
+      },
+    }),
+    [imageHandler],
+  );
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -101,6 +162,7 @@ export default function CreateBlogPage() {
       <h1>Create Blog</h1>
 
       <form onSubmit={handleSubmit}>
+        {/* Your existing inputs... */}
         <input
           type="text"
           placeholder="Title"
@@ -108,7 +170,6 @@ export default function CreateBlogPage() {
           onChange={(e) => setTitle(e.target.value)}
           className="input"
         />
-
         <input
           type="text"
           placeholder="Slug (optional)"
@@ -116,7 +177,6 @@ export default function CreateBlogPage() {
           onChange={(e) => setSlug(e.target.value)}
           className="input"
         />
-
         <input
           type="text"
           placeholder="Meta Title"
@@ -124,22 +184,19 @@ export default function CreateBlogPage() {
           onChange={(e) => setMetaTitle(e.target.value)}
           className="input"
         />
-
         <textarea
           placeholder="Meta Description"
           value={metaDescription}
           onChange={(e) => setMetaDescription(e.target.value)}
           className="input"
         />
-
         <input
           type="text"
-          placeholder="Target Keywords (comma separated)"
+          placeholder="Target Keywords"
           value={targetKeywords}
           onChange={(e) => setTargetKeywords(e.target.value)}
           className="input"
         />
-
         <textarea
           placeholder="Short Description"
           value={shortDesc}
@@ -150,18 +207,22 @@ export default function CreateBlogPage() {
         <div className="ad-label-group">
           <label>Upload Featured Image:</label>
           <input type="file" onChange={uploadImage} />
-
           {featuredImage && (
             <Image src={featuredImage} width={80} height={80} alt="featured" />
           )}
         </div>
 
-        <ReactQuill
-          theme="snow"
-          value={content}
-          onChange={setContent}
-          placeholder="Blog Content"
-        />
+        <div style={{ margin: "20px 0" }}>
+          {/* Passed ref and modules here */}
+          <ReactQuill
+            ref={quillRef}
+            theme="snow"
+            value={content}
+            onChange={setContent}
+            placeholder="Blog Content"
+            modules={modules}
+          />
+        </div>
 
         <button type="submit" className="btn" disabled={submitting}>
           {submitting ? "Submitting..." : "Submit Blog"}

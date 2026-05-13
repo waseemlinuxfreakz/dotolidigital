@@ -1,3 +1,4 @@
+// src/app/blog/[slug]/page.js
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import { HeroAllSection } from "../../components/HeroAllSection";

@@ -5,6 +5,12 @@
 body .header-wrapper .header {
   display: none;
 }
+main.main-content .quill .ql-container img {
+  width: 100%;
+  height: 250px;
+  display: block;
+  object-fit: cover;
+}
 .admin-layout {
   display: flex;
   min-height: 100vh;
