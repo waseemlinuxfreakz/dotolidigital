@@ -8,5 +8,9 @@ module.exports = {
     "/services/vr-experiences/virtual-brand-experiences",
     "/services/vr-experiences/vr-marketing-product-showcases",
     "/work",
+    "/admin/blog/create",
+    "/admin/blog/create",
+    "/admin/blog",
+    "/admin/dashboard",
   ],
 };
