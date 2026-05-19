@@ -252,7 +252,7 @@ export default function EditBlogPage() {
           )}
         </div>
 
-        <div style={{ margin: "20px 0" }}>
+        <div className="quill-sticky-container" style={{ margin: "20px 0" }}>
           {/* Passed ref and modules here */}
           <ReactQuill
             ref={quillRef}

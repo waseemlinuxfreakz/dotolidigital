@@ -38,12 +38,21 @@ main.blog-single article img {
 }
 main.blog-single .container img {
   width: 100%;
-  height: 400px;
+  height: auto;
   object-fit: cover;
+}
+
+.blog-single-header h1.title-1 {
+  font-size: 42px;
+  line-height: 54px;
 }
 
 /* all mobile */
 @media (max-width: 767px) {
+  body .blog-single-header h1.title-1 {
+    font-size: 26px;
+    line-height: 36px;
+  }
   body main.blog-single article img,
   body main.blog-single .container img {
     height: 200px;
@@ -3603,4 +3612,79 @@ Title block above form
   body .pm-cta-btn {
     font-size: 14px;
   }
+}
+
+/* =========================================
+   Blog Content & Quill Editor Table Styles 
+========================================= */
+
+/* ড্যাশবোর্ড এবং ফ্রন্টএন্ড কন্টেন্ট উভয়ের জন্য */
+.ql-editor table,
+.blog-content table {
+  display: block !important; /* স্ক্রল কাজ করানোর জন্য এটি অত্যন্ত জরুরি */
+  width: 100% !important;
+  max-width: 100% !important;
+  border-collapse: collapse !important;
+  margin: 24px 0 !important;
+  background-color: transparent !important;
+
+  /* মোবাইলে ডানে-বামে স্ক্রল করার জাদুকরী কোড */
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important; /* আইফোনে স্মুথ স্ক্রল করার জন্য */
+  scrollbar-width: thin; /* ফায়ারফক্সের জন্য চিকন স্ক্রলবার */
+}
+
+/* কাস্টম স্ক্রলবার ডিজাইন (টেবিলের নিচের স্ক্রলবারটি সুন্দর দেখানোর জন্য) */
+.blog-content table::-webkit-scrollbar,
+.ql-editor table::-webkit-scrollbar {
+  height: 6px;
+}
+.blog-content table::-webkit-scrollbar-thumb,
+.ql-editor table::-webkit-scrollbar-thumb {
+  background-color: var(--bg1);
+  border-radius: 10px;
+}
+
+/* টেবিলের বর্ডার, প্যাডিং এবং মিনিমাম ওয়াইডথ */
+.ql-editor table td,
+.ql-editor table th,
+.blog-content table td,
+.blog-content table th {
+  padding: 14px 16px !important;
+  border: 1px solid var(--bg1) !important;
+  vertical-align: middle !important;
+
+  /* মোবাইলে সেলগুলো যাতে একদম চ্যাপ্টা না হয়ে যায়, তার জন্য মিনিমাম একটি সাইজ দেওয়া হলো */
+  min-width: 150px !important;
+}
+
+/* ক্লায়েন্টের দেওয়া ইনলাইন কালার ওভাররাইড করা */
+.ql-editor table td,
+.ql-editor table td span,
+.ql-editor table td strong,
+.blog-content table td,
+.blog-content table td span,
+.blog-content table td strong {
+  color: var(--foreground) !important;
+  background-color: transparent !important;
+  font-family: var(--font-primary) !important;
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+}
+
+/* টেবিলের হেডার (প্রথম সারি) হাইলাইট করা */
+.ql-editor table tr:first-child td,
+.blog-content table tr:first-child td {
+  background-color: var(--bg1) !important;
+}
+
+/* হেডারের টেক্সট বোল্ড করা */
+.ql-editor table tr:first-child td,
+.ql-editor table tr:first-child td span,
+.ql-editor table tr:first-child td strong,
+.blog-content table tr:first-child td *,
+.blog-content table tr:first-child td span,
+.blog-content table tr:first-child td strong {
+  color: var(--primary) !important;
+  font-weight: 700 !important;
 }

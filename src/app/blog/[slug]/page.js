@@ -80,6 +80,7 @@ export default async function SingleBlogPage({ params }) {
           )}
 
           <article
+            className="blog-content"
             dangerouslySetInnerHTML={{
               __html: cleanHtml(post.content),
             }}

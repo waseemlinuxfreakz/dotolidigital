@@ -2,6 +2,27 @@
   --background: #1b1b1b;
   --foreground: #dddfdf;
 }
+/* React Quill Sticky Toolbar */
+.quill-sticky-container {
+  position: relative;
+}
+
+.quill-sticky-container .ql-toolbar.ql-snow {
+  position: sticky !important;
+  top: 0; /* যদি আপনার ড্যাশবোর্ডে উপরে কোনো ফিক্সড মেনুবার/হেডার থাকে, তবে সেটির উচ্চতা অনুযায়ী এটি পরিবর্তন করুন। যেমন: top: 60px; */
+  z-index: 1000 !important; /* টেক্সটের উপরে থাকার জন্য */
+
+  /* আপনার ড্যাশবোর্ডটি ডার্ক থিমের, তাই টুলবারের ব্যাকগ্রাউন্ড কালার ড্যাশবোর্ডের সাথে মিলিয়ে দিন */
+  background-color: #1a1a1a; /* আপনার UI এর ব্যাকগ্রাউন্ড কালার কোড এখানে বসান */
+
+  border-bottom: 1px solid #444 !important; /* নিচে একটি বর্ডার দেওয়ার জন্য */
+}
+
+/* এডিটর কন্টেইনারের হাইট ঠিক রাখার জন্য */
+.quill-sticky-container .ql-container.ql-snow {
+  min-height: 400px; /* আপনার প্রয়োজন মতো পরিবর্তন করতে পারেন */
+}
+
 body .header-wrapper .header {
   display: none;
 }
