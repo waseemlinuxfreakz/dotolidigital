@@ -4,6 +4,8 @@ import Image from "next/image";
 import { HeroAllSection } from "../../components/HeroAllSection";
 import Footer from "../../components/Footer";
 
+import AuthorBio from "../../components/AuthorBio";
+
 async function getBlog(slug) {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
@@ -85,6 +87,7 @@ export default async function SingleBlogPage({ params }) {
               __html: cleanHtml(post.content),
             }}
           />
+          <AuthorBio />
         </div>
       </main>
 

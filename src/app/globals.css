@@ -3688,3 +3688,134 @@ Title block above form
   color: var(--primary) !important;
   font-weight: 700 !important;
 }
+
+/* 
+==================================
+    Blog Author Bio Box Styles
+==================================
+*/
+
+/* --- Author Bio Box Styles --- */
+.blog-author-box {
+  display: flex;
+  gap: 30px;
+  padding: 40px;
+  background-color: var(--bg1);
+  border-radius: 16px;
+  border: 1px solid rgba(63, 65, 68, 0.1);
+  margin-top: 50px;
+  color: var(--foreground);
+  font-family: var(--font-primary);
+  transition: all 0.3s ease;
+}
+
+:root.dark .blog-author-box {
+  border-color: rgba(197, 252, 252, 0.1);
+}
+
+/* Image Styling */
+.author-image-wrapper {
+  flex-shrink: 0;
+}
+
+/* Next.js Image এর জন্য স্টাইল */
+.author-avatar {
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary);
+  padding: 4px;
+}
+
+/* Content Styling */
+.author-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.author-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.author-name {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  font-family: var(--font-secondary);
+}
+
+.author-role {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 5px 12px;
+  background-color: var(--primary);
+  color: var(--background);
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.author-bio {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  opacity: 0.85;
+}
+
+/* Social Links Styling */
+.author-social-links {
+  display: flex;
+  gap: 12px;
+}
+
+.author-social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1.5px solid var(--primary);
+  color: var(--primary);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.author-social-links a:hover {
+  background-color: var(--primary);
+  color: var(--background);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.author-social-links a svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  transition: fill 0.3s ease;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .blog-author-box {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .author-header {
+    justify-content: center;
+  }
+
+  .author-social-links {
+    justify-content: center;
+  }
+}
