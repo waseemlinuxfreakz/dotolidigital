@@ -401,6 +401,38 @@ export default function Page() {
           </div>
         </div>
 
+        {/* ───── JENNY'S SCOREBOARD ───── */}
+        <div className="scoreboard-container gsap-fade-up space-bottom">
+          <div className="scoreboard-header">
+            <h3 className="scoreboard-title">JENNY'S SCOREBOARD</h3>
+            <p className="scoreboard-subtitle">
+              The numbers we report every week, from her own ad account.
+            </p>
+          </div>
+
+          <div className="scoreboard-grid">
+            <div className="scoreboard-card">
+              <div className="score-val cyan-text">$40.54</div>
+              <div className="score-label">Cost per lead</div>
+            </div>
+
+            <div className="scoreboard-card">
+              <div className="score-val white-text">252</div>
+              <div className="score-label">Leads captured</div>
+            </div>
+
+            <div className="scoreboard-card">
+              <div className="score-val white-text">$10,217</div>
+              <div className="score-label">Spent to date</div>
+            </div>
+
+            <div className="scoreboard-card">
+              <div className="score-val cyan-text">36%</div>
+              <div className="score-label">Hook rate, vs 25% benchmark</div>
+            </div>
+          </div>
+        </div>
+
         {/* Case Study 2 */}
         <div className="shell space-bottom">
           <div className="case-study">
@@ -556,7 +588,7 @@ export default function Page() {
               </li>
             </ul>
           </div>
-          <div className="who-card">
+          <div className="who-card sm2">
             <h4>NOT FOR YOU IF</h4>
             <ul className="who-list">
               <li>

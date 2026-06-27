@@ -377,6 +377,7 @@ font-family: var(--font-secondary);
   line-height: 1.05;
   margin-top: 20px;
   letter-spacing: -0.02em;
+  color: #ffffff;
 }
 .cs-huge-numbers span {
   color: var(--accent-cyan);
@@ -632,6 +633,7 @@ font-family: var(--font-secondary);
   font-size: clamp(2.5rem, 5vw, 4rem);
   line-height: 1.1;
   margin-bottom: 20px;
+  color: #ffffff;
 }
 
 /* Responsive Styles */
@@ -816,6 +818,7 @@ p.process-card-desc {
   letter-spacing: -0.02em;
   line-height: 1.06;
   margin-bottom: 26px;
+  color: #ffffff;
 }
 
 .sm-gu-box .sm-gu-desc {
@@ -857,4 +860,95 @@ p.sm-final-cta-feedback {
   line-height: 1.65;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* ───── SCOREBOARD SECTION ───── */
+
+.scoreboard-container {
+  margin-top: 18px;
+  background: #0a0b0d;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 18px;
+  padding: 24px;
+}
+
+.scoreboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.scoreboard-title {
+  color: var(--accent-cyan);
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0;
+}
+
+.scoreboard-subtitle {
+  color: var(--text-gray);
+  font-size: 13px;
+  margin: 0;
+}
+
+.scoreboard-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.scoreboard-card {
+  background: #101216;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 12px;
+  padding: 18px 14px;
+  text-align: center;
+}
+
+.scoreboard-card:hover {
+  border-color: var(--border-color-light);
+}
+
+.score-val {
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.white-text {
+  color: var(--text-white);
+}
+
+.score-label {
+  color: var(--text-gray);
+  font-size: 14px;
+}
+
+/* Responsive for Scoreboard */
+@media (max-width: 992px) {
+  .scoreboard-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .scoreboard-container {
+    padding: 25px;
+  }
+  .scoreboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .scoreboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.who-card.sm2 h4 {
+  color: #9aa0a6;
 }
