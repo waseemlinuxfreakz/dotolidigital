@@ -1,6 +1,6 @@
-import { Montserrat } from "next/font/google";
+import { Montserrat, Plus_Jakarta_Sans } from "next/font/google"; // ✅ Plus Jakarta Sans import করা হয়েছে
 import localFont from "next/font/local";
-//.import LayoutWrapper from "./LayoutWrapper";
+//import LayoutWrapper from "./LayoutWrapper";
 //import Footer from "./components/Footer";
 import Header from "./components/Header";
 import LoadingWrapper from "./components/LoadingWrapper";
@@ -18,24 +18,17 @@ const Nourd = localFont({
 const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-montserrat",
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700", "800", "900"],
   display: "swap",
 });
 
-// // Configure Google Font (Abril Fatface)
-// const abrilFatface = Abril_Fatface({
-//   subsets: ["latin"],
-//   variable: "--font-abrilfatface",
-//   weight: "400", // Abril Fatface only has one weight
-//   display: "swap",
-// });
-// // Configure Google Font (Inter)
-// const inter = Inter({
-//   subsets: ["latin"],
-//   variable: "--font-inter",
-//   weight: ["400", "500", "700"], // Add weights as needed
-//   display: "swap",
-// });
+// ✅ Google font: Plus Jakarta Sans (New Added)
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-plus-jakarta-sans",
+  weight: ["300", "400", "500", "600", "700", "800"],
+  display: "swap",
+});
 
 export const metadata = {
   title:
@@ -67,7 +60,8 @@ export default function RootLayout({ children }) {
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${montserrat.variable} ${Nourd.variable} `}
+      // ✅ এখানে plusJakartaSans.variable যুক্ত করা হয়েছে
+      className={`${montserrat.variable} ${Nourd.variable} ${plusJakartaSans.variable}`}
     >
       <head>
         {/* ✅ Google Site Verification */}
@@ -89,7 +83,6 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      {/* inter */}
       <body>
         {/* Google Tag Manager - NoScript (must be first element in <body>) */}
         <noscript>
