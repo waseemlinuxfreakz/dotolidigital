@@ -2,7 +2,7 @@ import { Montserrat, Plus_Jakarta_Sans } from "next/font/google"; // ✅ Plus Ja
 import localFont from "next/font/local";
 //import LayoutWrapper from "./LayoutWrapper";
 //import Footer from "./components/Footer";
-import Header from "./components/Header";
+import Header from "./components/Header/Header";
 import LoadingWrapper from "./components/LoadingWrapper";
 import ThemeProvider from "./components/ThemeProvider";
 import "./globals.css";

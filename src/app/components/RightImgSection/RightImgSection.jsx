@@ -5,8 +5,16 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
+import { FaArrowRight } from "react-icons/fa";
+import "./RightImgSection.css";
 
-export function RightImgSection({ title, description, images, btn_text, btn_link }) {
+export function RightImgSection({
+  title,
+  description,
+  images,
+  btn_text,
+  btn_link,
+}) {
   const rightImgSecRef = useRef(null);
   const contentRef = useRef(null);
   const images1Ref = useRef(null);
@@ -25,11 +33,11 @@ export function RightImgSection({ title, description, images, btn_text, btn_link
           trigger: rightImgSecRef.current,
           start: "top 70%",
           end: "bottom 90%",
-          scrub: 2
-        }
+          scrub: 2,
+        },
       });
     },
-    { scope: rightImgSecRef }
+    { scope: rightImgSecRef },
   );
 
   // images1 animation
@@ -44,11 +52,11 @@ export function RightImgSection({ title, description, images, btn_text, btn_link
           trigger: rightImgSecRef.current,
           start: "top 70%",
           end: "bottom 90%",
-          scrub: 2
-        }
+          scrub: 2,
+        },
       });
     },
-    { scope: rightImgSecRef }
+    { scope: rightImgSecRef },
   );
 
   return (
@@ -57,17 +65,35 @@ export function RightImgSection({ title, description, images, btn_text, btn_link
         <div className="container">
           <div className="flex-box">
             <div className="content" ref={contentRef}>
-              <h2 className="title-2" dangerouslySetInnerHTML={{ __html: title }} />
-              <p className="text-1" dangerouslySetInnerHTML={{ __html: description }} />
-          
+              <h2
+                className="title-2"
+                dangerouslySetInnerHTML={{ __html: title }}
+              />
+              <p
+                className="text-1"
+                dangerouslySetInnerHTML={{ __html: description }}
+              />
+
               <div className="btn">
                 {/* <Link href="/about">Explore work</Link> */}
-                <Link href={btn_link}>{btn_text}</Link>
+                <Link href={btn_link}>
+                  {btn_text}{" "}
+                  <span class="ic">
+                    <FaArrowRight />
+                  </span>
+                </Link>
               </div>
             </div>
             <div className="img-box">
               <Link href={btn_link}>
-                <Image ref={images1Ref} src={`/images/${images}`} alt="loftloom" width={1500} height={1000} priority />
+                <Image
+                  ref={images1Ref}
+                  src={`/images/${images}`}
+                  alt="loftloom"
+                  width={1500}
+                  height={1000}
+                  priority
+                />
               </Link>
             </div>
           </div>

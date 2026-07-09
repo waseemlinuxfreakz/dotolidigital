@@ -5,7 +5,16 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
-export function LeftImgSection({ title, description, images, btn_text, btn_link }) {
+import { FaArrowRight } from "react-icons/fa";
+import "./RightImgSection.css";
+
+export function LeftImgSection({
+  title,
+  description,
+  images,
+  btn_text,
+  btn_link,
+}) {
   const leftImgSecRef = useRef(null);
   const content1Ref = useRef(null);
   const images2Ref = useRef(null);
@@ -24,11 +33,11 @@ export function LeftImgSection({ title, description, images, btn_text, btn_link 
           trigger: leftImgSecRef.current,
           start: "top 70%",
           end: "bottom 90%",
-          scrub: 2
-        }
+          scrub: 2,
+        },
       });
     },
-    { scope: leftImgSecRef }
+    { scope: leftImgSecRef },
   );
 
   // images1 animation
@@ -43,11 +52,11 @@ export function LeftImgSection({ title, description, images, btn_text, btn_link 
           trigger: leftImgSecRef.current,
           start: "top 70%",
           end: "bottom 90%",
-          scrub: 2
-        }
+          scrub: 2,
+        },
       });
     },
-    { scope: leftImgSecRef }
+    { scope: leftImgSecRef },
   );
 
   return (
@@ -57,17 +66,32 @@ export function LeftImgSection({ title, description, images, btn_text, btn_link 
           <div className="flex-box">
             <div className="img-box">
               <Link href={btn_link}>
-                <Image ref={images2Ref} src={`/images/${images}`} alt="loftloom" width={1500} height={1000} priority />
+                <Image
+                  ref={images2Ref}
+                  src={`/images/${images}`}
+                  alt="loftloom"
+                  width={1500}
+                  height={1000}
+                  priority
+                />
               </Link>
             </div>
             <div className="content" ref={content1Ref}>
-              <h2 className="title-2" dangerouslySetInnerHTML={{ __html: title }}/>
+              <h2
+                className="title-2"
+                dangerouslySetInnerHTML={{ __html: title }}
+              />
               <p
-                    className="text-1"
-                    dangerouslySetInnerHTML={{ __html: description }}
-                  />
+                className="text-1"
+                dangerouslySetInnerHTML={{ __html: description }}
+              />
               <div className="btn">
-                <Link href={btn_link}>{btn_text}</Link>
+                <Link href={btn_link}>
+                  {btn_text}{" "}
+                  <span class="ic">
+                    <FaArrowRight />
+                  </span>
+                </Link>
               </div>
             </div>
           </div>

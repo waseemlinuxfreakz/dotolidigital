@@ -1,0 +1,83 @@
+/* 
+============================
+  recent-work-sec
+============================
+*/
+.abourspacer {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: 40px;
+}
+.video-sec-wrapper {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.recent-work-sec .flex-box.sm-right-wwa {
+  flex-direction: row-reverse;
+}
+
+.recent-work-sec .flex-box.sm-right-wwa .text {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.recent-work-sec .flex-box.sm-right-wwa .right-text {
+  display: flex;
+  align-items: end;
+  justify-content: start;
+}
+.recent-work-sec .flex-box .text {
+  width: 60%;
+}
+.recent-work-sec .flex-box .right-text {
+  width: 40%;
+}
+.recent-work-sec {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  overflow: hidden;
+}
+.recent-work-sec .flex-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+/* for animation */
+.dark .recent-work-sec .title-3 .block {
+  background: linear-gradient(90deg, #ffffff 50%, #252525 0);
+  background-size: 200% 100%;
+  background-position-x: 0%;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  position: relative;
+}
+.recent-work-sec .title-3 .block {
+  background: linear-gradient(90deg, #3f4144 50%, #dce1e1 0);
+  background-size: 200% 100%;
+  background-position-x: 0%;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  position: relative;
+}
+
+/*all mobile*/
+@media (max-width: 767px) {
+  body .recent-work-sec .flex-box {
+    flex-direction: column;
+    gap: 30px;
+    align-items: start;
+  }
+  body .recent-work-sec .flex-box.sm-right-wwa {
+    flex-direction: column;
+  }
+}
+
+/*ipad*/
+@media (min-width: 768px) and (max-width: 1024px) {
+}

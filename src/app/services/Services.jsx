@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
 import Footer from "../components/Footer";
-import { HeroAllSection } from "../components/HeroAllSection";
-import { LogoTracker } from "../components/LogoTracker";
+import { HeroAllSection } from "../components/HeroSection/HeroAllSection";
+import { LogoTracker } from "../components/NewsTracker/LogoTracker";
 import PopupForm from "../components/PopupForm";
 import { ServicesSection } from "../components/ServicesSection";
 export default function Services() {

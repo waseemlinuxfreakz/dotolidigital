@@ -4,6 +4,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Image from "next/image";
 import { useRef } from "react";
+import "./NewsTracker.css";
 
 // ✅ Each logo has its own dimensions
 const logos = [
@@ -12,15 +13,23 @@ const logos = [
   { src: "/images/brand-logo/z-logo-default.svg", width: 150, height: 80 },
   { src: "/images/brand-logo/mansionglobal.svg", width: 300, height: 80 },
   { src: "/images/brand-logo/forbes.svg", width: 140, height: 80 },
-  { src: "/images/brand-logo/logo-wide-transparent-500.svg", width: 200, height: 80 },
+  {
+    src: "/images/brand-logo/logo-wide-transparent-500.svg",
+    width: 200,
+    height: 80,
+  },
   { src: "/images/brand-logo/zillow.svg", width: 160, height: 80 },
   { src: "/images/brand-logo/wsj-short-brand.svg", width: 180, height: 80 },
   { src: "/images/brand-logo/bloomberg.svg", width: 160, height: 80 },
   { src: "/images/brand-logo/z-logo-default.svg", width: 150, height: 80 },
   { src: "/images/brand-logo/mansionglobal.svg", width: 300, height: 80 },
   { src: "/images/brand-logo/forbes.svg", width: 140, height: 80 },
-  { src: "/images/brand-logo/logo-wide-transparent-500.svg", width: 200, height: 80 },
-  { src: "/images/brand-logo/zillow.svg", width: 160, height: 80 }
+  {
+    src: "/images/brand-logo/logo-wide-transparent-500.svg",
+    width: 200,
+    height: 80,
+  },
+  { src: "/images/brand-logo/zillow.svg", width: 160, height: 80 },
 ];
 
 export function LogoTracker() {
@@ -41,8 +50,8 @@ export function LogoTracker() {
         x: reverse ? `+=${totalWidth}` : `-=${totalWidth}`,
         duration: totalWidth / 100,
         ease: "none",
-        repeat: -1
-      }
+        repeat: -1,
+      },
     );
   };
 

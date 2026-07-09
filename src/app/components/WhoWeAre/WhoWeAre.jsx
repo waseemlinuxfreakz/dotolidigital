@@ -1,9 +1,11 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { FaArrowRight } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
+import "./WhoWeAre.css";
 
 export function WhoWeAre({
   title1,
@@ -38,7 +40,7 @@ export function WhoWeAre({
         },
       });
     },
-    { scope: whoWeAreRef }
+    { scope: whoWeAreRef },
   );
 
   // Text 2 animation
@@ -57,7 +59,7 @@ export function WhoWeAre({
         },
       });
     },
-    { scope: whoWeAreRef }
+    { scope: whoWeAreRef },
   );
 
   // ✅ Fix: Capitalize dynamic header tag
@@ -86,7 +88,12 @@ export function WhoWeAre({
 
                   {btn_link ? (
                     <div className="btn">
-                      <Link href={btn_link}>{btn_text}</Link>
+                      <Link href={btn_link}>
+                        {btn_text}{" "}
+                        <span class="ic">
+                          <FaArrowRight />
+                        </span>
+                      </Link>
                     </div>
                   ) : (
                     ""

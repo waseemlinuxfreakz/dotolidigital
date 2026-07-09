@@ -3,7 +3,7 @@
 import { useState } from "react";
 import PopupForm from "../../../components/PopupForm";
 import Footer from "../../../components/Footer";
-import { HeroAllSection } from "../../../components/HeroAllSection";
+import { HeroAllSection } from "../../../components/HeroSection/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
 import PerformanceCta from "../../../components/PerformanceCta";
 import { FAQSection } from "../../../components/FAQSection";

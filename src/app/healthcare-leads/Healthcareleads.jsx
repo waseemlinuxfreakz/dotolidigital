@@ -1,17 +1,17 @@
 "use client";
 import { useState } from "react";
 import Footer from "../components/Footer";
-import { HeroAllSection } from "../components/HeroAllSection";
-import { LogoTracker } from "../components/LogoTracker";
+import { HeroAllSection } from "../components/HeroSection/HeroAllSection";
+import { LogoTracker } from "../components/NewsTracker/LogoTracker";
 import PopupForm from "../components/PopupForm";
 import { PortfolioImage } from "../components/PortfolioImage";
 import { ServiceDetailsSection } from "../components/ServiceDetailsSection";
-import { ClientTestimonial } from "../components/ClientTestimonial";
-import { WhoWeAre } from "../components/WhoWeAre";
-import { CounterSection } from "../components/CounterSection";
+import { ClientTestimonial } from "../components/ClientTestimonial/ClientTestimonial";
+import { WhoWeAre } from "../components/WhoWeAre/WhoWeAre";
+import { CounterSection } from "../components/CounterSection/CounterSection";
 import Image from "next/image";
-import { LeftImgSection } from "../components/LeftImgSection";
-import { RightImgSection } from "../components/RightImgSection";
+import { LeftImgSection } from "../components/RightImgSection/LeftImgSection";
+import { RightImgSection } from "../components/RightImgSection/RightImgSection";
 import Link from "next/link";
 
 export default function Healthcareleads() {
@@ -29,10 +29,10 @@ export default function Healthcareleads() {
       />
       <div id="team-hero"></div>
 
-        <div className="health_left_section">
-          <RightImgSection
-            title={"Why Healthcare Leads Require a Different Approach"}
-            description={`
+      <div className="health_left_section">
+        <RightImgSection
+          title={"Why Healthcare Leads Require a Different Approach"}
+          description={`
               Most brokers treat leads as a commodity. We don’t. Healthcare is a high-compliance, high-competition industry—meaning intent and quality matter more than volume. Our background in Google Ads, audience targeting, and creative optimization gives us an edge in generating genuine intent traffic, not just random clicks.
   Key Point Highlights:<br/><br/>
               <ul>
@@ -40,11 +40,11 @@ export default function Healthcareleads() {
                 <li>Compliance-first lead generation</li>
                 <li>Optimized campaigns for healthcare verticals</li>
                 </ul>`}
-            images={"leads-1.webp"}
-            btn_text={"Explore work"}
-            btn_link={"/services/seo-expert"}
-          />
-        </div>
+          images={"leads-1.webp"}
+          btn_text={"Explore work"}
+          btn_link={"/services/seo-expert"}
+        />
+      </div>
 
       {/* <div className="sm-img-fix">
         <WhoWeAre
@@ -63,7 +63,6 @@ Key Point Highlights:<br/><br/>
       </div> */}
 
       <div className="health_left_section">
-
         <LeftImgSection
           title={"The Dotoli <br>Digital Advantage"}
           description={`
@@ -77,9 +76,7 @@ Key Point Highlights:<br/><br/>
           btn_text={"Explore work"}
           btn_link={"/services/website-development"}
         />
-
       </div>
-
 
       <section>
         <div className="container middle-health-img">
@@ -91,27 +88,29 @@ Key Point Highlights:<br/><br/>
           />
         </div>
       </section>
-      
+
       <section className="button-health-center health-care-centers">
-          <div className="container">
-            <div className="btn-group">
-              <div className="btn">
-                <div className="btn btn--pulse">
-                    <button
-                        type="button"
-                        onClick={() => setShowPopup(true)}
-                        className="btn-elem"
-                      >Book a Free Strategy Call</button>
-                </div>
+        <div className="container">
+          <div className="btn-group">
+            <div className="btn">
+              <div className="btn btn--pulse">
+                <button
+                  type="button"
+                  onClick={() => setShowPopup(true)}
+                  className="btn-elem"
+                >
+                  Book a Free Strategy Call
+                </button>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
       <div className="health_left_section">
-          <RightImgSection
-            title={"How We Deliver <br> Quality Healthcare Leads"}
-            description={`
+        <RightImgSection
+          title={"How We Deliver <br> Quality Healthcare Leads"}
+          description={`
            
             <ul>
               <li><strong>Step 1: Audience Targetingstrong</strong> - Intent-driven Google Ads, social ads, and native campaigns.</li>
@@ -119,15 +118,14 @@ Key Point Highlights:<br/><br/>
               <li><strong>Step 3: Real-Time Feedback Loops</strong> - Using dispo and buyer feedback to refine campaigns daily.</li>
               <li><strong>Step 4: Scalable Partnerships</strong> - Flexible capacity, tailored lead flow, and nationwide reach.</li>
               </ul>`}
-            images={"leads-3.webp"}
-            btn_text={"Explore work"}
-            btn_link={"/services/seo-expert"}
-          />
-        </div>
+          images={"leads-3.webp"}
+          btn_text={"Explore work"}
+          btn_link={"/services/seo-expert"}
+        />
+      </div>
 
-        <div className="health_left_section">
-
-            <LeftImgSection
+      <div className="health_left_section">
+        <LeftImgSection
           title={"Who We <br>Work With"}
           description={`
             We power growth for:<br/><br/>
@@ -144,24 +142,25 @@ Key Point Highlights:<br/><br/>
           btn_text={"Explore work"}
           btn_link={"/services/website-development"}
         />
+      </div>
 
-        </div>
-
-        <section className="button-health-center">
-          <div className="container">
-            <div className="btn-group">
-              <div className="btn">
-                <div className="btn btn--pulse">
-                    <button
-                        type="button"
-                        onClick={() => setShowPopup(true)}
-                        className="btn-elem"
-                      >Book a Free Strategy Call</button>
-                </div>
+      <section className="button-health-center">
+        <div className="container">
+          <div className="btn-group">
+            <div className="btn">
+              <div className="btn btn--pulse">
+                <button
+                  type="button"
+                  onClick={() => setShowPopup(true)}
+                  className="btn-elem"
+                >
+                  Book a Free Strategy Call
+                </button>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
       <br />
       <br />

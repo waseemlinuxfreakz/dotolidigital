@@ -4,6 +4,8 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useRef } from "react";
 
+import "./NewsTracker.css";
+
 export function NewsTracker() {
   const ticker1Ref = useRef(null);
   const ticker2Ref = useRef(null);
@@ -20,32 +22,32 @@ export function NewsTracker() {
         duration: totalWidth / 100, // Adjust speed
         ease: "none",
         repeat: -1,
-      }
+      },
     );
   };
 
   useGSAP(() => {
     animateTicker(ticker1Ref, false); // Top ticker: left to right
-    animateTicker(ticker2Ref, true);  // Bottom ticker: right to left
+    animateTicker(ticker2Ref, true); // Bottom ticker: right to left
   });
 
   const renderTexts = () => (
     <>
-      {Array(10).fill(
-        "Digital Marketing . Website Development . CRM & Automation"
-      ).map((text, idx) => (
-        <span key={idx}>{text}</span>
-      ))}
+      {Array(10)
+        .fill("Digital Marketing . Website Development . CRM & Automation")
+        .map((text, idx) => (
+          <span key={idx}>{text}</span>
+        ))}
     </>
   );
 
   const renderTexts2 = () => (
     <>
-      {Array(10).fill(
-        "AI Agents & Chatbots . Branding & Creative . VR Experiences"
-      ).map((text, idx) => (
-        <span key={idx}>{text}</span>
-      ))}
+      {Array(10)
+        .fill("AI Agents & Chatbots . Branding & Creative . VR Experiences")
+        .map((text, idx) => (
+          <span key={idx}>{text}</span>
+        ))}
     </>
   );
 

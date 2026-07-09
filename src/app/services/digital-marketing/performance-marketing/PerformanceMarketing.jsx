@@ -2,7 +2,7 @@
 import { useState } from "react";
 import PopupForm from "../../../components/PopupForm";
 import Footer from "../../../components/Footer";
-import { HeroAllSection } from "../../../components/HeroAllSection";
+import { HeroAllSection } from "../../../components/HeroSection/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
 import { FAQSection } from "../../../components/FAQSection";
 import ServicesWeOffer from "../../../components/ServicesWeOffer";

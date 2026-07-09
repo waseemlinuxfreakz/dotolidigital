@@ -3,7 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { RxCross1, RxHamburgerMenu } from "react-icons/rx";
-import { ThemeToggle } from "./ThemeToggle";
+import { ThemeToggle } from "../ThemeToggle";
+
+import "./Header.css";
 
 function Header() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -68,9 +70,9 @@ function Header() {
               />
             </Link>
 
-            <div className="toggle-container">
+            {/* <div className="toggle-container">
               <ThemeToggle />
-            </div>
+            </div> */}
 
             <div className="header-controls">
               <button

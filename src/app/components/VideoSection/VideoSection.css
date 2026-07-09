@@ -1,0 +1,30 @@
+/* 
+============================
+  video-sec
+============================
+*/
+
+.video-sec {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.video-wrapper {
+  overflow: hidden;
+}
+.video-wrapper video {
+  width: 100%;
+  display: block;
+  /* overflow: hidden; */
+  border-radius: 2rem;
+}
+/*all mobile*/
+@media (max-width: 767px) {
+  .video-sec {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+/*ipad*/
+@media (min-width: 768px) and (max-width: 1024px) {
+}

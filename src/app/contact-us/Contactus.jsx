@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import Footer from "../components/Footer";
-import { HeroAllSection } from "../components/HeroAllSection";
+import { HeroAllSection } from "../components/HeroSection/HeroAllSection";
 import PopupForm from "../components/PopupForm";
 import { TextCounterSection } from "../components/TextCounterSection";
 
@@ -201,7 +201,6 @@ export default function Contactus() {
               </div>
 
               {/* Consent + legal */}
-              
 
               <div className="contact-legal-links">
                 <Link href="/privacy" className="legal-link">

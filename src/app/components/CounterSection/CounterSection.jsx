@@ -3,6 +3,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
 
+import "./CounterSection.css";
+
 export function CounterSection() {
   /* boxContainer */
   const boxLeftRef1 = useRef(null);
@@ -26,11 +28,11 @@ export function CounterSection() {
           trigger: boxLeftRef1.current,
           start: "top 70%",
           end: "bottom 90%",
-          scrub: 2
-        }
+          scrub: 2,
+        },
       });
     },
-    { scope: boxLeftRef1 }
+    { scope: boxLeftRef1 },
   );
 
   // box2 animation
@@ -46,11 +48,11 @@ export function CounterSection() {
           trigger: boxLeftRef2.current,
           start: "top 70%",
           end: "bottom 90%",
-          scrub: 2
-        }
+          scrub: 2,
+        },
       });
     },
-    { scope: boxLeftRef2 }
+    { scope: boxLeftRef2 },
   );
 
   // box3 animation
@@ -66,11 +68,11 @@ export function CounterSection() {
           trigger: boxRightRef1.current,
           start: "top 70%",
           end: "bottom 90%",
-          scrub: 2
-        }
+          scrub: 2,
+        },
       });
     },
-    { scope: boxRightRef1 }
+    { scope: boxRightRef1 },
   );
 
   // box4 animation
@@ -86,11 +88,11 @@ export function CounterSection() {
           trigger: boxRightRef2.current,
           start: "top 70%",
           end: "bottom 90%",
-          scrub: 2
-        }
+          scrub: 2,
+        },
       });
     },
-    { scope: boxRightRef1 }
+    { scope: boxRightRef1 },
   );
 
   return (

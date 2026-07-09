@@ -2,10 +2,10 @@
 
 import { useState } from "react";
 import Footer from "../../components/Footer";
-import { HeroAllSection } from "../../components/HeroAllSection";
+import { HeroAllSection } from "../../components/HeroSection/HeroAllSection";
 import PopupForm from "../../components/PopupForm";
 import { ServiceDetailsSection } from "../../components/ServiceDetailsSection";
-import { WhoWeAre } from "../../components/WhoWeAre";
+import { WhoWeAre } from "../../components/WhoWeAre/WhoWeAre";
 
 export default function Seoservices() {
   const [showPopup, setShowPopup] = useState(false);

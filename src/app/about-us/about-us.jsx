@@ -1,14 +1,14 @@
 /*  app/about/page.jsx  */
 "use client";
 import { useState } from "react";
-import { ClientTestimonial } from "../components/ClientTestimonial";
-import { CounterSection } from "../components/CounterSection";
+import { ClientTestimonial } from "../components/ClientTestimonial/ClientTestimonial";
+import { CounterSection } from "../components/CounterSection/CounterSection";
 import Footer from "../components/Footer";
-import { HeroSection } from "../components/HeroSection";
-import { LogoTracker } from "../components/LogoTracker";
+import { HeroSection } from "../components/HeroSection/HeroSection";
+import { LogoTracker } from "../components/NewsTracker/LogoTracker";
 import PopupForm from "../components/PopupForm";
-import { VideoSection } from "../components/VideoSection";
-import { WhoWeAre } from "../components/WhoWeAre";
+import { VideoSection } from "../components/VideoSection/VideoSection";
+import { WhoWeAre } from "../components/WhoWeAre/WhoWeAre";
 
 export default function AboutUs() {
   const [showPopup, setShowPopup] = useState(false);

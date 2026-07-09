@@ -1,7 +1,7 @@
 // src/app/blog/[slug]/page.js
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import { HeroAllSection } from "../../components/HeroAllSection";
+import { HeroAllSection } from "../../components/HeroSection/HeroAllSection";
 import Footer from "../../components/Footer";
 
 import AuthorBio from "../../components/AuthorBio";

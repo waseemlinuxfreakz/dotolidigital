@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Footer from "../../components/Footer";
-import { HeroAllSection } from "../../components/HeroAllSection";
+import { HeroAllSection } from "../../components/HeroSection/HeroAllSection";
 import PopupForm from "../../components/PopupForm";
 import { PortfolioLightbox } from "../../components/PortfolioLightbox";
 export default function Brandingcreative() {
@@ -20,7 +20,6 @@ export default function Brandingcreative() {
       />
       <div id="team-hero"></div>
       <PortfolioLightbox
-        
         img3="/images/bxx4.webp"
         img4="/images/bxx5.webp"
         img5="/images/kqpa1.webp"

@@ -4,7 +4,7 @@ import { useState } from "react";
 import PopupForm from "../components/PopupForm";
 import { BannerSection } from "../components/BannerSection";
 import Footer from "../components/Footer";
-import { HeroAllSection } from "../components/HeroAllSection";
+import { HeroAllSection } from "../components/HeroSection/HeroAllSection";
 import "./terms.css";
 
 export default function Terms() {

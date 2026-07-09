@@ -2,21 +2,22 @@
 "use client";
 
 import { useState } from "react";
-import { ClientTestimonial } from "./components/ClientTestimonial";
-import { CounterSection } from "./components/CounterSection";
+import { ClientTestimonial } from "./components/ClientTestimonial/ClientTestimonial";
+import { CounterSection } from "./components/CounterSection/CounterSection";
 import { DribbbleSection } from "./components/DribbbleSection";
 import Footer from "./components/Footer";
-import { HeroSection } from "./components/HeroSection";
+import { HeroSection } from "./components/HeroSection/HeroSection";
 import { JungleSection } from "./components/JungleSection";
-import { LeftImgSection } from "./components/LeftImgSection";
-import { NewsTracker } from "./components/NewsTracker";
+import { LeftImgSection } from "./components/RightImgSection/LeftImgSection";
+import { NewsTracker } from "./components/NewsTracker/NewsTracker";
 import { PageTitle } from "./components/PageTitle";
 import PopupForm from "./components/PopupForm";
-import { RecentWorkSection } from "./components/RecentWorkSection";
-import { RightImgSection } from "./components/RightImgSection";
+import { RecentWorkSection } from "./components/RecentWorkSection/RecentWorkSection";
+import { RightImgSection } from "./components/RightImgSection/RightImgSection";
 import { SocialSection } from "./components/SocialSection";
-import { VideoSection } from "./components/VideoSection";
-import { WhoWeAre } from "./components/WhoWeAre";
+import { VideoSection } from "./components/VideoSection/VideoSection";
+import { WhoWeAre } from "./components/WhoWeAre/WhoWeAre";
+import { FaArrowRight } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -123,36 +124,32 @@ export default function Home() {
       <ClientTestimonial />
       <NewsTracker />
       {/* <DribbbleSection /> */}
-      <div className="container">
-        <div className="dribbble-middle-text project-section-container">
-          <Image
-            src="/images/logo.png"
-            alt="Logo"
-            width={200}
-            height={60}
-            priority
-          />
-          <p className="text-2">
-            <strong>Design that Speaks. Strategy that Performs. </strong>
-            Explore the creative edge where visuals meet value.
-          </p>
-          {/* <div className="btn-group">
-              <div className="btn btn--pulse">
-                <Link href="/services" className="btn-elem">Explore work</Link>
+      <section className="dribbble-section">
+        <div className="container">
+          <div className="dribbble-middle-text project-section-container">
+            <Image
+              src="/images/logo.png"
+              alt="Logo"
+              width={200}
+              height={60}
+              priority
+            />
+            <p className="text-2">
+              <strong>Design that Speaks. Strategy that Performs. </strong>
+              Explore the creative edge where visuals meet value.
+            </p>
 
-              </div>
-            </div> */}
-          <div className="btn-group">
-            <div className="btn">
-              <div className="btn btn--pulse">
-                <Link href="/services" className="btn-elem">
-                  Explore work
-                </Link>
-              </div>
+            <div class="btn">
+              <Link href="/services" className="btn-elem">
+                Explore work
+                <span class="ic">
+                  <FaArrowRight />
+                </span>
+              </Link>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <JungleSection title1={"Join Us"} title2={""} title3={""} />
       <SocialSection />

@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Footer from "../../components/Footer";
-import { HeroAllSection } from "../../components/HeroAllSection";
+import { HeroAllSection } from "../../components/HeroSection/HeroAllSection";
 import PopupForm from "../../components/PopupForm";
 import { PortfolioImage } from "../../components/PortfolioImage";
 

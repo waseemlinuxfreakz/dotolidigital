@@ -3,8 +3,11 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Link from "next/link";
 import { HiOutlineArrowSmDown } from "react-icons/hi";
+import { FaArrowRight } from "react-icons/fa";
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
+import "./HeroSection.css";
+
 export function HeroAllSection({
   title1,
   title2,
@@ -37,7 +40,7 @@ translate: none; rotate: none; scale: none; filter: none; transform: translate(0
         ease: "Expo.easeOut",
       });
     },
-    { scope: heroWrapperRef }
+    { scope: heroWrapperRef },
   );
   // title 2 animation
   useGSAP(
@@ -52,7 +55,7 @@ translate: none; rotate: none; scale: none; filter: none; transform: translate(0
         ease: "Expo.easeOut",
       });
     },
-    { scope: heroWrapperRef }
+    { scope: heroWrapperRef },
   );
   // text animation
   useGSAP(
@@ -65,7 +68,7 @@ translate: none; rotate: none; scale: none; filter: none; transform: translate(0
         ease: "Expo.easeOut",
       });
     },
-    { scope: heroWrapperRef }
+    { scope: heroWrapperRef },
   );
 
   return (
@@ -97,9 +100,17 @@ translate: none; rotate: none; scale: none; filter: none; transform: translate(0
                         className="btn-elem"
                       >
                         {btn_text}
+                        <span class="ic">
+                          <FaArrowRight />
+                        </span>
                       </button>
                     ) : btn_link ? (
-                      <Link href={btn_link}>{btn_text}</Link>
+                      <Link href={btn_link}>
+                        {btn_text}{" "}
+                        <span class="ic">
+                          <FaArrowRight />
+                        </span>
+                      </Link>
                     ) : null}
                   </div>
                 </div>

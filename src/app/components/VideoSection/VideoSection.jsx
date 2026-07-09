@@ -4,6 +4,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef, useState } from "react";
 
+import "./VideoSection.css";
+
 export function VideoSection() {
   const videoRef = useRef(null);
   const videoSecRef = useRef(null);
@@ -61,7 +63,7 @@ export function VideoSection() {
         setPlayVideo(true); // Load immediately on mobile
       }
     },
-    { scope: videoSecRef, dependencies: [isDesktop] }
+    { scope: videoSecRef, dependencies: [isDesktop] },
   );
 
   return (

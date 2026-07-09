@@ -1,12 +1,12 @@
 "use client";
 import { useState } from "react";
 import Footer from "../components/Footer";
-import { HeroAllSection } from "../components/HeroAllSection";
-import { LogoTracker } from "../components/LogoTracker";
+import { HeroAllSection } from "../components/HeroSection/HeroAllSection";
+import { LogoTracker } from "../components/NewsTracker/LogoTracker";
 import PopupForm from "../components/PopupForm";
 import { PortfolioImage } from "../components/PortfolioImage";
 import { ServiceDetailsSection } from "../components/ServiceDetailsSection";
-import { ClientTestimonial } from "../components/ClientTestimonial";
+import { ClientTestimonial } from "../components/ClientTestimonial/ClientTestimonial";
 export default function OurWork() {
   const [showPopup, setShowPopup] = useState(false);
   return (

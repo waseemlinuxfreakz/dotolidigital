@@ -1,18 +1,18 @@
 "use client";
 import { useState } from "react";
 import PopupForm from "../../components/PopupForm";
- 
+
 import Footer from "../../components/Footer";
-import { HeroAllSection } from "../../components/HeroAllSection";
+import { HeroAllSection } from "../../components/HeroSection/HeroAllSection";
 import { ServiceDetailsSection } from "../../components/ServiceDetailsSection";
 import { SingleImageSlider1 } from "../../components/SingleImageSlider1";
- 
+
 export default function Aiagentsautomation() {
   const [showPopup, setShowPopup] = useState(false);
   return (
     <>
       {showPopup && <PopupForm onClose={() => setShowPopup(false)} />}
- 
+
       <HeroAllSection
         id="team-hero"
         title1="AI-Powered Agents That"
@@ -22,7 +22,7 @@ export default function Aiagentsautomation() {
         onBtnClick={() => setShowPopup(true)}
       />
       <div id="team-hero"></div>
- 
+
       <SingleImageSlider1 />
       {/*
       <Link href="/contact">Contact Us</Link>

@@ -4,6 +4,9 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
 import { useRef } from "react";
+import { FaArrowRight } from "react-icons/fa";
+import "../components/RecentWorkSection/RecentWorkSection.css";
+
 function Footer() {
   const recentWorkSecRef = useRef(null);
   const text1Ref = useRef(null);
@@ -29,7 +32,7 @@ function Footer() {
         },
       });
     },
-    { scope: recentWorkSecRef }
+    { scope: recentWorkSecRef },
   );
 
   // Text 2 animation
@@ -49,7 +52,7 @@ function Footer() {
         },
       });
     },
-    { scope: recentWorkSecRef }
+    { scope: recentWorkSecRef },
   );
   return (
     <>
@@ -71,6 +74,9 @@ function Footer() {
                 <div className="btn btn--pulse">
                   <Link className="btn-elem" href="/contact">
                     Book a Free Strategy Call
+                    <span class="ic">
+                      <FaArrowRight />
+                    </span>
                   </Link>
                 </div>
                 {/*  */}

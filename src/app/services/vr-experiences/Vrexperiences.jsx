@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Footer from "../../components/Footer";
-import { HeroAllSection } from "../../components/HeroAllSection";
+import { HeroAllSection } from "../../components/HeroSection/HeroAllSection";
 import PopupForm from "../../components/PopupForm";
 
 export default function Vrexperiences() {
@@ -34,9 +34,7 @@ export default function Vrexperiences() {
 
       */}
 
-      <section className="iframe-section">
-        
-      </section>
+      <section className="iframe-section"></section>
 
       <section className="video-section">
         <div className="container">

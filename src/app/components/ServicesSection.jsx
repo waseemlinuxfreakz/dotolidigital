@@ -3,10 +3,19 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
 import { useRef } from "react";
+import { FaArrowRight } from "react-icons/fa";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export function ServicesSection({ title, description, list1, list2, btn_text, btn_link, smclass }) {
+export function ServicesSection({
+  title,
+  description,
+  list1,
+  list2,
+  btn_text,
+  btn_link,
+  smclass,
+}) {
   const sectionRef = useRef(null);
 
   useGSAP(() => {
@@ -20,8 +29,8 @@ export function ServicesSection({ title, description, list1, list2, btn_text, bt
           trigger: ".services-sec .box",
           start: "top 80%",
           end: "bottom 60%",
-          toggleActions: "play none none reverse"
-        }
+          toggleActions: "play none none reverse",
+        },
       });
     }, sectionRef);
 
@@ -33,18 +42,35 @@ export function ServicesSection({ title, description, list1, list2, btn_text, bt
       <div className="container">
         <div className={`box ${smclass ? smclass : ""}`}>
           <div className="coll sm1">
-            <h2 className="title-2" dangerouslySetInnerHTML={{ __html: title }} />
+            <h2
+              className="title-2"
+              dangerouslySetInnerHTML={{ __html: title }}
+            />
             {btn_link && (
               <div className="btn">
-                <Link href={btn_link}>{btn_text}</Link>
+                <Link href={btn_link}>
+                  {btn_text}{" "}
+                  <span class="ic">
+                    <FaArrowRight />
+                  </span>
+                </Link>
               </div>
             )}
           </div>
           <div className="coll sm2">
-            <p className="text-1" dangerouslySetInnerHTML={{ __html: description }} />
+            <p
+              className="text-1"
+              dangerouslySetInnerHTML={{ __html: description }}
+            />
             <div className="list-flex">
-              <div className="list-text" dangerouslySetInnerHTML={{ __html: list1 }} />
-              <div className="list-text" dangerouslySetInnerHTML={{ __html: list2 }} />
+              <div
+                className="list-text"
+                dangerouslySetInnerHTML={{ __html: list1 }}
+              />
+              <div
+                className="list-text"
+                dangerouslySetInnerHTML={{ __html: list2 }}
+              />
             </div>
           </div>
         </div>

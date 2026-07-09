@@ -2,6 +2,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
+import "./RecentWorkSection.css";
 export function RecentWorkSection() {
   /* 
     recentWorkSecRef
@@ -25,11 +26,11 @@ export function RecentWorkSection() {
           trigger: recentWorkSecRef.current,
           start: "top 60%",
           end: "bottom 70%",
-          scrub: 2
-        }
+          scrub: 2,
+        },
       });
     },
-    { scope: recentWorkSecRef }
+    { scope: recentWorkSecRef },
   );
 
   // Text 2 animation
@@ -44,11 +45,11 @@ export function RecentWorkSection() {
           trigger: recentWorkSecRef.current,
           start: "top 60%",
           end: "bottom 70%",
-          scrub: 2
-        }
+          scrub: 2,
+        },
       });
     },
-    { scope: recentWorkSecRef }
+    { scope: recentWorkSecRef },
   );
 
   return (
@@ -67,10 +68,14 @@ export function RecentWorkSection() {
               </h3>
 
               <p className="text-1">
-                We help consultants, agencies, trades, and local service brands gain visibility and convert attention into action. Every strategy we create blends three powerful elements:
+                We help consultants, agencies, trades, and local service brands
+                gain visibility and convert attention into action. Every
+                strategy we create blends three powerful elements:
               </p>
             </div>
-            <div className="btn">{/* <Link href="/about">Explore work</Link> */}</div>
+            <div className="btn">
+              {/* <Link href="/about">Explore work</Link> */}
+            </div>
           </div>
         </div>
       </section>

@@ -1,0 +1,79 @@
+/* 
+===========================
+  counter-sec
+===========================
+*/
+.counter-sec {
+  overflow: hidden;
+  padding-bottom: 100px;
+}
+.counter-sec .flex-2box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.dark .counter-sec .flex-box .box2 {
+  background: rgba(31, 32, 34, 0.4);
+}
+.counter-sec .flex-box .box2 {
+  padding: 60px;
+  background: hsla(222, 6%, 67%, 0.2);
+  border-radius: 1.5rem;
+  margin-bottom: 30px;
+}
+.counter-sec .flex-box .box2 .num {
+  font-size: 120px;
+  font-weight: 700;
+  color: var(--accent-cyan);
+  line-height: 50px;
+  position: relative;
+  top: -24px;
+  margin-bottom: 50px;
+}
+.counter-sec .flex-box .box2 .num sup {
+  position: relative;
+  left: -5px;
+  top: 9px;
+  font-size: 40px;
+}
+.counter-sec .flex-box .box2 h3 {
+  font-size: 38px;
+  line-height: 34px;
+  font-weight: 400;
+  max-width: 250px;
+  text-align: right;
+  letter-spacing: 1px;
+}
+.counter-sec .flex-box .box2 .text {
+  display: flex;
+  justify-content: end;
+}
+.counter-sec .flex-box.a2 {
+  margin-top: 140px;
+}
+/*all mobile*/
+@media (max-width: 767px) {
+  body .counter-sec .flex-2box {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  body .counter-sec .flex-box .box2 .num {
+    font-size: 62px;
+    margin-bottom: 10px;
+  }
+  body .counter-sec .flex-box .box2 h3 {
+    font-size: 20px;
+    line-height: 34px;
+  }
+  body .counter-sec .flex-box .box2 {
+    padding: 30px;
+    margin-bottom: 30px;
+  }
+  body .counter-sec .flex-box.a2 {
+    margin-top: 0;
+  }
+}
+
+/*ipad*/
+@media (min-width: 768px) and (max-width: 1024px) {
+}

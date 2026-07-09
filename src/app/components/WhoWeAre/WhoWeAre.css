@@ -1,0 +1,21 @@
+/* 
+==============================
+  who-we-are
+==============================
+*/
+.who-we-are .right-text {
+  display: flex;
+  justify-content: end;
+}
+.who-we-are .right-text .box1 {
+  max-width: 449px;
+}
+.who-we-are .right-text .box1 .btn {
+  margin-top: 36px;
+}
+/* .who-we-are .text {
+  width: 70%;
+}
+.who-we-are .right-text {
+  width: 30%;
+} */

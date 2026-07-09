@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import PopupForm from "../components/PopupForm";
 import Link from "next/link";
 import Image from "next/image";
-import { HeroAllSection } from "../components/HeroAllSection";
+import { HeroAllSection } from "../components/HeroSection/HeroAllSection";
 import Footer from "../components/Footer";
 
 export default function BlogPage() {

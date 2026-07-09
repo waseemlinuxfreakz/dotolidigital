@@ -1,0 +1,71 @@
+/* 
+===========================
+  hero-wrapper
+===========================
+*/
+
+/* section.hero-wrapper .container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+} */
+section.hero-wrapper.sm-all .btn-group {
+  justify-content: center;
+}
+section.hero-wrapper.sm-all .btn-group {
+  margin-top: 30px;
+}
+.hero-wrapper {
+  padding-top: 200px;
+}
+/* section.hero-wrapper .btn-group {
+  margin-top: 60px;
+}
+section.hero-wrapper h1.title-1.text-center {
+  margin-bottom: 20px;
+} */
+
+.scroll-next-sec {
+  display: flex;
+  justify-content: center;
+  padding-top: 24px;
+  padding-bottom: 70px;
+}
+.scroll-next-sec a {
+  width: 30px;
+  height: 30px;
+  border: 0;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 0;
+  cursor: pointer;
+  background: hsla(222, 6%, 67%, 0.2);
+  color: var(--foreground);
+}
+/*all mobile*/
+@media (max-width: 767px) {
+  body .recent-work-sec .flex-box .right-text {
+    width: 100%;
+    justify-content: center;
+  }
+
+  body .hero-wrapper .title-1.text-center {
+    margin-bottom: 10px;
+  }
+  body .hero-wrapper {
+    padding-top: 130px;
+  }
+  body .scroll-next-sec {
+    padding-bottom: 50px;
+  }
+}
+
+/*ipad*/
+@media (min-width: 768px) and (max-width: 1024px) {
+}

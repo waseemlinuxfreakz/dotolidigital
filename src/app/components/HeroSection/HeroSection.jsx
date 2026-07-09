@@ -2,10 +2,13 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Link from "next/link";
 import { FaArrowTurnDown } from "react-icons/fa6";
+import { FaArrowRight } from "react-icons/fa";
 
 import { HiOutlineArrowSmDown } from "react-icons/hi";
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
+
+import "./HeroSection.css";
 
 export function HeroSection({
   title1,
@@ -41,7 +44,7 @@ translate: none; rotate: none; scale: none; filter: none; transform: translate(0
         ease: "Expo.easeOut",
       });
     },
-    { scope: heroWrapperRef }
+    { scope: heroWrapperRef },
   );
   // title 2 animation
   useGSAP(
@@ -56,7 +59,7 @@ translate: none; rotate: none; scale: none; filter: none; transform: translate(0
         ease: "Expo.easeOut",
       });
     },
-    { scope: heroWrapperRef }
+    { scope: heroWrapperRef },
   );
   // text animation
   useGSAP(
@@ -69,7 +72,7 @@ translate: none; rotate: none; scale: none; filter: none; transform: translate(0
         ease: "Expo.easeOut",
       });
     },
-    { scope: heroWrapperRef }
+    { scope: heroWrapperRef },
   );
   // btn 1
   useGSAP(
@@ -82,7 +85,7 @@ translate: none; rotate: none; scale: none; filter: none; transform: translate(0
         ease: "Expo.easeOut",
       });
     },
-    { scope: heroWrapperRef }
+    { scope: heroWrapperRef },
   );
   // btn 2
   useGSAP(
@@ -95,7 +98,7 @@ translate: none; rotate: none; scale: none; filter: none; transform: translate(0
         ease: "Expo.easeOut",
       });
     },
-    { scope: heroWrapperRef }
+    { scope: heroWrapperRef },
   );
 
   return (
@@ -106,7 +109,7 @@ translate: none; rotate: none; scale: none; filter: none; transform: translate(0
             <span ref={title1Ref} className="block">
               {title1}
             </span>
-            <span ref={title2Ref} className="block">
+            <span ref={title2Ref} className="block cyan-text">
               {title2}
             </span>
           </h1>
@@ -129,10 +132,16 @@ translate: none; rotate: none; scale: none; filter: none; transform: translate(0
               {onBtnClick ? (
                 <button type="button" className="btn-elem" onClick={onBtnClick}>
                   {btn_text1}
+                  <span class="ic">
+                    <FaArrowRight />
+                  </span>
                 </button>
               ) : btn_link1 ? (
                 <Link href={btn_link1} className="btn-elem">
                   {btn_text1}
+                  <span class="ic">
+                    <FaArrowRight />
+                  </span>
                 </Link>
               ) : null}
             </div>
@@ -141,6 +150,9 @@ translate: none; rotate: none; scale: none; filter: none; transform: translate(0
               {btn_text2 && btn_link2 ? (
                 <Link href={btn_link2} className="btn-elem">
                   {btn_text2}
+                  <span class="ic">
+                    <FaArrowRight />
+                  </span>
                 </Link>
               ) : null}
             </div>
