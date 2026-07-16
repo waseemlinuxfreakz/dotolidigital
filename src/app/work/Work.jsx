@@ -1,11 +1,13 @@
 "use client";
 import Footer from "../components/Footer";
+import Header from "../components/Header/Header";
 import { HeroAllSection } from "../components/HeroSection/HeroAllSection";
 import { LogoTracker } from "../components/NewsTracker/LogoTracker";
 import { WorkSection1 } from "../components/WorkSection1";
 export default function Work() {
   return (
     <>
+      <Header />
       <HeroAllSection
         id={"sm-bg-text-sec"}
         title1={"work that builds trust"}

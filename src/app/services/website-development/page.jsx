@@ -1,4 +1,5 @@
 import Websitedevelopments from "./Websitedevelopments";
+import Header from "../../components/Header/Header";
 
 export const metadata = {
   title: "Enterprise Technical SEO | DOTOLI DIGITAL",
@@ -9,5 +10,10 @@ export const metadata = {
   },
 };
 export default function Page() {
-  return <Websitedevelopments />;
+  return (
+    <>
+      <Header />
+      <Websitedevelopments />
+    </>
+  );
 }

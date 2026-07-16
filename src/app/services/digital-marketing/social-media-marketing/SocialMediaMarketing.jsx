@@ -2,6 +2,7 @@
 import { useState } from "react";
 import PopupForm from "../../../components/PopupForm";
 import Footer from "../../../components/Footer";
+import Header from "../../../components/Header/Header";
 import { HeroAllSection } from "../../../components/HeroSection/HeroAllSection";
 import { ServiceDetailsSection } from "../../../components/ServiceDetailsSection";
 import PerformanceCta from "../../../components/PerformanceCta";
@@ -29,6 +30,7 @@ export default function SocialMediaMarketing() {
 
   return (
     <>
+      <Header />
       {showPopup && <PopupForm onClose={() => setShowPopup(false)} />}
 
       <HeroAllSection

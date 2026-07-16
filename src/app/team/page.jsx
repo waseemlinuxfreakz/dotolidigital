@@ -3,6 +3,7 @@ import { useState } from "react";
 import PopupForm from "../components/PopupForm";
 import { BannerSection } from "../components/BannerSection";
 import Footer from "../components/Footer";
+import Header from "../components/Header/Header";
 import { HeroAllSection } from "../components/HeroSection/HeroAllSection";
 import { JungleSection } from "../components/JungleSection";
 
@@ -12,6 +13,7 @@ export default function page() {
   const [showPopup, setShowPopup] = useState(false);
   return (
     <>
+      <Header />
       {showPopup && <PopupForm onClose={() => setShowPopup(false)} />}
       <HeroAllSection
         title1={"The Team Behind"}

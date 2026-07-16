@@ -6,6 +6,7 @@ import { ClientTestimonial } from "./components/ClientTestimonial/ClientTestimon
 import { CounterSection } from "./components/CounterSection/CounterSection";
 import { DribbbleSection } from "./components/DribbbleSection";
 import Footer from "./components/Footer";
+import Header from "./components/Header/Header";
 import { HeroSection } from "./components/HeroSection/HeroSection";
 import { JungleSection } from "./components/JungleSection";
 import { LeftImgSection } from "./components/RightImgSection/LeftImgSection";
@@ -26,6 +27,7 @@ export default function Home() {
   const [showPopup, setShowPopup] = useState(false);
   return (
     <>
+      <Header />
       {showPopup && <PopupForm onClose={() => setShowPopup(false)} />}
 
       <HeroSection

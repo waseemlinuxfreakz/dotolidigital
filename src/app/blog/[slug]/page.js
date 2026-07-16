@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import { HeroAllSection } from "../../components/HeroSection/HeroAllSection";
 import Footer from "../../components/Footer";
+import Header from "../../components/Header/Header";
 
 import AuthorBio from "../../components/AuthorBio";
 
@@ -66,6 +67,7 @@ export default async function SingleBlogPage({ params }) {
 
   return (
     <>
+      <Header />
       <div className="blog-single-header">
         <HeroAllSection title1={post.title} />
       </div>

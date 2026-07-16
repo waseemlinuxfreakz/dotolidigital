@@ -1,0 +1,182 @@
+/* Color Variables */
+:root {
+  --header-bg: #0a0b0d;
+  --header-border: rgba(255, 255, 255, 0.08);
+  --text-gray: #a1a1aa;
+  --text-white: #ffffff;
+  --accent-cyan: #00ced1;
+  --btn-dark: #001516;
+  --cyan-alpha-16: rgba(0, 21, 22, 0.16);
+}
+
+/* Header Wrapper - Sticky & Centered */
+.fixed-header-wrapper {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  z-index: 9999;
+}
+
+/*all mobile*/
+@media (max-width: 767px) {
+}
+
+/*ipad*/
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+/* The Main Pill Shape Container */
+.header-pill {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--header-bg);
+  border: 1px solid var(--header-border);
+  border-radius: 999px;
+  padding: 8px 10px 8px 24px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Updated Logo Image Styling */
+.header-logo-img {
+  display: block;
+  object-fit: contain;
+  width: auto;
+  height: 32px; /* প্রয়োজন অনুযায়ী উচ্চতা ঠিক করে নিতে পারেন */
+}
+
+/* Right Side Group (Nav Links + Button align together) */
+.header-right-group {
+  display: flex;
+  align-items: center;
+  gap: 32px; /* লিংক এবং বাটনের মাঝের গ্যাপ */
+}
+
+/* Desktop Navigation */
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 32px; /* লিংকগুলোর নিজেদের মাঝের গ্যাপ */
+}
+.nav-link {
+  color: var(--text-gray);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.nav-link:hover {
+  color: var(--text-white);
+}
+
+/* Desktop CTA Button */
+.btn-header-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--accent-cyan);
+  color: var(--btn-dark);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 6px 6px 6px 20px;
+  border-radius: 999px;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+.btn-header-cta:hover {
+  transform: translateY(-2px);
+  background: #00e0e3;
+}
+.btn-header-cta .arrow-circle {
+  background: var(--cyan-alpha-16);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+/* Mobile Toggle Button */
+.mobile-menu-btn {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--header-border);
+  color: var(--text-white);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  place-items: center;
+  transition: background 0.3s;
+}
+.mobile-menu-btn:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Mobile Dropdown Menu */
+.mobile-dropdown {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 0;
+  width: 100%;
+  background: #0a0b0d;
+  border: 1px solid var(--header-border);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.mobile-dropdown.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 30px;
+}
+.mobile-nav-link {
+  color: var(--text-white);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* Mobile CTA Button */
+.btn-mobile-cta {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: var(--accent-cyan);
+  color: var(--btn-dark);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 16px;
+  border-radius: 12px;
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+  .header-pill {
+    padding: 8px 8px 8px 20px;
+  }
+  .header-right-group {
+    display: none; /* মোবাইল স্ক্রিনে মেনু+বাটনের গ্রুপটি হাইড হবে */
+  }
+  .mobile-menu-btn {
+    display: grid;
+  }
+}

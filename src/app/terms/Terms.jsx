@@ -4,6 +4,7 @@ import { useState } from "react";
 import PopupForm from "../components/PopupForm";
 import { BannerSection } from "../components/BannerSection";
 import Footer from "../components/Footer";
+import Header from "../components/Header/Header";
 import { HeroAllSection } from "../components/HeroSection/HeroAllSection";
 import "./terms.css";
 
@@ -12,6 +13,7 @@ export default function Terms() {
 
   return (
     <>
+      <Header />
       {showPopup && <PopupForm onClose={() => setShowPopup(false)} />}
 
       <HeroAllSection

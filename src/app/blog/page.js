@@ -7,6 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { HeroAllSection } from "../components/HeroSection/HeroAllSection";
 import Footer from "../components/Footer";
+import Header from "../components/Header/Header";
 
 export default function BlogPage() {
   const [showPopup, setShowPopup] = useState(false);
@@ -25,6 +26,7 @@ export default function BlogPage() {
 
   return (
     <>
+      <Header />
       {showPopup && <PopupForm onClose={() => setShowPopup(false)} />}
 
       <HeroAllSection

@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import Footer from "../components/Footer";
+import Header from "../components/Header/Header";
 import { HeroAllSection } from "../components/HeroSection/HeroAllSection";
 import PopupForm from "../components/PopupForm";
 import { TextCounterSection } from "../components/TextCounterSection";
@@ -316,6 +317,7 @@ export default function ContactPage() {
 
   return (
     <>
+      <Header />
       {showPopup && <PopupForm onClose={() => setShowPopup(false)} />}
 
       <HeroAllSection

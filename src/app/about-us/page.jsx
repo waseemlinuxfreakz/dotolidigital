@@ -1,4 +1,5 @@
 import AboutUs from "./about-us";
+import Header from "../components/Header/Header";
 
 export const metadata = {
   title: "24/7 AI Chatbot Automation | DOTOLI DIGITAL",
@@ -10,5 +11,11 @@ export const metadata = {
   },
 };
 export default function Page() {
-  return <AboutUs />;
+  return (
+    <>
+      {" "}
+      <Header />
+      <AboutUs />;
+    </>
+  );
 }

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Footer from "../../components/Footer";
+import Header from "../../components/Header/Header";
 import { HeroAllSection } from "../../components/HeroSection/HeroAllSection";
 import PopupForm from "../../components/PopupForm";
 import { ServiceDetailsSection } from "../../components/ServiceDetailsSection";
@@ -11,6 +12,7 @@ export default function Seoservices() {
   const [showPopup, setShowPopup] = useState(false);
   return (
     <>
+      <Header />
       {showPopup && <PopupForm onClose={() => setShowPopup(false)} />}
       <div className="seo-expert-hero">
         <HeroAllSection

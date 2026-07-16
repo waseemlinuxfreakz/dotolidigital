@@ -1,7 +1,9 @@
 import Services from "./Services";
+import Header from "../components/Header/Header";
 
 export const metadata = {
-  title: "Best Digital Marketing Services | SEO, AI Automation & Lead Generation Agency",
+  title:
+    "Best Digital Marketing Services | SEO, AI Automation & Lead Generation Agency",
   description:
     "Explore our digital marketing services including SEO, AI automation, and lead generation solutions to grow your business and increase conversions.",
   alternates: {
@@ -9,5 +11,10 @@ export const metadata = {
   },
 };
 export default function Page() {
-  return <Services />;
+  return (
+    <>
+      <Header />
+      <Services />
+    </>
+  );
 }

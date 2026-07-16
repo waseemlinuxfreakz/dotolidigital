@@ -100,7 +100,6 @@ export default function RootLayout({ children }) {
           disableTransitionOnChange
         >
           <LoadingWrapper>
-            <Header />
             {children}
             {/* <Footer /> */}
           </LoadingWrapper>
