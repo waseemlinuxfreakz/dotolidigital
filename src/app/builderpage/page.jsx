@@ -1,9 +1,11 @@
 "use client";
 import { useRef } from "react";
+import { useState } from "react";
 import "./builderpage.css";
 import LandingPageHeader from "../components/LandingPageHeader/LandingPageHeader";
 import Footer from "../components/Footer";
 import { FaArrowRight } from "react-icons/fa";
+import PopupForm from "../components/PopupForm";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -39,19 +41,20 @@ export default function BuilderPage() {
   );
 
   const menu = [
-    { label: "The System", href: "#" },
-    { label: "How it works", href: "#" },
-    { label: "Operator path", href: "#" },
-    { label: "Contact", href: "#" },
+    { label: "The System", href: "#the-system" },
+    { label: "How it works", href: "#how-it-works" },
+    { label: "Operator path", href: "#operator-path" },
+    { label: "Contact", href: "/contact-us" },
   ];
-
+  const [showPopup, setShowPopup] = useState(false);
   return (
     <>
+      {showPopup && <PopupForm onClose={() => setShowPopup(false)} />}
       <div ref={containerRef}>
         <LandingPageHeader
           navLinks={menu}
           ctaText="Book a call"
-          onBtnClick={() => {}}
+          onBtnClick={() => setShowPopup(true)}
         />
 
         {/* ───── TOP BAR ───── */}
@@ -73,7 +76,10 @@ export default function BuilderPage() {
         </div>
 
         {/* ───── HERO SECTION ───── */}
-        <section className="container1 section-padding gsap-fade-up hero-section">
+        <section
+          className="container1 section-padding gsap-fade-up hero-section"
+          id="the-system"
+        >
           <div className="section-tag">FOR FOUNDERS BUILDING TOWARD A SALE</div>
           <h1 className="hero-title">
             Most founder-run businesses never sell. The ones that do stopped
@@ -93,7 +99,10 @@ export default function BuilderPage() {
         </section>
 
         {/* ───── PROBLEM SECTION ───── */}
-        <section className="container1 section-padding gsap-fade-up problem-section">
+        <section
+          className="container1 section-padding gsap-fade-up problem-section"
+          id="operator-path"
+        >
           <div className="section-tag">THE PROBLEM</div>
           <h2 className="section-title">
             A business that only grows when you show up is hard to sell.
@@ -167,7 +176,10 @@ export default function BuilderPage() {
         </section>
 
         {/* ───── HOW IT WORKS ───── */}
-        <section className="container1 section-padding gsap-fade-up how-it-works-section">
+        <section
+          className="container1 section-padding gsap-fade-up how-it-works-section"
+          id="how-it-works"
+        >
           <div className="section-tag">HOW IT WORKS</div>
           <h2 className="section-title">Prove it, build it, partner.</h2>
 

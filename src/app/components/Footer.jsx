@@ -72,7 +72,7 @@ function Footer() {
             <div className="btn-group">
               <div className="btn">
                 <div className="btn btn--pulse">
-                  <Link className="btn-elem" href="/contact">
+                  <Link className="btn-elem" href="/contact-us">
                     Book a Free Strategy Call
                     <span class="ic">
                       <FaArrowRight />

@@ -109,12 +109,12 @@ function Header() {
                 <li className="menu-dropdown">
                   <div className="services-link-wrapper">
                     <Link
-                      href="/our-work"
+                      href=""
                       className="title-1 menu-link"
                       onClick={closeMenu}
                       tabIndex={isMenuOpen ? 0 : -1}
                     >
-                      Our Work
+                      Case Study
                     </Link>
 
                     <button

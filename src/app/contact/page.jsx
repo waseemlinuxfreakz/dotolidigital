@@ -9,6 +9,7 @@ import Header from "../components/Header/Header";
 import { HeroAllSection } from "../components/HeroSection/HeroAllSection";
 import PopupForm from "../components/PopupForm";
 import { TextCounterSection } from "../components/TextCounterSection";
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
 /* ───────────────────────── progress bar ───────────────────────── */
 function ProgressBar({ current, labels, setStep }) {
@@ -360,23 +361,44 @@ export default function ContactPage() {
 
               <div className="btn-group" style={{ marginTop: "2rem" }}>
                 {step > 0 && (
-                  <button
-                    type="button"
-                    className="btn prev-btn"
-                    onClick={() => setStep(step - 1)}
-                  >
-                    Previous
-                  </button>
+                  <div className="btn-group btn btn--pulse">
+                    <button
+                      type="button"
+                      className="btn prev-btn form-btn btn-elem"
+                      onClick={() => setStep(step - 1)}
+                    >
+                      Previous
+                      <span class="ic">
+                        <FaArrowLeft />
+                      </span>
+                    </button>
+                  </div>
                 )}
 
                 {step < steps.length - 1 ? (
-                  <button type="submit" className="btn next-btn">
-                    Next
-                  </button>
+                  <div className="btn-group btn btn--pulse">
+                    <button
+                      type="submit"
+                      className="btn next-btn form-btn btn-elem"
+                    >
+                      Next
+                      <span class="ic">
+                        <FaArrowRight />
+                      </span>
+                    </button>
+                  </div>
                 ) : (
-                  <button type="submit" className="btn form-btn">
-                    Send My Project Brief
-                  </button>
+                  <div className="btn-group btn btn--pulse">
+                    <button
+                      type="submit"
+                      className="btn form-btn form-btn btn-elem"
+                    >
+                      Send My Project Brief
+                      <span class="ic">
+                        <FaArrowRight />
+                      </span>
+                    </button>
+                  </div>
                 )}
               </div>
 
