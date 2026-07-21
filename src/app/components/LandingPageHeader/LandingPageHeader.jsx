@@ -6,24 +6,24 @@ import { FaArrowRight, FaBars, FaTimes } from "react-icons/fa";
 import "./LandingPageHeader.css";
 
 const LandingPageHeader = ({
-  navLinks = [], // ডাইনামিক মেনু লিংকগুলোর অ্যারে
-  ctaText = "Book a Call", // ডাইনামিক বাটনের নাম (ডিফল্ট)
-  ctaHref = "#contact", // ডাইনামিক বাটনের লিংক (ডিফল্ট)
+  navLinks = [],
+  ctaText = "Book a Call",
+  ctaHref = "#contact",
+  onBtnClick, // <-- পপআপ ওপেন করার জন্য নতুন প্রপ
 }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // Smooth Scroll & Link Handler
   const handleLinkClick = (e, href) => {
-    setIsMobileMenuOpen(false); // মেনুতে ক্লিক করলে মোবাইল মেনু বন্ধ হবে
+    setIsMobileMenuOpen(false);
 
-    // যদি লিংকটি একই পেজের কোনো সেকশন হয় (যেমন: #contact)
     if (href.startsWith("#")) {
       e.preventDefault();
       const targetId = href.replace("#", "");
       const targetElement = document.getElementById(targetId);
 
       if (targetElement) {
-        const headerOffset = 100; // হেডারের জন্য অফসেট
+        const headerOffset = 100;
         const elementPosition = targetElement.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.scrollY - headerOffset;
 
@@ -38,7 +38,7 @@ const LandingPageHeader = ({
   return (
     <header className="fixed-header-wrapper">
       <div className="header-pill">
-        {/* LOGO (Updated with Image & Link) */}
+        {/* LOGO */}
         <Link href="/">
           <Image
             src="/images/logo.png"
@@ -50,7 +50,7 @@ const LandingPageHeader = ({
           />
         </Link>
 
-        {/* RIGHT SIDE GROUP: NAV + CTA BUTTON */}
+        {/* RIGHT SIDE GROUP */}
         <div className="header-right-group">
           {/* DESKTOP NAV */}
           <nav className="desktop-nav">
@@ -68,16 +68,34 @@ const LandingPageHeader = ({
 
           {/* DESKTOP CTA BUTTON */}
           <div className="desktop-cta">
-            <a
-              href={ctaHref}
-              onClick={(e) => handleLinkClick(e, ctaHref)}
-              className="btn-header-cta"
-            >
-              {ctaText}
-              <span className="arrow-circle">
-                <FaArrowRight size={12} />
-              </span>
-            </a>
+            {/* যদি onBtnClick প্রপ থাকে, তাহলে বাটন রেন্ডার হবে, অন্যথায় লিংক */}
+            {onBtnClick ? (
+              <button
+                onClick={onBtnClick}
+                className="btn-header-cta"
+                style={{
+                  border: "none",
+                  cursor: "pointer",
+                  fontFamily: "inherit",
+                }}
+              >
+                {ctaText}
+                <span className="arrow-circle">
+                  <FaArrowRight size={12} />
+                </span>
+              </button>
+            ) : (
+              <a
+                href={ctaHref}
+                onClick={(e) => handleLinkClick(e, ctaHref)}
+                className="btn-header-cta"
+              >
+                {ctaText}
+                <span className="arrow-circle">
+                  <FaArrowRight size={12} />
+                </span>
+              </a>
+            )}
           </div>
         </div>
 
@@ -105,15 +123,34 @@ const LandingPageHeader = ({
             </a>
           ))}
         </nav>
+
+        {/* MOBILE CTA BUTTON */}
         <div className="mobile-cta-wrapper">
-          {/* MOBILE CTA BUTTON */}
-          <a
-            href={ctaHref}
-            onClick={(e) => handleLinkClick(e, ctaHref)}
-            className="btn-mobile-cta"
-          >
-            {ctaText}
-          </a>
+          {onBtnClick ? (
+            <button
+              onClick={() => {
+                onBtnClick();
+                setIsMobileMenuOpen(false); // পপআপ ওপেন হলে মোবাইল মেনু বন্ধ হবে
+              }}
+              className="btn-mobile-cta"
+              style={{
+                border: "none",
+                cursor: "pointer",
+                fontFamily: "inherit",
+                width: "100%",
+              }}
+            >
+              {ctaText}
+            </button>
+          ) : (
+            <a
+              href={ctaHref}
+              onClick={(e) => handleLinkClick(e, ctaHref)}
+              className="btn-mobile-cta"
+            >
+              {ctaText}
+            </a>
+          )}
         </div>
       </div>
     </header>

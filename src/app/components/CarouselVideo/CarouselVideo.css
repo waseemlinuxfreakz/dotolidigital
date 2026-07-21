@@ -1,0 +1,382 @@
+/* src/components/CarouselVideo/CarouselVideo.css */
+
+/* Breakout to ensure perfectly centered full-width section */
+.carousel-video-section {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 80px;
+  overflow: hidden;
+}
+
+.cv-centered-title {
+  text-align: center;
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 700;
+  margin-bottom: 50px;
+  letter-spacing: -0.01em;
+  color: var(--text-white, #ffffff);
+}
+
+.cv-swiper-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.cv-swiper-wrapper .swiper {
+  width: 100%;
+  padding: 40px 0; /* Space for the active slide to expand vertically */
+  overflow: visible;
+}
+
+/* =========================================
+   PURE CSS TRICK FOR PERFECT CENTERING & EQUAL GAPS
+   ========================================= */
+
+.cv-swiper-wrapper .swiper-slide {
+  width: 240px !important; /* Strict fixed width ensures Swiper centers perfectly */
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.35;
+  /* Push ALL slides on the LEFT side further left */
+  transform: translateX(-35px) scale(0.9);
+  transition:
+    transform 0.5s cubic-bezier(0.25, 1, 0.5, 1),
+    opacity 0.5s ease;
+}
+
+/* The Active Center Slide */
+.cv-swiper-wrapper .swiper-slide-active {
+  transform: translateX(0) scale(1.1); /* Center and enlarge */
+  opacity: 1;
+  z-index: 5;
+}
+
+/* Push ALL slides on the RIGHT side further right */
+.cv-swiper-wrapper .swiper-slide-active ~ .swiper-slide {
+  transform: translateX(35px) scale(0.9);
+}
+
+/* =========================================
+   CARD DESIGN
+   ========================================= */
+.cv-card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 16; /* Portrait ratio for Shorts/Reels */
+  border-radius: 16px; /* Rounded borders */
+  overflow: hidden;
+  cursor: pointer;
+  background-color: var(--bg-card-dark, #101216);
+  border: 1px solid var(--white-alpha-09, rgba(255, 255, 255, 0.09));
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
+}
+
+.cv-card-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s ease;
+  z-index: 1;
+}
+
+.cv-swiper-wrapper .swiper-slide-active .cv-card:hover .cv-card-bg {
+  transform: scale(1.06);
+}
+
+.cv-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0) 30%,
+    rgba(0, 0, 0, 0.4) 60%,
+    rgba(0, 0, 0, 0.95) 100%
+  );
+  z-index: 2;
+}
+
+/* Inner Content */
+.cv-card-content {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+/* Top Play Icon */
+.cv-card-top {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cv-play-icon {
+  width: 34px;
+  height: 34px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-white, #fff);
+  font-size: 11px;
+  transition: all 0.3s ease;
+}
+
+.cv-play-icon svg {
+  margin-left: 3px;
+}
+
+.cv-card:hover .cv-play-icon {
+  background: var(--accent-cyan, #00ced1);
+  color: #000;
+  border-color: var(--accent-cyan, #00ced1);
+  transform: scale(1.1);
+}
+
+/* Bottom Text - Adjusted so it never cuts off */
+.cv-card-bottom {
+  text-align: left;
+  width: 100%;
+}
+.cv-swiper-wrapper .swiper-slide-active .cv-card {
+  border: 1px solid #00ced1;
+}
+
+.cv-card-bottom p {
+  font-size: 10px;
+  color: var(--accent-cyan, #00ced1);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.cv-card-bottom h4 {
+  color: var(--text-white, #fff);
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.4;
+  white-space: normal; /* Allows text to wrap */
+  word-wrap: break-word;
+}
+
+/* =========================================
+   CUSTOM CAROUSEL NAVIGATION (BELOW SLIDER)
+   ========================================= */
+.cv-nav-controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.cv-nav-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%; /* Perfect Round border */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-white, #fff);
+  font-size: 14px; /* Small clean icon */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.cv-nav-btn:hover {
+  background: var(--accent-cyan, #00ced1);
+  color: #000;
+  border-color: var(--accent-cyan, #00ced1);
+}
+.cv-nav-btn-prev:hover {
+  transform: translateX(-4px);
+}
+.cv-nav-btn-next:hover {
+  transform: translateX(4px);
+}
+
+/* =========================================
+   FULLSCREEN BLACK MODAL (FIXED HEADER ISSUE)
+   ========================================= */
+.cv-modal-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background-color: #000000 !important; /* Pure pitch black */
+  z-index: 2147483647 !important; /* Maximum z-index ensures it's above EVERYTHING */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.cv-modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.cv-modal-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Modal Close Button */
+.cv-modal-close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+.cv-modal-close:hover {
+  color: #000;
+  background: var(--accent-cyan, #00ced1);
+  border-color: var(--accent-cyan, #00ced1);
+  transform: rotate(90deg);
+}
+
+/* Video Wrapper */
+.cv-modal-video-wrapper {
+  position: relative;
+  height: 85vh; /* Perfect height for shorts */
+  aspect-ratio: 9 / 16;
+  background: #050505;
+  border-radius: 16px;
+  box-shadow: 0 10px 60px rgba(0, 206, 209, 0.15);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cv-modal-video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 16px;
+}
+
+/* Modal Nav Arrows (Lowered & Rounded) */
+.cv-modal-arrow {
+  position: absolute;
+  top: 55%; /* Lowered a bit */
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border-radius: 50%; /* Perfect circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px; /* Small icon */
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.cv-modal-arrow:hover {
+  background: var(--accent-cyan, #00ced1);
+  color: #000;
+  border-color: var(--accent-cyan, #00ced1);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.cv-modal-prev {
+  left: calc(50% - (85vh * 9 / 16 / 2) - 80px);
+}
+.cv-modal-next {
+  right: calc(50% - (85vh * 9 / 16 / 2) - 80px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .cv-modal-prev {
+    left: 30px;
+  }
+  .cv-modal-next {
+    right: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cv-swiper-wrapper .swiper-slide {
+    width: 180px !important;
+    transform: translateX(-20px) scale(0.9);
+  }
+  .cv-swiper-wrapper .swiper-slide-active {
+    transform: translateX(0) scale(1.1);
+  }
+  .cv-swiper-wrapper .swiper-slide-active ~ .swiper-slide {
+    transform: translateX(20px) scale(0.9);
+  }
+
+  .cv-card-bottom h4 {
+    font-size: 14px;
+  }
+
+  .cv-modal-video-wrapper {
+    height: 80vh;
+  }
+  .cv-modal-close {
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+  .cv-modal-arrow {
+    width: 44px;
+    height: 44px;
+    font-size: 12px;
+    background: rgba(0, 0, 0, 0.8);
+  }
+  .cv-modal-prev {
+    left: 10px;
+  }
+  .cv-modal-next {
+    right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cv-swiper-wrapper .swiper-slide {
+    width: 160px !important;
+  }
+}

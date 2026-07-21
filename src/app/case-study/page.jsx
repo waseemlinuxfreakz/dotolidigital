@@ -1,12 +1,13 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import "./case-study.css";
-
+import { useState } from "react";
 import LandingPageHeader from "../components/LandingPageHeader/LandingPageHeader";
+import PopupForm from "../components/PopupForm";
 import Footer from "../components/Footer";
+import CarouselVideo from "../components/CarouselVideo/CarouselVideo"; // Ensure Path is correct
 
-// Icons
-import { FaPlay, FaArrowRight, FaTimes } from "react-icons/fa";
+import { FaPlay, FaArrowRight } from "react-icons/fa";
 
 // GSAP
 import gsap from "gsap";
@@ -19,7 +20,6 @@ if (typeof window !== "undefined") {
 
 export default function CaseStudiesPage() {
   const containerRef = useRef();
-  const [activeVideo, setActiveVideo] = useState(null);
 
   // GSAP Scroll Animation
   useGSAP(
@@ -47,97 +47,23 @@ export default function CaseStudiesPage() {
     { scope: containerRef },
   );
 
-  // Reel Data Array
-  const reelData = [
-    {
-      id: 1,
-      gridClass: "large",
-      tag: "CASE FILM, 01:48",
-      category: "KITCHEN REMODELING",
-      title: "South Florida Contractor Doubles Deals",
-      bgImage: "/images/case-film1.avif",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
-    },
-    {
-      id: 2,
-      gridClass: "medium-1",
-      tag: null,
-      category: "WELLNESS",
-      title: "ROSE Farm, Goat Yoga Story",
-      bgImage: "/images/case-film2.avif",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
-    },
-    {
-      id: 3,
-      gridClass: "medium-2",
-      tag: null,
-      category: "DEMOLITION",
-      title: "Founder-Led Brand Spot",
-      bgImage: "/images/case-film3.avif",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
-    },
-    {
-      id: 4,
-      gridClass: "small-1",
-      tag: null,
-      category: "SHORT-FORM",
-      title: "Kitchen Reel, Hook 01",
-      bgImage: "/images/case-film4.avif",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
-    },
-    {
-      id: 5,
-      gridClass: "small-2",
-      tag: null,
-      category: "AESTHETICS",
-      title: "Aestira, Procedure Reveal",
-      bgImage: "/images/case-film5.avif",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
-    },
-    {
-      id: 6,
-      gridClass: "small-3",
-      tag: null,
-      category: "BEAUTY",
-      title: "Astra Beauty Bar, UGC",
-      bgImage: "/images/case-film6.avif",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
-    },
-    {
-      id: 7,
-      gridClass: "small-4",
-      tag: null,
-      category: "AUTOMOTIVE",
-      title: "Forty Collection, Build Film",
-      bgImage: "/images/case-film7.avif",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
-    },
-  ];
-
-  const handleOpenVideo = (url) => {
-    setActiveVideo(url);
-    // document.body.style.overflow = "hidden"; // Prevent scrolling when modal open
-  };
-
-  const handleCloseVideo = () => {
-    setActiveVideo(null);
-    // document.body.style.overflow = "auto";
-  };
-
   const homeMenu = [
     { label: "Work", href: "#reel" },
-    { label: "Case Studies", href: "#cases" },
+    { label: "Case Studies", href: "#case-studies" },
     { label: "Results", href: "#results" },
     { label: "Contact", href: "/contact-us" },
   ];
+  const [showPopup, setShowPopup] = useState(false);
 
   return (
     <>
+      {showPopup && <PopupForm onClose={() => setShowPopup(false)} />}
       <LandingPageHeader
         navLinks={homeMenu}
         ctaText="Book a Call"
-        ctaHref="#book-call"
+        onBtnClick={() => setShowPopup(true)}
       />
+
       <div ref={containerRef} className="case-study-page">
         {/* ───── HERO SECTION ───── */}
         <section className="container1 gsap-fade-up">
@@ -195,82 +121,10 @@ export default function CaseStudiesPage() {
           </div>
         </section>
 
-        {/* ───── THE REEL (UPDATED BENTO GRID) ───── */}
-        <section className="container1 gsap-fade-up" id="reel">
-          <div className="section-tag">THE REEL</div>
-          <h2 className="section-title">
-            Creative built to be felt, then to
-            <br />
-            convert.
-          </h2>
-          <p className="section-desc">
-            Direct-response video, founder-led stories and short-form cutdowns,
-            shot on real clients and built for the platforms their customers
-            actually live on.
-          </p>
-
-          <div className="reel-grid">
-            {reelData.map((item) => (
-              <div
-                key={item.id}
-                className={`reel-card ${item.gridClass}`}
-                onClick={() => handleOpenVideo(item.videoUrl)}
-              >
-                {/* Background with Zoom Effect */}
-                <div
-                  className="reel-bg"
-                  style={{ backgroundImage: `url(${item.bgImage})` }}
-                />
-                <div className="reel-overlay" />
-
-                <div className="reel-card-content">
-                  <div className="reel-top">
-                    {
-                      item.tag ? (
-                        <span className="reel-tag">{item.tag}</span>
-                      ) : (
-                        <div></div>
-                      ) /* Empty div to push play button to the right if no tag */
-                    }
-                    <span className="play-btn">
-                      <FaPlay />
-                    </span>
-                  </div>
-
-                  <div className="reel-bottom">
-                    <p>{item.category}</p>
-                    <h4>{item.title}</h4>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+        {/* ───── THE REEL (SEPARATE COMPONENT) ───── */}
+        <section className="gsap-fade-up" id="reel">
+          <CarouselVideo />
         </section>
-
-        {/* ───── VIDEO MODAL ───── */}
-        <div
-          className={`video-modal-overlay ${activeVideo ? "active" : ""}`}
-          onClick={handleCloseVideo}
-        >
-          <div
-            className="video-modal-container"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button className="close-modal-btn" onClick={handleCloseVideo}>
-              <FaTimes />
-            </button>
-            <div className="video-wrapper">
-              {activeVideo && (
-                <iframe
-                  src={activeVideo}
-                  allow="autoplay; encrypted-media"
-                  allowFullScreen
-                  title="Video Player"
-                />
-              )}
-            </div>
-          </div>
-        </div>
 
         {/* ───── CASE STUDIES ───── */}
         <section className="container1 gsap-fade-up" id="case-studies">

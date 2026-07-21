@@ -1,6 +1,7 @@
 "use client";
 import { useState, useRef } from "react";
 import Footer from "../components/Footer";
+import PopupForm from "../components/PopupForm";
 import "./leadfunnel.css";
 
 import LandingPageHeader from "../components/LandingPageHeader/LandingPageHeader";
@@ -55,13 +56,14 @@ export default function Page() {
     { label: "How it works", href: "#how-to-work" },
     { label: "Proof", href: "#proof" },
   ];
-
+  const [showPopup, setShowPopup] = useState(false);
   return (
     <>
+      {showPopup && <PopupForm onClose={() => setShowPopup(false)} />}
       <LandingPageHeader
         navLinks={homeMenu}
         ctaText="Book a Call"
-        ctaHref="#book-call"
+        onBtnClick={() => setShowPopup(true)}
       />
 
       <div ref={containerRef}>

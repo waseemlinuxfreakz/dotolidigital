@@ -101,8 +101,8 @@
   color: var(--foreground);
   text-decoration: none;
   display: block;
-  font-size: 60px;
-  line-height: 90px;
+  font-size: 50px;
+  line-height: 80px;
   text-transform: capitalize;
   margin-bottom: 0 !important;
 }

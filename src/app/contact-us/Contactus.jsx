@@ -8,6 +8,7 @@ import Footer from "../components/Footer";
 import { HeroAllSection } from "../components/HeroSection/HeroAllSection";
 import PopupForm from "../components/PopupForm";
 import { TextCounterSection } from "../components/TextCounterSection";
+import { FaArrowRight } from "react-icons/fa";
 
 export default function Contactus() {
   const [status, setStatus] = useState("");
@@ -194,9 +195,15 @@ export default function Contactus() {
               </div>
 
               {/* Submit */}
-              <div className="btn-group" style={{ marginTop: "2rem" }}>
-                <button type="submit" className="btn form-btn">
+              <div
+                className="btn-group btn btn--pulse"
+                style={{ marginTop: "2rem" }}
+              >
+                <button type="submit" className="btn form-btn btn-elem">
                   Send My Project Brief
+                  <span class="ic">
+                    <FaArrowRight />
+                  </span>
                 </button>
               </div>
 

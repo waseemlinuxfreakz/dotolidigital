@@ -8,8 +8,6 @@ import { ThemeToggle } from "../ThemeToggle";
 import "./Header.css";
 
 function Header() {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-
   // ✅ separate submenu states
   const [digitalMarketingOpen, setDigitalMarketingOpen] = useState(false);
   const [websiteDevelopmentOpen, setWebsiteDevelopmentOpen] = useState(false);
@@ -20,6 +18,8 @@ function Header() {
   const [seoServicesOpen, setSeoServicesOpen] = useState(false);
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [ourWorkOpen, setOurWorkOpen] = useState(false);
 
   const closeAllSubmenus = () => {
     setDigitalMarketingOpen(false);
@@ -36,6 +36,7 @@ function Header() {
   const closeMenu = () => {
     setIsMenuOpen(false);
     setDropdownOpen(false);
+    setOurWorkOpen(false);
     closeAllSubmenus();
   };
 
@@ -104,15 +105,55 @@ function Header() {
           <div className="menu-wrapper">
             <nav className="menu-nav">
               <ul>
-                <li>
-                  <Link
-                    href="/our-work"
-                    className="title-1 menu-link"
-                    onClick={closeMenu}
-                    tabIndex={isMenuOpen ? 0 : -1}
-                  >
-                    Our Work
-                  </Link>
+                {/* Our Work Dropdown */}
+                <li className="menu-dropdown">
+                  <div className="services-link-wrapper">
+                    <Link
+                      href="/our-work"
+                      className="title-1 menu-link"
+                      onClick={closeMenu}
+                      tabIndex={isMenuOpen ? 0 : -1}
+                    >
+                      Our Work
+                    </Link>
+
+                    <button
+                      type="button"
+                      className="dropdown-toggle-btn"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setOurWorkOpen((prev) => !prev);
+                        setDropdownOpen(false); // Services মেনু খোলা থাকলে বন্ধ করে দেবে
+                      }}
+                      tabIndex={isMenuOpen ? 0 : -1}
+                      aria-label="Toggle Our Work Dropdown"
+                    >
+                      {ourWorkOpen ? "▲" : "▼"}
+                    </button>
+                  </div>
+
+                  {ourWorkOpen && (
+                    <ul className="dropdown-list">
+                      <li style={{ marginBottom: "12px" }}>
+                        <Link
+                          href="/our-work"
+                          className="dropdown-link"
+                          onClick={closeMenu}
+                        >
+                          Our Work
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="/case-study"
+                          className="dropdown-link"
+                          onClick={closeMenu}
+                        >
+                          Case Study
+                        </Link>
+                      </li>
+                    </ul>
+                  )}
                 </li>
 
                 <li>

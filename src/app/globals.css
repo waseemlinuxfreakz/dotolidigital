@@ -1349,7 +1349,7 @@ section.dribbble-section img {
 
 ul.dropdown-list.footer-links li a {
   text-decoration: none;
-  color: #c5fcfc;
+  color: #00ced1;
 }
 
 ul.dropdown-list.footer-links {
@@ -2334,6 +2334,8 @@ Title block above form
 /* Title block above form */
 .contact-form-title-wrap {
   margin-bottom: 18px;
+  text-align: center;
+  font-size: 16px;
 }
 
 .contact-form-title {
@@ -2440,12 +2442,14 @@ Title block above form
 
 .legal-link {
   font-size: 13px;
-  text-decoration: underline;
+  text-decoration: none;
   opacity: 0.85;
+  color: #00ced1;
 }
 
 .legal-link:hover {
   opacity: 1;
+  text-decoration: underline;
 }
 
 /* ============================

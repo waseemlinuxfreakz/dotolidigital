@@ -1,0 +1,227 @@
+"use client";
+import React, { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
+import { Swiper, SwiperSlide } from "swiper/react";
+// Autoplay মডিউল ইমপোর্ট করা হয়েছে
+import { Navigation, Autoplay } from "swiper/modules";
+import {
+  FaPlay,
+  FaArrowRight,
+  FaArrowLeft,
+  FaChevronLeft,
+  FaChevronRight,
+} from "react-icons/fa";
+import { IoClose } from "react-icons/io5";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "./CarouselVideo.css";
+
+const reelData = [
+  {
+    id: 1,
+    category: "KITCHEN REMODELING",
+    title: "South Florida Contractor Doubles Deals",
+    bgImage: "/images/case-film1.avif",
+    videoUrl: "https://www.youtube.com/embed/9kf57TUquEI",
+  },
+  {
+    id: 2,
+    category: "WELLNESS",
+    title: "ROSE Farm, Goat Yoga Story",
+    bgImage: "/images/case-film2.avif",
+    videoUrl: "https://www.youtube.com/embed/2znxs0OmI0U",
+  },
+  {
+    id: 3,
+    category: "DEMOLITION",
+    title: "Founder-Led Brand Spot",
+    bgImage: "/images/case-film3.avif",
+    videoUrl: "https://www.youtube.com/embed/hkez6nKR6XCY",
+  },
+  {
+    id: 4,
+    category: "SHORT-FORM",
+    title: "Kitchen Reel, Hook 01",
+    bgImage: "/images/case-film4.avif",
+    videoUrl: "https://www.youtube.com/embed/JWpRYCz-hbY",
+  },
+  {
+    id: 5,
+    category: "AESTHETICS",
+    title: "Aestira, Procedure Reveal",
+    bgImage: "/images/case-film5.avif",
+    videoUrl: "https://www.youtube.com/embed/njsorqQz1Fc",
+  },
+  {
+    id: 6,
+    category: "BEAUTY",
+    title: "Astra Beauty Bar, UGC",
+    bgImage: "/images/case-film6.avif",
+    videoUrl: "https://www.youtube.com/embed/yf1d29v4iRw",
+  },
+  {
+    id: 7,
+    category: "AUTOMOTIVE",
+    title: "Forty Collection, Build Film",
+    bgImage: "/images/case-film7.avif",
+    videoUrl: "https://www.youtube.com/embed/ABFFS53kqWI",
+  },
+  {
+    id: 8,
+    category: "AUTOMOTIVE",
+    title: "Forty Collection, Build Film",
+    bgImage: "/images/case-film7.avif",
+    videoUrl: "https://www.youtube.com/embed/pXIgrLpByaM",
+  },
+];
+
+const extendedReelData = [...reelData, ...reelData, ...reelData];
+
+export default function CarouselVideo() {
+  const [activeVideoIndex, setActiveVideoIndex] = useState(null);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  // Modal Handlers
+  const handleOpenVideo = (index) => {
+    setActiveVideoIndex(index);
+    document.body.style.overflow = "hidden";
+  };
+
+  const handleCloseVideo = () => {
+    setActiveVideoIndex(null);
+    document.body.style.overflow = "auto";
+  };
+
+  const handleNextVideo = (e) => {
+    e.stopPropagation();
+    setActiveVideoIndex((prev) => (prev + 1) % extendedReelData.length);
+  };
+
+  const handlePrevVideo = (e) => {
+    e.stopPropagation();
+    setActiveVideoIndex((prev) =>
+      prev === 0 ? extendedReelData.length - 1 : prev - 1,
+    );
+  };
+
+  return (
+    <>
+      <div className="carousel-video-section">
+        <h2 className="cv-centered-title">Our Reels and Shorts</h2>
+
+        {/* --- Carousel --- */}
+        <div className="cv-swiper-wrapper">
+          <Swiper
+            // Autoplay যুক্ত করা হয়েছে
+            modules={[Navigation, Autoplay]}
+            centeredSlides={true}
+            loop={true}
+            speed={800} // একটু স্মুথ ট্রানজিশনের জন্য স্পিড বাড়ানো হয়েছে
+            autoplay={{
+              delay: 3000, // ৩ সেকেন্ড পর পর স্লাইড চেঞ্জ হবে
+              disableOnInteraction: false, // ইউজার ক্লিক করার পরও অটো-প্লে চলতে থাকবে
+              pauseOnMouseEnter: true, // মাউস রাখলে অটো-প্লে পজ হবে
+            }}
+            slidesPerView="auto"
+            spaceBetween={0}
+            initialSlide={3}
+            navigation={{
+              nextEl: ".cv-nav-btn-next",
+              prevEl: ".cv-nav-btn-prev",
+            }}
+          >
+            {extendedReelData.map((item, index) => (
+              <SwiperSlide key={`${item.id}-${index}`}>
+                <div className="cv-card" onClick={() => handleOpenVideo(index)}>
+                  <div
+                    className="cv-card-bg"
+                    style={{ backgroundImage: `url(${item.bgImage})` }}
+                  />
+                  <div className="cv-card-overlay" />
+
+                  <div className="cv-card-content">
+                    <div className="cv-card-top">
+                      <div className="cv-play-icon">
+                        <FaPlay />
+                      </div>
+                    </div>
+
+                    <div className="cv-card-bottom">
+                      <p>{item.category}</p>
+                      <h4 title={item.title}>{item.title}</h4>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+
+          {/* Bottom Navigation Arrows */}
+          <div className="cv-nav-controls">
+            <button className="cv-nav-btn cv-nav-btn-prev">
+              <FaArrowLeft />
+            </button>
+            <button className="cv-nav-btn cv-nav-btn-next">
+              <FaArrowRight />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* --- Video Modal Popup --- */}
+      {isMounted &&
+        createPortal(
+          <div
+            className={`cv-modal-overlay ${activeVideoIndex !== null ? "active" : ""}`}
+            onClick={handleCloseVideo}
+          >
+            <div
+              className="cv-modal-container"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Close Button */}
+              <button className="cv-modal-close" onClick={handleCloseVideo}>
+                <IoClose />
+              </button>
+
+              {/* Slider Navigation inside Modal */}
+              {activeVideoIndex !== null && (
+                <>
+                  <button
+                    className="cv-modal-arrow cv-modal-prev"
+                    onClick={handlePrevVideo}
+                  >
+                    <FaChevronLeft />
+                  </button>
+                  <button
+                    className="cv-modal-arrow cv-modal-next"
+                    onClick={handleNextVideo}
+                  >
+                    <FaChevronRight />
+                  </button>
+                </>
+              )}
+
+              {/* Video Player */}
+              <div className="cv-modal-video-wrapper">
+                {activeVideoIndex !== null && (
+                  <iframe
+                    src={`${extendedReelData[activeVideoIndex].videoUrl}?autoplay=1`}
+                    allow="autoplay; encrypted-media"
+                    allowFullScreen
+                    title="Video Player"
+                  />
+                )}
+              </div>
+            </div>
+          </div>,
+          document.body,
+        )}
+    </>
+  );
+}
