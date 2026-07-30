@@ -71,9 +71,9 @@ function Header() {
               />
             </Link>
 
-            {/* <div className="toggle-container">
+            <div className="toggle-container">
               <ThemeToggle />
-            </div> */}
+            </div>
 
             <div className="header-controls">
               <button

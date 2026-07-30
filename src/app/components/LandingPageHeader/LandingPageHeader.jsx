@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight, FaBars, FaTimes } from "react-icons/fa";
 import "./LandingPageHeader.css";
+import { ThemeToggle } from "../ThemeToggle";
 
 const LandingPageHeader = ({
   navLinks = [],
@@ -53,6 +54,9 @@ const LandingPageHeader = ({
         {/* RIGHT SIDE GROUP */}
         <div className="header-right-group">
           {/* DESKTOP NAV */}
+          <div className="toggle-container sm-landing">
+            <ThemeToggle />
+          </div>
           <nav className="desktop-nav">
             {navLinks.map((link, index) => (
               <a
