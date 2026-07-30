@@ -6,6 +6,7 @@ import LandingPageHeader from "../components/LandingPageHeader/LandingPageHeader
 import PopupForm from "../components/PopupForm";
 import Footer from "../components/Footer";
 import CarouselVideo from "../components/CarouselVideo/CarouselVideo"; // Ensure Path is correct
+import Link from "next/link";
 
 import { FaPlay, FaArrowRight } from "react-icons/fa";
 
@@ -85,15 +86,17 @@ export default function CaseStudiesPage() {
             className="hero-buttons"
             style={{ display: "flex", gap: "15px" }}
           >
-            <button className="btn-primary">
-              Watch the Reel{" "}
+            <Link href={"#reel"} className="btn-primary">
+              Watch the Reel
               <span className="ic">
                 <FaPlay
                   style={{ width: "10px", height: "10px", marginLeft: "2px" }}
                 />
               </span>
-            </button>
-            <button className="btn-outline">See the Results</button>
+            </Link>
+            <Link href={"#results"} className="btn-outline">
+              See the Results
+            </Link>
           </div>
         </section>
 
