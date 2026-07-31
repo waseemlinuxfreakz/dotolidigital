@@ -20,55 +20,105 @@ import "./CarouselVideo.css";
 const reelData = [
   {
     id: 1,
-    category: "KITCHEN REMODELING",
-    title: "South Florida Contractor Doubles Deals",
+    category: "META ADS",
+    title: "Stop Wasting $3K/Month on Meta Ads",
     bgImage: "/images/yt1.png",
     videoUrl: "https://www.youtube.com/embed/9kf57TUquEI",
   },
   {
     id: 2,
-    category: "WELLNESS",
-    title: "ROSE Farm, Goat Yoga Story",
+    category: "REAL ESTATE",
+    title: "Marina Landings: Elite Marina Homes",
     bgImage: "/images/yt2.png",
     videoUrl: "https://www.youtube.com/embed/2znxs0OmI0U",
   },
   {
     id: 3,
-    category: "SHORT-FORM",
-    title: "Kitchen Reel, Hook 01",
+    category: "SUCCESS STORY",
+    title: "South Florida Contractor Doubles Deals",
     bgImage: "/images/yt3.png",
     videoUrl: "https://www.youtube.com/embed/JWpRYCz-hbY",
   },
   {
     id: 4,
-    category: "AESTHETICS",
-    title: "Aestira, Procedure Reveal",
+    category: "CONTRACTOR SALES",
+    title: "How Contractors Close More Jobs",
     bgImage: "/images/yt4.png",
     videoUrl: "https://www.youtube.com/embed/njsorqQz1Fc",
   },
   {
     id: 5,
-    category: "BEAUTY",
-    title: "Astra Beauty Bar, UGC",
+    category: "LUXURY REAL ESTATE",
+    title: "Selene Fort Lauderdale Oceanfront Condo",
     bgImage: "/images/yt5.png",
     videoUrl: "https://www.youtube.com/embed/yf1d29v4iRw",
   },
   {
     id: 6,
-    category: "AUTOMOTIVE",
-    title: "Forty Collection, Build Film",
+    category: "GOOGLE ADS",
+    title: "Finding the Best Clients with Google Ads",
     bgImage: "/images/yt6.png",
     videoUrl: "https://www.youtube.com/embed/ABFFS53kqWI",
   },
   {
     id: 7,
-    category: "AUTOMOTIVE",
-    title: "Forty Collection, Build Film",
+    category: "VIDEO PRODUCTION",
+    title: "The Forty Collection Reel Script",
     bgImage: "/images/yt7.png",
     videoUrl: "https://www.youtube.com/embed/pXIgrLpByaM",
   },
+  {
+    id: 8,
+    category: "WELLNESS",
+    title: "Rose Therapeutic Farm Goat Yoga",
+    bgImage: "/images/yt8.png",
+    videoUrl: "https://www.youtube.com/embed/kez6nKR6XCY",
+  },
+  {
+    id: 9,
+    category: "SUCCESS STORY",
+    title: "Florida Demolition Experts Record Growth",
+    bgImage: "/images/yt9.png",
+    videoUrl: "https://www.youtube.com/embed/LELkDqKWpPo",
+  },
+  {
+    id: 10,
+    category: "PLASTIC SURGERY",
+    title: "Restoralift Facelift Video",
+    bgImage: "/images/yt10.png",
+    videoUrl: "https://www.youtube.com/embed/t5mRTgMemc4",
+  },
+  {
+    id: 11,
+    category: "PLASTIC SURGERY",
+    title: "Aestira's Unique Recovery Process",
+    bgImage: "/images/yt11.png",
+    videoUrl: "https://www.youtube.com/embed/1Di5pyUxyPk",
+  },
+  {
+    id: 12,
+    category: "PLASTIC SURGERY",
+    title: "Restoralift Facelift Showcase",
+    bgImage: "/images/yt12.png",
+    videoUrl: "https://www.youtube.com/embed/a5Yhb70kde4",
+  },
+  {
+    id: 13,
+    category: "PLASTIC SURGERY",
+    title: "Rhinoplasty Procedure Video",
+    bgImage: "/images/yt13.png",
+    videoUrl: "https://www.youtube.com/embed/MBM68MWXlpI",
+  },
 ];
 
+/**
+
+
+
+
+
+
+ */
 const extendedReelData = [...reelData, ...reelData, ...reelData];
 
 export default function CarouselVideo() {
