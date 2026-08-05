@@ -109,6 +109,20 @@ const reelData = [
     bgImage: "/images/yt13.png",
     videoUrl: "https://www.youtube.com/embed/MBM68MWXlpI",
   },
+  {
+    id: 14,
+    category: "VEHICLE BUILDS",
+    title: "Bronco & Defender Chassis",
+    bgImage: "/images/yt14.png",
+    videoUrl: "https://www.youtube.com/embed/cAePchQJl1c",
+  },
+  {
+    id: 15,
+    category: "LUXURY REAL ESTATE",
+    title: "Only 4 Luxury Homes Left",
+    bgImage: "/images/yt15.png",
+    videoUrl: "https://www.youtube.com/embed/EIg-R76nZk4",
+  },
 ];
 
 /**
