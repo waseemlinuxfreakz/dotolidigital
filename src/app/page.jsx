@@ -21,6 +21,7 @@ import { WhoWeAre } from "./components/WhoWeAre/WhoWeAre";
 import { FaArrowRight } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
+import CarouselVideo from "./components/CarouselVideo/CarouselVideo";
 
 /* sm shuvoS */
 export default function Home() {
@@ -39,7 +40,9 @@ export default function Home() {
         btn_text2={"Request a Proposal"}
         btn_link2={"/contact"}
       />
-      <VideoSection />
+      {/* <VideoSection /> */}
+      <CarouselVideo />
+
       <div className="abourspacer"></div>
       <RecentWorkSection />
 

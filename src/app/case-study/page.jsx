@@ -126,7 +126,7 @@ export default function CaseStudiesPage() {
 
         {/* ───── THE REEL (SEPARATE COMPONENT) ───── */}
         <section className="gsap-fade-up" id="reel">
-          <CarouselVideo />
+          <CarouselVideo title={"Our Reels and Shorts"} />
         </section>
 
         {/* ───── CASE STUDIES ───── */}

@@ -135,7 +135,7 @@ const reelData = [
  */
 const extendedReelData = [...reelData, ...reelData, ...reelData];
 
-export default function CarouselVideo() {
+export default function CarouselVideo({ title }) {
   const [activeVideoIndex, setActiveVideoIndex] = useState(null);
   const [isMounted, setIsMounted] = useState(false);
 
@@ -169,7 +169,7 @@ export default function CarouselVideo() {
   return (
     <>
       <div className="carousel-video-section">
-        <h2 className="cv-centered-title">Our Reels and Shorts</h2>
+        <h2 className="cv-centered-title">{title}</h2>
 
         {/* --- Carousel --- */}
         <div className="cv-swiper-wrapper">
