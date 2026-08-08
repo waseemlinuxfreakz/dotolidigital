@@ -22,6 +22,7 @@ import { FaArrowRight } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
 import CarouselVideo from "./components/CarouselVideo/CarouselVideo";
+import TopStatsRow from "./components/TopStatsRow/TopStatsRow";
 
 /* sm shuvoS */
 export default function Home() {
@@ -40,8 +41,12 @@ export default function Home() {
         btn_text2={"Request a Proposal"}
         btn_link2={"/contact"}
       />
+      <div className="container">
+        <TopStatsRow />
+      </div>
+
       {/* <VideoSection /> */}
-      <CarouselVideo />
+      <CarouselVideo title={"Our Reels and Shorts"} />
 
       <div className="abourspacer"></div>
       <RecentWorkSection />

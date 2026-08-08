@@ -6,6 +6,7 @@ import LandingPageHeader from "../components/LandingPageHeader/LandingPageHeader
 import PopupForm from "../components/PopupForm";
 import Footer from "../components/Footer";
 import CarouselVideo from "../components/CarouselVideo/CarouselVideo"; // Ensure Path is correct
+import TopStatsRow from "../components/TopStatsRow/TopStatsRow"; // Ensure Path is correct
 import Link from "next/link";
 
 import { FaPlay, FaArrowRight } from "react-icons/fa";
@@ -100,29 +101,8 @@ export default function CaseStudiesPage() {
           </div>
         </section>
 
-        {/* ───── TOP STATS ROW ───── */}
-        <section className="container1 gsap-fade-up">
-          <div className="stats-top-row">
-            <div className="stat-card-small">
-              <div className="val">28.4x</div>
-              <div className="label">Best client return on ad spend</div>
-            </div>
-            <div className="stat-card-small">
-              <div className="val">19x</div>
-              <div className="label">Peak organic click growth in a year</div>
-            </div>
-            <div className="stat-card-small">
-              <div className="val">$2.27M</div>
-              <div className="label">
-                Pipeline traced in 60 days, one client
-              </div>
-            </div>
-            <div className="stat-card-small">
-              <div className="val">5.77x</div>
-              <div className="label">ROAS rebuilt on a stalled account</div>
-            </div>
-          </div>
-        </section>
+        {/* ───── TOP STATS ROW  TopStatsRow ROW───── */}
+        <TopStatsRow />
 
         {/* ───── THE REEL (SEPARATE COMPONENT) ───── */}
         <section className="gsap-fade-up" id="reel">
