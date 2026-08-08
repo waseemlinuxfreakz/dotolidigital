@@ -1,3 +1,4 @@
+// ✅ src/app/case-study/page.jsx
 "use client";
 import React, { useRef } from "react";
 import "./case-study.css";

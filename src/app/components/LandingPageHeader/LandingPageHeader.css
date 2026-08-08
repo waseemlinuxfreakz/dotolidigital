@@ -1,14 +1,41 @@
-/* Color Variables */
+/* =========================================
+   LIGHT THEME VARIABLES
+   ========================================= */
+html.light,
+.light {
+  --header-bg: rgba(255, 255, 255, 0.85) !important;
+  --header-border: rgba(0, 0, 0, 0.1) !important;
+  --text-gray: #475569 !important;
+  --text-white: #0f172a !important; /* হেডারের টেক্সট লাইট মুডে কালো হবে */
+  --accent-cyan: #00ced1 !important;
+  --btn-dark: #000000 !important; /* 👈 বাটনের ভেতরের টেক্সট লাইট মুডে সম্পূর্ণ কালো হবে */
+  --cyan-alpha-16: rgba(
+    0,
+    0,
+    0,
+    0.1
+  ) !important; /* বাটনের তীরের গোল ব্যাকগ্রাউন্ড */
+  --mobile-menu-bg: #ffffff !important;
+  --hover-bg: rgba(0, 0, 0, 0.05) !important;
+}
+
+/* =========================================
+   DARK THEME VARIABLES (Original)
+   ========================================= */
+html.dark,
 :root {
   --header-bg: #0a0b0d;
   --header-border: rgba(255, 255, 255, 0.08);
   --text-gray: #a1a1aa;
   --text-white: #ffffff;
   --accent-cyan: #00ced1;
-  --btn-dark: #001516;
+  --btn-dark: #001516; /* ডার্ক মুডে বাটনের টেক্সট কালার */
   --cyan-alpha-16: rgba(0, 21, 22, 0.16);
+  --mobile-menu-bg: #0a0b0d;
+  --hover-bg: rgba(255, 255, 255, 0.05);
 }
 
+/* Theme Toggle Button */
 .sm-landing button.theme-toggle {
   width: 30px;
   height: 30px;
@@ -21,9 +48,9 @@
   flex-wrap: wrap;
   gap: 0;
   cursor: pointer;
-  box-shadow: inset 0 1px 1px var(--white-alpha-07);
-  background: var(--bg-card-dark);
-  border: 1px solid var(--white-alpha-09);
+  box-shadow: inset 0 1px 1px var(--white-alpha-07, rgba(255, 255, 255, 0.07));
+  background: var(--bg-card-dark, #101216);
+  border: 1px solid var(--white-alpha-09, rgba(255, 255, 255, 0.09));
 }
 
 /* Header Wrapper - Sticky & Centered */
@@ -36,14 +63,6 @@
   max-width: 1200px;
   padding: 0 20px;
   z-index: 999;
-}
-
-/*all mobile*/
-@media (max-width: 767px) {
-}
-
-/*ipad*/
-@media (min-width: 768px) and (max-width: 1024px) {
 }
 
 /* The Main Pill Shape Container */
@@ -59,26 +78,37 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
+/* Light mode specific shadow for header */
+html.light .header-pill {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
 /* Updated Logo Image Styling */
 .header-logo-img {
   display: block;
   object-fit: contain;
   width: auto;
-  height: 32px; /* প্রয়োজন অনুযায়ী উচ্চতা ঠিক করে নিতে পারেন */
+  height: 32px;
+}
+
+/* (Optional) লাইট মুডে যদি আপনার লোগোটি সাদা হওয়ার কারণে অদৃশ্য হয়ে যায়, 
+   তাহলে নিচের কোডটি অটোমেটিক লোগোটিকে কালো করে দেবে */
+html.light .header-logo-img {
+  filter: invert(1) brightness(0.1);
 }
 
 /* Right Side Group (Nav Links + Button align together) */
 .header-right-group {
   display: flex;
   align-items: center;
-  gap: 32px; /* লিংক এবং বাটনের মাঝের গ্যাপ */
+  gap: 32px;
 }
 
 /* Desktop Navigation */
 .desktop-nav {
   display: flex;
   align-items: center;
-  gap: 32px; /* লিংকগুলোর নিজেদের মাঝের গ্যাপ */
+  gap: 32px;
 }
 .nav-link {
   color: var(--text-gray);
@@ -134,7 +164,7 @@
   transition: background 0.3s;
 }
 .mobile-menu-btn:hover {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--hover-bg);
 }
 
 /* Mobile Dropdown Menu */
@@ -143,7 +173,7 @@
   top: calc(100% + 12px);
   left: 0;
   width: 100%;
-  background: #0a0b0d;
+  background: var(--mobile-menu-bg); /* Fixed Hardcoded Color */
   border: 1px solid var(--header-border);
   border-radius: 20px;
   padding: 24px;
@@ -152,6 +182,9 @@
   visibility: hidden;
   transform: translateY(-10px);
   transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+html.light .mobile-dropdown {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 .mobile-dropdown.open {
   opacity: 1;
@@ -191,7 +224,7 @@
     padding: 8px 8px 8px 20px;
   }
   .header-right-group {
-    display: none; /* মোবাইল স্ক্রিনে মেনু+বাটনের গ্রুপটি হাইড হবে */
+    display: none;
   }
   .mobile-menu-btn {
     display: grid;

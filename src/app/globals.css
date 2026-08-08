@@ -7,23 +7,80 @@
 @media (min-width: 1920px) {
 }
 
-:root {
-  /* color variables */
+/* =========================================
+   LIGHT THEME (DEFAULT) - Missing variables added here!
+   ========================================= */
+:root,
+html.light,
+.light {
+  /* Existing Base Colors */
   --background: #eef3f3;
   --bg1: hsla(222, 6%, 67%, 0.2);
   --foreground: #3f4144;
   --primary: #3f4144;
 
   /* Font variables */
-
   --font-primary: var(--font-montserrat), sans-serif;
   --font-secondary: var(--font-plus-jakarta-sans), sans-serif;
-  /* --font-dmmono */
+
+  /* --- ADDED LIGHT THEME COLORS --- */
+  --bg-main: #f7f9fa;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f1f5f9;
+  --bg-card-light: #ffffff;
+  --bg-card-dark: #ffffff; /* White card for light mode */
+  --bg-black: #ffffff;
+  --bg-scoreboard: #f8f9fa;
+
+  --accent-cyan: #00ced1;
+  --accent-cyan-border: rgba(0, 206, 209, 0.55);
+  --accent-cyan-hover: #00aeb0;
+  --accent-cyan-transparent: rgba(0, 206, 209, 0.08);
+  --turq: #00ced1;
+
+  /* Buttons */
+  --btn-dark-color: #001516;
+
+  /* Text Colors (Dark text for light background) */
+  --text-white: #0f172a; /* 👈 This fixes the invisible Headings */
+  --text-gray: #475569;
+  --text-light-gray: #334155;
+  --text-dark-gray: #94a3b8;
+  --text-muted: #64748b;
+  --text-lighter-gray: #1e293b;
+  --text-darker-gray: #475569;
+  --text-cyan-light: #0d9488;
+
+  --border-color: #e2e8f0;
+  --border-color-light: #cbd5e1;
+
+  /* Borders & Shadows (Black Alphas instead of White for light mode) */
+  --white-alpha-015: rgba(0, 0, 0, 0.02);
+  --white-alpha-02: rgba(0, 0, 0, 0.04);
+  --white-alpha-035: rgba(0, 0, 0, 0.05);
+  --white-alpha-07: rgba(0, 0, 0, 0.08);
+  --white-alpha-09: rgba(0, 0, 0, 0.12); /* 👈 Fixes missing borders */
+  --white-alpha-14: rgba(0, 0, 0, 0.16);
+
+  /* Cyan Alphas */
+  --cyan-alpha-02: rgba(0, 206, 209, 0.02);
+  --cyan-alpha-045: rgba(0, 206, 209, 0.045);
+  --cyan-alpha-10: rgba(0, 206, 209, 0.1);
+  --cyan-alpha-14: rgba(0, 206, 209, 0.14);
+  --cyan-alpha-22: rgba(0, 206, 209, 0.22);
+  --cyan-alpha-28: rgba(0, 206, 209, 0.28);
+  --cyan-alpha-40: rgba(0, 206, 209, 0.4);
+  --cyan-alpha-45: rgba(0, 206, 209, 0.45);
+
+  --dark-alpha-16: rgba(255, 255, 255, 0.4);
 }
 
-/* Dark theme overrides */
-
-:root.dark {
+/* =========================================
+   DARK THEME OVERRIDES (ORIGINAL)
+   ========================================= */
+:root.dark,
+html.dark,
+.dark {
   --background: #000000;
   --bg1: #262626;
   --foreground: #ffffff;
@@ -75,6 +132,8 @@
 
   --dark-alpha-16: rgba(0, 21, 22, 0.16);
 }
+
+/* Base styles (DO NOT DELETE THE REST OF YOUR CSS BELOW THIS LINE) */
 
 /* Base styles */
 * {

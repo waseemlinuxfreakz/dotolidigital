@@ -1,10 +1,24 @@
+/* =========================================
+   LIGHT THEME VARIABLES
+   ========================================= */
+html.light,
+.light {
+  --bg-card-dark: #ffffff !important; /* লাইট মুডে সাদা কার্ড */
+  --white-alpha-09: rgba(0, 0, 0, 0.12) !important; /* লাইট মুডে অ্যাশ বর্ডার */
+  --accent-cyan: #00ced1;
+  --text-muted: #64748b !important; /* লাইট মুডে ডার্ক-অ্যাশ টেক্সট */
+}
+
+/* =========================================
+   DARK THEME VARIABLES (ORIGINAL)
+   ========================================= */
+html.dark,
 :root {
   --bg-card-dark: #101216;
   --white-alpha-09: rgba(255, 255, 255, 0.09);
   --accent-cyan: #00ced1;
   --text-muted: #9aa0a6;
 }
-
 /* Top Stats Row */
 .stats-top-row {
   display: grid;

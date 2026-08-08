@@ -1,39 +1,47 @@
-:root {
-  /* Original Variables */
-  --bg-main: #050505;
-  --bg-card: #111111;
-  --bg-card-hover: #161616;
-  --bg-card-light: #1a1a1a;
+/* =========================================
+   LIGHT THEME (Targeting next-themes 'light' class)
+   ========================================= */
+html.light,
+:root.light,
+.light {
+  /* Backgrounds */
+  --bg-main: #f7f9fa !important;
+  --bg-card: #ffffff !important;
+  --bg-card-hover: #f1f5f9 !important;
+  --bg-card-light: #ffffff !important;
+  --bg-card-dark: #ffffff !important;
+  --bg-black: #ffffff !important;
+  --bg-scoreboard: #f8f9fa !important;
+
+  /* Accents */
   --accent-cyan: #00ced1;
   --accent-cyan-border: rgba(0, 206, 209, 0.55);
-  --accent-cyan-hover: #00c7dd;
+  --accent-cyan-hover: #00aeb0;
   --accent-cyan-transparent: rgba(0, 206, 209, 0.08);
-  --text-white: #ffffff;
-  --text-gray: #a1a1aa;
-  --text-light-gray: #d6d9dc;
-  --text-dark-gray: #52525b;
-  --border-color: #27272a;
-  --border-color-light: #3f3f46;
-  --btn-dark-color: #001516;
-
-  /* Added Variables */
   --turq: #00ced1;
-  --bg-card-dark: #101216;
-  --bg-black: #000000;
-  --bg-scoreboard: #0a0b0d;
 
-  --text-muted: #9aa0a6;
-  --text-lighter-gray: #c8ccd0;
-  --text-darker-gray: #80868c;
-  --text-cyan-light: #eaf6f6;
+  /* Text Colors (Forced dark text for light mode) */
+  --text-white: #0f172a !important; /* 👈 ম্যাজিক এখানে */
+  --text-gray: #475569 !important;
+  --text-light-gray: #334155 !important;
+  --text-dark-gray: #94a3b8 !important;
+  --text-muted: #64748b !important;
+  --text-lighter-gray: #1e293b !important;
+  --text-darker-gray: #475569 !important;
+  --text-cyan-light: #0d9488 !important;
 
-  --white-alpha-015: rgba(255, 255, 255, 0.015);
-  --white-alpha-02: rgba(255, 255, 255, 0.02);
-  --white-alpha-035: rgba(255, 255, 255, 0.035);
-  --white-alpha-07: rgba(255, 255, 255, 0.07);
-  --white-alpha-09: rgba(255, 255, 255, 0.09);
-  --white-alpha-14: rgba(255, 255, 255, 0.14);
+  /* Borders & Shadows */
+  --border-color: #e2e8f0 !important;
+  --border-color-light: #cbd5e1 !important;
 
+  --white-alpha-015: rgba(0, 0, 0, 0.02) !important;
+  --white-alpha-02: rgba(0, 0, 0, 0.04) !important;
+  --white-alpha-035: rgba(0, 0, 0, 0.05) !important;
+  --white-alpha-07: rgba(0, 0, 0, 0.08) !important;
+  --white-alpha-09: rgba(0, 0, 0, 0.12) !important;
+  --white-alpha-14: rgba(0, 0, 0, 0.16) !important;
+
+  /* Cyan Alphas */
   --cyan-alpha-02: rgba(0, 206, 209, 0.02);
   --cyan-alpha-045: rgba(0, 206, 209, 0.045);
   --cyan-alpha-10: rgba(0, 206, 209, 0.1);
@@ -43,8 +51,40 @@
   --cyan-alpha-40: rgba(0, 206, 209, 0.4);
   --cyan-alpha-45: rgba(0, 206, 209, 0.45);
 
-  --dark-alpha-16: rgba(0, 21, 22, 0.16);
+  --dark-alpha-16: rgba(255, 255, 255, 0.4);
   --ease: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* =========================================
+   DARK THEME (ORIGINAL)
+   ========================================= */
+html.dark,
+:root.dark,
+.dark {
+  /* Backgrounds */
+  --bg-main: #050505;
+  --bg-card: #111111;
+  --bg-card-hover: #161616;
+  --bg-card-light: #1a1a1a;
+  --bg-card-dark: #101216;
+  --bg-black: #000000;
+  --bg-scoreboard: #0a0b0d;
+
+  /* Text Colors */
+  --text-white: #ffffff;
+  --text-gray: #a1a1aa;
+  --text-light-gray: #d6d9dc;
+  --text-dark-gray: #52525b;
+  --text-muted: #9aa0a6;
+  --text-lighter-gray: #c8ccd0;
+  --text-darker-gray: #80868c;
+
+  --white-alpha-015: rgba(255, 255, 255, 0.015);
+  --white-alpha-02: rgba(255, 255, 255, 0.02);
+  --white-alpha-035: rgba(255, 255, 255, 0.035);
+  --white-alpha-07: rgba(255, 255, 255, 0.07);
+  --white-alpha-09: rgba(255, 255, 255, 0.09);
+  --white-alpha-14: rgba(255, 255, 255, 0.14);
 }
 
 body {
@@ -159,6 +199,7 @@ body {
   margin-bottom: 24px;
   letter-spacing: -0.02em;
   line-height: 1.06;
+  color: var(--text-white); /* 👈 এই লাইনটি যোগ করুন */
 }
 .hero-subtitle {
   color: var(--text-light-gray);

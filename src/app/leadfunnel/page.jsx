@@ -770,9 +770,7 @@ export default function Page() {
 
           <p className="sm-final-cta-text">
             You keep the pixel, the data, and the whole system.{" "}
-            <span style={{ color: "#fff", fontWeight: "bold" }}>
-              No long contract.
-            </span>
+            <span style={{ fontWeight: "bold" }}>No long contract.</span>
           </p>
           <p className="sm-final-cta-alt">
             Prefer to talk now?{" "}
@@ -780,10 +778,10 @@ export default function Page() {
           </p>
 
           <p className="sm-final-cta-feedback">
-            <strong style={{ color: "#fff" }}>P.S.</strong> The Pilot is the
-            whole pitch. We would rather prove it on your business for 30 days
-            than ask you to trust a promise. If the numbers are not there, you
-            have lost nothing and you keep everything we built.
+            <strong style={{}}>P.S.</strong> The Pilot is the whole pitch. We
+            would rather prove it on your business for 30 days than ask you to
+            trust a promise. If the numbers are not there, you have lost nothing
+            and you keep everything we built.
           </p>
         </section>
 

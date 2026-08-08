@@ -40,7 +40,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0.35;
+  /* opacity: 0.35; */
   /* Push ALL slides on the LEFT side further left */
   transform: translateX(-35px) scale(0.9);
   transition:
@@ -163,7 +163,7 @@
 }
 
 .cv-card-bottom h4 {
-  color: var(--text-white, #fff);
+  color: #fff;
   font-size: 13px;
   font-weight: 600;
   margin: 0;
