@@ -89,12 +89,15 @@ html.light .header-pill {
   object-fit: contain;
   width: auto;
   height: 32px;
+  filter: brightness(0) saturate(100%) invert(66%) sepia(59%) saturate(3116%)
+    hue-rotate(135deg) brightness(97%) contrast(101%);
 }
 
 /* (Optional) লাইট মুডে যদি আপনার লোগোটি সাদা হওয়ার কারণে অদৃশ্য হয়ে যায়, 
    তাহলে নিচের কোডটি অটোমেটিক লোগোটিকে কালো করে দেবে */
 html.light .header-logo-img {
-  filter: invert(1) brightness(0.1);
+  filter: brightness(0) saturate(100%) invert(66%) sepia(59%) saturate(3116%)
+    hue-rotate(135deg) brightness(97%) contrast(101%);
 }
 
 /* Right Side Group (Nav Links + Button align together) */

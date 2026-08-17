@@ -1550,12 +1550,15 @@ ul.sub-dropdown-list.sub-dropdown-list-2 {
 .faq-item {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
+html.light .faq-item {
+  border-bottom: 1px solid rgb(0 0 0 / 19%);
+}
 
 .faq-question {
   width: 100%;
   background: none;
   border: none;
-  color: #d7faff;
+  color: var(--text-white);
   font-size: 20px;
   text-align: left;
   padding: 20px 0;
@@ -1566,7 +1569,7 @@ ul.sub-dropdown-list.sub-dropdown-list-2 {
 
 .faq-answer {
   padding: 0 0 20px 0;
-  color: #b9d7dd;
+  color: var(--text-muted);
   line-height: 1.7;
 }
 
@@ -2426,6 +2429,9 @@ Title block above form
   background: rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(6px);
 }
+html.light .contact-form {
+  background: rgba(255, 255, 255, 0.05);
+}
 
 /* SMS Opt-in block */
 .sms-optin-wrap {
@@ -2595,8 +2601,9 @@ Title block above form
 }
 
 .pm-cta-btn-primary {
-  background: var(--primary);
+  background: var(--accent-cyan);
   color: #121315;
+  border: 0;
 }
 
 .dark .pm-cta-btn-primary {

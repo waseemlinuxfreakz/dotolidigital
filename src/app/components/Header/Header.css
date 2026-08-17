@@ -198,8 +198,10 @@
 }
 .dribbble-sec .dribbble-middle-text img,
 .header-wrapper .header a img {
-  filter: brightness(0) saturate(100%) invert(24%) sepia(1%) saturate(2881%)
-    hue-rotate(183deg) brightness(93%) contrast(88%);
+  /* filter: brightness(0) saturate(100%) invert(24%) sepia(1%) saturate(2881%)
+    hue-rotate(183deg) brightness(93%) contrast(88%); */
+  filter: brightness(0) saturate(100%) invert(66%) sepia(59%) saturate(3116%)
+    hue-rotate(135deg) brightness(97%) contrast(101%);
 }
 
 .mobile-menu .menu-wrapper {

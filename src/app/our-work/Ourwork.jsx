@@ -31,7 +31,14 @@ export default function OurWork() {
         img="/images/crm-slide3.jpg"
         heading="AI-Powered Blog Automation for WordPress: Publish Smarter, Not Harder"
         text="From content that writes and posts itself, to customer journeys powered by intelligent workflows—our AI Agents transform hours of manual work into seamless automation. If you can imagine it, we can automate it. Let's build your growth engine together."
+        cta={{
+          text: "Book a Free Strategy Call",
+          onClick: () => setShowPopup(true),
+        }}
       />
+      <br />
+      <br />
+      <br />
 
       {/* ai-agents-automation */}
       <ServiceDetailsSection
@@ -43,7 +50,14 @@ export default function OurWork() {
         img="/images/ia3.webp"
         heading="End-to-End Lead Automation with 15+ Custom Zaps for Josh DotoliGroup"
         text="We set up over 15 custom Zaps to automate lead capture, syncing, and follow-ups across Facebook, Google Forms, Outlook, and CRMs. This system helps JoshDotoliGroup respond faster, stay organized, and scale lead handling with zero manual effort."
+        cta={{
+          text: "Book a Free Strategy Call",
+          onClick: () => setShowPopup(true),
+        }}
       />
+      <br />
+      <br />
+      <br />
 
       {/* crm-automation */}
       <ServiceDetailsSection
@@ -55,7 +69,14 @@ export default function OurWork() {
         img="/images/crm2.webp"
         heading="Full-Funnel CRM Workflows Built for Lead Nurturing & Sales Automation"
         text="We implemented an advanced CRM architecture with segmented workflows for cold, warm, and hot leads, including 3-month nurturing sequences for loan officers. From automated emails and SMS to call reminders and drip campaigns, the system ensures no lead goes untouched, improving conversion rates across the board."
+        cta={{
+          text: "Book a Free Strategy Call",
+          onClick: () => setShowPopup(true),
+        }}
       />
+      <br />
+      <br />
+      <br />
 
       {/* seo-marketing */}
       <ServiceDetailsSection
@@ -70,7 +91,14 @@ export default function OurWork() {
         img="/images/x2.webp"
         heading="Growth in Organic Clicks & Impressions"
         text="The screenshot displays a positive upward trend in SEO performance over the past three months. Total organic clicks reached 13.3K, while impressions climbed to 1.48 million, reflecting increased visibility in search results. The overall trajectory indicates successful optimization efforts and rising organic reach."
+        cta={{
+          text: "Book a Free Strategy Call",
+          onClick: () => setShowPopup(true),
+        }}
       />
+      <br />
+      <br />
+      <br />
 
       {/* vr-experiences */}
       {/* branding-creative */}
