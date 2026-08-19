@@ -44,7 +44,7 @@ export function NewsTracker() {
   const renderTexts2 = () => (
     <>
       {Array(10)
-        .fill("AI Agents & Chatbots . Branding & Creative . VR Experiences")
+        .fill("AI Agents & Chatbots . Branding & Creative")
         .map((text, idx) => (
           <span key={idx}>{text}</span>
         ))}

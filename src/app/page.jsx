@@ -150,7 +150,7 @@ export default function Home() {
             </p>
 
             <div class="btn">
-              <Link href="/services" className="btn-elem">
+              <Link href="/case-study#results" className="btn-elem">
                 Explore work
                 <span class="ic">
                   <FaArrowRight />
