@@ -42,7 +42,7 @@ export default function Page() {
             ease: "power3.out",
             scrollTrigger: {
               trigger: el,
-              start: "top 85%", // Trigger when top of element hits 85% of viewport
+              start: "top 85%",
               toggleActions: "play none none none",
             },
           },
@@ -57,6 +57,7 @@ export default function Page() {
     { label: "Proof", href: "#proof" },
   ];
   const [showPopup, setShowPopup] = useState(false);
+
   return (
     <>
       {showPopup && <PopupForm onClose={() => setShowPopup(false)} />}
@@ -87,26 +88,38 @@ export default function Page() {
             </p>
 
             <div className="hero-buttons">
-              <button className="btn-primary">
+              <button
+                onClick={() => setShowPopup(true)}
+                className="btn-primary"
+              >
                 Book my 30-Day Traction Pilot{" "}
-                <span class="ic">
+                <span className="ic">
                   <FaArrowRight />
                 </span>
               </button>
-              <button className="btn-outline">See how the system works</button>
+              <button
+                className="btn-outline"
+                onClick={() => {
+                  document
+                    .getElementById("how-to-work")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                See how the system works
+              </button>
             </div>
 
             <div className="hero-stats">
               <div className="flex-row">
                 <div className="coll">
-                  <span class="d"></span>
+                  <span className="d"></span>
                   <div>
                     <span className="cyan-text">$10,217 in. $290,000 out.</span>{" "}
                     for a Miami kitchen remodeler
                   </div>
                 </div>
                 <div className="coll">
-                  <span class="d"></span>
+                  <span className="d"></span>
                   <div>
                     <span className="cyan-text">$402K in demolition work</span>{" "}
                     on about $6,000 of ad spend
@@ -118,7 +131,7 @@ export default function Page() {
                 Real client numbers, pulled from their own ad accounts.
               </div>
               <div className="text t2">
-                <span class="d"></span>
+                <span className="d"></span>
                 Marketing operators since 2009. Florida based, serving clients
                 nationwide.
               </div>
@@ -576,7 +589,7 @@ export default function Page() {
             </div>
           </div>
 
-          <button className="btn-primary">
+          <button className="btn-primary" onClick={() => setShowPopup(true)}>
             Book my 30-Day Traction Pilot{" "}
             <span className="ic">
               <FaArrowRight />
@@ -736,7 +749,7 @@ export default function Page() {
               assets a buyer pays for. Mention it when you book and we will map
               it on the call.
             </p>
-            <button className="btn-outline">
+            <button className="btn-outline" onClick={() => setShowPopup(true)}>
               Book a call about the Sellable-Asset track
             </button>
           </div>
@@ -761,7 +774,7 @@ export default function Page() {
             we book are worth more than the Pilot fee.
           </p>
 
-          <button className="btn-primary">
+          <button className="btn-primary" onClick={() => setShowPopup(true)}>
             Book my 30-Day Traction Pilot{" "}
             <span className="ic">
               <FaArrowRight />
@@ -778,10 +791,10 @@ export default function Page() {
           </p>
 
           <p className="sm-final-cta-feedback">
-            <strong style={{}}>P.S.</strong> The Pilot is the whole pitch. We
-            would rather prove it on your business for 30 days than ask you to
-            trust a promise. If the numbers are not there, you have lost nothing
-            and you keep everything we built.
+            <strong>P.S.</strong> The Pilot is the whole pitch. We would rather
+            prove it on your business for 30 days than ask you to trust a
+            promise. If the numbers are not there, you have lost nothing and you
+            keep everything we built.
           </p>
         </section>
 
