@@ -8,7 +8,13 @@ import { ThemeToggle } from "../ThemeToggle";
 import "./Header.css";
 
 function Header() {
-  // ✅ separate submenu states
+  // Submenu states
+  const [solutionsOpen, setSolutionsOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [ourWorkOpen, setOurWorkOpen] = useState(false);
+  const [aboutOpen, setAboutOpen] = useState(false);
+
+  // Mobile submenu states (for nested items)
   const [digitalMarketingOpen, setDigitalMarketingOpen] = useState(false);
   const [websiteDevelopmentOpen, setWebsiteDevelopmentOpen] = useState(false);
   const [brandingCreativeOpen, setBrandingCreativeOpen] = useState(false);
@@ -19,9 +25,12 @@ function Header() {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [ourWorkOpen, setOurWorkOpen] = useState(false);
 
   const closeAllSubmenus = () => {
+    setSolutionsOpen(false);
+    setServicesOpen(false);
+    setOurWorkOpen(false);
+    setAboutOpen(false);
     setDigitalMarketingOpen(false);
     setWebsiteDevelopmentOpen(false);
     setBrandingCreativeOpen(false);
@@ -36,7 +45,6 @@ function Header() {
   const closeMenu = () => {
     setIsMenuOpen(false);
     setDropdownOpen(false);
-    setOurWorkOpen(false);
     closeAllSubmenus();
   };
 
@@ -47,7 +55,6 @@ function Header() {
 
     document.addEventListener("keydown", handleKeyDown);
 
-    // ✅ Handle scroll locking
     document.body.style.overflow = isMenuOpen ? "hidden" : "";
 
     return () => {
@@ -105,66 +112,51 @@ function Header() {
           <div className="menu-wrapper">
             <nav className="menu-nav">
               <ul>
-                {/* Our Work Dropdown */}
+                {/* Solutions Dropdown */}
                 <li className="menu-dropdown">
                   <div className="services-link-wrapper">
-                    <Link
-                      href=""
-                      className="title-1 menu-link"
-                      onClick={closeMenu}
-                      tabIndex={isMenuOpen ? 0 : -1}
-                    >
-                      Case Study
-                    </Link>
+                    <span className="title-1 menu-link">Solutions</span>
 
                     <button
                       type="button"
                       className="dropdown-toggle-btn"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        setOurWorkOpen((prev) => !prev);
-                        setDropdownOpen(false); // Services মেনু খোলা থাকলে বন্ধ করে দেবে
+                      onClick={() => {
+                        setSolutionsOpen((prev) => !prev);
+                        setServicesOpen(false);
+                        setOurWorkOpen(false);
+                        setAboutOpen(false);
                       }}
                       tabIndex={isMenuOpen ? 0 : -1}
-                      aria-label="Toggle Our Work Dropdown"
+                      aria-label="Toggle Solutions Dropdown"
                     >
-                      {ourWorkOpen ? "▲" : "▼"}
+                      {solutionsOpen ? "▲" : "▼"}
                     </button>
                   </div>
 
-                  {ourWorkOpen && (
+                  {solutionsOpen && (
                     <ul className="dropdown-list">
                       <li style={{ marginBottom: "12px" }}>
                         <Link
-                          href="/our-work"
+                          href="https://www.dotolidigital.com/leadfunnel"
                           className="dropdown-link"
                           onClick={closeMenu}
+                          target="_blank"
                         >
-                          Our Work
+                          Grow My Business
                         </Link>
                       </li>
                       <li>
                         <Link
-                          href="/case-study"
+                          href="https://www.dotolidigital.com/builderpage"
                           className="dropdown-link"
                           onClick={closeMenu}
+                          target="_blank"
                         >
-                          Case Study
+                          Sell My Business
                         </Link>
                       </li>
                     </ul>
                   )}
-                </li>
-
-                <li>
-                  <Link
-                    href="/about-us"
-                    className="title-1 menu-link"
-                    onClick={closeMenu}
-                    tabIndex={isMenuOpen ? 0 : -1}
-                  >
-                    About Us
-                  </Link>
                 </li>
 
                 {/* Services Dropdown */}
@@ -183,21 +175,21 @@ function Header() {
                       type="button"
                       className="dropdown-toggle-btn"
                       onClick={() => {
-                        setDropdownOpen((prev) => {
+                        setServicesOpen((prev) => {
                           const next = !prev;
-                          // ✅ if closing OR opening fresh, reset submenus
                           closeAllSubmenus();
+                          setServicesOpen(next);
                           return next;
                         });
                       }}
                       tabIndex={isMenuOpen ? 0 : -1}
                       aria-label="Toggle Services Dropdown"
                     >
-                      {dropdownOpen ? "▲" : "▼"}
+                      {servicesOpen ? "▲" : "▼"}
                     </button>
                   </div>
 
-                  {dropdownOpen && (
+                  {servicesOpen && (
                     <ul className="dropdown-list">
                       {/* Digital Marketing with Submenu */}
                       <li className="dropdown-item-with-submenu">
@@ -220,6 +212,8 @@ function Header() {
                               setBrandingCreativeOpen(false);
                               setCrmAutomationOpen(false);
                               setAiAgentsAutomationOpen(false);
+                              setVRExperiencesOpen(false);
+                              setSeoServicesOpen(false);
                             }}
                             aria-label="Toggle Digital Marketing Submenu"
                             tabIndex={isMenuOpen ? 0 : -1}
@@ -282,6 +276,8 @@ function Header() {
                               setBrandingCreativeOpen(false);
                               setCrmAutomationOpen(false);
                               setAiAgentsAutomationOpen(false);
+                              setVRExperiencesOpen(false);
+                              setSeoServicesOpen(false);
                             }}
                             aria-label="Toggle Website Development Submenu"
                             tabIndex={isMenuOpen ? 0 : -1}
@@ -323,14 +319,7 @@ function Header() {
                         )}
                       </li>
 
-                      {/* 
-                      SEO Services - seo-services
-                      dropdown with 4 subservices:
-                      URL: https://dotolidigital.com/services/seo/technical-seo/
-                      URL: https://dotolidigital.com/services/seo/local-seo/
-                      URL: https://dotolidigital.com/services/seo/ecommerce-seo/
-                      URL: https://dotolidigital.com/services/seo/aeo-geo-optimization/
-                      */}
+                      {/* SEO Services */}
                       <li className="dropdown-item-with-submenu">
                         <div className="submenu-title-row sm-submenu">
                           <Link
@@ -347,7 +336,6 @@ function Header() {
                             onClick={(e) => {
                               e.stopPropagation();
                               setSeoServicesOpen((prev) => !prev);
-                              // toggle SEO submenu
                               setDigitalMarketingOpen(false);
                               setWebsiteDevelopmentOpen(false);
                               setBrandingCreativeOpen(false);
@@ -403,64 +391,6 @@ function Header() {
                           </ul>
                         )}
                       </li>
-                      {/* 
-                       VR Experiences
-                       dropdown with 2-3 subservices:
-                      URL: http://dotolidigital.com/services/vr-experiences/virtual-brand/
-                      URL: http://dotolidigital.com/services/vr-experiences/vr-marketing-product-showcases/
-                      */}
-                      {/* <li className="dropdown-item-with-submenu">
-                        <div className="submenu-title-row sm-submenu">
-                          <Link
-                            href="/services/vr-experiences"
-                            className="dropdown-link"
-                            onClick={closeMenu}
-                          >
-                            VR Experiences
-                          </Link>
-
-                          <button
-                            type="button"
-                            className="dropdown-toggle-btn"
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              setVRExperiencesOpen((prev) => !prev);
-                              setDigitalMarketingOpen(false);
-                              setWebsiteDevelopmentOpen(false);
-                              setBrandingCreativeOpen(false);
-                              setCrmAutomationOpen(false);
-                              setAiAgentsAutomationOpen(false);
-                            }}
-                            aria-label="Toggle VR Experiences Submenu"
-                            tabIndex={isMenuOpen ? 0 : -1}
-                          >
-                            {vrExperiencesOpen ? "▲" : "▼"}
-                          </button>
-                        </div>
-
-                        {vrExperiencesOpen && (
-                          <ul className="sub-dropdown-list sub-dropdown-list-2">
-                            <li>
-                              <Link
-                                href="/services/vr-experiences/virtual-brand-experiences"
-                                className="dropdown-link"
-                                onClick={closeMenu}
-                              >
-                                Virtual Brand Experiences
-                              </Link>
-                            </li>
-                            <li>
-                              <Link
-                                href="/services/vr-experiences/vr-marketing-product-showcases"
-                                className="dropdown-link"
-                                onClick={closeMenu}
-                              >
-                                VR Marketing & Product Showcases
-                              </Link>
-                            </li>
-                          </ul>
-                        )}
-                      </li> */}
 
                       {/* Branding & Creative with Submenu */}
                       <li className="dropdown-item-with-submenu">
@@ -483,6 +413,8 @@ function Header() {
                               setWebsiteDevelopmentOpen(false);
                               setCrmAutomationOpen(false);
                               setAiAgentsAutomationOpen(false);
+                              setVRExperiencesOpen(false);
+                              setSeoServicesOpen(false);
                             }}
                             aria-label="Toggle Branding & Creative Submenu"
                             tabIndex={isMenuOpen ? 0 : -1}
@@ -545,6 +477,8 @@ function Header() {
                               setWebsiteDevelopmentOpen(false);
                               setBrandingCreativeOpen(false);
                               setAiAgentsAutomationOpen(false);
+                              setVRExperiencesOpen(false);
+                              setSeoServicesOpen(false);
                             }}
                             aria-label="Toggle CRM & Automation Submenu"
                             tabIndex={isMenuOpen ? 0 : -1}
@@ -607,6 +541,8 @@ function Header() {
                               setWebsiteDevelopmentOpen(false);
                               setBrandingCreativeOpen(false);
                               setCrmAutomationOpen(false);
+                              setVRExperiencesOpen(false);
+                              setSeoServicesOpen(false);
                             }}
                             aria-label="Toggle AI Agents & Chatbots Submenu"
                             tabIndex={isMenuOpen ? 0 : -1}
@@ -626,7 +562,6 @@ function Header() {
                                 AI Chatbot Development
                               </Link>
                             </li>
-
                             <li>
                               <Link
                                 href="/services/ai-agents-automation/sales-lead-generation-ai-agents"
@@ -643,17 +578,101 @@ function Header() {
                   )}
                 </li>
 
-                <li>
-                  <Link
-                    href="/team"
-                    className="title-1 menu-link"
-                    onClick={closeMenu}
-                    tabIndex={isMenuOpen ? 0 : -1}
-                  >
-                    Teams
-                  </Link>
+                {/* Our Work Dropdown */}
+                <li className="menu-dropdown">
+                  <div className="services-link-wrapper">
+                    <span className="title-1 menu-link">Our Work</span>
+
+                    <button
+                      type="button"
+                      className="dropdown-toggle-btn"
+                      onClick={() => {
+                        setOurWorkOpen((prev) => !prev);
+                        setSolutionsOpen(false);
+                        setServicesOpen(false);
+                        setAboutOpen(false);
+                      }}
+                      tabIndex={isMenuOpen ? 0 : -1}
+                      aria-label="Toggle Our Work Dropdown"
+                    >
+                      {ourWorkOpen ? "▲" : "▼"}
+                    </button>
+                  </div>
+
+                  {ourWorkOpen && (
+                    <ul className="dropdown-list">
+                      <li style={{ marginBottom: "12px" }}>
+                        <Link
+                          href="https://www.dotolidigital.com/case-study"
+                          className="dropdown-link"
+                          onClick={closeMenu}
+                          target="_blank"
+                        >
+                          Case Studies
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="https://www.dotolidigital.com/our-work"
+                          className="dropdown-link"
+                          onClick={closeMenu}
+                          target="_blank"
+                        >
+                          Portfolio
+                        </Link>
+                      </li>
+                    </ul>
+                  )}
                 </li>
 
+                {/* About Dropdown */}
+                <li className="menu-dropdown">
+                  <div className="services-link-wrapper">
+                    <span className="title-1 menu-link">About</span>
+
+                    <button
+                      type="button"
+                      className="dropdown-toggle-btn"
+                      onClick={() => {
+                        setAboutOpen((prev) => !prev);
+                        setSolutionsOpen(false);
+                        setServicesOpen(false);
+                        setOurWorkOpen(false);
+                      }}
+                      tabIndex={isMenuOpen ? 0 : -1}
+                      aria-label="Toggle About Dropdown"
+                    >
+                      {aboutOpen ? "▲" : "▼"}
+                    </button>
+                  </div>
+
+                  {aboutOpen && (
+                    <ul className="dropdown-list">
+                      <li style={{ marginBottom: "12px" }}>
+                        <Link
+                          href="https://www.dotolidigital.com/about-us"
+                          className="dropdown-link"
+                          onClick={closeMenu}
+                          target="_blank"
+                        >
+                          About Us
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="https://www.dotolidigital.com/team"
+                          className="dropdown-link"
+                          onClick={closeMenu}
+                          target="_blank"
+                        >
+                          Our Team
+                        </Link>
+                      </li>
+                    </ul>
+                  )}
+                </li>
+
+                {/* Blog */}
                 <li>
                   <Link
                     href="/blog"
@@ -665,6 +684,7 @@ function Header() {
                   </Link>
                 </li>
 
+                {/* Contact Us */}
                 <li>
                   <Link
                     href="/contact-us"
