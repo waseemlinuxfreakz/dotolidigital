@@ -47,6 +47,7 @@ export default function BuilderPage() {
     { label: "Contact", href: "/contact-us" },
   ];
   const [showPopup, setShowPopup] = useState(false);
+
   return (
     <>
       {showPopup && <PopupForm onClose={() => setShowPopup(false)} />}
@@ -93,7 +94,7 @@ export default function BuilderPage() {
             that survive due diligence, and a documented system a new owner can
             step into.
           </p>
-          <button className="btn-primary">
+          <button className="btn-primary" onClick={() => setShowPopup(true)}>
             Book a Sellable-Asset strategy call <FaArrowRight />
           </button>
         </section>
@@ -214,8 +215,8 @@ export default function BuilderPage() {
               <div className="system-card">
                 <div className="wrap-step">
                   <div className="step-circle">3</div>
+                  <span className="system-card-step">PARTNER</span>
                 </div>
-                <span className="system-card-step">PARTNER</span>
                 <h3>Sellable-Asset Partner</h3>
                 <p>
                   An ongoing engagement to run, scale, and harden the system
@@ -237,7 +238,15 @@ export default function BuilderPage() {
                 Founders with a real exit horizon who want the business to be
                 worth more without them in it. If you have no plan to sell and
                 just want more customers, the{" "}
-                <span className="cyan-text" style={{ cursor: "pointer" }}>
+                <span
+                  className="cyan-text"
+                  style={{ cursor: "pointer" }}
+                  onClick={() => {
+                    document
+                      .getElementById("operator-path")
+                      ?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                >
                   operator path
                 </span>{" "}
                 is the better fit.
@@ -257,7 +266,11 @@ export default function BuilderPage() {
           <h2 className="hero-title">
             Build something a buyer will actually pay for.
           </h2>
-          <button className="btn-primary" style={{ marginTop: "20px" }}>
+          <button
+            className="btn-primary"
+            style={{ marginTop: "20px" }}
+            onClick={() => setShowPopup(true)}
+          >
             Book a Sellable-Asset strategy call <FaArrowRight />
           </button>
         </section>
