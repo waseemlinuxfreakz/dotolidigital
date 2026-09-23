@@ -43,11 +43,11 @@ export const metadata = {
       "Dotoli Digital | AI-Powered Marketing, Automation & Creative Solutions",
     description:
       "Dotoli Digital helps brands scale smarter with AI-driven marketing, CRM automation, VR experiences, and bold creative. Based in Florida, Serving Worldwide.",
-    url: "https://dotolidigital.com",
+    url: "/",
     siteName: "Dotoli Digital",
     images: [
       {
-        url: "../../public/images/aai5.webp",
+        url: "/images/aai5.webp",
         width: 1200,
         height: 630,
         alt: "Dotoli Digital - AI-Powered Marketing, Automation & Creative Solutions",
