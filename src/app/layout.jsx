@@ -31,6 +31,9 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://dotolidigital.com",
+  ),
   title:
     "Dotoli Digital | AI-Powered Marketing, Automation & Creative Solutions",
   description:
